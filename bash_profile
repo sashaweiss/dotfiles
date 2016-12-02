@@ -15,6 +15,7 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 alias celar="clear"
+alias cd="cd -P"
 
 readmd () {
     if [ "$#" -ne 1 ]; then
