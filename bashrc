@@ -12,4 +12,4 @@ magenta="\[\033[0;35m\]"
 cyan="\[\033[0;36m\]"
 white="\[\033[0;37m\]"
 
-PS1="$green\u $white| $cyan\t $white| $magenta\W\$(__git_ps1) $white\$ "
+PS1="$green\u$white@$red\h $white| $cyan\t $white| $magenta\W\$(__git_ps1) $white\$ "
