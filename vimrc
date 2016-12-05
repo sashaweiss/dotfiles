@@ -18,3 +18,6 @@ noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
+
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
