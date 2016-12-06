@@ -19,9 +19,12 @@ noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
 
-set mouse=a
-map <ScrollWheelUp> <C-Y>
-map <ScrollWheelDown> <C-E>
+noremap <ScrollWheelUp> <nop>
+inoremap <ScrollWheelUp> <nop>
+"<C-Y>
+noremap <ScrollWheelDown> <nop>
+inoremap <ScrollWheelDown> <nop>
+"<C-E>
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
