@@ -16,12 +16,3 @@ source $(brew --prefix nvm)/nvm.sh
 
 alias celar="clear"
 alias cd="cd -P"
-
-readmd () {
-    if [ "$#" -ne 1 ]; then
-			echo "Usage: readmd <path to markdown file>"
-    else
-        pandoc $1 | lynx -stdin
-    fi
-}
-
