@@ -1,8 +1,8 @@
 #!/bin/bash
 
-source ~/etc/git-completion.bash
-source ~/etc/git-prompt.sh
-source ~/etc/sexy-bash-prompt.sh
+source ~/dotfiles/etc/git-completion.bash
+source ~/dotfiles/etc/git-prompt.sh
+source ~/dotfiles/etc/sexy-bash-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 red="\[\033[0;31m\]"
