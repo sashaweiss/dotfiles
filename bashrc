@@ -15,7 +15,7 @@ white="\[\033[0;37m\]"
 
 function git_info {
   $(sexy_bash_prompt_is_on_git) && \
-  echo " ($(sexy_bash_prompt_get_git_info)$(sexy_bash_prompt_get_git_progress))" # From sexy-bash-prompt
+  echo " [$(sexy_bash_prompt_get_git_info)$(sexy_bash_prompt_get_git_progress)]" # From sexy-bash-prompt
   # echo -n "$(__git_ps1)" # Github-provided
 }
 
