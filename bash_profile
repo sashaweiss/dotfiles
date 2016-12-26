@@ -16,3 +16,4 @@ source $(brew --prefix nvm)/nvm.sh
 
 alias celar="clear"
 alias cd="cd -P"
+alias back='cd "$OLDPWD"'
