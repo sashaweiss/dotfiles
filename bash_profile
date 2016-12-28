@@ -14,6 +14,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-alias celar="clear"
 alias cd="cd -P"
 alias back='cd "$OLDPWD"'
+alias wifioff='networksetup -setairportpower en0 off'
+alias wifion='networksetup -setairportpower en0 on'
