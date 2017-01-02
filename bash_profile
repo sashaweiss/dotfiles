@@ -18,3 +18,6 @@ alias cd="cd -P"
 alias back='cd "$OLDPWD"'
 alias wifioff='networksetup -setairportpower en0 off'
 alias wifion='networksetup -setairportpower en0 on'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
