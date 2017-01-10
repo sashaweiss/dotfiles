@@ -7,7 +7,7 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 NODE_PATH=/usr/local/lib/node_modules
 
 export ANDROID_HOME="~/Library/Android/sdk"
-export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.4/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$SCALAPATH/bin
+export PATH=$PATH:$SCALAPATH/bin
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
@@ -21,3 +21,5 @@ alias wifion='networksetup -setairportpower en0 on'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
+
+export PATH="/usr/local/miniconda2/bin:$PATH"
