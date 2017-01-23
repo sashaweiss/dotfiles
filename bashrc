@@ -20,3 +20,6 @@ function git_info {
 }
 
 PS1="$green\u $white| $red\h $white| $cyan\t $white| $magenta\W\$(git_info) $white\$ "
+
+shopt -s histappend
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
