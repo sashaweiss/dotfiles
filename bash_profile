@@ -21,5 +21,7 @@ alias wifion='networksetup -setairportpower en0 on'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
+alias gd='git diff'
+alias gdc='git diff --cached'
 
 export PATH="/usr/local/miniconda2/bin:$PATH"
