@@ -24,4 +24,3 @@ alias gc='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
 
-export PATH="/usr/local/miniconda2/bin:$PATH"
