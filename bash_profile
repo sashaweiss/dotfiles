@@ -24,3 +24,6 @@ alias gc='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
 
+alias ll='ls -lh'
+alias la='ls -a'
+alias lla='ls -lha'
