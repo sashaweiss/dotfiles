@@ -27,3 +27,5 @@ alias gdc='git diff --cached'
 alias ll='ls -lh'
 alias la='ls -a'
 alias lla='ls -lha'
+
+alias tmux='tmux -2'

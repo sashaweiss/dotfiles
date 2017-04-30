@@ -24,3 +24,6 @@ PS1="$green\u $white| $red\h $white| $cyan\t $white| $magenta\W\$(git_info) $whi
 
 shopt -s histappend
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
+# Download VimPlug
+#curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
