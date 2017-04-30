@@ -20,7 +20,7 @@ let mapleader=" "
 " Colors
 set background=dark
 set t_Co=256
-colorscheme molokai
+colorscheme afterglow
 let g:molokai_original = 1
 
 " Airline
