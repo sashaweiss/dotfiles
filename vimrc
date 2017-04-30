@@ -7,6 +7,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
@@ -36,6 +37,19 @@ let g:airline_right_alt_sep = ''
 let g:airline#extensions#tabline#enabled = 1      " Enable the list of buffers
 let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 
+" NERDTree
+nmap <leader>` :NERDTreeToggle<cr>
+let NERDTreeMapOpenSplit='\t'
+
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf = "~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+
+" No newline when accept autocomplete
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+
+" Typescript
+let g:typescript_indent_disable = 1
+
 " Buffers
 nmap <leader>T :enew<cr>
 nmap <leader>2 :bnext<cr>
@@ -44,13 +58,6 @@ nmap <leader>1 :bprevious<cr>
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
 nmap <leader>w :bp <BAR> bd #<cr>
-
-" NERDTree
-nmap <leader>` :NERDTreeToggle<cr>
-let NERDTreeMapOpenSplit='\t'
-
-" YouCompleteMe
-let g:ycm_global_ycm_extra_conf = "~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
 
 " New panes to right and bottom
 set splitright
