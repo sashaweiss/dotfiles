@@ -76,10 +76,12 @@ noremap l l
 noremap i k
 noremap k j
 noremap j h
-"noremap <Up> <nop>
+noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
+noremap <C-f> <C-D>
+noremap <C-B> <C-U>
 
 " Nuke scroll wheel spam characters
 noremap <ScrollWheelUp> <nop>
