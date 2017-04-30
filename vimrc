@@ -6,6 +6,7 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -47,6 +48,9 @@ nmap <leader>w :bp <BAR> bd #<cr>
 " NERDTree
 nmap <leader>` :NERDTreeToggle<cr>
 let NERDTreeMapOpenSplit='\t'
+
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf = "~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
 
 " New panes to right and bottom
 set splitright
