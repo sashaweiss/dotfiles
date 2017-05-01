@@ -8,6 +8,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'leafgarland/typescript-vim'
+Plug 'keith/swift.vim'
 
 call plug#end()
 
