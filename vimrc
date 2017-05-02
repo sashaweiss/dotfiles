@@ -9,6 +9,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'leafgarland/typescript-vim'
 Plug 'keith/swift.vim'
+Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
@@ -46,10 +47,10 @@ let NERDTreeMapOpenSplit='\t'
 let g:ycm_global_ycm_extra_conf = "~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
 
 " No newline when accept autocomplete
-inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+" inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
 " Typescript
-let g:typescript_indent_disable = 1
+let g:typescript_indent_disable = 0
 
 " Buffers
 nmap <leader>T :enew<cr>
@@ -71,6 +72,8 @@ set relativenumber
 " Tabs and indents
 set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
 set autoindent
+set cindent
+set smartindent
 
 " Search as you type into search string
 set incsearch
@@ -82,7 +85,8 @@ set linebreak
 inoremap jk <esc>
 
 " Insert
-noremap ; i
+noremap n i
+noremap m n
 
 " Move with right-hand wasd
 noremap l l
@@ -101,6 +105,10 @@ noremap <ScrollWheelUp> <nop>
 inoremap <ScrollWheelUp> <nop>
 noremap <ScrollWheelDown> <nop>
 inoremap <ScrollWheelDown> <nop>
+
+" Move delete so I stop killing lines
+noremap d w
+noremap w d
 
 " Change pane
 nnoremap <leader>j <C-w><Left>
