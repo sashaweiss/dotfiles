@@ -10,6 +10,8 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'leafgarland/typescript-vim'
 Plug 'keith/swift.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'altercation/vim-colors-solarized'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -25,7 +27,9 @@ let mapleader=" "
 " Colors
 set background=dark
 set t_Co=256
-colorscheme afterglow
+let g:solarized_termcolors=256
+"colorscheme afterglow
+colorscheme solarized
 let g:molokai_original = 1
 
 " Airline
