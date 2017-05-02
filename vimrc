@@ -12,6 +12,7 @@ Plug 'keith/swift.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'altercation/vim-colors-solarized'
 Plug 'jiangmiao/auto-pairs'
+Plug 'dahu/vim-fanfingtastic'
 
 call plug#end()
 
