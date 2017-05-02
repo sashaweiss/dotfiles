@@ -33,6 +33,8 @@ colorscheme solarized
 let g:molokai_original = 1
 
 " Airline
+let g:airline_theme='base16_mocha'
+
 set laststatus=2
 let g:airline_powerline_fonts = 1
 " airline symbols
@@ -103,6 +105,10 @@ noremap <Left> <nop>
 noremap <Right> <nop>
 noremap <C-f> <C-D>
 noremap <C-B> <C-U>
+
+" Jump by paragraph
+noremap K }
+noremap I {
 
 " Nuke scroll wheel spam characters
 noremap <ScrollWheelUp> <nop>
