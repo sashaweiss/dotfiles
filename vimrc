@@ -18,6 +18,7 @@ call plug#end()
 
 " Highlight
 syntax on
+set hlsearch
 
 " Don't beep on errors
 set visualbell
@@ -29,8 +30,8 @@ let mapleader=" "
 set background=dark
 set t_Co=256
 let g:solarized_termcolors=256
+colorscheme jellybeans
 "colorscheme afterglow
-colorscheme solarized
 let g:molokai_original = 1
 
 " Airline
@@ -52,12 +53,16 @@ let NERDTreeMapOpenSplit='\t'
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
-
-" No newline when accept autocomplete
-" inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_add_preview_to_completeopt = 0
+set completeopt-=preview'
 
 " Typescript
 let g:typescript_indent_disable = 0
+
+" Typescript autocomplete
+autocmd FileType typescript setlocal completeopt+=menu,preview
 
 " Buffers
 nmap <leader>T :enew<cr>
@@ -70,7 +75,7 @@ nmap <leader>w :bp <BAR> bd #<cr>
 
 " New panes to right and bottom
 set splitright
-set splitbelow
+"set splitbelow
 
 " Line numbers
 set number
@@ -95,6 +100,10 @@ inoremap jk <esc>
 noremap n i
 noremap m n
 
+" Insert with correct indent
+noremap M N
+noremap N cc
+
 " Move with right-hand wasd
 noremap l l
 noremap i k
@@ -110,6 +119,10 @@ noremap <C-B> <C-U>
 " Jump by paragraph
 noremap K }
 noremap I {
+
+" Scroll window by multiple lines at a time
+noremap <C-E> 3<C-E>
+noremap <C-Y> 3<C-Y>
 
 " Nuke scroll wheel spam characters
 noremap <ScrollWheelUp> <nop>
