@@ -13,6 +13,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'altercation/vim-colors-solarized'
 Plug 'jiangmiao/auto-pairs'
 Plug 'dahu/vim-fanfingtastic'
+Plug 'chaoren/vim-wordmotion'
 
 call plug#end()
 
@@ -116,6 +117,16 @@ noremap <Right> <nop>
 noremap <C-f> <C-D>
 noremap <C-B> <C-U>
 
+" Subword motion
+let g:wordmotion_mappings = {
+			\ 'w' : 'W',
+			\ 'b' : 'B',
+			\ 'e' : 'E',
+			\ 'ge' : '',
+			\ 'aw' : '',
+			\ 'iw' : ''
+\ }
+
 " Jump by paragraph
 noremap K }
 noremap I {
@@ -131,8 +142,8 @@ noremap <ScrollWheelDown> <nop>
 inoremap <ScrollWheelDown> <nop>
 
 " Move delete so I stop killing lines
-noremap d w
-noremap w d
+"noremap d w
+"noremap w d
 
 " Change pane
 nnoremap <leader>j <C-w><Left>
