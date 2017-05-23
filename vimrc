@@ -38,7 +38,13 @@ let g:solarized_termcolors=256
 "colorscheme ron
 colorscheme slate
 "colorscheme afterglow
+
+" Something related to molokai
 let g:molokai_original = 1
+
+" Don't highlight with terrible colors
+hi Search cterm=NONE ctermfg=grey ctermbg=blue
+hi MatchParen cterm=NONE ctermfg=grey ctermbg=blue
 
 " Airline
 let g:airline_theme='base16_mocha'
@@ -63,6 +69,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_add_preview_to_completeopt = 0
 set completeopt-=preview'
+
+map <leader>t :YcmCompleter GetType<CR>
 
 " Typescript
 let g:typescript_indent_disable = 0
