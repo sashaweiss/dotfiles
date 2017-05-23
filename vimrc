@@ -97,6 +97,9 @@ set linebreak
 " Enter command mode
 inoremap jk <esc>
 
+" Delete like normal
+set backspace=indent,eol,start
+
 " Insert
 noremap n i
 noremap m n
@@ -116,6 +119,9 @@ noremap <Left> <nop>
 noremap <Right> <nop>
 noremap <C-f> <C-D>
 noremap <C-B> <C-U>
+
+" Buffer space around cursor when scrolling
+set scrolloff=7
 
 " Subword motion
 let g:wordmotion_mappings = {
@@ -144,6 +150,12 @@ inoremap <ScrollWheelDown> <nop>
 " Move delete so I stop killing lines
 "noremap d w
 "noremap w d
+
+" Jump to end of line
+noremap z $
+
+" Copy to system
+noremap <leader>y "*y
 
 " Change pane
 nnoremap <leader>j <C-w><Left>
