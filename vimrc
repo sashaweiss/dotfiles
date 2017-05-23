@@ -31,7 +31,12 @@ let mapleader=" "
 set background=dark
 set t_Co=256
 let g:solarized_termcolors=256
-colorscheme jellybeans
+"colorscheme jellybeans
+"colorscheme desert
+"colorscheme molokai
+"colorscheme peachpuff
+"colorscheme ron
+colorscheme slate
 "colorscheme afterglow
 let g:molokai_original = 1
 
