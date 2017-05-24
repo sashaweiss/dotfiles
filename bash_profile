@@ -21,6 +21,8 @@ alias ga='git add'
 alias gc='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
+alias pg='ping google.com'
+alias d='date'
 
 alias ll='ls -lh'
 alias la='ls -a'

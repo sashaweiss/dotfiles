@@ -14,6 +14,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'jiangmiao/auto-pairs'
 Plug 'dahu/vim-fanfingtastic'
 Plug 'chaoren/vim-wordmotion'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
@@ -150,6 +151,9 @@ let g:wordmotion_mappings = {
 noremap K }
 noremap I {
 
+" Remap commenting
+nmap cc gc
+
 " Scroll window by multiple lines at a time
 noremap <C-E> 3<C-E>
 noremap <C-Y> 3<C-Y>
@@ -164,8 +168,9 @@ inoremap <ScrollWheelDown> <nop>
 "noremap d w
 "noremap w d
 
-" Jump to end of line
+" Jump around lines
 noremap z $
+noremap Z ^
 
 " Copy to system
 noremap <leader>y "*y
