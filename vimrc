@@ -48,7 +48,7 @@ hi Search cterm=NONE ctermfg=grey ctermbg=blue
 hi MatchParen cterm=NONE ctermfg=grey ctermbg=blue
 
 " Airline
-let g:airline_theme='base16_mocha'
+let g:airline_theme='cool'
 
 set laststatus=2
 let g:airline_powerline_fonts = 1
@@ -127,6 +127,10 @@ noremap l l
 noremap i k
 noremap k j
 noremap j h
+noremap <C-i> gk
+noremap <C-k> gj
+noremap <C-j> h
+noremap <C-l> l
 noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>
