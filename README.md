@@ -1,10 +1,10 @@
 # Sasha's dotfiles
 
-.files for bash, vim, and ssh host configuration.
+.files for bash, vim, tmux, and ssh host configuration.
 
-To install, clone this repo down. Then, in your ~ directory, run `ln -s dotfiles/<dotfile> .<dotfile>` to link to each of the cloned dotfiles. To reload bash configs, run `source <dotfile>`, or close and reopen your terminal.
+To install, clone this repo down into your home. Then, still in your ~ directory, run `ln -s dotfiles/bashrc .bashrc; ln -s dotfiles/bash_profile .bash_profile` to link to the cloned dotfiles. To reload bash configs, run `source <dotfile>`, or close and reopen your terminal.
 
-For the ssh host configuration, replace the hosts and netID with yours - it's largely a template.
+For the ssh host configuration, replace the hosts and netID with yours - it's largely a template. Then, add to the ~/.ssh directory.
 
 The bash prompt as it is in bashrc uses [git-prompt][git-prompt], [git-completion][git-completion], and a slight mod of [sexy-bash-prompt][sexy-bash-prompt], which can be found in etc/. 
 

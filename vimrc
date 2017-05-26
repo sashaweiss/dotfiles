@@ -188,3 +188,6 @@ nnoremap <leader>l <C-w><Right>
 " Map .md files to markdown
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
+" Download VimPlug
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
