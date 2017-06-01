@@ -15,6 +15,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'dahu/vim-fanfingtastic'
 Plug 'chaoren/vim-wordmotion'
 Plug 'tpope/vim-commentary'
+Plug 'alvan/vim-closetag'
 
 call plug#end()
 
@@ -73,6 +74,9 @@ set completeopt-=preview'
 
 map <leader>t :YcmCompleter GetType<CR>
 
+" CtrlP
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
 " Typescript
 let g:typescript_indent_disable = 0
 
@@ -104,6 +108,10 @@ set smartindent
 
 " Search as you type into search string
 set incsearch
+
+" Bash-style completions for file names
+set wildmode=longest,list,full
+set wildmenu
 
 " Word wrap on line break
 set linebreak
