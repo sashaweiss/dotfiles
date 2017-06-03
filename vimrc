@@ -74,6 +74,9 @@ set completeopt-=preview'
 
 map <leader>t :YcmCompleter GetType<CR>
 
+" Invoke prettier for TS
+command Prettier silent %!prettier --stdin --trailing-comma all --single-quote
+
 " CtrlP
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
