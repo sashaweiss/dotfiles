@@ -18,7 +18,7 @@ function git_info {
   echo " // [$(sexy_bash_prompt_get_git_info)$(sexy_bash_prompt_get_git_progress)]"
 }
 
-PS1="$cyan\u // $red\h // $magenta\W$green\$(git_info)\n$blue... $white"
+PS1="$cyan\u // $magenta\h // $green\W$red\$(git_info)\n$blue... $white"
 trap '[[ -t 1  ]] && tput sgr0' DEBUG
 
 shopt -s histappend
