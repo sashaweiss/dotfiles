@@ -75,10 +75,10 @@ set completeopt-=preview'
 map <leader>t :YcmCompleter GetType<CR>
 
 " Invoke prettier for TS
-command Prettier silent %!prettier --stdin --trailing-comma all --single-quote
+command! Prettier silent %!prettier --stdin --trailing-comma all --single-quote
 
 " CtrlP
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|out'
 
 " Typescript
 let g:typescript_indent_disable = 0
