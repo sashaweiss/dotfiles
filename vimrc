@@ -49,6 +49,10 @@ au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=ghmarkdown
 " Four space tabs for Python
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
+" Set up highlight group & retain through colorscheme changes
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+
 " Highlight trailing whitespace
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
