@@ -19,9 +19,19 @@ Plug 'alvan/vim-closetag'
 
 call plug#end()
 
+
+" ========= General Options =========
+
 " Highlight
 syntax on
 set hlsearch
+
+" Line numbers
+set number
+set relativenumber
+
+" Delete like normal
+set backspace=indent,eol,start
 
 " Don't beep on errors
 set visualbell
@@ -29,18 +39,32 @@ set visualbell
 " Map leader to space
 let mapleader=" "
 
-" Colors
+" Word wrap on line break
+set linebreak
+
+" Map .md files to markdown
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
+
+
+" ========= Colors =========
+
+" Background color
 set background=dark
-set t_Co=256
-let g:solarized_termcolors=256
+
+" Colors
+colorscheme slate
 "colorscheme jellybeans
 "colorscheme desert
 "colorscheme molokai
 "colorscheme peachpuff
 "colorscheme ron
-colorscheme slate
 "colorscheme vibrantink
 "colorscheme afterglow
+
+" Terminal color adjustments
+set t_Co=256
+let g:solarized_termcolors=256
 
 " Something related to molokai
 let g:molokai_original = 1
@@ -49,21 +73,45 @@ let g:molokai_original = 1
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
 hi MatchParen cterm=NONE ctermfg=grey ctermbg=blue
 
+" New panes to right and bottom
+set splitright
+
+" Tabs and indents
+set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
+set autoindent
+set cindent
+set smartindent
+
+" Incremental search
+set incsearch
+
+" Bash-style completions for file names
+set wildmode=longest,list,full
+set wildmenu
+
+" Ignores
+set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out
+
+" Buffer space around cursor when scrolling
+set scrolloff=7
+
+
+" ========= Plugin Configuration =========
+
 " Airline
 let g:airline_theme='cool'
-
 set laststatus=2
 let g:airline_powerline_fonts = 1
-" airline symbols
+let g:airline#extensions#tabline#enabled = 1      " Enable the list of buffers
+let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
+
+" Airline symbols
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-let g:airline#extensions#tabline#enabled = 1      " Enable the list of buffers
-let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 
 " NERDTree
-nmap <leader>nt :NERDTreeToggle<cr>
 let NERDTreeMapOpenSplit='\t'
 
 " YouCompleteMe
@@ -73,65 +121,9 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_add_preview_to_completeopt = 0
 set completeopt-=preview'
 
-map <leader>gt :YcmCompleter GetType<CR>
-
-" Invoke prettier for TS
-command! Prettier silent %!prettier --stdin --trailing-comma all --single-quote
-
-" CtrlP
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|out'
-
 " Typescript
 let g:typescript_indent_disable = 0
-
-" Typescript autocomplete
-autocmd FileType typescript setlocal completeopt+=menu,preview
-
-" Buffers
-nmap <leader>t :enew<cr>
-nmap <leader>2 :bnext<cr>
-nmap <leader>1 :bprevious<cr>
-
-" Close the current buffer and move to the previous one
-" This replicates the idea of closing a tab
-nmap <leader>w :bp <BAR> bd #<cr>
-
-" New panes to right and bottom
-set splitright
-"set splitbelow
-
-" Line numbers
-set number
-set relativenumber
-
-" Tabs and indents
-set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
-set autoindent
-set cindent
-set smartindent
-
-" Search as you type into search string
-set incsearch
-
-" Bash-style completions for file names
-set wildmode=longest,list,full
-set wildmenu
-
-" Word wrap on line break
-set linebreak
-
-" Enter command mode
-inoremap jk <esc>
-
-" Delete like normal
-set backspace=indent,eol,start
-
-" Only go down half a page at a time
-noremap <C-f> <C-D>
-noremap <C-B> <C-U>
-
-" Buffer space around cursor when scrolling
-set scrolloff=7
+autocmd FileType typescript setlocal completeopt+=menu,preview  " autocomplete
 
 " Subword motion
 let g:wordmotion_mappings = {
@@ -143,8 +135,21 @@ let g:wordmotion_mappings = {
 			\ 'iw' : ''
 \ }
 
-" Remap commenting
-"nmap cc gc
+
+" ========= Remappings =========
+
+" Enter command mode
+inoremap jk <esc>
+
+" Buffers
+nmap <leader>t :enew<cr>
+nmap <leader>2 :bnext<cr>
+nmap <leader>1 :bprevious<cr>
+nmap <leader>w :bp <BAR> bd #<cr>
+
+" Only go down half a page at a time
+noremap <C-f> <C-D>
+noremap <C-B> <C-U>
 
 " Scroll window by multiple lines at a time
 noremap <C-E> 3<C-E>
@@ -163,8 +168,19 @@ noremap Z ^
 " Copy to system (only applicable on Mac)
 noremap <leader>y "*y
 
-" Map .md files to markdown
-au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+" Infer type
+map <leader>gt :YcmCompleter GetType<CR>
+
+" Toggle NERDTree
+nmap <leader>nt :NERDTreeToggle<cr>
+
+" ========= Custom Commands =========
+
+" Invoke prettier for TS
+command! Prettier silent %!prettier --stdin --trailing-comma all --single-quote
+
+
+" ========= Notes =========
 
 " Download VimPlug
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
