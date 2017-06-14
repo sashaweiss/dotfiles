@@ -126,27 +126,7 @@ inoremap jk <esc>
 " Delete like normal
 set backspace=indent,eol,start
 
-" Insert
-noremap n i
-noremap m n
-
-" Insert with correct indent
-noremap M N
-noremap N cc
-
-" Move with right-hand wasd
-noremap l l
-noremap i k
-noremap k j
-noremap j h
-noremap <C-i> gk
-noremap <C-k> gj
-noremap <C-j> h
-noremap <C-l> l
-noremap <Up> <nop>
-noremap <Down> <nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
+" Only go down half a page at a time
 noremap <C-f> <C-D>
 noremap <C-B> <C-U>
 
@@ -155,20 +135,16 @@ set scrolloff=7
 
 " Subword motion
 let g:wordmotion_mappings = {
-			\ 'w' : 'W',
-			\ 'b' : 'B',
-			\ 'e' : 'E',
+			\ 'w' : 'gw',
+			\ 'b' : 'gb',
+			\ 'e' : 'ge',
 			\ 'ge' : '',
 			\ 'aw' : '',
 			\ 'iw' : ''
 \ }
 
-" Jump by paragraph
-noremap K }
-noremap I {
-
 " Remap commenting
-nmap cc gc
+"nmap cc gc
 
 " Scroll window by multiple lines at a time
 noremap <C-E> 3<C-E>
@@ -180,22 +156,12 @@ inoremap <ScrollWheelUp> <nop>
 noremap <ScrollWheelDown> <nop>
 inoremap <ScrollWheelDown> <nop>
 
-" Move delete so I stop killing lines
-"noremap d w
-"noremap w d
-
 " Jump around lines
 noremap z $
 noremap Z ^
 
-" Copy to system
+" Copy to system (only applicable on Mac)
 noremap <leader>y "*y
-
-" Change pane
-nnoremap <leader>j <C-w><Left>
-nnoremap <leader>k <C-w><Down>
-nnoremap <leader>i <C-w><Up>
-nnoremap <leader>l <C-w><Right>
 
 " Map .md files to markdown
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
