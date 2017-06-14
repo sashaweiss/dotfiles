@@ -39,6 +39,7 @@ let g:solarized_termcolors=256
 "colorscheme peachpuff
 "colorscheme ron
 colorscheme slate
+"colorscheme vibrantink
 "colorscheme afterglow
 
 " Something related to molokai
@@ -62,7 +63,7 @@ let g:airline#extensions#tabline#enabled = 1      " Enable the list of buffers
 let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 
 " NERDTree
-nmap <leader>` :NERDTreeToggle<cr>
+nmap <leader>nt :NERDTreeToggle<cr>
 let NERDTreeMapOpenSplit='\t'
 
 " YouCompleteMe
@@ -72,7 +73,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_add_preview_to_completeopt = 0
 set completeopt-=preview'
 
-map <leader>t :YcmCompleter GetType<CR>
+map <leader>gt :YcmCompleter GetType<CR>
 
 " Invoke prettier for TS
 command! Prettier silent %!prettier --stdin --trailing-comma all --single-quote
@@ -87,7 +88,7 @@ let g:typescript_indent_disable = 0
 autocmd FileType typescript setlocal completeopt+=menu,preview
 
 " Buffers
-nmap <leader>T :enew<cr>
+nmap <leader>t :enew<cr>
 nmap <leader>2 :bnext<cr>
 nmap <leader>1 :bprevious<cr>
 
