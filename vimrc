@@ -1,4 +1,5 @@
-" VimPlug plugins
+" ========= VimPlug Plugins =========
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
@@ -44,7 +45,6 @@ set linebreak
 
 " Map .md files to markdown
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-
 
 
 " ========= Colors =========
@@ -125,16 +125,6 @@ set completeopt-=preview'
 let g:typescript_indent_disable = 0
 autocmd FileType typescript setlocal completeopt+=menu,preview  " autocomplete
 
-" Subword motion
-let g:wordmotion_mappings = {
-			\ 'w' : 'gw',
-			\ 'b' : 'gb',
-			\ 'e' : 'ge',
-			\ 'ge' : '',
-			\ 'aw' : '',
-			\ 'iw' : ''
-\ }
-
 
 " ========= Remappings =========
 
@@ -165,6 +155,12 @@ inoremap <ScrollWheelDown> <nop>
 noremap z $
 noremap Z ^
 
+" Jump between panes with leader
+map <leader>h <C-W>h
+map <leader>j <C-W>j
+map <leader>k <C-W>k
+map <leader>l <C-W>l
+
 " Copy to system (only applicable on Mac)
 noremap <leader>y "*y
 
@@ -173,6 +169,17 @@ map <leader>gt :YcmCompleter GetType<CR>
 
 " Toggle NERDTree
 nmap <leader>nt :NERDTreeToggle<cr>
+
+" Subword motion
+let g:wordmotion_mappings = {
+			\ 'w' : 'gw',
+			\ 'b' : 'gb',
+			\ 'e' : 'ge',
+			\ 'ge' : '',
+			\ 'aw' : '',
+			\ 'iw' : ''
+\ }
+
 
 " ========= Custom Commands =========
 
