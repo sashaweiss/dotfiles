@@ -44,7 +44,17 @@ let mapleader=" "
 set linebreak
 
 " Map .md files to markdown
-au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=ghmarkdown
+
+" Four space tabs for Python
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
+
+" Highlight trailing whitespace
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
+
+" Autoremove trailing spaces when saving the buffer
+autocmd FileType c,cpp,elixir,eruby,html,java,javascript,php,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 
 " ========= Colors =========
