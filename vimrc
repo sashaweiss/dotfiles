@@ -165,6 +165,10 @@ inoremap <ScrollWheelUp> <nop>
 noremap <ScrollWheelDown> <nop>
 inoremap <ScrollWheelDown> <nop>
 
+" Jump paragraphs using capital J and K
+noremap K {
+noremap J }
+
 " Jump around lines
 noremap z $
 noremap Z ^
