@@ -1,4 +1,5 @@
-" VimPlug plugins
+" ========= VimPlug Plugins =========
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
@@ -19,9 +20,19 @@ Plug 'alvan/vim-closetag'
 
 call plug#end()
 
+
+" ========= General Options =========
+
 " Highlight
 syntax on
 set hlsearch
+
+" Line numbers
+set number
+set relativenumber
+
+" Delete like normal
+set backspace=indent,eol,start
 
 " Don't beep on errors
 set visualbell
@@ -29,17 +40,45 @@ set visualbell
 " Map leader to space
 let mapleader=" "
 
-" Colors
+" Word wrap on line break
+set linebreak
+
+" Map .md files to markdown
+au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=ghmarkdown
+
+" Four space tabs for Python
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
+
+" Set up highlight group & retain through colorscheme changes
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+
+" Highlight trailing whitespace
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
+
+" Autoremove trailing spaces when saving the buffer
+autocmd FileType c,cpp,elixir,eruby,html,java,javascript,php,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+
+" ========= Colors =========
+
+" Background color
 set background=dark
-set t_Co=256
-let g:solarized_termcolors=256
+
+" Colors
+colorscheme slate
 "colorscheme jellybeans
 "colorscheme desert
 "colorscheme molokai
 "colorscheme peachpuff
 "colorscheme ron
-colorscheme slate
+"colorscheme vibrantink
 "colorscheme afterglow
+
+" Terminal color adjustments
+set t_Co=256
+let g:solarized_termcolors=256
 
 " Something related to molokai
 let g:molokai_original = 1
@@ -48,21 +87,45 @@ let g:molokai_original = 1
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
 hi MatchParen cterm=NONE ctermfg=grey ctermbg=blue
 
+" New panes to right and bottom
+set splitright
+
+" Tabs and indents
+set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
+set autoindent
+set cindent
+set smartindent
+
+" Incremental search
+set incsearch
+
+" Bash-style completions for file names
+set wildmode=longest,list,full
+set wildmenu
+
+" Ignores
+set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out
+
+" Buffer space around cursor when scrolling
+set scrolloff=7
+
+
+" ========= Plugin Configuration =========
+
 " Airline
 let g:airline_theme='cool'
-
 set laststatus=2
 let g:airline_powerline_fonts = 1
-" airline symbols
+let g:airline#extensions#tabline#enabled = 1      " Enable the list of buffers
+let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
+
+" Airline symbols
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-let g:airline#extensions#tabline#enabled = 1      " Enable the list of buffers
-let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 
 " NERDTree
-nmap <leader>` :NERDTreeToggle<cr>
 let NERDTreeMapOpenSplit='\t'
 
 " YouCompleteMe
@@ -72,102 +135,25 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_add_preview_to_completeopt = 0
 set completeopt-=preview'
 
-map <leader>t :YcmCompleter GetType<CR>
-
-" Invoke prettier for TS
-command! Prettier silent %!prettier --stdin --trailing-comma all --single-quote
-
-" CtrlP
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|out'
-
 " Typescript
 let g:typescript_indent_disable = 0
+autocmd FileType typescript setlocal completeopt+=menu,preview  " autocomplete
 
-" Typescript autocomplete
-autocmd FileType typescript setlocal completeopt+=menu,preview
 
-" Buffers
-nmap <leader>T :enew<cr>
-nmap <leader>2 :bnext<cr>
-nmap <leader>1 :bprevious<cr>
-
-" Close the current buffer and move to the previous one
-" This replicates the idea of closing a tab
-nmap <leader>w :bp <BAR> bd #<cr>
-
-" New panes to right and bottom
-set splitright
-"set splitbelow
-
-" Line numbers
-set number
-set relativenumber
-
-" Tabs and indents
-set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
-set autoindent
-set cindent
-set smartindent
-
-" Search as you type into search string
-set incsearch
-
-" Bash-style completions for file names
-set wildmode=longest,list,full
-set wildmenu
-
-" Word wrap on line break
-set linebreak
+" ========= Remappings =========
 
 " Enter command mode
 inoremap jk <esc>
 
-" Delete like normal
-set backspace=indent,eol,start
+" Buffers
+nmap <leader>t :enew<cr>
+nmap <leader>2 :bnext<cr>
+nmap <leader>1 :bprevious<cr>
+nmap <leader>w :bp <BAR> bd #<cr>
 
-" Insert
-noremap n i
-noremap m n
-
-" Insert with correct indent
-noremap M N
-noremap N cc
-
-" Move with right-hand wasd
-noremap l l
-noremap i k
-noremap k j
-noremap j h
-noremap <C-i> gk
-noremap <C-k> gj
-noremap <C-j> h
-noremap <C-l> l
-noremap <Up> <nop>
-noremap <Down> <nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
+" Only go down half a page at a time
 noremap <C-f> <C-D>
 noremap <C-B> <C-U>
-
-" Buffer space around cursor when scrolling
-set scrolloff=7
-
-" Subword motion
-let g:wordmotion_mappings = {
-			\ 'w' : 'W',
-			\ 'b' : 'B',
-			\ 'e' : 'E',
-			\ 'ge' : '',
-			\ 'aw' : '',
-			\ 'iw' : ''
-\ }
-
-" Jump by paragraph
-noremap K }
-noremap I {
-
-" Remap commenting
-nmap cc gc
 
 " Scroll window by multiple lines at a time
 noremap <C-E> 3<C-E>
@@ -179,25 +165,47 @@ inoremap <ScrollWheelUp> <nop>
 noremap <ScrollWheelDown> <nop>
 inoremap <ScrollWheelDown> <nop>
 
-" Move delete so I stop killing lines
-"noremap d w
-"noremap w d
+" Jump paragraphs using capital J and K
+noremap K {
+noremap J }
 
 " Jump around lines
 noremap z $
 noremap Z ^
 
-" Copy to system
+" Jump between panes with leader
+map <leader>h <C-W>h
+map <leader>j <C-W>j
+map <leader>k <C-W>k
+map <leader>l <C-W>l
+
+" Copy to system (only applicable on Mac)
 noremap <leader>y "*y
 
-" Change pane
-nnoremap <leader>j <C-w><Left>
-nnoremap <leader>k <C-w><Down>
-nnoremap <leader>i <C-w><Up>
-nnoremap <leader>l <C-w><Right>
+" Infer type
+map <leader>gt :YcmCompleter GetType<CR>
 
-" Map .md files to markdown
-au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+" Toggle NERDTree
+nmap <leader>nt :NERDTreeToggle<cr>
+
+" Subword motion
+let g:wordmotion_mappings = {
+			\ 'w' : 'gw',
+			\ 'b' : 'gb',
+			\ 'e' : 'ge',
+			\ 'ge' : '',
+			\ 'aw' : '',
+			\ 'iw' : ''
+\ }
+
+
+" ========= Custom Commands =========
+
+" Invoke prettier for TS
+command! Prettier silent %!prettier --stdin --trailing-comma all --single-quote
+
+
+" ========= Notes =========
 
 " Download VimPlug
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
