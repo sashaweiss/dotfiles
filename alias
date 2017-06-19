@@ -9,6 +9,8 @@ alias ga='git add'
 alias gc='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
+alias gco='git checkout'
+
 alias pg='ping google.com'
 alias d='date'
 alias batt='pmset -g batt'
