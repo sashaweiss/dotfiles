@@ -1,0 +1,8 @@
+[user]
+	name = sashaweiss
+	email = sasha.weiss@getbraintree.com
+[core]
+	editor = vim
+[alias]
+	co = checkout
+
