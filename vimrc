@@ -17,6 +17,7 @@ Plug 'dahu/vim-fanfingtastic'
 Plug 'chaoren/vim-wordmotion'
 Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
+Plug 'mustache/vim-mustache-handlebars'
 
 call plug#end()
 
@@ -104,7 +105,7 @@ set wildmode=longest,list,full
 set wildmenu
 
 " Ignores
-set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out
+set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out,node_modules
 
 " Buffer space around cursor when scrolling
 set scrolloff=7
