@@ -45,7 +45,7 @@ let mapleader=" "
 set linebreak
 
 " Map .md files to markdown
-au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=ghmarkdown
+au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=markdown
 
 " Four space tabs for Python
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
