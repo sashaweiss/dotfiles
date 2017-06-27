@@ -6,6 +6,8 @@ alias bt='cd ~/bt'
 
 alias wifioff='networksetup -setairportpower en0 off'
 alias wifion='networksetup -setairportpower en0 on'
+
+alias g='git'
 alias gs='git status'
 alias gst='git stash'
 alias ga='git add'
