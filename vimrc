@@ -17,6 +17,7 @@ Plug 'dahu/vim-fanfingtastic'
 Plug 'chaoren/vim-wordmotion'
 Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
+Plug 'mustache/vim-mustache-handlebars'
 
 call plug#end()
 
@@ -104,7 +105,7 @@ set wildmode=longest,list,full
 set wildmenu
 
 " Ignores
-set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out
+set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out,node_modules,dist
 
 " Buffer space around cursor when scrolling
 set scrolloff=7
@@ -138,6 +139,9 @@ set completeopt-=preview'
 " Typescript
 let g:typescript_indent_disable = 0
 autocmd FileType typescript setlocal completeopt+=menu,preview  " autocomplete
+
+" Autoclose HTML
+let g:closetag_filenames = "*.html, *.hbs, *.handlebars"
 
 
 " ========= Remappings =========
