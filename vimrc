@@ -134,6 +134,7 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/plugged/YouCompleteMe/third_party/ycmd
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_min_num_of_chars_for_completion = 1
 set completeopt-=preview'
 
 " Typescript
