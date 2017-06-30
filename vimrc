@@ -18,6 +18,7 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'terryma/vim-smooth-scroll'
 
 call plug#end()
 
@@ -141,6 +142,12 @@ set completeopt-=preview'
 let g:typescript_indent_disable = 0
 autocmd FileType typescript setlocal completeopt+=menu,preview  " autocomplete
 
+" Smooth Scroll
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll*2/3, 0, 6)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll*2/3, 0, 6)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2*2/3, 0, 12)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2*2/3, 0, 12)<CR>
+
 
 " ========= Remappings =========
 
@@ -152,10 +159,6 @@ nmap <leader>t :enew<cr>
 nmap <leader>2 :bnext<cr>
 nmap <leader>1 :bprevious<cr>
 nmap <leader>w :bp <BAR> bd #<cr>
-
-" Only go down half a page at a time
-noremap <C-f> <C-D>
-noremap <C-B> <C-U>
 
 " Scroll window by multiple lines at a time
 noremap <C-E> 3<C-E>
