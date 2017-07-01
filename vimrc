@@ -18,6 +18,7 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'terryma/vim-smooth-scroll'
 
 call plug#end()
 
@@ -45,7 +46,7 @@ let mapleader=" "
 set linebreak
 
 " Map .md files to markdown
-au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=ghmarkdown
+au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=markdown
 
 " Four space tabs for Python
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
@@ -134,6 +135,7 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/plugged/YouCompleteMe/third_party/ycmd
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_min_num_of_chars_for_completion = 1
 set completeopt-=preview'
 
 " Typescript
@@ -142,6 +144,12 @@ autocmd FileType typescript setlocal completeopt+=menu,preview  " autocomplete
 
 " Autoclose HTML
 let g:closetag_filenames = "*.html, *.hbs, *.handlebars"
+
+" Smooth Scroll
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll*2/3, 0, 6)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll*2/3, 0, 6)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2*2/3, 0, 12)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2*2/3, 0, 12)<CR>
 
 
 " ========= Remappings =========
@@ -154,10 +162,6 @@ nmap <leader>t :enew<cr>
 nmap <leader>2 :bnext<cr>
 nmap <leader>1 :bprevious<cr>
 nmap <leader>w :bp <BAR> bd #<cr>
-
-" Only go down half a page at a time
-noremap <C-f> <C-D>
-noremap <C-B> <C-U>
 
 " Scroll window by multiple lines at a time
 noremap <C-E> 3<C-E>
