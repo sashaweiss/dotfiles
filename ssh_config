@@ -25,3 +25,11 @@ Host hanlon
 Host watney
 	HostName 25.21.232.134
 	user sasha
+
+Host patera
+	HostName 25.14.80.57
+	user jiripatera
+
+Host sasha_patera
+	HostName 25.14.80.57
+	user sasha
