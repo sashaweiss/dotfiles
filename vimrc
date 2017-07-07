@@ -88,6 +88,8 @@ let g:molokai_original = 1
 " Don't highlight with terrible colors
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
 hi MatchParen cterm=NONE ctermfg=grey ctermbg=blue
+hi Error cterm=NONE ctermfg=white ctermbg=red
+hi SpellBad cterm=NONE ctermfg=white ctermbg=red
 
 " New panes to right and bottom
 set splitright
