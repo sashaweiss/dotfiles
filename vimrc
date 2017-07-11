@@ -108,7 +108,7 @@ set wildmode=longest,list,full
 set wildmenu
 
 " Ignores
-set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out,node_modules,dist
+set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out,node_modules,dist,venv
 
 " Buffer space around cursor when scrolling
 set scrolloff=7
