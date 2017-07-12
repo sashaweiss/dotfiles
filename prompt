@@ -6,6 +6,6 @@ function git_info {
 }
 
 source ~/dotfiles/etc/sexy-bash-prompt.sh
-PROMPT="%B%F{cyan}%n %f%F{white}➞%f %F{magenta}%m %f%F{white}➞%f %F{green}%1d%f$(git_info)%f
-%F{white}...%b %F{white}"
+PROMPT='%B%F{cyan}%n %f%F{white}➞%f %F{magenta}%m %f%F{white}➞%f %F{green}%1d%f$(git_info)%f
+%F{white}...%b %F{white}'
 
