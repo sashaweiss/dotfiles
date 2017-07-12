@@ -9,9 +9,6 @@ alias pg='ping google.com'
 alias d='date'
 alias batt='pmset -g batt'
 
-alias bt='cd ~/bt'
-alias sdk='cd ~/go/src/github.braintreeps.com/dx/sdkgen'
-
 alias wifioff='networksetup -setairportpower en0 off'
 alias wifion='networksetup -setairportpower en0 on'
 
@@ -23,9 +20,9 @@ alias gc='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
 
-alias ll='ls -lh'
-alias la='ls -a'
-alias lla='ls -lha'
+alias ll='ls -lFh'
+alias la='ls -aF'
+alias lla='ls -lFha'
 
 alias tmux='tmux -2'
 
