@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/zsh
 
-alias cd="cd -P"
+alias cd='cd -P'
 alias back='cd "$OLDPWD"'
 
 alias wifioff='networksetup -setairportpower en0 off'
