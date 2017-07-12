@@ -1,4 +1,11 @@
 #!/bin/zsh
 
-ZSH_THEME="robbyrussell"
+function git_info {
+  $(sexy_bash_prompt_is_on_git) && \
+  echo " // [$(sexy_bash_prompt_get_git_info)$(sexy_bash_prompt_get_git_progress)]"
+}
+
+source ~/dotfiles/etc/sexy-bash-prompt.sh
+PROMPT="%B%F{cyan}%n //%f %F{magenta}%m //%f %F{green}%1d%f%F{red}\$(git_info)%f
+%F{blue}...%f%b %F{white}"
 
