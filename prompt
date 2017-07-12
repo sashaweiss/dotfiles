@@ -2,7 +2,7 @@
 
 function git_info {
   $(sexy_bash_prompt_is_on_git) && \
-  echo " %F{white}➞%f%F{red} [$(sexy_bash_prompt_get_git_info)$(sexy_bash_prompt_get_git_progress)]%f"
+  echo " %F{white}➞%f%F{red} ($(sexy_bash_prompt_get_git_info)$(sexy_bash_prompt_get_git_progress))%f"
 }
 
 source ~/dotfiles/etc/sexy-bash-prompt.sh
