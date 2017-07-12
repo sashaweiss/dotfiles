@@ -3,7 +3,7 @@
 # ZSH Plugins
 plugins=(git)
 
-export ZSH="/Users/alexweiss/.oh-my-zsh"
+export ZSH="/Users/sasha/.oh-my-zsh"
 
 source ~/dotfiles/colors
 
