@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/zsh
 
-alias cd="cd -P"
+alias cd='cd -P'
 alias back='cd "$OLDPWD"'
 alias bt='cd ~/bt'
 alias sdk='cd ~/go/src/github.braintreeps.com/dx/sdkgen'
