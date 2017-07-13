@@ -2,6 +2,7 @@
 
 alias cd='cd -P'
 alias back='cd "$OLDPWD"'
+alias work='cd ~/.projects'
 
 alias wifioff='networksetup -setairportpower en0 off'
 alias wifion='networksetup -setairportpower en0 on'
