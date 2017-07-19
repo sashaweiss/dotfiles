@@ -15,3 +15,4 @@ source ~/dotfiles/prompt
 
 unalias -m '*'
 source ~/dotfiles/alias
+
