@@ -195,6 +195,9 @@ noremap <leader>y "*y
 " Infer type
 map <leader>gt :YcmCompleter GetType<CR>
 
+" View doc
+map <leader>gd :YcmCompleter GetDoc<CR>
+
 " Toggle NERDTree
 nmap <leader>nt :NERDTreeToggle<cr>
 
