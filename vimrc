@@ -31,7 +31,6 @@ set hlsearch
 
 " Line numbers
 set number
-set relativenumber
 
 " Delete like normal
 set backspace=indent,eol,start
