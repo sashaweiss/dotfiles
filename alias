@@ -3,6 +3,7 @@
 alias cd='cd -P'
 alias back='cd "$OLDPWD"'
 alias sdk='cd /Users/alexweiss/go/src/github.braintreeps.com/dx/sdkgen/'
+alias bt='cd ~/bt'
 
 alias wifioff='networksetup -setairportpower en0 off'
 alias wifion='networksetup -setairportpower en0 on'
