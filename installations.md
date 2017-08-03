@@ -1,6 +1,8 @@
 ## brew
 - thefuck
 - vim
+- tree
+- wget
 
 ## npm
 - typescript
