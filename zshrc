@@ -3,7 +3,7 @@
 # ZSH Plugins
 plugins=(git npm python sudo)
 
-export ZSH="/Users/sasha/.oh-my-zsh"
+export ZSH="/Users/alexweiss/.oh-my-zsh"
 
 source ~/dotfiles/colors
 
@@ -15,3 +15,4 @@ source ~/dotfiles/prompt
 
 unalias -m '*'
 source ~/dotfiles/alias
+

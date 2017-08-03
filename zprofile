@@ -1,15 +1,18 @@
 #!/bin/zsh
 
-export PYTHONPATH="/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python:/Library/Python/2.7/site-packages:/usr/.local/lib/python2.7/site-packages:$PYTHONPATH"
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+if [[ ! -d ~/.oh-my-zsh ]]; then
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
 
-VIM_PATH=/usr/local/Cellar/vim/8.0.0596/bin
-SCALA_PATH="/usr/local/share/scala/bin"
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
 
-PATH=$SCALA_PATH:$PATH
-PATH=$VIM_PATH:$PATH
-export PATH
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+export PATH="$PATH:$HOME/.rvm/bin"
 
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="/Users/alexweiss/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export JAVA_HOME=$(/usr/libexec/java_home)
 

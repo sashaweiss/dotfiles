@@ -11,9 +11,6 @@ alias pg='ping google.com'
 alias d='date'
 alias batt='pmset -g batt'
 
-alias wifioff='networksetup -setairportpower en0 off'
-alias wifion='networksetup -setairportpower en0 on'
-
 alias g='git'
 alias gs='git status'
 alias gst='git stash'
@@ -22,9 +19,8 @@ alias gc='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
 
-alias ll='ls -lFh'
-alias la='ls -aF'
-alias lla='ls -lFha'
+alias l='ls -lFh'
+alias la='ls -alhF'
 
 alias tmux='tmux -2'
 
