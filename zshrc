@@ -3,16 +3,16 @@
 # ZSH Plugins
 plugins=(git npm python sudo)
 
-export ZSH="/Users/alexweiss/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
-source ~/dotfiles/colors
+source $HOME/dotfiles/colors
 
 # ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 
 setopt PROMPT_SUBST
-source ~/dotfiles/prompt
+source $HOME/dotfiles/prompt
 
 unalias -m '*'
-source ~/dotfiles/alias
+source $HOME/dotfiles/alias
 

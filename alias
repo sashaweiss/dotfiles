@@ -2,14 +2,10 @@
 
 alias cd='cd -P'
 alias back='cd "$OLDPWD"'
-alias work='cd ~/.projects'
 alias "cd.."='cd ..'
 
-alias wifioff='networksetup -setairportpower en0 off'
-alias wifion='networksetup -setairportpower en0 on'
 alias pg='ping google.com'
 alias d='date'
-alias batt='pmset -g batt'
 
 alias g='git'
 alias gs='git status'
@@ -25,4 +21,6 @@ alias la='ls -alhF'
 alias tmux='tmux -2'
 
 eval $(thefuck --alias)
+
+source $HOME/dotfiles/machines/"$(hostname)"/alias
 

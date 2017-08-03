@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+alias work='cd ~/.projects'
+
+alias wifioff='networksetup -setairportpower en2 off'
+alias wifion='networksetup -setairportpower en0 on'
+
+alias batt='pmset -g batt'
+
+# http://xkcd.com/530/
+alias shh="osascript -e 'set volume output muted true'"
+alias loud="osascript -e 'set volume output volume 100'"

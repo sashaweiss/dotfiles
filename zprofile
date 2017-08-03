@@ -1,3 +1,4 @@
 #!/bin/zsh
 
-source ~/dotfiles/env_vars
+source ~/dotfiles/machines/"$(hostname)"/env_vars
+
