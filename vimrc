@@ -18,7 +18,6 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
 Plug 'mustache/vim-mustache-handlebars'
-Plug 'terryma/vim-smooth-scroll'
 
 call plug#end()
 
@@ -215,10 +214,4 @@ let g:wordmotion_mappings = {
 
 " Invoke prettier for TS
 command! Prettier silent %!prettier --stdin --trailing-comma all --single-quote
-
-
-" ========= Notes =========
-
-" Download VimPlug
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
