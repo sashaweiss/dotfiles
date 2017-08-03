@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # ZSH Plugins
-plugins=(git)
+plugins=(git npm python sudo)
 
 export ZSH="/Users/sasha/.oh-my-zsh"
 

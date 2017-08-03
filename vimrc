@@ -40,7 +40,7 @@ set backspace=indent,eol,start
 set visualbell
 
 " Map leader to space
-let mapleader=" "
+let mapleader="\\"
 
 " Word wrap on line break
 set linebreak
