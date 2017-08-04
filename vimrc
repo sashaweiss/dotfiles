@@ -36,8 +36,9 @@ set backspace=indent,eol,start
 
 " Don't beep on errors
 set visualbell
+set t_vb=
 
-" Map leader to space
+" Map leader to backslash
 let mapleader="\\"
 
 " Word wrap on line break
@@ -98,6 +99,10 @@ set autoindent
 set cindent
 set smartindent
 
+" Seach case-sensitive if capital in pattern, otherwise insensitive
+set ignorecase
+set smartcase
+
 " Incremental search
 set incsearch
 
@@ -109,7 +114,7 @@ set wildmenu
 set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out,node_modules,dist,venv
 
 " Buffer space around cursor when scrolling
-set scrolloff=7
+set scrolloff=3
 
 
 " ========= Plugin Configuration =========
@@ -144,12 +149,6 @@ autocmd FileType typescript setlocal completeopt+=menu,preview  " autocomplete
 
 " Autoclose HTML
 let g:closetag_filenames = "*.html, *.hbs, *.handlebars"
-
-" Smooth Scroll
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll*2/3, 0, 6)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll*2/3, 0, 6)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2*2/3, 0, 12)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2*2/3, 0, 12)<CR>
 
 
 " ========= Remappings =========
@@ -189,6 +188,9 @@ map <leader>l <C-W>l
 
 " Copy to system (only applicable on Mac)
 noremap <leader>y "*y
+
+" Search for highlighted text
+vnoremap <expr> // 'y/\V'.escape(@",'\').'<CR>'
 
 " Infer type
 map <leader>gt :YcmCompleter GetType<CR>
