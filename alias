@@ -24,5 +24,6 @@ alias tmux='tmux -2'
 
 eval $(thefuck --alias)
 
-source $HOME/dotfiles/machines/"$(hostname)"/alias
+mach=$HOME/dotfiles/machines/"$(hostname)"/alias
 
+if [[ -f "$mach" ]]; then source $mach; fi

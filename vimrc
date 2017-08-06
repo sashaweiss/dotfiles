@@ -67,6 +67,10 @@ autocmd FileType c,cpp,elixir,eruby,html,java,javascript,php,ruby autocmd BufWri
 " Background color
 set background=dark
 
+" Change gutter and vsplit color
+" hi LineNr ctermbg=#272d38
+" hi VertSplit ctermbg=#272D38
+
 " Colors
 colorscheme slate
 "colorscheme jellybeans

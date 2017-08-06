@@ -1,4 +1,6 @@
 #!/bin/zsh
 
-source ~/dotfiles/machines/"$(hostname)"/env_vars
+mach=$HOME/dotfiles/machines/"$(hostname)"/env_vars
+
+if [[ -f "$mach" ]]; then source $mach; fi
 
