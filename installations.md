@@ -25,7 +25,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 ### pip
 - virtualenv
 
-## misc
+### misc
 - [powerline fonts](https://github.com/powerline/fonts)
 
 ## Symlink dotfiles
