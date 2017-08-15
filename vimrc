@@ -7,7 +7,7 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 Plug 'leafgarland/typescript-vim'
 Plug 'keith/swift.vim'
 Plug 'pangloss/vim-javascript'
@@ -18,6 +18,8 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'fatih/vim-go'
 
 call plug#end()
 
@@ -115,7 +117,7 @@ set wildmode=longest,list,full
 set wildmenu
 
 " Ignores
-set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out,node_modules,dist,venv
+set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out,node_modules,dist,venv,vendor
 
 " Buffer space around cursor when scrolling
 set scrolloff=3
@@ -138,6 +140,7 @@ let g:airline_right_alt_sep = ''
 
 " NERDTree
 let NERDTreeMapOpenSplit='\t'
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
@@ -179,6 +182,10 @@ inoremap <ScrollWheelDown> <nop>
 " Jump paragraphs using capital J and K
 noremap K {
 noremap J }
+
+" Move by display lines
+nnoremap <silent> k gk
+nnoremap <silent> j gj
 
 " Jump around lines
 noremap z $

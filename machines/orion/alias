@@ -2,3 +2,4 @@
 
 alias sdk='cd /Users/alexweiss/go/src/github.braintreeps.com/dx/sdkgen/'
 alias bt='cd ~/bt'
+alias play='cd ~/Documents/projects'
