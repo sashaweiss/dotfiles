@@ -16,3 +16,6 @@ source $HOME/dotfiles/prompt
 unalias -m '*'
 source $HOME/dotfiles/alias
 
+# FZF completions
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

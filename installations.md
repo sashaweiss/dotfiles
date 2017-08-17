@@ -18,6 +18,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 - thefuck
 - tree
 - wget
+- fzf
 
 ### npm
 - typescript

@@ -6,8 +6,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'Valloric/YouCompleteMe'
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'keith/swift.vim'
 Plug 'pangloss/vim-javascript'
@@ -211,6 +211,9 @@ map <leader>gd :YcmCompleter GetDoc<CR>
 
 " Toggle NERDTree
 nmap <leader>nt :NERDTreeToggle<cr>
+
+" Open FZF file finder
+map <C-p> :GFiles<CR>
 
 " Subword motion
 let g:wordmotion_mappings = {
