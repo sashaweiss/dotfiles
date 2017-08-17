@@ -117,7 +117,7 @@ set wildmode=longest,list,full
 set wildmenu
 
 " Ignores
-set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out,node_modules,dist,venv,vendor
+set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out,node_modules,dist,venv,vendor,*.swp
 
 " Buffer space around cursor when scrolling
 set scrolloff=3
@@ -140,6 +140,7 @@ let g:airline_right_alt_sep = ''
 
 " NERDTree
 let NERDTreeMapOpenSplit='\t'
+let NERDTreeShowHidden=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " YouCompleteMe
