@@ -158,6 +158,9 @@ autocmd FileType typescript setlocal completeopt+=menu,preview  " autocomplete
 " Autoclose HTML
 let g:closetag_filenames = "*.html, *.hbs, *.handlebars"
 
+" Vim-Go
+let g:go_fmt_command = "goimports"
+
 
 " ========= Remappings =========
 
