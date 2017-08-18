@@ -214,7 +214,7 @@ map <leader>gd :YcmCompleter GetDoc<CR>
 nmap <leader>nt :NERDTreeToggle<cr>
 
 " Open FZF file finder
-map <C-p> :GFiles<CR>
+map <C-p> :Files<CR>
 
 " Subword motion
 let g:wordmotion_mappings = {
