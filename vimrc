@@ -140,7 +140,6 @@ let g:airline_right_alt_sep = ''
 
 " NERDTree
 let NERDTreeMapOpenSplit='\t'
-" let NERDTreeShowHidden=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " YouCompleteMe
@@ -236,5 +235,5 @@ let g:wordmotion_mappings = {
 command! Prettier silent %!prettier --stdin --trailing-comma all --single-quote
 
 " Use ripgrep and fzf to search for terms
-command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 
