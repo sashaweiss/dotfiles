@@ -46,6 +46,10 @@ let mapleader="\\"
 " Word wrap on line break
 set linebreak
 
+" Minimum window height/width
+set winheight=4 winminheight=4
+set winwidth=15 winminwidth=15
+
 " Map .md files to markdown
 au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=markdown
 
@@ -140,6 +144,7 @@ let g:airline_right_alt_sep = ''
 
 " NERDTree
 let NERDTreeMapOpenSplit='\t'
+let g:NERDTreeWinSize=25
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " YouCompleteMe
@@ -213,7 +218,10 @@ map <leader>gt :YcmCompleter GetType<CR>
 map <leader>gd :YcmCompleter GetDoc<CR>
 
 " Toggle NERDTree
-nmap <leader>nt :NERDTreeToggle<cr>
+nmap <leader>nt :NERDTreeToggle<CR>
+
+" Focus NERDTree
+nmap <leader>nf :NERDTreeFocus<CR>
 
 " Open FZF file finder
 map <C-p> :Files<CR>
@@ -236,4 +244,3 @@ command! Prettier silent %!prettier --stdin --trailing-comma all --single-quote
 
 " Use ripgrep and fzf to search for terms
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
-
