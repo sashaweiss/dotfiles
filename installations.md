@@ -18,7 +18,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 - thefuck
 - tree
 - wget
-- fzf
+- fzf (remember to run /usr/local/opt/fzf/install)
 - ripgrep
 
 ### npm
