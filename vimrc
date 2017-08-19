@@ -19,7 +19,7 @@ Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go' " Remember to run :GoInstallBinaries on first install
 
 call plug#end()
 
