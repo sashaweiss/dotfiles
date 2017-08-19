@@ -172,10 +172,16 @@ let g:go_fmt_command = "goimports"
 inoremap jk <esc>
 
 " Buffers
-nmap <leader>t :enew<cr>
-nmap <leader>2 :bnext<cr>
-nmap <leader>1 :bprevious<cr>
-nmap <leader>w :bp <BAR> bd #<cr>
+nmap <leader>t :enew<CR>
+nmap <leader>n :bnext<CR>
+nmap <leader>p :bprevious<CR>
+nmap <leader>w :bprevious <BAR> bd #<CR>
+
+" Tabs
+nmap <leader>T :tabe %<CR>
+nmap <leader>N :tabnext<CR>
+nmap <leader>P :tabprevious<CR>
+nmap <leader>W :tabclose<CR>
 
 " Scroll window by multiple lines at a time
 noremap <C-E> 3<C-E>
