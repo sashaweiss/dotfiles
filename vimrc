@@ -173,8 +173,8 @@ inoremap jk <esc>
 
 " Buffers
 nmap <leader>t :enew<CR>
-nmap <leader>n :bnext<CR>
-nmap <leader>p :bprevious<CR>
+nmap <leader>= :bnext<CR>
+nmap <leader>- :bprevious<CR>
 nmap <leader>w :bprevious <BAR> bd #<CR>
 
 " Tabs
