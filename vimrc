@@ -78,14 +78,11 @@ set background=dark
 " hi VertSplit ctermbg=#272D38
 
 " Colors
-colorscheme slate
-"colorscheme jellybeans
-"colorscheme desert
-"colorscheme molokai
-"colorscheme peachpuff
-"colorscheme ron
-"colorscheme vibrantink
-"colorscheme afterglow
+" colorscheme slate
+" colorscheme jellybeans
+" colorscheme desert
+" colorscheme molokai
+colorscheme afterglow
 
 " Terminal color adjustments
 set t_Co=256
