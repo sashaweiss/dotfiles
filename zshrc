@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # ZSH Plugins
-plugins=(git npm python sudo)
+plugins=(git npm python sudo golang)
 
 export ZSH="$HOME/.oh-my-zsh"
 
