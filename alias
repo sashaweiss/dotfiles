@@ -17,7 +17,7 @@ alias gc='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
 
-alias l='ls -lFh'
+alias ll='ls -lFh'
 alias la='ls -alhF'
 
 alias tmux='tmux -2'
