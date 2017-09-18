@@ -46,6 +46,9 @@ let mapleader="\\"
 " Word wrap on line break
 set linebreak
 
+" Show as much of wrapped lines going off the screen as possible
+set display+=lastline
+
 " Minimum window height/width
 set winheight=4 winminheight=4
 set winwidth=15 winminwidth=15
