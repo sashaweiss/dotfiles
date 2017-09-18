@@ -183,10 +183,6 @@ nmap <leader>N :tabnext<CR>
 nmap <leader>P :tabprevious<CR>
 nmap <leader>W :tabclose<CR>
 
-" Scroll window by multiple lines at a time
-noremap <C-E> 3<C-E>
-noremap <C-Y> 3<C-Y>
-
 " Nuke scroll wheel spam characters
 noremap <ScrollWheelUp> <nop>
 inoremap <ScrollWheelUp> <nop>
