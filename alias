@@ -17,6 +17,7 @@ alias gc='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
 
+alias ls='ls --color=auto'
 alias ll='ls -lFh'
 alias la='ls -alhF'
 
