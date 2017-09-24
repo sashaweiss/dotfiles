@@ -26,6 +26,9 @@ call plug#end()
 
 " ========= General Options =========
 
+" Use UTF-8
+set encoding=utf-8
+
 " Highlight
 syntax on
 set hlsearch
@@ -84,11 +87,11 @@ set background=dark
 " hi VertSplit ctermbg=#272D38
 
 " Colors
-" colorscheme slate
-" colorscheme jellybeans
-" colorscheme desert
-" colorscheme molokai
-colorscheme afterglow
+" silent! colorscheme slate
+" silent! colorscheme jellybeans
+" silent! colorscheme desert
+" silent! colorscheme molokai
+silent! colorscheme afterglow
 
 " Terminal color adjustments
 set t_Co=256
