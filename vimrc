@@ -56,6 +56,9 @@ set winwidth=15 winminwidth=15
 " Map .md files to markdown
 au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=markdown
 
+" Auto-resize splits when resizing vim generally
+autocmd VimResized * wincmd =
+
 " Four space tabs for Python
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
