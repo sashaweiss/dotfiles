@@ -20,6 +20,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 - wget
 - fzf (remember to run /usr/local/opt/fzf/install)
 - ripgrep
+- osxfuse (`brew cask install osxfuse`) + sshfs
 
 ### npm
 - typescript
