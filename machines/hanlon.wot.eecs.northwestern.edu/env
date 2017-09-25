@@ -2,3 +2,6 @@
 
 PATH="$HOME/bin:$PATH"
 export PATH
+
+# FZF completions
+source ~/.fzf.zsh

@@ -244,11 +244,7 @@ let g:wordmotion_mappings = {
 			\ 'iw' : ''
 \ }
 
-
-" ========= Custom Commands =========
-
-" Invoke prettier for TS
-command! Prettier silent %!prettier --stdin --trailing-comma all --single-quote
-
-" Use ripgrep and fzf to search for terms
-command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+let host_vimrc = "machines/" + substitute(system('hostname'), '\n', '', '') + "/vimrc"
+if filereadable(host_vimrc)
+	so host_vimrc
+endif
