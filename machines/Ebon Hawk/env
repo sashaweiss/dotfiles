@@ -20,3 +20,9 @@ PATH+=:$GO_BIN_PATH
 PATH+=:$GIT_BIN_PATH
 export PATH
 
+# FZF completions
+if [ -f ~/.fzf.zsh ]; then
+	source ~/.fzf.zsh
+	export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+	export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+fi
