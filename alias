@@ -22,7 +22,7 @@ alias la='ls -alhF'
 
 alias untar='tar -xzvf'
 
-alias tmux='tmux -2'
+alias tmux='tmux -2u'
 
 mach=$HOME/dotfiles/machines/"$(hostname)"/alias
 
