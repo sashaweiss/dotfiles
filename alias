@@ -20,6 +20,8 @@ alias gdc='git diff --cached'
 alias ll='ls -lFh'
 alias la='ls -alhF'
 
+alias untar='tar -xzvf'
+
 alias tmux='tmux -2'
 
 mach=$HOME/dotfiles/machines/"$(hostname)"/alias
