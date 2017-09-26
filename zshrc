@@ -17,6 +17,7 @@ unalias -m '*'
 source $HOME/dotfiles/alias
 
 export EDITOR="vim"
+export HOSTNAME=`hostname`
 
 # Source machine-specific environment variables
 mach=$HOME/dotfiles/machines/"$(hostname)"/env

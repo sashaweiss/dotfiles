@@ -263,4 +263,4 @@ set-window-option -g mode-keys vi
 #set -g status-position top
 
 # source machine-specific
-source-file "$HOME"/dotfiles/machines/"#H"/tmux.conf
+source-file "$HOME"/dotfiles/machines/"$HOSTNAME"/tmux.conf
