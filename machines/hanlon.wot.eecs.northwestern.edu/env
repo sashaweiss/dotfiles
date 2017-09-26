@@ -4,10 +4,10 @@
 PATH="$HOME/bin:$PATH"
 
 # CAT stuff
-PATH+=":$HOME/cat/CAT-c/bin"
-PATH+=":$LLVM_HOME/bin"
-
 LLVM_HOME=/home/software/llvm
+
+PATH="$HOME/cat/CAT-c/bin:$PATH"
+PATH="$LLVM_HOME/bin:$PATH"
 export LD_LIBRARY_PATH=$LLVM_HOME/lib:$LD_LIBRARY_PATH
 
 source /opt/rh/devtoolset-6/enable
