@@ -244,7 +244,7 @@ let g:wordmotion_mappings = {
 			\ 'iw' : ''
 \ }
 
-let g:host_vimrc="machines/" . substitute(system('hostname'), '\n', '', '') . "/vimrc"
-if filereadable(g:host_vimrc)
+let g:host_vimrc="$HOME/dotfiles/machines/" . substitute(system('hostname'), '\n', '', '') . "/vimrc"
+if filereadable(expand(g:host_vimrc))
 	execute 'so ' . fnameescape(g:host_vimrc)
 endif
