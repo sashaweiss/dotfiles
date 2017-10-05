@@ -30,6 +30,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 ### misc
 - [powerline fonts](https://github.com/powerline/fonts)
+- [vim afterglow theme](https://github.com/danilo-augusto/vim-afterglow)
 
 ## Symlink dotfiles
 ```sh
