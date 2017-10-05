@@ -1,8 +1,3 @@
-#!/bin/zsh
-
-# Local installs
-PATH="$HOME/bin:$PATH"
-
 # CAT stuff
 LLVM_HOME=/home/software/llvm
 
@@ -11,8 +6,3 @@ PATH="$LLVM_HOME/bin:$PATH"
 export LD_LIBRARY_PATH=$LLVM_HOME/lib:$LD_LIBRARY_PATH
 
 source /opt/rh/devtoolset-6/enable
-
-# FZF completions
-source ~/.fzf.zsh
-
-export PATH

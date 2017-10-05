@@ -1,4 +1,4 @@
 #!/bin/zsh
 
 alias ls='ls --color=auto'
-alias cdcat='cd $HOME/cat/CAT-c/catpass/'
+alias cdcat='cd $HOME/kitty/CAT-c/catpass/'
