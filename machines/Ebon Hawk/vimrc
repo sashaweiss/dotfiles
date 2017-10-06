@@ -5,3 +5,6 @@ command! Prettier silent %!prettier --stdin --trailing-comma all --single-quote
 
 " Use ripgrep and fzf to search for terms
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+
+" Use rsync to copy CatPass.cpp up to Hanlon
+command! Hanlon Dispatch! cd $HOME/Documents/projects/CAT/CAT-c/catpass && rsync -a CatPass.cpp hanlon:kitty/CAT-c/catpass/CatPass.cpp &> /dev/null

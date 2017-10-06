@@ -20,6 +20,7 @@ Plug 'alvan/vim-closetag'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'fatih/vim-go' " Remember to run :GoInstallBinaries on first install
+Plug 'tpope/vim-dispatch'
 
 call plug#end()
 
