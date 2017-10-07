@@ -4,7 +4,6 @@ alias cd='cd -P'
 alias back='cd "$OLDPWD"'
 alias "cd.."='cd ..'
 alias dot='cd $HOME/dotfiles'
-alias play='cd $HOME/Desktop'
 
 alias pg='ping google.com'
 alias d='date'
