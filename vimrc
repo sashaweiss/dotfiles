@@ -63,9 +63,6 @@ au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=markdown
 " Auto-resize splits when resizing vim generally
 autocmd VimResized * wincmd =
 
-" Four space tabs for Python
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
-
 " Set up highlight group & retain through colorscheme changes
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
@@ -111,10 +108,14 @@ hi SpellBad cterm=NONE ctermfg=white ctermbg=red
 set splitright
 
 " Tabs and indents
-set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+set smarttab
 set autoindent
 set cindent
 set smartindent
+
+" Four space tabs for Python
+autocmd FileType python setlocal tabstop=4 shiftwidth=4
 
 " Seach case-sensitive if capital in pattern, otherwise insensitive
 set ignorecase
