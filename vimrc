@@ -187,8 +187,8 @@ nmap <leader>w :bprevious <BAR> bd #<CR>
 
 " Tabs
 nmap <leader>T :tabe %<CR>
-nmap <leader>N :tabnext<CR>
-nmap <leader>P :tabprevious<CR>
+nmap <leader>+ :tabnext<CR>
+nmap <leader>_ :tabprevious<CR>
 nmap <leader>W :tabclose<CR>
 
 " Nuke scroll wheel spam characters
