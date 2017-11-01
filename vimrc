@@ -89,10 +89,8 @@ set background=dark
 
 " Colors
 " silent! colorscheme slate
-" silent! colorscheme jellybeans
-" silent! colorscheme desert
-" silent! colorscheme molokai
-silent! colorscheme afterglow
+silent! colorscheme molokai
+" silent! colorscheme afterglow
 
 " Terminal color adjustments
 set t_Co=256
