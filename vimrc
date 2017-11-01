@@ -47,6 +47,9 @@ set t_vb=
 " Map leader to backslash
 let mapleader="\\"
 
+" Wrap lines
+set wrap
+
 " Word wrap on line break
 set linebreak
 
