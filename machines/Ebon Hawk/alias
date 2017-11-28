@@ -1,7 +1,12 @@
 #!/bin/zsh
 
-alias work='cd $HOME/Documents/projects'
-alias play='cd $HOME/Desktop'
+export WORK="$HOME/Documents/projects"
+alias work="cd $WORK"
+export PLAY="$HOME/Desktop"
+alias play="cd $PLAY"
+export DOWN="$HOME/Downloads"
+alias down="cd $DOWN"
+
 alias hanlon='ssh hanlon'
 
 eval $(thefuck --alias)
