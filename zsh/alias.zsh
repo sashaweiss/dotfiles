@@ -21,10 +21,6 @@ if ebon; then
   alias down="cd $DOWN"
 
   alias shootme='ssh hanlon'
-
-  eval $(thefuck --alias)
 elif hanlon; then
   alias ls='ls --color=auto'
-elif watney; then
-  # Nothing at present
 fi

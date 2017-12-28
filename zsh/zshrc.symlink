@@ -48,3 +48,5 @@ for file
 do
   source $file
 done
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
