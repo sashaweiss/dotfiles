@@ -1,8 +1,0 @@
-# CAT stuff
-LLVM_HOME=/home/software/llvm
-
-PATH="$HOME/CAT/bin:$PATH"
-PATH="$LLVM_HOME/bin:$PATH"
-export LD_LIBRARY_PATH=$LLVM_HOME/lib:$LD_LIBRARY_PATH
-
-source /opt/rh/devtoolset-6/enable
