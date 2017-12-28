@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+[[ "hanlon.wot.eecs.northwestern.edu" == `hostname` ]]
