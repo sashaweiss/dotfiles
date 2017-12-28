@@ -1,3 +1,3 @@
-if `which thefuck`; then
+if test `which thefuck`; then
   eval $(thefuck --alias)
 fi
