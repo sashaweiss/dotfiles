@@ -11,6 +11,12 @@ export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 unalias -m '*'
 
+# Load brew into path on Linux
+if [[ `uname` == "Linux" ]]; then
+  PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+  export PATH
+fi
+
 # Use PROMPT_SUBST
 setopt PROMPT_SUBST
 

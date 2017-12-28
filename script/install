@@ -123,6 +123,8 @@ elif [[ `uname` == "Linux" && ! `which brew` ]]; then
   info "Installing Linuxbrew and dependencies..."
   sudo apt install build-essential curl git python-setuptools ruby
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+  PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+  export PATH
   success "Linuxbrew and dependencies installed!"
 fi
 
