@@ -1,6 +1,0 @@
-#!/bin/bash
-
-sudo apt install vim zsh
-chsh -s $(which zsh)
-zsh script/install
-zsh
