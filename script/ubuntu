@@ -1,7 +1,6 @@
 #!/bin/bash
 
-sudo apt install vim git zsh
-git clone https://github.com/sashaweiss/dotfiles
+sudo apt install vim zsh
 chsh -s $(which zsh)
 zsh
 ./script/install
