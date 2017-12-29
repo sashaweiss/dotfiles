@@ -4,4 +4,4 @@ if test ! `which pip`; then
   rm get-pip.py
 fi
 
-pip install virtualenv
+sudo pip install virtualenv
