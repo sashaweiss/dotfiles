@@ -4,7 +4,7 @@ cd "$nvm_dir"
 git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`
 
 export NVM_DIR=~/.nvm
-source "$NVM_DIR/nvm.sh"
+. "$NVM_DIR/nvm.sh"
 
 nvm install node
 
