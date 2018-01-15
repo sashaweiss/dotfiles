@@ -6,7 +6,7 @@ fpath=($DOTFILES/funcs $fpath)
 autoload -U ebon hanlon watney
 
 # Source oh-my-zsh
-plugins=(git npm python sudo golang)
+plugins=(git npm python sudo golang docker docker-compose)
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 unalias -m '*'
