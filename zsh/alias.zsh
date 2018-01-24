@@ -20,7 +20,7 @@ if ebon; then
   export DOWN="$HOME/Downloads"
   alias down="cd $DOWN"
 
-  alias shootme='ssh hanlon'
+  alias shootme='ssh shootme'
 elif hanlon; then
   alias ls='ls --color=auto'
 fi
