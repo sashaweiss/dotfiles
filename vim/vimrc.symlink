@@ -19,6 +19,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'sashaweiss/vim-go' " A fork including small tweaks to play nice with the Go testify package. See https://github.com/fatih/vim-go/issues/1636.
 Plug 'tpope/vim-dispatch'
+Plug 'wlangstroth/vim-racket'
 
 call plug#end()
 
