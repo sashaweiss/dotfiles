@@ -90,6 +90,9 @@ set background=dark
 " silent! colorscheme slate
 silent! colorscheme molokai
 
+" Use transparent background
+hi Normal ctermbg=NONE
+
 " Terminal color adjustments
 set t_Co=256
 let g:solarized_termcolors=256
