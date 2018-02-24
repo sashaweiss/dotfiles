@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 config_file=$DOTFILES/ssh/config.`hostname`
 if [ -f "$config_file" ]; then
   if [ -L ~/.ssh/config ]; then

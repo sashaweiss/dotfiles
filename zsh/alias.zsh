@@ -1,5 +1,3 @@
-#!/bin/zsh
-
 alias cd='cd -P'
 alias "cd.."='cd ..'
 alias dot='cd $HOME/dotfiles'

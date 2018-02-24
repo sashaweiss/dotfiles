@@ -3,7 +3,7 @@ export DOTFILES=$HOME/dotfiles
 
 # Load functions for distinguishing machines
 fpath=($DOTFILES/funcs $fpath)
-autoload -U ebon hanlon watney
+autoload -U ebon hanlon watney mac linux
 
 # Source oh-my-zsh
 plugins=(git npm python sudo golang docker docker-compose)
@@ -24,8 +24,8 @@ do
   source $file
 done
 
-# load everything but the path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
+# load everything but the path files
+for file in ${${config_files:#*/path.zsh}}
 do
   source $file
 done
@@ -33,11 +33,5 @@ done
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
-
-# load every completion after autocomplete loads
-for file in ${(M)config_files:#*/completion.zsh}
-do
-  source $file
-done
 
 unset config_files

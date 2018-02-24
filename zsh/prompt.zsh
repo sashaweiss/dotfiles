@@ -1,5 +1,3 @@
-#!/bin/zsh
-
 source $DOTFILES/zsh/gitstatus/zshrc.sh
 
 PROMPT=''
