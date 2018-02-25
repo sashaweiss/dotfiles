@@ -134,7 +134,7 @@ set wildmenu
 set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out,node_modules,dist,venv,vendor,*.swp
 
 " Buffer space around cursor when scrolling
-set scrolloff=3
+set scrolloff=2
 
 
 " ========= Plugin Configuration =========
