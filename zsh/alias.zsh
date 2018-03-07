@@ -13,8 +13,13 @@ alias untar='tar -xzvf'
 if ebon; then
   export WORK="$HOME/Documents/projects"
   alias work="cd $WORK"
+
+  export CLONE="$HOME/Documents/clones"
+  alias clones="cd $CLONE"
+
   export PLAY="$HOME/Desktop"
   alias play="cd $PLAY"
+
   export DOWN="$HOME/Downloads"
   alias down="cd $DOWN"
 
