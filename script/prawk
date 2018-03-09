@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+if [ "$#" -lt 1 ]; then
+  echo "Missing column argument!"
+  exit 1
+elif [ "$#" -gt 1 ]; then
+  echo "Too many arguments!"
+  exit 1
+fi
+
+awk_command="{ print \$$1 }"
+awk $awk_command <&0
