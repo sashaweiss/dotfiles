@@ -1,12 +1,18 @@
 #!/bin/zsh
 
-if [ "$#" -lt 1 ]; then
-  echo "Missing column argument!"
-  exit 1
-elif [ "$#" -gt 1 ]; then
-  echo "Too many arguments!"
+# TODO: varargs for multiple columns
+
+awk_command=""
+delim=""
+if [ "$#" -eq 1 ]; then
+  awk_command="{ print \$$1 }"
+elif [ "$#" -eq 2 ]; then
+  awk_command="{ print \$$2 }"
+  delim="-F $1"
+else
+  echo "Wrong number of arguments!"
   exit 1
 fi
 
-awk_command="{ print \$$1 }"
-awk $awk_command <&0
+cmd="awk $delim '$awk_command'"
+eval $cmd <&0
