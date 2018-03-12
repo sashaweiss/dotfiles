@@ -2,24 +2,32 @@
 
 call plug#begin('~/.vim/plugged')
 
+" Languages
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'keith/swift.vim'
+Plug 'wlangstroth/vim-racket'
+Plug 'fatih/vim-go'
+Plug 'mustache/vim-mustache-handlebars'
+
+" File browsing
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } | Plug 'junegunn/fzf.vim'
+Plug 'jlanzarotta/bufexplorer'
+
+" HUD annotations
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } | Plug 'junegunn/fzf.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'keith/swift.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'altercation/vim-colors-solarized'
-Plug 'jiangmiao/auto-pairs'
+
+" Typing
 Plug 'chaoren/vim-wordmotion'
 Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'jlanzarotta/bufexplorer'
-Plug 'fatih/vim-go'
+Plug 'jiangmiao/auto-pairs'
+
+" Behind-the-scenes
 Plug 'tpope/vim-dispatch'
-Plug 'wlangstroth/vim-racket'
 
 call plug#end()
 
@@ -74,37 +82,7 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Autoremove trailing spaces when saving the buffer
-autocmd FileType c,cpp,elixir,eruby,html,java,javascript,php,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
-
-
-" ========= Colors =========
-
-" Background color
-set background=dark
-
-" Change gutter and vsplit color
-" hi LineNr ctermbg=#272d38
-" hi VertSplit ctermbg=#272D38
-
-" Colors
-" silent! colorscheme slate
-silent! colorscheme molokai
-
-" Use transparent background
-hi Normal ctermbg=NONE
-
-" Terminal color adjustments
-set t_Co=256
-let g:solarized_termcolors=256
-
-" Something related to molokai
-let g:molokai_original = 1
-
-" Don't highlight with terrible colors
-hi Search cterm=NONE ctermfg=grey ctermbg=blue
-hi MatchParen cterm=NONE ctermfg=grey ctermbg=blue
-hi Error cterm=NONE ctermfg=white ctermbg=red
-hi SpellBad cterm=NONE ctermfg=white ctermbg=red
+autocmd FileType * autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " New panes to right and bottom
 set splitright
@@ -135,6 +113,29 @@ set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out,node_modules,dist,venv,vendor,*.
 
 " Buffer space around cursor when scrolling
 set scrolloff=2
+
+
+" ========= Colors =========
+
+" Background color
+set background=dark
+
+" Colors
+silent! colorscheme molokai
+let g:molokai_original = 1
+
+" Use transparent background
+hi Normal ctermbg=NONE
+
+" Terminal color adjustments
+set t_Co=256
+let g:solarized_termcolors=256
+
+" Don't highlight with terrible colors
+hi Search cterm=NONE ctermfg=grey ctermbg=blue
+hi MatchParen cterm=NONE ctermfg=grey ctermbg=blue
+hi Error cterm=NONE ctermfg=white ctermbg=red
+hi SpellBad cterm=NONE ctermfg=white ctermbg=red
 
 
 " ========= Plugin Configuration =========
@@ -171,7 +172,6 @@ let g:go_doc_keywordprg_enabled = 0
 
 " Auto-Pairs
 let g:AutoPairsMultilineClose = 0
-let g:AutoPairs = {'{':'}',"'":"'",'"':'"', '`':'`'}
 
 
 " ========= Remappings =========
@@ -211,23 +211,8 @@ nnoremap <silent> j gj
 noremap z $
 noremap Z ^
 
-" Jump between panes with leader
-map <leader>h <C-W>h
-map <leader>j <C-W>j
-map <leader>k <C-W>k
-map <leader>l <C-W>l
-
 " Copy to system (only applicable on Mac)
 noremap <leader>y "*y
-
-" Search for highlighted text
-vnoremap <expr> // 'y/\V'.escape(@",'\').'<CR>'
-
-" Infer type
-map <leader>gt :YcmCompleter GetType<CR>
-
-" View doc
-map <leader>gd :YcmCompleter GetDoc<CR>
 
 " Toggle NERDTree
 nmap <leader>nt :NERDTreeToggle<CR>
