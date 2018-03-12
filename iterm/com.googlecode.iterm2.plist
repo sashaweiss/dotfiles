@@ -177,11 +177,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 220 599 388 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>330 423 918 401 0 0 1440 900 </string>
+	<string>330 495 918 401 0 0 1440 900 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 319 650 452 0 0 1440 900 </string>
+	<string>723 376 650 502 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>846 149 730 527 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -363,7 +363,7 @@
 			<key>Background Image Location</key>
 			<string></string>
 			<key>Blinking Cursor</key>
-			<true/>
+			<false/>
 			<key>Blur</key>
 			<false/>
 			<key>Bold Color</key>
@@ -879,7 +879,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-03-06T22:24:50Z</date>
+	<date>2018-03-11T18:10:40Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Selection Respects Soft Boundaries</key>
