@@ -175,6 +175,11 @@ let g:closetag_filenames = "*.html, *.hbs, *.handlebars"
 
 " Vim-Go
 let g:go_fmt_command = "goimports"
+let g:go_doc_keywordprg_enabled = 0
+
+" Auto-Pairs
+let g:AutoPairsMultilineClose = 0
+let g:AutoPairs = {'{':'}',"'":"'",'"':'"', '`':'`'}
 
 
 " ========= Remappings =========
@@ -201,8 +206,10 @@ noremap <ScrollWheelDown> <nop>
 inoremap <ScrollWheelDown> <nop>
 
 " Jump paragraphs using capital J and K
-noremap K {
-noremap J }
+nnoremap J }
+vnoremap J }
+nnoremap K {
+vnoremap K {
 
 " Move by display lines
 nnoremap <silent> k gk
