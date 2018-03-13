@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+files=`git status --porcelain | sed s/^...// | tr '\n' ' '`
+eval "vim $files"
