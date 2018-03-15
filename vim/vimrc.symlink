@@ -82,7 +82,14 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Autoremove trailing spaces when saving the buffer
-autocmd FileType * autocmd BufWritePre <buffer> :%s/\s\+$//e
+" Don't do it for Go - let GoFmt handle that
+fun! StripTrailingWhitespace()
+    if &ft =~ 'go'
+        return
+    endif
+    %s/\s\+$//e
+endfun
+autocmd BufWritePre * call StripTrailingWhitespace()
 
 " New panes to right and bottom
 set splitright
