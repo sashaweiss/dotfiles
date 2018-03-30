@@ -10,6 +10,8 @@ alias la='ls -alhF'
 
 alias untar='tar -xzvf'
 
+alias reload='source ~/.zshrc'
+
 if ebon; then
   export WORK="$HOME/Documents/projects"
   alias work="cd $WORK"

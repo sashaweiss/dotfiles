@@ -6,4 +6,5 @@ if test `which git`; then
   alias gc='git commit'
   alias gd='git diff'
   alias gdc='git diff --cached'
+  alias gb='git branch -a'
 fi
