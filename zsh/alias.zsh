@@ -24,8 +24,6 @@ if test ebon; then
 
   export DOWN="$HOME/Downloads"
   alias down="cd $DOWN"
-
-  alias shootme='ssh shootme'
 elif test hanlon; then
   alias ls='ls --color=auto'
 fi
