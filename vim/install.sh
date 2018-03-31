@@ -1,8 +1,8 @@
 #!/bin/zsh
 
-if test linux; then
+if linux; then
   sudo apt-get -y install vim
-elif test mac; then
+elif mac; then
   brew install vim
 fi
 

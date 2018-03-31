@@ -1,11 +1,11 @@
 #!/bin/zsh
 
-if test linux && ! test `which ruby`; then
+if linux && ! command -v ruby > /dev/null; then
   sudo apt-get install -y ruby
 fi
 
-if test mac; then
+if mac; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-elif test linux; then
+elif linux; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
 fi

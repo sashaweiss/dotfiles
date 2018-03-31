@@ -1,4 +1,4 @@
-if test `uname` == "Linux"; then
+if linux; then
   sudo apt-get -y install zsh
 fi
 

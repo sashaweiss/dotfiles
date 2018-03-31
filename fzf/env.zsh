@@ -1,9 +1,9 @@
-if test `which fzf`; then
+if command -v fzf > /dev/null; then
   if [ -f ~/.fzf.zsh ]; then
     source ~/.fzf.zsh
   fi
 
-  if test `which rg`; then
+  if command -v rg > /dev/null; then
     export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
   fi
 

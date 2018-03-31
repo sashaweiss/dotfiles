@@ -1,4 +1,4 @@
-if test `which go`; then
+if command -v go > /dev/null; then
   export GOPATH=$(go env GOPATH)
   export GOROOT=$(go env GOROOT)
 

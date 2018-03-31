@@ -1,4 +1,4 @@
-if test hanlon; then
+if hanlon; then
   PATH="$HOME/bin:$PATH"
 fi
 
