@@ -3,7 +3,6 @@ export DOTFILES=$HOME/dotfiles
 
 # Load functions for distinguishing machines
 fpath=($DOTFILES/funcs $fpath)
-autoload -U ebon hanlon watney mac linux
 
 # Source oh-my-zsh
 plugins=(git npm python sudo golang docker docker-compose)

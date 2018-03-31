@@ -1,4 +1,4 @@
-if ebon; then
+if test ebon; then
   SCALA_PATH="/usr/local/share/scala/bin"
   PATH+=:$SCALA_PATH
 

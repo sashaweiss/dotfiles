@@ -1,4 +1,4 @@
-if linux && test `which brew`; then
+if test linux && test `which brew`; then
   PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 fi
 

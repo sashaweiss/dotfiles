@@ -12,7 +12,7 @@ alias untar='tar -xzvf'
 
 alias reload='source ~/.zshrc'
 
-if ebon; then
+if test ebon; then
   export WORK="$HOME/Documents/projects"
   alias work="cd $WORK"
 
@@ -26,6 +26,6 @@ if ebon; then
   alias down="cd $DOWN"
 
   alias shootme='ssh shootme'
-elif hanlon; then
+elif test hanlon; then
   alias ls='ls --color=auto'
 fi

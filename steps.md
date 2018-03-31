@@ -4,8 +4,6 @@ cuz scripts never work
 ## Install zsh
 ```sh
 $ sudo ./zsh/install.sh
-$ export fpath=($DOTFILES/funcs $fpath)
-$ autoload -U ebon hanlon watney mac linux
 ```
 
 ## Install P0 software
