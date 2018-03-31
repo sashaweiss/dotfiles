@@ -24,9 +24,10 @@ $ sudo ./zsh/install.sh
 
 ## Install utilities
 1. ripgrep - `brew install ripgrep`
-2. fzf - `brew install fzf`
-3. wget - `brew install wget`
-4. tree - `brew install tree`
+2. fd - `brew install fd`
+3. fzf - `brew install fzf`
+4. wget - `brew install wget`
+5. tree - `brew install tree`
 
 ## Install GUI utilities
 1. [iTerm](https://iterm2.com/) - set up to source from $DOTFILES/iterm/...plist
