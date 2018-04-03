@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ `uname` != Linux ]; then
+  echo "This script is intended for Linux!"
+  exit 1
+fi
+
+# Get sudo permissions
+echo "This script will require sudo permissions!"
+sudo echo "Perfect. Installing..."
+
+# Install base stuff
+sudo apt-get install -y zsh vim git curl
+
+# Install oh-my-zsh
+git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
+
+# Link dotfiles
+./install/link
+
+# The rest of install assumes the shell is `zsh` - use auxiliary script
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}"  )" && pwd  )"
+zsh $SCRIPT_DIR/_on_linux
+unset SCRIPT_DIR
+
+echo
+echo "SUCCESS: Install finished!"

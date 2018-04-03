@@ -1,5 +1,4 @@
 " ========= VimPlug Plugins =========
-
 call plug#begin('~/.vim/plugged')
 
 " Languages

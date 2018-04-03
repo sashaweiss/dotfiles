@@ -1,7 +1,5 @@
-if command -v fzf > /dev/null; then
-  if [ -f ~/.fzf.zsh ]; then
-    source ~/.fzf.zsh
-  fi
+if command -v fzf > /dev/null && [ -f ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
 
   if command -v fd > /dev/null; then
     export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'

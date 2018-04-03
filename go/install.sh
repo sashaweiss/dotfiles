@@ -1,2 +1,4 @@
+#!/bin/zsh
+
 brew install go
-# install dep?
+brew install dep

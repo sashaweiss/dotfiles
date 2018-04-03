@@ -31,3 +31,4 @@ autoload -U compinit
 compinit
 
 unset config_files
+unsetopt AUTO_CD
