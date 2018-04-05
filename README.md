@@ -36,10 +36,12 @@ git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
 - python
 - node and typescript
 - go
+- rust
 ```sh
 ./python/install.sh && source ~/.zshrc
 ./go/install.sh && source ~/.zshrc
 ./node/install.sh && source ~/.zshrc
+./rust/install.sh && source ~/.zshrc
 ```
 
 #### (Optional) Languages with complicated online instructions
