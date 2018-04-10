@@ -6,7 +6,7 @@ Thanks to [holman's dotfiles](https://github.com/holman/dotfiles), [.tmux](https
 ## Download and install
 These dotfiles will assume that they live at `~/dotfiles` - changing this will require adjusting the `$DOTFILES` environment variable set in the first line of `zsh/zshrc.symlink`.
 
-On Linux, run `./install/on_linux` for a complete, automatic install process (asks for sudo once at the beginning). Tested on Ubuntu 16.04, running with `bash`.
+On Linux, run `./install/on_linux` for a complete, automatic install process (asks for sudo once at the beginning). Tested on Ubuntu 16.04, running with `bash`. (Currently does not install `rust`.)
 
 Alternatively (either Linux or Mac), run install scripts individually, as listed below. This can be a more tailored approach (I like my setup, doesn't mean you do), and can help diagnose a failing script-install.
 
@@ -41,7 +41,7 @@ git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
 ./python/install.sh && source ~/.zshrc
 ./go/install.sh && source ~/.zshrc
 ./node/install.sh && source ~/.zshrc
-./rust/install.sh && source ~/.zshrc
+./rust/install.sh && source ~/.zshrc # this step is not automatic yet
 ```
 
 #### (Optional) Languages with complicated online instructions

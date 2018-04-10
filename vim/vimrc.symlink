@@ -8,6 +8,7 @@ Plug 'keith/swift.vim'
 Plug 'wlangstroth/vim-racket'
 Plug 'fatih/vim-go'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'rust-lang/rust.vim'
 
 " File browsing
 Plug 'scrooloose/nerdtree'
@@ -178,6 +179,9 @@ let g:go_doc_keywordprg_enabled = 0
 
 " Auto-Pairs
 let g:AutoPairsMultilineClose = 0
+
+" RustFmt
+let g:rustfmt_autosave = 1
 
 
 " ========= Remappings =========
