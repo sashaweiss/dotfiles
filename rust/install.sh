@@ -1,3 +1,4 @@
 #!/bin/zsh
 
-brew install rust
+curl https://sh.rustup.rs -sSf | sh
+# manual currently
