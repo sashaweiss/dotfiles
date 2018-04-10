@@ -1,5 +1,3 @@
-#!/bin/zsh
-
 if [ "$#" -eq 2 ]; then
   tar -czvf $1 $2
 else
