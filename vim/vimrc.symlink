@@ -9,6 +9,7 @@ Plug 'wlangstroth/vim-racket'
 Plug 'fatih/vim-go'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 
 " File browsing
 Plug 'scrooloose/nerdtree'
@@ -185,6 +186,7 @@ let g:AutoPairsMultilineClose = 0
 
 " RustFmt
 let g:rustfmt_autosave = 1
+let g:rustfmt_options = "-f"
 
 
 " ========= Remappings =========
@@ -246,7 +248,13 @@ let g:wordmotion_mappings = {
 			\ 'iw' : ''
 \ }
 
-let g:host_vimrc="$HOME/dotfiles/vim/" . "vimrc." . substitute(system('hostname'), '\n', '', '')
-if filereadable(expand(g:host_vimrc))
-	execute 'so ' . fnameescape(g:host_vimrc)
+" Remap Omni-Completion
+inoremap <C-X><C-N> <C-X><C-O>
+
+
+" ========= Custom Commands =========
+
+" Use ripgrep and fzf to search for terms
+if executable('rg')
+  command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 endif

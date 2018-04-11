@@ -1,3 +1,0 @@
-
-" Use GFiles instead of Files because hanlon sucks
-map <C-p> :GFiles<CR>
