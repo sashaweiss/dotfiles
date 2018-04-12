@@ -71,6 +71,9 @@ set winwidth=15 winminwidth=15
 " Allow unsaved buffers to be hidden
 set hidden
 
+" Completion style
+set completeopt=longest,menuone
+
 " Map .md files to markdown
 au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=markdown
 
@@ -250,7 +253,10 @@ let g:wordmotion_mappings = {
 \ }
 
 " Remap Omni-Completion
-inoremap <C-X><C-N> <C-X><C-O>
+inoremap <C-X><C-N> <C-X><C-O><Down>
+
+" Omnicompletion use Enter to select an entry
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
 " Vim-Racer mappings
 au FileType rust command! RustDef execute "normal \<Plug>(rust-def)"
