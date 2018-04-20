@@ -1,3 +1,4 @@
+alias rg='rg -i'
 alias rga='rg -uuu'
-alias rgi='rg -i'
-alias rgai='rg -uuu -i'
+alias rgs='rg --case-sensitive'
+alias rgas='rg -uuu --case-sensitive'
