@@ -6,3 +6,5 @@ else
 fi
 
 alias vims='vim -O'
+
+alias vimgs='vim `git status -s | grep -v '"'"'??'"'"' | sed s/^...// | tr '"'"'\n'"'"' '"'"' '"'"'`'
