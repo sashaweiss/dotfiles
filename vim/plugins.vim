@@ -19,12 +19,16 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } | Plug 'juneg
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'neomake/neomake'
 
 " Typing
 Plug 'chaoren/vim-wordmotion'
 Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
+
+" General functionality
+Plug 'romainl/vim-qf'
 
 call plug#end()
 
@@ -71,3 +75,7 @@ let g:racer_experimental_completer = 1
 
 " GitGutter
 set updatetime=1000
+
+" Neomake
+let g:neomake_open_list = 2
+autocmd! BufWritePre * if &ft == "rust" | Neomake cargo
