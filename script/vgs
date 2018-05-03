@@ -1,2 +1,0 @@
-files=`git status -s | grep -v '??' | sed s/^...// | tr '\n' ' '`
-eval "vim $files"
