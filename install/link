@@ -1,16 +1,16 @@
 #!/bin/zsh
 
-ln -s $DOTFILES/git/gitconfig ~/.gitconfig
-ln -s $DOTFILES/git/gitignore ~/.gitignore
+ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
+ln -s ~/dotfiles/git/gitignore ~/.gitignore
 
 mkdir ~/.ssh
-ln -s $DOTFILES/ssh/config ~/.ssh/config
+ln -s ~/dotfiles/ssh/config ~/.ssh/config
 
-ln -s $DOTFILES/vim/vimrc ~/.vimrc
+ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 
-ln -s $DOTFILES/tmux/tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 
-ln -s $DOTFILES/zsh/zshrc ~/.zshrc
+ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
