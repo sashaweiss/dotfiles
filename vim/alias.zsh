@@ -8,3 +8,4 @@ fi
 alias vims='vim -O'
 
 alias vimgs='vim `git status -s | grep -v '"'"'??'"'"' | sed s/^...// | tr '"'"'\n'"'"' '"'"' '"'"'`'
+alias vimsgs='vim -O `git status -s | grep -v '"'"'??'"'"' | sed s/^...// | tr '"'"'\n'"'"' '"'"' '"'"'`'
