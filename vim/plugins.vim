@@ -77,7 +77,7 @@ let g:rustfmt_options = "-f"
 let g:racer_experimental_completer = 1
 
 " GitGutter
-set updatetime=1000
+set updatetime=300
 
 " Neomake
 let g:neomake_open_list = 2
