@@ -30,6 +30,9 @@ Plug 'jiangmiao/auto-pairs'
 " General functionality
 Plug 'romainl/vim-qf'
 
+" Colors
+Plug 'mhartington/oceanic-next'
+
 call plug#end()
 
 
