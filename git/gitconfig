@@ -2,7 +2,7 @@
 	name = sashaweiss
 	email = sasha@sashaweiss.coffee
 [core]
-	editor = vim
+	editor = "if command -v nvim > /dev/null; then ED='nvim'; else ED='vim'; fi; $ED"
 [alias]
 	co = checkout
   oneline = log --pretty=format:\"%h %ad%x20%s%x20%x28%an%x29\" --date=short
