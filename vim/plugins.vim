@@ -73,7 +73,6 @@ let g:AutoPairsMultilineClose = 0
 
 " Vim-Rust
 let g:rustfmt_autosave = 1
-let g:rustfmt_options = "-f"
 let g:racer_experimental_completer = 1
 
 " GitGutter
