@@ -18,6 +18,8 @@
 	<string>manual</string>
 	<key>Default Bookmark Guid</key>
 	<string>7C00883D-12D8-4811-9A96-83B114E3BE23</string>
+	<key>DisableMetalWhenUnplugged</key>
+	<false/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -177,15 +179,15 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 220 599 388 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>512 419 918 401 0 0 1440 900 </string>
+	<string>521 731 1018 447 0 0 1920 1200 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>723 376 665 502 0 0 1440 900 </string>
+	<string>0 98 650 502 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>2 376 650 502 0 0 1440 878 </string>
+	<string>1836 398 650 502 1440 135 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>197 54 730 527 0 0 1440 878 </string>
+	<string>197 73 650 502 0 0 1440 878 </string>
 	<key>NeverWarnAboutPossibleOverrides</key>
 	<true/>
 	<key>NeverWarnAboutPossibleOverrides_selection</key>
@@ -200,7 +202,7 @@
 			<key>ASCII Anti Aliased</key>
 			<true/>
 			<key>ASCII Ligatures</key>
-			<true/>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -881,17 +883,21 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-05-03T19:10:47Z</date>
+	<date>2018-06-04T15:24:08Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Selection Respects Soft Boundaries</key>
 	<true/>
+	<key>ShowMetalFPSmeter</key>
+	<false/>
 	<key>SwitchPaneModifier</key>
 	<integer>9</integer>
 	<key>TabStyle</key>
 	<integer>1</integer>
 	<key>UKCrashReporterLastCrashReportDate</key>
 	<real>1486405376</real>
+	<key>UseMetal</key>
+	<true/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
@@ -901,7 +907,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.6</string>
+	<string>3.2.0beta3</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
