@@ -8,12 +8,7 @@ nmap <leader>t :enew<CR>
 nmap <leader>= :bnext<CR>
 nmap <leader>- :bprevious<CR>
 nmap <leader>w :bprevious <BAR> bd #<CR>
-
-" Tabs
-nmap <leader>T :tabe %<CR>
-nmap <leader>+ :tabnext<CR>
-nmap <leader>_ :tabprevious<CR>
-nmap <leader>W :tabclose<CR>
+nmap <leader>W :bprevious <BAR> bd! #<CR>
 
 " Nuke scroll wheel spam characters
 noremap <ScrollWheelUp> <nop>
