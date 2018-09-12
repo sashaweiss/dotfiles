@@ -20,6 +20,12 @@ git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
 ./install/link
 ```
 
+### Change shell to `zsh`
+```
+chsh -s /bin/zsh # Mac
+```
+Now, restart your terminal.
+
 ### P0 tools
 - brew (needed for the rest)
 - git
