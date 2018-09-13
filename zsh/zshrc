@@ -1,17 +1,19 @@
-# printf "Loading zsh"
-
 # Shortcut to this dotfiles path is $DOTFILES
 export DOTFILES=$HOME/dotfiles
 
 # Load helper scripts
-PATH="$DOTFILES/script:$PATH"
+if [ -z "$OLD_PATH" ]; then
+  OLD_PATH=$PATH
+  export OLD_PATH
+fi
+
+PATH="$DOTFILES/script:$OLD_PATH"
 export PATH
 
 # Source oh-my-zsh
 plugins=(git npm python sudo golang docker docker-compose cargo)
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
-# printf "."
 unalias -m '*'
 
 # Get all zsh files
@@ -21,18 +23,14 @@ config_files=($DOTFILES/**/*.zsh)
 # Load the path files
 for file in ${(M)config_files:#*/path.zsh}
 do
-  # printf "."
   source $file
 done
 
 # Load everything but the path files
 for file in ${${config_files:#*/path.zsh}}
 do
-  # printf "."
   source $file
 done
-
-# printf "done!\n"
 
 autoload -U compinit
 compinit

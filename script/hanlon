@@ -1,5 +1,0 @@
-if [[ "hanlon.wot.eecs.northwestern.edu" == `hostname` ]]; then
-  exit 0
-fi
-
-exit 1

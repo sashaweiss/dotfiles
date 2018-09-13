@@ -168,11 +168,11 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>2124 696 445 77 1440 209 1920 1080 </string>
+	<string>461 269 445 77 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1909 659 918 394 1440 209 1920 1080 </string>
+	<string>269 410 918 394 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2234 614 665 452 1440 209 1920 1057 </string>
+	<string>492 245 665 477 0 0 1440 900 </string>
 	<key>NeverWarnAboutPossibleOverrides</key>
 	<true/>
 	<key>NeverWarnAboutPossibleOverrides_selection</key>
@@ -720,7 +720,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGSDZForPowerline-Regular 14</string>
+			<string>OperatorMonoForPowerline-Book 16</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>

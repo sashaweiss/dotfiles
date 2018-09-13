@@ -1,39 +1,3 @@
-Host murphy
-    HostName murphy.wot.eecs.northwestern.edu
-    User awq325
-
-Host batman
-    HostName batman.eecs.northwestern.edu
-    User awq325
-
-Host batgirl
-    HostName batgirl.eecs.northwestern.edu
-    User awq325
-
-Host alfred
-    HostName alfred.eecs.northwestern.edu
-    User awq325
-
-Host gotham
-    HostName gotham.eecs.northwestern.edu
-    User awq325
-
-Host hanlon
-    HostName hanlon.wot.eecs.northwestern.edu
-    User awq325
-
-Host peroni
-    HostName peroni.cs.northwestern.edu
-    User awq325
-
 Host watney
     HostName 25.0.222.253
-    user sasha
-
-Host patera
-    HostName 25.14.80.57
-    user jiripatera
-
-Host sasha_patera
-    HostName 25.14.80.57
     user sasha
