@@ -2,44 +2,59 @@ source $DOTFILES/zsh/gitstatus/zshrc.sh
 
 setopt PROMPT_SUBST
 
+# Thanks to https://joshdick.net/2017/06/08/my_git_prompt_for_zsh_revisited.html
 git_info() {
-  data=`git status -b --porcelain 2> /dev/null`
-  if [[ $? -eq 0 ]]; then
-    n_staged=`echo "$data" | grep -c "^[ADM]"`
-    n_mod=`echo "$data" | grep -c "^ [ADM]"`
-    n_ut=`echo "$data" | grep -c "^??"`
 
-    branch_regex="^## ([a-zA-Z0-9]+)\.{3}([a-zA-Z0-9/]*)"
-    [[ "$data" =~ "$branch_regex" ]]
-    l_branch=$match[1]
-    r_branch=$match[2]
+  # Exit if not inside a Git repository
+  ! git rev-parse --is-inside-work-tree > /dev/null 2>&1 && return
 
-    hud="$l_branch"
-    if [[ "$n_staged" -ne "0" ]] || [[ "$n_mod" -ne "0" ]] || [[ "$n_ut" -ne "0" ]]; then
-      hud+="..."
-    fi
+  # Git branch/tag, or name-rev if on detached head
+  local GIT_LOCATION=${$(git symbolic-ref -q HEAD || git name-rev --name-only --no-undefined --always HEAD)#(refs/heads/|tags/)}
 
-    # if [[ -z "$r_branch" ]]; then
-    #   ah_beh="`git rev-list --left-right --count $l_branch...$r_branch` "
-    #   ahead=`echo $ah_beh | cut -d ' ' -f1`
-    #   behind=`echo $ah_beh | cut -d ' ' -f2`
+  local AHEAD="%F{red}⇡NUMf"
+  local BEHIND="%F{cyan}⇣NUM%f"
+  local MERGING="%F{magenta}⚡︎%f"
+  local UNTRACKED="%F{red}●%f"
+  local MODIFIED="%F{yellow}●%f"
+  local STAGED="%F{green}●%f"
 
-    #   if [[ "$ahead" -ne "0" ]] || [[ "$behind" -ne "0" ]]; then
-    #     hud+=" ["
-    #   fi
-    #   if [[ "$ahead" -ne "0" ]]; then
-    #     hud+=$ahead"↑"
-    #   fi
-    #   if [[ "$behind" -ne "0" ]]; then
-    #     hud+=$behind"↓"
-    #   fi
-    #   if [[ "$ahead" -ne "0" ]] || [[ "$behind" -ne "0" ]]; then
-    #     hud+="]"
-    #   fi
-    # fi
+  local -a DIVERGENCES
+  local -a FLAGS
 
-    echo " %F{black}on%f %F{red}$hud%f"
+  local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
+  if [ "$NUM_AHEAD" -gt 0 ]; then
+    DIVERGENCES+=( "${AHEAD//NUM/$NUM_AHEAD}" )
   fi
+
+  local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
+  if [ "$NUM_BEHIND" -gt 0 ]; then
+    DIVERGENCES+=( "${BEHIND//NUM/$NUM_BEHIND}" )
+  fi
+
+  local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
+  if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; then
+    FLAGS+=( "$MERGING" )
+  fi
+
+  if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
+    FLAGS+=( "$UNTRACKED" )
+  fi
+
+  if ! git diff --quiet 2> /dev/null; then
+    FLAGS+=( "$MODIFIED" )
+  fi
+
+  if ! git diff --cached --quiet 2> /dev/null; then
+    FLAGS+=( "$STAGED" )
+  fi
+
+  local -a GIT_INFO
+  # GIT_INFO+=( "\033[38;5;15m" )
+  [ -n "$GIT_STATUS" ] && GIT_INFO+=( "$GIT_STATUS" )
+  GIT_INFO+=( "$GIT_LOCATION" )
+  [[ ${#DIVERGENCES[@]} -ne 0 ]] && GIT_INFO+=( "${(j::)DIVERGENCES}" )
+  [[ ${#FLAGS[@]} -ne 0 ]] && GIT_INFO+=( "${(j::)FLAGS}" )
+  echo " %F{black}on%f $GIT_INFO"
 }
 
 PROMPT=''
