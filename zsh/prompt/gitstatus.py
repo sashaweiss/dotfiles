@@ -74,7 +74,7 @@ for st in status:
         elif st[0] != ' ':
             staged.append(st)
 
-out = " %F{{black}}on%f %F{{white}}{}%f {}{}{}%F{{green}}{}%f%F{{yellow}}{}%f%F{{red}}{}%f {}".format(
+out = " %F{{black}}on%f %F{{142}}{} {}{}{}%F{{green}}{}%f%F{{yellow}}{}%f%F{{red}}{}%f {}".format(
         branch,
         "{}↑".format(ahead) if ahead else "",
         "{}↓".format(behind) if behind else "",
