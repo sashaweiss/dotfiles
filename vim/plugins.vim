@@ -2,14 +2,14 @@
 call plug#begin('~/.vim/plugged')
 
 " Languages
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'keith/swift.vim'
-Plug 'wlangstroth/vim-racket'
-Plug 'fatih/vim-go'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'keith/swift.vim', { 'for': 'swift' }
+Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'mustache/vim-mustache-handlebars', { 'for': 'html.handlebars' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'racer-rust/vim-racer', { 'for': 'rust' }
 
 " File browsing
 Plug 'scrooloose/nerdtree'
@@ -19,7 +19,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } | Plug 'juneg
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'neomake/neomake'
+Plug 'neomake/neomake', { 'for': 'rust' }
 
 " Typing
 Plug 'chaoren/vim-wordmotion'
