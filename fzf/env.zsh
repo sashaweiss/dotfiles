@@ -2,7 +2,7 @@ if command -v fzf > /dev/null && [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
 
   if command -v fd > /dev/null; then
-    export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
+    export FZF_DEFAULT_COMMAND='fd --follow --hidden --exclude .git'
   fi
 
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
