@@ -20,5 +20,10 @@ nmap <C-o> :xcmenucmd Go Back<CR>
 
 inoremap jk <esc>
 
+nnoremap J }
+vnoremap J }
+nnoremap K {
+vnoremap K {
+
 noremap z $
 nnoremap Z ^
