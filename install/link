@@ -9,6 +9,7 @@ ln -s ~/dotfiles/ssh/config ~/.ssh/config
 ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 
 mkdir ~/.vim
+mkdir ~/.config
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 
