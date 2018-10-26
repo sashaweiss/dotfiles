@@ -1,6 +1,6 @@
 [user]
 	name = sashaweiss
-	email = sasha@sashaweiss.coffee
+	email = asashaweiss@gmail.com
 [core]
 	editor = "if command -v nvim > /dev/null; then ED='nvim'; else ED='vim'; fi; $ED"
 [alias]

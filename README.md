@@ -61,7 +61,7 @@ Now, restart your terminal.
 - wget
 - tree
 ```sh
-brew install fzf wget tree fd ripgrep && source ~/.zshrc
+brew install fzf wget tree fd ripgrep htop sashaweiss/projects/itree && source ~/.zshrc
 ```
 
 ### Vim plugins
@@ -71,5 +71,9 @@ vim +GoInstallBinaries +qa
 ```
 
 ### (Optional) GUI utilities
+- HyperSwitch
+- Spectacle
+- Bartender
+- Alfred 3
 - [iTerm](https://iterm2.com/) - set up to source from $DOTFILES/iterm
 - [Powerline fonts](https://github.com/powerline/fonts)
