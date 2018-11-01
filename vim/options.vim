@@ -73,8 +73,9 @@ set autoindent
 set cindent
 set smartindent
 
-" Four space tabs for Python
+" Four space tabs for some languages
 autocmd FileType python setlocal tabstop=4 shiftwidth=4
+autocmd FileType swift setlocal tabstop=4 shiftwidth=4
 
 " Seach case-sensitive if capital in pattern, otherwise insensitive
 set ignorecase
