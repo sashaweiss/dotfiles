@@ -55,13 +55,8 @@ Now, restart your terminal.
 - java
 
 ### CLI utilities
-- ripgrep
-- fd
-- fzf
-- wget
-- tree
 ```sh
-brew install fzf wget tree fd ripgrep htop sashaweiss/projects/itree && source ~/.zshrc
+brew install fzf wget tree fd ripgrep exa bat htop sashaweiss/projects/itree && source ~/.zshrc
 ```
 
 ### Vim plugins

@@ -9,3 +9,5 @@ if mac; then
 elif linux; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)" < /dev/null
 fi
+
+brew install fzf wget tree fd ripgrep exa bat htop sashaweiss/projects/itree
