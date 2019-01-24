@@ -66,7 +66,7 @@ vim +GoInstallBinaries +qa
 ```
 
 ### (Optional) GUI utilities
-- HyperSwitch
+- Contexts
 - Spectacle
 - Bartender
 - Alfred 3
