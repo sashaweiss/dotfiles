@@ -70,5 +70,6 @@ vim +GoInstallBinaries +qa
 - Spectacle
 - Bartender
 - Alfred 3
+- Amphetamine
 - [iTerm](https://iterm2.com/) - set up to source from $DOTFILES/iterm
 - [Powerline fonts](https://github.com/powerline/fonts)
