@@ -34,7 +34,7 @@ noremap Z ^
 noremap <leader>y "*y
 
 " Search for highlighted text
-vnoremap // yb/\V<C-R>"<CR>
+vnoremap // y/\V<C-R>"<CR>
 
 " Toggle NERDTree
 nmap <leader>nt :NERDTreeToggle<CR>
