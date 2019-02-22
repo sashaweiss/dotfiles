@@ -1,5 +1,5 @@
 " ========= General Options =========
-
+      
 " Use UTF-8
 set encoding=utf-8
 
@@ -54,14 +54,26 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Autoremove trailing spaces when saving the buffer
-" Don't do it for Go - let GoFmt handle that
-fun! StripTrailingWhitespace()
-    if &ft =~ 'go'
-        return
-    endif
-    %s/\s\+$//e
-endfun
-autocmd BufWritePre * call StripTrailingWhitespace()
+" Don't do it for Rust or Go; let (go|rust)fmt handle that
+" Use g:StripWhitespace to temporarily disable this behavior
+let g:StripWhitespace = 1
+
+function StripTrailingWhitespace()
+  if g:StripWhitespace != 1
+    return
+  endif
+
+  if &ft =~ 'go' || &ft =~ 'rust'
+    return
+  endif
+
+  let l = line(".")
+  let c = col(".")
+  :%s/\s\+$//e
+  call cursor(l, c)
+endfunction
+
+autocmd BufWritePost * call StripTrailingWhitespace()
 
 " New panes to right and bottom
 set splitright
