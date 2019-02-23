@@ -58,7 +58,7 @@ autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 " Use g:StripWhitespace to temporarily disable this behavior
 let g:StripWhitespace = 1
 
-function StripTrailingWhitespace()
+function! StripTrailingWhitespace()
   if g:StripWhitespace != 1
     return
   endif
