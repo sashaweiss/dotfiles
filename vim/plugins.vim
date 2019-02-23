@@ -10,6 +10,7 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'mustache/vim-mustache-handlebars', { 'for': 'html.handlebars' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'racer-rust/vim-racer', { 'for': 'rust' }
+Plug 'plasticboy/vim-markdown', { 'for': ['md', 'markdown'] }
 
 " File browsing
 Plug 'scrooloose/nerdtree'
@@ -84,3 +85,8 @@ autocmd! BufWritePre * if &ft == "rust" | Neomake cargo
 
 let g:neomake_rust_cargo_command = ['check', '--all-targets']
 let $RUSTFLAGS='-Awarnings'
+
+" Vim-Markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_strikethrough = 1
+let g:vim_markdown_math = 1
