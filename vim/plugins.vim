@@ -25,7 +25,7 @@ Plug 'neomake/neomake', { 'for': 'rust' }
 " Typing
 Plug 'chaoren/vim-wordmotion'
 Plug 'tpope/vim-commentary'
-Plug 'alvan/vim-closetag'
+Plug 'alvan/vim-closetag', { 'for': ['html', 'xml'] }
 Plug 'jiangmiao/auto-pairs'
 
 " General functionality
