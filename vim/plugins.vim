@@ -81,7 +81,7 @@ set updatetime=300
 
 " Neomake
 let g:neomake_open_list = 2
-autocmd! BufWritePre * if &ft == "rust" | Neomake cargo
+autocmd! BufWritePre * if &ft == "rust" | Neomake! cargo
 
 let g:neomake_rust_cargo_command = ['check', '--all-targets']
 let $RUSTFLAGS='-Awarnings'
