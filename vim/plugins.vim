@@ -71,10 +71,12 @@ let g:go_doc_keywordprg_enabled = 0
 
 " Auto-Pairs
 let g:AutoPairsMultilineClose = 0
+let g:AutoPairs = {'{':'}'}
 
 " Vim-Rust
 let g:rustfmt_autosave = 1
 let g:racer_experimental_completer = 1
+let g:rust_keep_autopairs_default = 1
 
 " GitGutter
 set updatetime=300
