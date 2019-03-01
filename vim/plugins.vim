@@ -10,6 +10,7 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'mustache/vim-mustache-handlebars', { 'for': 'html.handlebars' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'racer-rust/vim-racer', { 'for': 'rust' }
+Plug 'tpope/vim-markdown', { 'for': ['md', 'markdown'] }
 
 " File browsing
 Plug 'scrooloose/nerdtree'
@@ -24,7 +25,7 @@ Plug 'neomake/neomake', { 'for': 'rust' }
 " Typing
 Plug 'chaoren/vim-wordmotion'
 Plug 'tpope/vim-commentary'
-Plug 'alvan/vim-closetag'
+Plug 'alvan/vim-closetag', { 'for': ['html', 'xml'] }
 Plug 'jiangmiao/auto-pairs'
 
 " General functionality
@@ -70,17 +71,19 @@ let g:go_doc_keywordprg_enabled = 0
 
 " Auto-Pairs
 let g:AutoPairsMultilineClose = 0
+let g:AutoPairs = {'{':'}'}
 
 " Vim-Rust
 let g:rustfmt_autosave = 1
 let g:racer_experimental_completer = 1
+let g:rust_keep_autopairs_default = 1
 
 " GitGutter
 set updatetime=300
 
 " Neomake
 let g:neomake_open_list = 2
-autocmd! BufWritePre * if &ft == "rust" | Neomake cargo
+autocmd! BufWritePre * if &ft == "rust" | Neomake! cargo
 
 let g:neomake_rust_cargo_command = ['check', '--all-targets']
 let $RUSTFLAGS='-Awarnings'
