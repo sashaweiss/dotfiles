@@ -1,0 +1,7 @@
+if [ "$#" -ne 2 ]; then
+  echo "Usage: nvimdiff <file_one> <file_two>"
+elif command -v nvim > /dev/null; then
+  nvim -d "$1" "$2" -c '$wincmd w' -c '$wincmd j'
+else
+  echo "Neovim must be installed!"
+fi
