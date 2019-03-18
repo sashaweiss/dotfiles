@@ -29,6 +29,7 @@ nnoremap <silent> j gj
 " Jump around lines
 noremap z $
 noremap Z ^
+vnoremap z $h
 
 " Copy to system (only applicable on Mac)
 noremap <leader>y "*y
