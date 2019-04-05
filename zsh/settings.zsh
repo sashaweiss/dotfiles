@@ -6,5 +6,7 @@ fi
 export HOSTNAME=`hostname`
 
 # History
-HISTFILE=$HOME/.zsh_history
-setopt inc_append_history share_history
+HISTSIZE=100000
+SAVEHIST=$HISTSIZE
+HISTFILE=~/.zsh_history
+setopt hist_ignore_all_dups hist_reduce_blanks share_history hist_verify

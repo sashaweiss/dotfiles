@@ -13,8 +13,6 @@ SPACESHIP_PROMPT_ORDER=(
   host          # hostname
   dir           # current directory
   git           # git section (git_branch + git_status)
-  package       # package version
-  rust          # rust section
   line_sep      # line break
   vi_mode       # vi mode indicator
   jobs          # background jobs indicator

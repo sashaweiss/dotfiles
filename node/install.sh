@@ -8,4 +8,4 @@ export NVM_DIR=$nvm_dir
 source $NVM_DIR/nvm.sh
 
 nvm install node
-npm install -g typescript
+npm install -g typescript yarn neovim

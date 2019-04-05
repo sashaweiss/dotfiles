@@ -17,7 +17,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } | Plug 'junegunn/fzf.vim'
 
 " HUD annotations
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
+Plug 'iamcco/sran.nvim', { 'do': 'yarn' }
+Plug 'iamcco/git-p.nvim'
+
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neomake/neomake', { 'for': 'rust' }
@@ -80,6 +83,7 @@ let g:rust_keep_autopairs_default = 1
 
 " GitGutter
 set updatetime=300
+let g:gitp_blame_format = '  %{account} ~ %{ago} • %{commit}'
 
 " Neomake
 let g:neomake_open_list = 2

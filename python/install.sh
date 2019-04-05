@@ -6,4 +6,5 @@ if ! command -v pip > /dev/null; then
   rm get-pip.py
 fi
 
-sudo pip install pipenv
+sudo pip install pipenv neovim
+sudo pip3 install pipenv neovim
