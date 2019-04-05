@@ -1,6 +1,6 @@
 # turn on spaceship prompt vi mode
 # if using spaceship prompt
-#command -v spaceship_vi_mode_enable > /dev/null 2>&1 && spaceship_vi_mode_enable
+command -v spaceship_vi_mode_enable > /dev/null 2>&1 && spaceship_vi_mode_enable
 
 # use spaceship prompt
 export ZSH_THEME="spaceship"
@@ -14,9 +14,7 @@ SPACESHIP_PROMPT_ORDER=(
   dir           # current directory
   git           # git section (git_branch + git_status)
   package       # package version
-  node          # node.js section
-  venv          # virtualenv section
-  exec_time     # execution time
+  rust          # rust section
   line_sep      # line break
   vi_mode       # vi mode indicator
   jobs          # background jobs indicator
@@ -24,9 +22,9 @@ SPACESHIP_PROMPT_ORDER=(
   char          # prompt character
 )
 
-# SPACESHIP_RPROMPT_ORDER=(
-#   battery
-# )
+SPACESHIP_RPROMPT_ORDER=(
+  exec_time     # execution time
+)
 
 # prompt options
 SPACESHIP_PROMPT_ADD_NEWLINE=false
@@ -80,17 +78,8 @@ SPACESHIP_GIT_STATUS_ADDED="$FG[045]+%F{red}"
 SPACESHIP_GIT_STATUS_UNTRACKED="$FG[004]?%F{red}"
 SPACESHIP_GIT_STATUS_DELETED="$FG[214]x%F{red}"
 
-SPACESHIP_GIT_STATUS_AHEAD="$FG[247]⬆%F{red}"
-SPACESHIP_GIT_STATUS_BEHIND="$FG[247]⬇%F{red}"
-
-# package
-# come back to this
-
-# node
-# come back to this
-
-# venv
-# come back to this
+SPACESHIP_GIT_STATUS_AHEAD="$FG[247]⬆ %F{red}"
+SPACESHIP_GIT_STATUS_BEHIND="$FG[247]⬇ %F{red}"
 
 # exec time
 SPACESHIP_EXEC_TIME_ELAPSED=10
@@ -100,6 +89,6 @@ SPACESHIP_EXEC_TIME_ELAPSED=10
 # SPACESHIP_BATTERY_THRESHOLD=15
 
 # vi mode
-SPACESHIP_VI_MODE_INSERT="$FG[159]•%F{red}"
+SPACESHIP_VI_MODE_INSERT="$FG[159]-%F{red}"
 SPACESHIP_VI_MODE_NORMAL="$FG[166]•%F{red}"
 SPACESHIP_VI_MODE_COLOR=249

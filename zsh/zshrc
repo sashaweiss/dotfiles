@@ -10,9 +10,6 @@ fi
 PATH="$DOTFILES/script:$OLD_PATH"
 export PATH
 
-# Vi mode
-#bindkey -v
-
 # Setup antibody
 source <(antibody init)
 antibody bundle < $DOTFILES/zsh/antiplugins.txt
