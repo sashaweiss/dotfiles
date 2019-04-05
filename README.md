@@ -6,70 +6,35 @@ Thanks to [holman's dotfiles](https://github.com/holman/dotfiles), [.tmux](https
 ## Download and install
 These dotfiles will assume that they live at `~/dotfiles` - changing this will require adjusting the `$DOTFILES` environment variable set in the first line of `zsh/zshrc.symlink`.
 
-On Linux, run `./install/on_linux` for a complete, automatic install process (asks for sudo once at the beginning). Tested on Ubuntu 16.04, running with `bash`. (Currently does not install `rust`.)
-
-Alternatively (either Linux or Mac), run install scripts individually, as listed below. This can be a more tailored approach (I like my setup, doesn't mean you do), and can help diagnose a failing script-install.
-
 Installation on Mac assumes `git` (and therefore the Xcode command-line tools) is installed.
 
 Manual installation on Linux will require installing `zsh`, `git`, and `curl` if they're not already.
 
-### oh-my-zsh and linking
+### Linking
 ```sh
-git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
 ./install/link
 ```
 
-### Change shell to `zsh`
-```
-chsh -s /bin/zsh # Mac
-```
-Now, restart your terminal.
+### Install my toys
 
-### P0 tools
-- brew (needed for the rest)
-- git
-- vim
-- tmux
-```sh
-./brew/install.sh && source ~/.zshrc
-./git/install.sh && source ~/.zshrc
-./vim/install.sh && source ~/.zshrc
-./tmux/install.sh && source ~/.zshrc
+Install brew:
+```
+$ ./brew/install.sh
 ```
 
-### Languages
-- python
-- node and typescript
-- go
-- rust
-```sh
-./python/install.sh && source ~/.zshrc
-./go/install.sh && source ~/.zshrc
-./node/install.sh && source ~/.zshrc
-./rust/install.sh && source ~/.zshrc # this step is not automatic yet
+Let brew install everything:
+```
+$ brew bundle
 ```
 
-#### (Optional) Languages with complicated online instructions
-- scala
-- java
+### Start using `zsh`
+Add `/usr/local/bin/zsh` to `/etc/shells`. Run `chsh -s /usr/local/bin/zsh`.
 
-### CLI utilities
-```sh
-brew install fzf wget tree fd ripgrep exa bat htop sashaweiss/projects/itree && source ~/.zshrc
-```
+### Individual language support
+Run `./<language>/install.sh` for individual language support.
 
-### Vim plugins
+#### Vim plugins
 ```sh
 vim +PlugInstall +qa
 vim +GoInstallBinaries +qa
 ```
-
-### (Optional) GUI utilities
-- Contexts
-- Spectacle
-- Bartender
-- Alfred 3
-- Amphetamine
-- [iTerm](https://iterm2.com/) - set up to source from $DOTFILES/iterm
-- [Powerline fonts](https://github.com/powerline/fonts)

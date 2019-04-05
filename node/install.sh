@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 nvm_dir=~/.nvm
 git clone https://github.com/creationix/nvm.git "$nvm_dir"

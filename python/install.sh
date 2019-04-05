@@ -1,6 +1,4 @@
-#!/bin/zsh
-
-brew install python
+#!/usr/bin/env zsh
 
 if ! command -v pip > /dev/null; then
   curl https://bootstrap.pypa.io/get-pip.py > get-pip.py
