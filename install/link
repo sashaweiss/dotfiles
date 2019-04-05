@@ -1,19 +1,22 @@
 #!/usr/bin/env zsh
 
-ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
-ln -s ~/dotfiles/git/gitignore ~/.gitignore
+ln -fs $DOTFILES/git/gitconfig ~/.gitconfig
+ln -fs $DOTFILES/git/gitignore ~/.gitignore
 
 mkdir ~/.ssh
-ln -s ~/dotfiles/ssh/config ~/.ssh/config
+ln -fs $DOTFILES/ssh/config ~/.ssh/config
 
-ln -s ~/dotfiles/vim/vimrc ~/.vimrc
-ln -s ~/dotfiles/vim/xvimrc ~/.xvimrc
+ln -fs $DOTFILES/vim/vimrc ~/.vimrc
+ln -fs $DOTFILES/vim/xvimrc ~/.xvimrc
 
 mkdir ~/.vim
 mkdir ~/.config
-ln -s ~/.vim ~/.config/nvim
-ln -s ~/.vimrc ~/.config/nvim/init.vim
+ln -Fs ~/.vim ~/.config/nvim
+ln -Fs ~/.vimrc ~/.config/nvim/init.vim
 
-ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -fs $DOTFILES/tmux/tmux.conf ~/.tmux.conf
 
-ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
+ln -fs $DOTFILES/zsh/zshrc ~/.zshrc
+
+mkdir -p ~/.config/alacritty
+ln -fs $DOTFILES/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
