@@ -1,5 +1,5 @@
 # Shortcut to this dotfiles path is $DOTFILES
-export DOTFILES=$HOME/dotfiles
+export DOTFILES=$HOME/.files
 
 # Load helper scripts
 if [ -z "$OLD_PATH" ]; then

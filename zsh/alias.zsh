@@ -1,6 +1,6 @@
 alias cd='cd -P'
 alias "cd.."='cd ..'
-alias dot='cd $HOME/dotfiles'
+alias dot='cd $DOTFILES'
 
 alias pg='ping google.com'
 alias d='date'
