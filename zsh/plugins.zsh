@@ -8,7 +8,6 @@ ZSH_AUTOSUGGEST_USE_ASYNC=true # can be set to anything
 ZSH_AUTOSUGGEST_STRATEGY=(history)
 
 # Keymappings
-# ref - https://github.com/zsh-users/zsh-autosuggestions#key-bindings
 
-#bindkey -M viins '^e' autosuggest-accept # until end of suggestion
-bindkey -M viins '^w' forward-word # next word, how `vim` `w` would advance
+# ref - https://github.com/zsh-users/zsh-autosuggestions#key-bindings
+bindkey -M viins '^f' forward-word # next word, how `vim` `w` would advance

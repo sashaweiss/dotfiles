@@ -34,6 +34,8 @@ Add `/usr/local/bin/zsh` to `/etc/shells`. Run `chsh -s /usr/local/bin/zsh`.
 Run `./<language>/install.sh` for individual language support.
 
 #### Vim plugins
+Make sure to run `python/install.sh`, `ruby/install.sh`, and `node/install.sh` first so we have language support for `neovim`.
+
 ```sh
 vim +PlugInstall +qa
 vim +GoInstallBinaries +qa
