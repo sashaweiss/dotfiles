@@ -17,9 +17,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } | Plug 'junegunn/fzf.vim'
 
 " HUD annotations
-" Plug 'airblade/vim-gitgutter'
-Plug 'iamcco/sran.nvim', { 'do': 'yarn' }
-Plug 'iamcco/git-p.nvim'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
