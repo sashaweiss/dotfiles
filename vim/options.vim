@@ -1,5 +1,5 @@
 " ========= General Options =========
-      
+
 " Use UTF-8
 set encoding=utf-8
 
@@ -41,9 +41,6 @@ set completeopt=longest,menuone
 
 " Map .md files to markdown
 au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=markdown
-
-" Auto-resize splits when resizing vim generally
-autocmd VimResized * wincmd =
 
 " Set up highlight group & retain through colorscheme changes
 highlight ExtraWhitespace ctermbg=red guibg=red
