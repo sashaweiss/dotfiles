@@ -6,3 +6,6 @@ zdharma/fast-syntax-highlighting
 
 # In-prompt shadow-y autocomplete suggestions
 zsh-users/zsh-autosuggestions
+
+# Oh-My-Zsh completion plugins
+robbyrussell/oh-my-zsh path:plugins/cargo kind:fpath
