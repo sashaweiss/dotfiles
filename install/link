@@ -3,9 +3,6 @@
 ln -fs $DOTFILES/git/gitconfig ~/.gitconfig
 ln -fs $DOTFILES/git/gitignore ~/.gitignore
 
-mkdir ~/.ssh
-ln -fs $DOTFILES/ssh/config ~/.ssh/config
-
 ln -fs $DOTFILES/vim/vimrc ~/.vimrc
 ln -fs $DOTFILES/vim/xvimrc ~/.xvimrc
 

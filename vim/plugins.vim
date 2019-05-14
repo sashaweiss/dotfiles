@@ -1,9 +1,6 @@
 " ========= VimPlug Plugins =========
 call plug#begin('~/.vim/plugged')
 
-" Languages
-Plug 'fatih/vim-go', { 'for': 'go' }
-
 " Actually writing code
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-markdown', { 'for': ['md', 'markdown'] }
@@ -53,10 +50,6 @@ let NERDTreeMapOpenSplit='\t'
 let NERDTreeRespectWildIgnore=1
 let g:NERDTreeWinSize=25
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Vim-Go
-let g:go_fmt_command = "goimports"
-let g:go_doc_keywordprg_enabled = 0
 
 " Auto-Pairs
 let g:AutoPairsMultilineClose = 0
