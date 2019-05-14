@@ -1,14 +1,14 @@
 # Shortcut to this dotfiles path is $DOTFILES
 export DOTFILES=$HOME/.files
 
-# Load helper scripts
-if [ -z "$OLD_PATH" ]; then
-  OLD_PATH=$PATH
-  export OLD_PATH
-fi
+# Load helper functions and scripts
+typeset -U path
+path=(
+  $DOTFILES/functions
+  $path
+)
 
-PATH="$DOTFILES/script:$OLD_PATH"
-export PATH
+source "$DOTFILES/functions/_load"
 
 # Setup antibody
 source <(antibody init)

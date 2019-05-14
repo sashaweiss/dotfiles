@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-nvm_dir=~/.nvm
+nvm_dir="$HOME/.nvm"
 git clone https://github.com/creationix/nvm.git "$nvm_dir"
 cd "$nvm_dir"
 

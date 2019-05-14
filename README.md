@@ -4,7 +4,7 @@ My personal dotfiles. A `zsh`+`vim`+`tmux` workflow, mostly.
 Thanks to [holman's dotfiles](https://github.com/holman/dotfiles), [.tmux](https://github.com/olivierverdier/zsh-git-prompt), and [zsh-git-prompt](https://github.com/gpakosz/.tmux)!
 
 ## Download and install
-These dotfiles will assume that they live at `~/dotfiles` - changing this will require adjusting the `$DOTFILES` environment variable set in the first line of `zsh/zshrc.symlink`.
+These dotfiles will assume that they live at `$HOME/dotfiles` - changing this will require adjusting the `$DOTFILES` environment variable set in the first line of `zsh/zshrc.symlink`.
 
 Installation on Mac assumes `git` (and therefore the Xcode command-line tools) is installed.
 

@@ -36,31 +36,3 @@ noremap <leader>y "*y
 
 " Search for highlighted text
 vnoremap // y/\V<C-R>"<CR>
-
-" Toggle NERDTree
-nmap <leader>nt :NERDTreeToggle<CR>
-
-" Focus NERDTree
-nmap <leader>nf :NERDTreeFocus<CR>
-
-" Open FZF file finder
-map <C-p> :Files<CR>
-
-" Subword motion
-let g:wordmotion_mappings = {
-			\ 'w' : 'gw',
-			\ 'b' : 'gb',
-			\ 'e' : 'ge',
-			\ 'ge' : '',
-			\ 'aw' : '',
-			\ 'iw' : ''
-\ }
-
-" Remap Omni-Completion
-inoremap <C-X><C-N> <C-X><C-O>
-
-" Omnicompletion use Enter to select an entry
-inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-
-" Jump to definition in Rust
-autocmd FileType rust map gd :RustDef<CR>

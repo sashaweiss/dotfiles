@@ -1,5 +1,0 @@
-if [[ "Ebon Hawk" == `hostname` ]]; then
-  exit 0
-fi
-
-exit 1
