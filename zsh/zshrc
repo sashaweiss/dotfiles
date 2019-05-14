@@ -4,11 +4,11 @@ export DOTFILES=$HOME/.files
 # Load helper functions and scripts
 typeset -U path
 path=(
-  $DOTFILES/script
+  $DOTFILES/functions
   $path
 )
 
-source "$DOTFILES/script/_load"
+source "$DOTFILES/functions/_load"
 
 # Setup antibody
 source <(antibody init)

@@ -1,7 +1,3 @@
-" TODO: understand this
-" highlight symbol under cursor on CursorHold
-" autocmd CursorHold * silent call CocActionAsync('highlight')
-
 " << completion >>
 " ref - https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources#improve-completion-experience
 
