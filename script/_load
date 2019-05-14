@@ -1,3 +1,4 @@
 #! /usr/bin/env zsh
 
-_fzf_functions
+source _fzf_functions
+source _nvimdiff

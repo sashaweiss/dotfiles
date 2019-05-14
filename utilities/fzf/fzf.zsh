@@ -34,22 +34,19 @@ _fzf_compgen_dir() {
 
 # <<<< options >>>>
 
-export FZF_DEFAULT_OPTS="--height 75% --reverse --no-mouse --cycle --ansi\
- --select-1 --exit-0\
- --bind ctrl-k:down,ctrl-l:up,space:toggle-preview,alt-d:preview-page-down,\
-alt-u:preview-page-up,ctrl-a:select-all+accept"
+export FZF_DEFAULT_OPTS="--height 50% --reverse --no-mouse --cycle --ansi \
+ --select-1 \
+ --bind ctrl-space:toggle-preview,ctrl-d:preview-page-down,ctrl-u:preview-page-up,ctrl-a:select-all+accept"
 _fzf_bat_preview="--preview='bat --style=numbers --color=always {}'"
+
 export FZF_CTRL_T_OPTS="$_fzf_bat_preview --preview-window=hidden"
 export FZF_EDIT_OPTS="$_fzf_bat_preview"
 
 
 # <<<< commands >>>>
 
-export FZF_DEFAULT_COMMAND="fd --type file --hidden --follow --exclude .git"
-# NOTE: actually mapped to `C-f`
+export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-# NOTE: actually mapped to `C-t`
-export FZF_ALT_C_COMMAND="fd --type directory --hidden --follow --exclude .git"
 
 # <<<< keybindings >>>>
 # NOTE: corresponding widgets defined in `$DOTFILES/functions/_fzf_functions` &
@@ -57,20 +54,10 @@ export FZF_ALT_C_COMMAND="fd --type directory --hidden --follow --exclude .git"
 
 # << zsh functions -> widgets >>
 zle -N fzf-edit-widget
-zle -N fzf-history-widget-accept
-zle -N fzf-modified-history-widget
-
-# paste selected files
-bindkey '^f' fzf-file-widget
 
 # cd into selected folder
 # Note: overrides default of '^t' being bound to `fzf-file-widget`
-bindkey '^t' fzf-cd-widget
+bindkey '^o' fzf-cd-widget
 
 # edit selected file (same as `e <c-f>`)
 bindkey '^p' fzf-edit-widget
-
-# shell history
-# ref - https://github.com/junegunn/fzf/wiki/Configuring-shell-key-bindings
-bindkey -M vicmd '/' fzf-modified-history-widget
-bindkey '^r' fzf-modified-history-widget

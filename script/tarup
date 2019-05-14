@@ -1,5 +1,0 @@
-if [ "$#" -eq 2 ]; then
-  tar -czvf $1 $2
-else
-  echo "Usage: untar <dest> <source>"
-fi

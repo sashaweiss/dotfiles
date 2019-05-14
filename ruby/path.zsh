@@ -1,1 +1,4 @@
-export PATH="$HOME/.rvm/bin:$PATH"
+path=(
+  "$HOME/.rvm/bin"
+  $path
+)
