@@ -1,5 +1,6 @@
 cask_args appdir: "/Applications"
 
+brew "asciinema"
 brew "bat"
 brew "go"
 brew "dep"

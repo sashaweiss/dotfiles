@@ -29,31 +29,74 @@ call plug#end()
 
 " ========= Plugin Configuration =========
 
-" Polyglot
+
+" *** Polyglot ***
+
 let g:polyglot_disabled = ['markdown']
 
-" Airline
+
+" *** Airline ***
+
 let g:airline_theme='cool'
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1      " Enable the list of buffers
 let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 
-" Airline symbols
+
+" *** Airline symbols ***
+
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
-" NERDTree
+
+" *** NERDTree ***
+
 let NERDTreeMapOpenSplit='\t'
 let NERDTreeRespectWildIgnore=1
 let g:NERDTreeWinSize=25
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Auto-Pairs
+nmap <leader>nt :NERDTreeToggle<CR>
+nmap <leader>nf :NERDTreeFocus<CR>
+
+
+" *** Auto-Pairs ***
+
 let g:AutoPairsMultilineClose = 0
 let g:AutoPairs = {'{':'}'}
 
-" GitGutter
+
+" *** GitGutter ***
+"
 set updatetime=300
+
+
+" *** Subword motion ***
+
+let g:wordmotion_mappings = {
+			\ 'w' : 'gw',
+			\ 'b' : 'gb',
+			\ 'e' : 'ge',
+			\ 'ge' : '',
+			\ 'aw' : '',
+			\ 'iw' : ''
+\ }
+
+
+" *** FZF ***
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
+" Override :Files - add toggleable (w/ Space) preview
+command! -bang -nargs=? -complete=dir Files
+\ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+nmap <C-p> :Files<CR>
