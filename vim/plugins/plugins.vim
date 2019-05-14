@@ -1,5 +1,5 @@
 " ========= VimPlug Plugins =========
-call plug#begin('~/.vim/plugged')
+call plug#begin('$HOME/.vim/plugged')
 
 " Actually writing code
 Plug 'sheerun/vim-polyglot'

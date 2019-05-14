@@ -1,20 +1,20 @@
 #!/usr/bin/env zsh
 
-ln -fs $DOTFILES/git/gitconfig ~/.gitconfig
-ln -fs $DOTFILES/git/gitignore ~/.gitignore
+ln -fs "$DOTFILES/git/gitconfig" "$HOME/.gitconfig"
+ln -fs "$DOTFILES/git/gitignore" "$HOME/.gitignore"
 
-ln -fs $DOTFILES/vim/vimrc ~/.vimrc
-ln -fs $DOTFILES/vim/xvimrc ~/.xvimrc
+ln -fs "$DOTFILES/vim/vimrc" "$HOME/.vimrc"
+ln -fs "$DOTFILES/vim/xvimrc" "$HOME/.xvimrc"
 
-mkdir ~/.vim
-mkdir ~/.config
-ln -Fs ~/.vim ~/.config/nvim
-ln -Fs ~/.vimrc ~/.config/nvim/init.vim
-ln -Fs $DOTFILES/vim/plugins/coc.json ~/.config/nvim/coc-settings.json
+mkdir "$HOME/.vim"
+mkdir "$HOME/.config"
+ln -Fs "$HOME/.vim $HOME/.config/nvim"
+ln -Fs "$HOME/.vimrc $HOME/.config/nvim/init.vim"
+ln -Fs "$DOTFILES/vim/plugins/coc.json" "$HOME/.config/nvim/coc-settings.json"
 
-ln -fs $DOTFILES/tmux/tmux.conf ~/.tmux.conf
+ln -fs "$DOTFILES/tmux/tmux.conf" "$HOME/.tmux.conf"
 
-ln -fs $DOTFILES/zsh/zshrc ~/.zshrc
+ln -fs "$DOTFILES/zsh/zshrc" "$HOME/.zshrc"
 
-mkdir -p ~/.config/alacritty
-ln -fs $DOTFILES/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+mkdir -p "$HOME/.config/alacritty"
+ln -fs "$DOTFILES/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"

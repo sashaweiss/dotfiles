@@ -63,7 +63,7 @@ function! StripTrailingWhitespace()
     return
   endif
 
-  if &ft =~ 'go' || &ft =~ 'rust'
+  if &ft =~ 'rust'
     return
   endif
 
