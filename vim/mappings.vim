@@ -55,12 +55,3 @@ let g:wordmotion_mappings = {
 			\ 'aw' : '',
 			\ 'iw' : ''
 \ }
-
-" Remap Omni-Completion
-inoremap <C-X><C-N> <C-X><C-O>
-
-" Omnicompletion use Enter to select an entry
-inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-
-" Jump to definition in Rust
-autocmd FileType rust map gd :RustDef<CR>

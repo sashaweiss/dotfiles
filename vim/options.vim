@@ -26,6 +26,9 @@ set wrap
 " Word wrap on line break
 set linebreak
 
+" Keep gutter open
+set signcolumn=yes
+
 " Show as much of wrapped lines going off the screen as possible
 set display+=lastline
 

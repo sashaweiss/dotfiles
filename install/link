@@ -13,6 +13,7 @@ mkdir ~/.vim
 mkdir ~/.config
 ln -Fs ~/.vim ~/.config/nvim
 ln -Fs ~/.vimrc ~/.config/nvim/init.vim
+ln -Fs $DOTFILES/vim/coc.json ~/.config/nvim/coc-settings.json
 
 ln -fs $DOTFILES/tmux/tmux.conf ~/.tmux.conf
 
