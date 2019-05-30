@@ -125,7 +125,7 @@ fzf_gr() {
   preview+=' $(sed s/^..// <<< {} | cut -d" " -f1) | bat'
 
   git branch -a --color=always | grep -v '/HEAD\s' | sort |
-  fzf --ansi --multi --tac --preview-window right:70% --bind="$bindings" \
+  fzf --ansi --multi --tac --bind="$bindings" \
     --preview "$preview" |
   sed 's/^..//' | cut -d' ' -f1 |
   sed 's#^remotes/##'
