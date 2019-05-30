@@ -39,6 +39,7 @@ nmap <silent> grf <Plug>(coc-references)
 " extra sources - https://github.com/neoclide/coc-sources
 let g:coc_global_extensions = [
   \ 'coc-json',
+  \ 'coc-solargraph',
   \ 'coc-tsserver',
   \ 'coc-html',
   \ 'coc-css',
