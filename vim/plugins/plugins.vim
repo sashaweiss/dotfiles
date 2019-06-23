@@ -8,7 +8,8 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 " File browsing
 Plug 'scrooloose/nerdtree'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  } | Plug 'junegunn/fzf.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " HUD annotations
 Plug 'airblade/vim-gitgutter'
