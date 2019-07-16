@@ -39,5 +39,4 @@ Make sure to run `python/install.sh`, `ruby/install.sh`, and `node/install.sh` f
 
 ```sh
 vim +PlugInstall +qa
-vim +GoInstallBinaries +qa
 ```
