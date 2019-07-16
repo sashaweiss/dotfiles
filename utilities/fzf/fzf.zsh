@@ -59,8 +59,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 zle -N fzf-edit-widget
 
 # cd into selected folder
-# Note: overrides default of '^t' being bound to `fzf-file-widget`
-bindkey '^o' fzf-cd-widget
+# bindkey '^o' fzf-cd-widget
 
 # edit selected file (same as `e <c-f>`)
-bindkey '^p' fzf-edit-widget
+# bindkey '^p' fzf-edit-widget
