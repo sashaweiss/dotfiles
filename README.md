@@ -29,7 +29,7 @@ $ brew bundle
 ```
 
 ### Start using `zsh`
-Add `/usr/local/bin/zsh` to `/etc/shells`. Run `chsh -s /usr/local/bin/zsh`.
+Add `$(brew --prefix)/bin/zsh` (the result of running that expression, not the expression itself) to `/etc/shells`. Run `chsh -s $(brew --prefix)/bin/zsh`.
 
 ### Individual language support
 Run `./<language>/install.sh` for individual language support.
