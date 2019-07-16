@@ -22,6 +22,7 @@ brew "zsh"
 brew "sashaweiss/projects/itree"
 brew "getantibody/tap/antibody"
 
+cask "alacritty"
 cask "1password"
 cask "iterm2"
 cask "alfred"
@@ -33,7 +34,6 @@ cask "google-chrome"
 cask "postman"
 cask "private-internet-access"
 cask "spectacle"
-cask "amphetamine"
 
 brew "mas"
 

@@ -8,8 +8,8 @@ ln -fs "$DOTFILES/vim/xvimrc" "$HOME/.xvimrc"
 
 mkdir "$HOME/.vim"
 mkdir "$HOME/.config"
-ln -Fs "$HOME/.vim $HOME/.config/nvim"
-ln -Fs "$HOME/.vimrc $HOME/.config/nvim/init.vim"
+ln -Fs "$HOME/.vim" "$HOME/.config/nvim"
+ln -Fs "$HOME/.vimrc" "$HOME/.config/nvim/init.vim"
 ln -Fs "$DOTFILES/vim/plugins/coc.json" "$HOME/.config/nvim/coc-settings.json"
 
 ln -fs "$DOTFILES/tmux/tmux.conf" "$HOME/.tmux.conf"
