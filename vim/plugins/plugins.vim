@@ -8,7 +8,12 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 " File browsing
 Plug 'scrooloose/nerdtree'
-Plug '/usr/local/opt/fzf'
+
+if has('mac')
+  Plug '/usr/local/opt/fzf'
+elseif has('unix')
+  Plug '/home/linuxbrew/.linuxbrew/opt/fzf'
+endif
 Plug 'junegunn/fzf.vim'
 
 " HUD annotations

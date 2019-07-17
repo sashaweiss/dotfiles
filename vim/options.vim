@@ -90,7 +90,7 @@ autocmd FileType python setlocal tabstop=4 shiftwidth=4
 autocmd FileType swift setlocal tabstop=4 shiftwidth=4
 autocmd FileType objc setlocal tabstop=4 shiftwidth=4
 
-" Seach case-sensitive if capital in pattern, otherwise insensitive
+" Search case-sensitive if capital in pattern, otherwise insensitive
 set ignorecase
 set smartcase
 
