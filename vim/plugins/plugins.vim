@@ -5,6 +5,7 @@ call plug#begin('$HOME/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-markdown', { 'for': ['md', 'markdown'] }
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'tweekmonster/gofmt.vim', { 'for': ['go'] }
 
 " File browsing
 Plug 'scrooloose/nerdtree'
@@ -90,6 +91,11 @@ let g:wordmotion_mappings = {
 			\ 'aw' : '',
 			\ 'iw' : ''
 \ }
+
+
+" *** GoFmt ***
+
+let g:gofmt_exe = 'goimports'
 
 
 " *** FZF ***
