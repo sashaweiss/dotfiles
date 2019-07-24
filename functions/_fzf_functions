@@ -131,7 +131,7 @@ fzf_gr() {
   sed 's#^remotes/##'
 }
 
-fzf_gh() {
+fzf_gc() {
   is_in_git_repo || return
   local format bindings preview
   format='%C(green)%C(bold)%cd %C(auto)%h%d %s (%an)'
