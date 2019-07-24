@@ -112,3 +112,6 @@ command! -bang -nargs=? -complete=dir Files
 \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 nmap <C-p> :Files<CR>
+
+" Search for highlighted text
+vnoremap // y:Rg <C-R>"<CR>

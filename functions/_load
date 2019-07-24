@@ -2,3 +2,4 @@
 
 source _fzf_functions
 source _nvimdiff
+source _egs

@@ -33,6 +33,3 @@ vnoremap z $h
 
 " Copy to system (only applicable on Mac)
 noremap <leader>y "*y
-
-" Search for highlighted text
-vnoremap // y/\V<C-R>"<CR>
