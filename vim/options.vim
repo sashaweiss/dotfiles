@@ -20,8 +20,8 @@ set t_vb=
 " Map leader to backslash
 let mapleader="\\"
 
-" Wrap lines
-set wrap
+" Don't wrap lines by default
+set nowrap
 
 " Word wrap on line break
 set linebreak
