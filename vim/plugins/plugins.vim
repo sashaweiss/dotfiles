@@ -15,7 +15,7 @@ if has('mac')
 elseif has('unix')
   Plug '/home/linuxbrew/.linuxbrew/opt/fzf'
 endif
-Plug 'junegunn/fzf.vim'
+Plug 'sashaweiss/fzf.vim', { 'branch': 'preview_fix' } " Use my fork which implements the community's solution to https://github.com/junegunn/fzf.vim/issues/751
 
 " HUD annotations
 Plug 'airblade/vim-gitgutter'
