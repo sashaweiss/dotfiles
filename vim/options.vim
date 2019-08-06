@@ -59,7 +59,7 @@ autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 let g:StripWhitespace = 1
 
 function! StripTrailingWhitespace()
-  if g:StripWhitespace != 1
+  if g:StripWhitespace != 1 || (exists("b:StripWhitespace") && b:StripWhitespace != 1)
     return
   endif
 
