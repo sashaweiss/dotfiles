@@ -18,3 +18,6 @@ ln -fs "$DOTFILES/zsh/zshrc" "$HOME/.zshrc"
 
 mkdir -p "$HOME/.config/alacritty"
 ln -fs "$DOTFILES/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
+
+ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
