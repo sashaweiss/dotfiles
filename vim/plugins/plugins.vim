@@ -4,8 +4,9 @@ call plug#begin('$HOME/.vim/plugged')
 " Actually writing code
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-markdown', { 'for': ['md', 'markdown'] }
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'jparise/vim-graphql', { 'for': ['graphql', 'gql'] }
 Plug 'tweekmonster/gofmt.vim', { 'for': ['go'] }
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 " File browsing
 Plug 'scrooloose/nerdtree'
