@@ -9,9 +9,10 @@
   "codeLens.enable": true,
   "codeLens.separator": "  ‣ ",
   "list.indicator": "λ",
-  "list.nextKeymap": "<C-k>",
-  "list.previousKeymap": "<C-l>",
+  "list.nextKeymap": "<C-n>",
+  "list.previousKeymap": "<C-p>",
   "coc.source.file.ignoreHidden": false,
+  "coc.preferences.formatOnSaveFiletypes": ["rust"],
   "languageserver": {
     "golang": {
       "command": "gopls",
