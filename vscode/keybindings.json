@@ -18,5 +18,14 @@
     {
         "key": "shift+cmd+[",
         "command": "-workbench.action.previousEditor"
+    },
+    {
+        "key": "shift+cmd+j",
+        "command": "-workbench.action.search.toggleQueryDetails",
+        "when": "searchViewletVisible"
+    },
+    {
+        "key": "shift+cmd+j",
+        "command": "workbench.action.focusActiveEditorGroup"
     }
 ]

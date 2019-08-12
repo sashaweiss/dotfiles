@@ -34,6 +34,7 @@ cask "google-chrome"
 cask "postman"
 cask "private-internet-access"
 cask "spectacle"
+cask "visual-studio-code"
 
 brew "mas"
 
