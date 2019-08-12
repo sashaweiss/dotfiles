@@ -1,0 +1,89 @@
+{
+    "vim.camelCaseMotion.enable": true,
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.visualstar": true,
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["j", "k"],
+        "after": ["<Esc>"]
+      }
+    ],
+    "vim.normalModeKeyBindings": [
+      {
+        "before": ["<leader>", "="],
+        "commands": ["workbench.action.nextEditor"]
+      },
+      {
+        "before": ["<leader>", "-"],
+        "commands": ["workbench.action.previousEditor"]
+      },
+      {
+        "before": ["<leader>", "w"],
+        "commands": ["workbench.action.closeWindow"]
+      },
+      {
+        "before": ["J"],
+        "after": ["}"]
+      },
+      {
+        "before": ["K"],
+        "after": ["{"]
+      },
+      {
+        "before": ["k"],
+        "after": ["g", "k"]
+      },
+      {
+        "before": ["j"],
+        "after": ["g", "j"]
+      },
+      {
+        "before": ["z"],
+        "after": ["$"]
+      },
+      {
+        "before": ["Z"],
+        "after": ["^"]
+      }
+    ],
+    "vim.visualModeKeyBindings": [
+      {
+        "before": ["J"],
+        "after": ["}"]
+      },
+      {
+        "before": ["K"],
+        "after": ["{"]
+      },
+      {
+        "before": ["k"],
+        "after": ["g", "k"]
+      },
+      {
+        "before": ["j"],
+        "after": ["g", "j"]
+      },
+      {
+        "before": ["z"],
+        "after": ["$", "h"]
+      },
+      {
+        "before": ["v", "z"],
+        "after": ["$", "h"]
+      },
+      {
+        "before": ["v", "Z"],
+        "after": ["^"]
+      },
+      {
+        "before": ["Z"],
+        "after": ["^"]
+      }
+    ],
+
+    "workbench.editor.focusRecentEditorAfterClose": false,
+    "files.trimTrailingWhitespace": true,
+    "editor.fontFamily": "Operator Mono for Powerline, Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.macOptionIsMeta": true
+}
