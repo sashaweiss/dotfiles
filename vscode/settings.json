@@ -86,5 +86,6 @@
     "files.trimTrailingWhitespace": true,
     "editor.fontFamily": "Operator Mono for Powerline, Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.macOptionIsMeta": true,
-    "workbench.colorTheme": "An Old Hope"
+    "workbench.colorTheme": "An Old Hope",
+    "workbench.startupEditor": "newUntitledFile"
 }
