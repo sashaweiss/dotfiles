@@ -1,10 +1,10 @@
 #!/usr/bin/env zsh
 
-ln -fs "$DOTFILES/git/gitconfig" "$HOME/.gitconfig"
-ln -fs "$DOTFILES/git/gitignore" "$HOME/.gitignore"
+ln -fs "$DOTFILES/git/gitconfig.symlink" "$HOME/.gitconfig"
+ln -fs "$DOTFILES/git/gitignore.symlink" "$HOME/.gitignore"
 
-ln -fs "$DOTFILES/vim/vimrc" "$HOME/.vimrc"
-ln -fs "$DOTFILES/vim/xvimrc" "$HOME/.xvimrc"
+ln -fs "$DOTFILES/vim/vimrc.symlink" "$HOME/.vimrc"
+ln -fs "$DOTFILES/vim/xvimrc.symlink" "$HOME/.xvimrc"
 
 mkdir "$HOME/.vim"
 mkdir "$HOME/.config"
@@ -12,9 +12,9 @@ ln -Fs "$HOME/.vim" "$HOME/.config/nvim"
 ln -Fs "$HOME/.vimrc" "$HOME/.config/nvim/init.vim"
 ln -Fs "$DOTFILES/vim/plugins/coc.json" "$HOME/.config/nvim/coc-settings.json"
 
-ln -fs "$DOTFILES/tmux/tmux.conf" "$HOME/.tmux.conf"
+ln -fs "$DOTFILES/tmux/tmux.conf.symlink" "$HOME/.tmux.conf"
 
-ln -fs "$DOTFILES/zsh/zshrc" "$HOME/.zshrc"
+ln -fs "$DOTFILES/zsh/zshrc.symlink" "$HOME/.zshrc"
 
 mkdir -p "$HOME/.config/alacritty"
 ln -fs "$DOTFILES/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
