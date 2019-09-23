@@ -11,10 +11,10 @@ alias la='ls -alhF'
 
 alias untar='tar -xzvf'
 
-export WORK="$HOME/Documents/projects"
+export WORK="$HOME/dev/work"
 alias work="cd $WORK"
 
-export CLONE="$HOME/Documents/clones"
+export CLONE="$HOME/dev/clones"
 alias clones="cd $CLONE"
 
 export PLAY="$HOME/Desktop"

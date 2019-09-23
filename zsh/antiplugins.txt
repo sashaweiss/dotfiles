@@ -1,5 +1,5 @@
 # Sweet-ass prompt
-denysdovhan/spaceship-prompt
+romkatv/powerlevel10k
 
 # In-prompt syntax highlighting
 zdharma/fast-syntax-highlighting
