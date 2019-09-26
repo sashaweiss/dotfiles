@@ -39,7 +39,8 @@ fi
     vcs          # git status
     # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< second line >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     newline
-    prompt_char  # prompt symbol
+    background_jobs # presence of background jobs
+    prompt_char     # prompt symbol
   )
 
   # Right prompt on the last prompt line (where you are typing your commands)
@@ -49,7 +50,6 @@ fi
     # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< first line >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     status                  # exit code of the last command
     command_execution_time  # duration of the last command
-    background_jobs         # presence of background jobs
     virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
     context                 # user@host
     # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< second line >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
