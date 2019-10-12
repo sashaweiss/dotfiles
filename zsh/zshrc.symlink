@@ -1,14 +1,14 @@
 # Shortcut to this dotfiles path is $DOTFILES
 export DOTFILES=$HOME/.files
 
+zmodload zsh/zprof
+
 # Load helper functions and scripts
 typeset -U path
 path=(
   $DOTFILES/functions
   $path
 )
-
-source "$DOTFILES/functions/_load"
 
 # Get brew in the path, to get antibody ready
 source "$DOTFILES/brew/path.zsh"

@@ -1,0 +1,3 @@
+#! /usr/bin/env zsh
+
+git status --porcelain | cut -c 4- | xargs $EDITOR
