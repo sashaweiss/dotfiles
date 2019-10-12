@@ -186,7 +186,7 @@ fi
   # ~ if have merge conflicts.
   vcs+='${${VCS_STATUS_NUM_CONFLICTED:#0}:+ %196F~${VCS_STATUS_NUM_CONFLICTED}}'
   # Show stashes
-  vcs+='${${VCS_STATUS_STASHES:#0}:+ %76F*${VCS_STATUS_STASHES}}'
+  vcs+='${${VCS_STATUS_STASHES:#0}:+ %76F\$}'
   # add separator before staged/unstaged/tracked indicators
   vcs+=' '
   # light blue ⊚ for unstaged changes
