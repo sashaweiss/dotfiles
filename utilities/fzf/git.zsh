@@ -31,5 +31,5 @@ bind-git-helper() {
 # f - list files (what `git status` would list)
 # r - list branches (including remotes)
 # c - list commits
-bind-git-helper f r c
+bind-git-helper r c
 unset -f bind-git-helper
