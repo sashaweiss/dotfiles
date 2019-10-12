@@ -1,3 +1,26 @@
+### Install zplugin if not present
+if ! [ -d "$HOME/.zplugin" ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+fi
+
+### Start of zplugin installer-added chunk
+source "$HOME/.zplugin/bin/zplugin.zsh"
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+
+### Plugins
+
+zplugin ice wait atload'_zsh_autosuggest_start' lucid
+zplugin light zsh-users/zsh-autosuggestions
+
+zplugin ice wait atload'zpcompinit; zpcdreplay' lucid
+zplugin light zdharma/fast-syntax-highlighting
+
+# prompt
+# could load async in the future though this causes the default zsh prompt to
+# flash on screen temporarily before being overwritten
+zplugin light romkatv/powerlevel10k
+
 # Autosuggestions
 # ref - https://github.com/zsh-users/zsh-autosuggestions#configuration
 

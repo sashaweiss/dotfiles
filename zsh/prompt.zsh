@@ -166,7 +166,7 @@ fi
   # on a branch
   vcs+='${${VCS_STATUS_LOCAL_BRANCH:+%176F'${(g::)POWERLEVEL9K_VCS_BRANCH_ICON}
   # show full local branch name if less than 32 characters
-  vcs+='${${${$(($#VCS_STATUS_LOCAL_BRANCH<=32)):#0}:+${VCS_STATUS_LOCAL_BRANCH//\%/%%}}'
+  vcs+='${${${$(($#VCS_STATUS_LOCAL_BRANCH<=1000)):#0}:+${VCS_STATUS_LOCAL_BRANCH//\%/%%}}'
   # truncate branch name at 32 characters to `first_12_chars...last_12_chars`
   # equivalent to setting POWERLEVEL9K_VCS_SHORTEN_LENGTH=12 and
   # POWERLEVEL9K_VCS_SHORTEN_STRATEGY=truncate_middle.

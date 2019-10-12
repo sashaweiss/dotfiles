@@ -13,10 +13,6 @@ source "$DOTFILES/functions/_load"
 # Get brew in the path, to get antibody ready
 source "$DOTFILES/brew/path.zsh"
 
-# Setup antibody
-source <(antibody init)
-antibody bundle < $DOTFILES/zsh/antiplugins.txt
-
 # Get all zsh files
 typeset -U config_files
 config_files=($DOTFILES/**/*.zsh)
@@ -38,3 +34,9 @@ compinit
 
 unset config_files
 unsetopt AUTO_CD
+
+### Added by Zplugin's installer
+source '/Users/sasha/.zplugin/bin/zplugin.zsh'
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+### End of Zplugin installer's chunk
