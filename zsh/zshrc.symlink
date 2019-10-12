@@ -1,7 +1,8 @@
+# If ever you want to profile the shell:
+# https://htr3n.github.io/2018/07/faster-zsh/
+
 # Shortcut to this dotfiles path is $DOTFILES
 export DOTFILES=$HOME/.files
-
-zmodload zsh/zprof
 
 # Load helper functions and scripts
 typeset -U path
