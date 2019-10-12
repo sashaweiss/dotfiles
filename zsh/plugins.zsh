@@ -16,9 +16,6 @@ zplugin light zsh-users/zsh-autosuggestions
 zplugin ice wait atload'zpcompinit; zpcdreplay' lucid
 zplugin light zdharma/fast-syntax-highlighting
 
-# prompt
-# could load async in the future though this causes the default zsh prompt to
-# flash on screen temporarily before being overwritten
 zplugin light romkatv/powerlevel10k
 
 # Autosuggestions
