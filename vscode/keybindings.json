@@ -43,12 +43,12 @@
   {
     "key": "shift+cmd+e",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "explorerViewletVisible"
+    "when": "explorerViewletFocus"
   },
   {
     "key": "shift+cmd+f",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "searchViewletVisible"
+    "when": "searchViewletFocus"
   },
   {
     "key": "ctrl+o",
