@@ -20,7 +20,7 @@
       },
       {
         "before": ["<leader>", "w"],
-        "commands": ["workbench.action.closeWindow"]
+        "commands": ["workbench.action.closeActiveEditor"]
       },
       {
         "before": ["J"],
