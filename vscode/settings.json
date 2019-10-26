@@ -12,11 +12,11 @@
     "vim.normalModeKeyBindings": [
       {
         "before": ["<leader>", "="],
-        "commands": ["workbench.action.nextEditor"]
+        "commands": ["workbench.action.nextEditorInGroup"]
       },
       {
         "before": ["<leader>", "-"],
-        "commands": ["workbench.action.previousEditor"]
+        "commands": ["workbench.action.previousEditorInGroup"]
       },
       {
         "before": ["<leader>", "w"],
