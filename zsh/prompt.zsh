@@ -226,7 +226,8 @@
     if (( $1 )); then
       # Styling for up-to-date Git status.
       local       meta='%f'     # default foreground
-      local      clean='%005F'  # lilac foreground
+      local      clean='%040F'  # green foreground
+      local     branch='%005F'  # lilac foreground
       local     staged='%087F'  # light blue foreground
       local   unstaged='%200F'  # hot pink foreground
       local  untracked='%033F'  # blue foreground
@@ -235,6 +236,7 @@
       # Styling for incomplete and stale Git status.
       local       meta='%244F'  # grey foreground
       local      clean='%244F'  # grey foreground
+      local     branch='%244F'  # grey foreground
       local     staged='%244F'  # grey foreground
       local   unstaged='%244F'  # grey foreground
       local  untracked='%244F'  # grey foreground
@@ -244,7 +246,7 @@
     local res
     local where  # branch name, tag or commit
     if [[ -n $VCS_STATUS_LOCAL_BRANCH ]]; then
-      res+="${clean}${POWERLEVEL9K_VCS_BRANCH_ICON}"
+      res+="${branch}${POWERLEVEL9K_VCS_BRANCH_ICON}"
       where=${(V)VCS_STATUS_LOCAL_BRANCH}
     elif [[ -n $VCS_STATUS_TAG ]]; then
       res+="${meta}#"
@@ -254,10 +256,7 @@
       where=${VCS_STATUS_COMMIT[1,8]}
     fi
 
-    # If local branch name or tag is at most 32 characters long, show it in full.
-    # Otherwise show the first 12 … the last 12.
-    (( $#where > 32 )) && where[13,-13]="…"
-    res+="${clean}${where//\%/%%}"  # escape %
+    res+="${branch}${where//\%/%%}"  # escape %
 
     # Show tracking branch name if it differs from local branch.
     if [[ -n ${VCS_STATUS_REMOTE_BRANCH:#$VCS_STATUS_LOCAL_BRANCH} ]]; then
