@@ -37,6 +37,20 @@
     "command": "workbench.action.focusActiveEditorGroup"
   },
   {
+    "key": "shift+cmd+z",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "explorerViewletVisible"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "searchViewletVisible"
+  },
+  {
     "key": "ctrl+o",
     "command": "list.toggleExpand",
     "when": "listFocus && !inputFocus"
