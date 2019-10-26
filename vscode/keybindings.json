@@ -64,28 +64,5 @@
     "key": "ctrl+o",
     "command": "filesExplorer.openFilePreserveFocus",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
-  },
-  {
-    "key": "shift+cmd+g",
-    "command": "workbench.view.scm"
-  },
-  {
-    "key": "ctrl+shift+g",
-    "command": "-workbench.view.scm"
-  },
-  {
-    "key": "shift+cmd+g",
-    "command": "-editor.action.previousMatchFindAction",
-    "when": "editorFocus"
-  },
-  {
-    "key": "shift+cmd+g",
-    "command": "-workbench.action.terminal.findPreviousTerminalFocus",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "shift+cmd+g",
-    "command": "-workbench.action.terminal.findPrevious",
-    "when": "terminalFindWidgetFocused"
   }
 ]
