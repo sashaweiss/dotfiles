@@ -21,6 +21,8 @@ Make the navigation experience as similar to Vim as possible. Replicate/analogiz
 - `cmd+shift+e` to focus/toggle file explorer.
 - `cmd+shift+f` to focus/toggle search explorer.
 - `cmd+shift+z` to focus/toggle integrated terminal.
+- `cmd+shift+j` to focus editors.
+- `ctrl+w+[hl]` to move between editor and sidebar. Note: if in list in an explorer and focused on an expandable node, `ctrl+w+l` will expand the node rather than change focus. To fix this would mean `l` does not expand nodes, which would be a bummer, so leaving this bug in.
 
 #### Lists within an explorer
 - `jk` or `ctrl+[np]` to navigate tree.
