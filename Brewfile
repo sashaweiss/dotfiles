@@ -1,5 +1,7 @@
 cask_args appdir: "/Applications"
 
+tap "dandavison/delta", "https://github.com/dandavison/delta"
+
 brew "asciinema"
 brew "bat"
 brew "go"
@@ -8,6 +10,7 @@ brew "exa"
 brew "fd"
 brew "fzf"
 brew "git"
+brew "git-delta"
 brew "python"
 brew "grip"
 brew "htop"
@@ -22,7 +25,6 @@ brew "wget"
 brew "zsh"
 
 brew "sashaweiss/projects/itree"
-brew "getantibody/tap/antibody"
 
 cask "alacritty"
 cask "1password"
