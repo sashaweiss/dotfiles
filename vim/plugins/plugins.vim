@@ -1,16 +1,25 @@
 " ========= VimPlug Plugins =========
 call plug#begin('$HOME/.vim/plugged')
 
-" Actually writing code
+" Syntax highlighting for pretty much every language
 Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-markdown', { 'for': ['md', 'markdown'] }
+
+" ...except GraphQL
 Plug 'jparise/vim-graphql', { 'for': ['graphql', 'gql'] }
-Plug 'tweekmonster/gofmt.vim', { 'for': ['go'] }
+
+" Better navigation support for editing markdown
+Plug 'tpope/vim-markdown', { 'for': ['md', 'markdown'] }
+
+" IDE-like features via the Language Server Protocol, supporting almost every language
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
+" ...except Go
+Plug 'tweekmonster/gofmt.vim', { 'for': ['go'] }
 
 " File browsing
 Plug 'scrooloose/nerdtree'
 
+" FZF for fuzzy-matching files, search results, etc.
 if has('mac')
   Plug '/usr/local/opt/fzf'
 elseif has('unix')
@@ -18,18 +27,33 @@ elseif has('unix')
 endif
 Plug 'sashaweiss/fzf.vim', { 'branch': 'preview_fix' } " Use my fork which implements the community's solution to https://github.com/junegunn/fzf.vim/issues/751
 
-" HUD annotations
+" Show line-based git-status in the gutter
 Plug 'airblade/vim-gitgutter'
+
+" Show a nice statusline at the bottom
 Plug 'bling/vim-airline'
+
+" Themes for said statusline
 Plug 'vim-airline/vim-airline-themes'
 
-" Typing
+" Move by 'subword', i.e. through camelCase and snake_case words
 Plug 'chaoren/vim-wordmotion'
+
+" Add commands for commenting code
 Plug 'tpope/vim-commentary'
+
+" Automatically close tags in *ml languages
 Plug 'alvan/vim-closetag', { 'for': ['html', 'xml'] }
+
+" Automatically close brackets and stuff
 Plug 'jiangmiao/auto-pairs'
 
-" Colors
+" Use `gr` in place of `d`, `c`, `y` - anything that places text in the paste
+" register - to both do the action and paste from the register so you don't
+" blow away the register.
+Plug 'vim-scripts/ReplaceWithRegister'
+
+" OceanicNext colorscheme
 Plug 'mhartington/oceanic-next'
 
 call plug#end()
