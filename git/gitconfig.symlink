@@ -11,5 +11,3 @@
   addnowhitespace=!sh -c 'git diff -U0 -w --no-color "$@" | git apply --cached --ignore-whitespace --unidiff-zero -'
 [grep]
 	linenumber = true
-[url "git@github.com:"]
-	insteadOf = https://github.com/
