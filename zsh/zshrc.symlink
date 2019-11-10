@@ -11,9 +11,6 @@ path=(
   $path
 )
 
-# Get brew in the path, to get antibody ready
-source "$DOTFILES/brew/path.zsh"
-
 # Get all zsh files
 typeset -U config_files
 config_files=($DOTFILES/**/*.zsh)
