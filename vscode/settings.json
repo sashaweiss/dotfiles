@@ -84,6 +84,7 @@
     ],
 
     "rust-analyzer.enableEnhancedTyping": false,
+    "rust-analyzer.enableCargoWatchOnStartup": "enabled",
 
     "workbench.editor.focusRecentEditorAfterClose": false,
     "workbench.startupEditor": "newUntitledFile",
