@@ -23,7 +23,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>Sasha Weiss</string>
 	<key>description</key>
 	<string>Open the `snek` project in VSCode</string>
 	<key>disabled</key>
@@ -40,7 +40,8 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>"/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" "$HOME/dev/work/snek"</string>
+				<string># Need to run with zsh interactively to inherit $PATH info that VSCode needs
+zsh -i -c 'code "$WORK/snek"'</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
