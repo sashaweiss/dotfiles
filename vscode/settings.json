@@ -3,6 +3,7 @@
     "vim.hlsearch": true,
     "vim.useSystemClipboard": true,
     "vim.visualstar": true,
+    "vim.replaceWithRegister": true,
     "vim.insertModeKeyBindings": [
       {
         "before": ["j", "k"],
@@ -83,9 +84,14 @@
     ],
 
     "workbench.editor.focusRecentEditorAfterClose": false,
-    "files.trimTrailingWhitespace": true,
+    "workbench.startupEditor": "newUntitledFile",
+
     "editor.fontFamily": "Operator Mono for Powerline, Menlo, Monaco, 'Courier New', monospace",
-    "terminal.integrated.macOptionIsMeta": true,
     "workbench.colorTheme": "An Old Hope",
-    "workbench.startupEditor": "newUntitledFile"
+
+    "terminal.integrated.macOptionIsMeta": true,
+
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
 }
