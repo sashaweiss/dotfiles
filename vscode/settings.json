@@ -83,6 +83,8 @@
       }
     ],
 
+    "rust-analyzer.enableEnhancedTyping": false,
+
     "workbench.editor.focusRecentEditorAfterClose": false,
     "workbench.startupEditor": "newUntitledFile",
 
@@ -93,5 +95,7 @@
 
     "files.trimTrailingWhitespace": true,
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
+
+    "workbench.list.automaticKeyboardNavigation": false
 }
