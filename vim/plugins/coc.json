@@ -19,5 +19,6 @@
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
     }
-  }
+  },
+  "rust-analyzer.enableCargoWatchOnStartup": "enabled"
 }
