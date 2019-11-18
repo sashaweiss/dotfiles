@@ -65,6 +65,7 @@ call plug#end()
 " *** Polyglot ***
 
 let g:polyglot_disabled = ['markdown']
+let g:rust_recommended_style = 0 " Manually manage spacing config
 
 
 " *** Airline ***
