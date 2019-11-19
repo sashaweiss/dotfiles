@@ -20,8 +20,5 @@ alias clones="cd $CLONE"
 export PLAY="$HOME/Desktop"
 alias play="cd $PLAY"
 
-export DERIVED="$HOME/Library/Developer/Xcode/DerivedData"
-alias derived="cd $DERIVED"
-
 export DOWN="$HOME/Downloads"
 alias down="cd $DOWN"
