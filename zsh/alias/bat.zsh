@@ -1,3 +1,3 @@
-if command -v bat > /dev/null; then
+command -v bat > /dev/null && {
   alias cat='bat'
-fi
+}

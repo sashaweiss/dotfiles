@@ -1,3 +1,3 @@
-if command -v exa > /dev/null; then
+command -v exa > /dev/null && {
   alias ls='exa'
-fi
+}
