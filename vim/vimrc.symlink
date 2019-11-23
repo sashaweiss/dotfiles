@@ -1,6 +1,0 @@
-source $DOTFILES/vim/plugins/coc.vim
-source $DOTFILES/vim/plugins/plugins.vim
-
-source $DOTFILES/vim/options.vim
-source $DOTFILES/vim/colors.vim
-source $DOTFILES/vim/mappings.vim
