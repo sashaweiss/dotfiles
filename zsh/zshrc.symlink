@@ -5,11 +5,18 @@
 export DOTFILES=$HOME/.files
 
 # Load helper functions and scripts
-typeset -U path
-path=(
-  $DOTFILES/functions
-  $path
-)
+source "$DOTFILES/zsh/path.zsh"
+
+########
+
+# set up functions
+# set up ali
+# set up env - zshenv
+
+
+
+
+########
 
 # Get all zsh files
 typeset -U config_files
