@@ -1,6 +1,10 @@
 #!/usr/bin/env zsh
 
-if command -v go > /dev/null; then
+command -v go > /dev/null && {
   export GOPATH=$(go env GOPATH)
   export GOROOT=$(go env GOROOT)
-fi
+}
+
+command -v rustc > /dev/null && {
+  export RUST_SRC_PATH=`rustc --print sysroot`/lib/rustlib/src/rust/src
+}

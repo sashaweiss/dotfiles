@@ -4,13 +4,12 @@
 # Shortcut to this dotfiles path is $DOTFILES
 export DOTFILES=$HOME/.files
 
-# Load helper functions and scripts
 source "$DOTFILES/zsh/path.zsh"
+source "$DOTFILES/zsh/alias/*.zsh"
 
 ########
 
 # set up functions
-# set up ali
 # set up env - zshenv
 
 
