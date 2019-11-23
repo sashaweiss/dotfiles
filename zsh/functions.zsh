@@ -23,24 +23,14 @@
 #
 # ref - http://zsh.sourceforge.net/Intro/intro_4.html (search `autoload` for
 # explanation of loading behavior described above)
+#
+# - @nathanshelly
 
-# autoload any functions defined in directories named `functions` throughout
-# this repo
-typeset -u topic_functions
-# `(x:t)` selects only executables (the `x`) & extracts the filename (the `:t`)
-# ref - http://zsh.sourceforge.net/Doc/Release/Expansion.html#Glob-Qualifiers
-topic_functions=($DOTFILES/**/functions/*(x:t))
-for function in $topic_functions
-do
-  autoload -Uz "$function"
+function_dirs=("$DOTFILES/zsh/functions" "$DOTFILES/zsh/functions/fzf")
+for dir in $function_dirs; do
+  # don't surround in quotes to get the expansion
+  # (:t) extracts just the filename
+  autoload -Uz $dir/*(:t)
+  fpath=("$dir" $fpath)
 done
-unset topic_functions
-
-# add all directories named `functions` throughout this repo to `fpath`
-typeset -u topic_functions_folders
-topic_functions_folders=($DOTFILES/**/functions)
-for topic_functions_folder in $topic_functions_folders
-do
-  fpath=("$topic_functions_folder" $fpath);
-done
-unset topic_functions_folders
+unset function_dirs

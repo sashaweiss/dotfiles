@@ -30,4 +30,4 @@ ZSH_AUTOSUGGEST_STRATEGY=(history)
 # Keymappings
 
 # ref - https://github.com/zsh-users/zsh-autosuggestions#key-bindings
-bindkey -M viins '^f' forward-word # next word, how `vim` `w` would advance
+bindkey -M viins '^f' vi-forward-word # next word, how `vim` `w` would advance

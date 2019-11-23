@@ -1,10 +1,21 @@
 #!/usr/bin/env zsh
 
+export CLICOLOR=1
+export LSCOLORS="GxFxCxDxBxegedabagaced"
+
+export HOSTNAME="$(hostname)"
+
+if command -v nvim > /dev/null; then
+  export EDITOR="nvim"
+else
+  export EDITOR="vim"
+fi
+
 command -v go > /dev/null && {
-  export GOPATH=$(go env GOPATH)
-  export GOROOT=$(go env GOROOT)
+  export GOPATH="$(go env GOPATH)"
+  export GOROOT="$(go env GOROOT)"
 }
 
 command -v rustc > /dev/null && {
-  export RUST_SRC_PATH=`rustc --print sysroot`/lib/rustlib/src/rust/src
+  export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 }
