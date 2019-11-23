@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export DOTFILES="$HOME/.files"
+
 export CLICOLOR=1
 export LSCOLORS="GxFxCxDxBxegedabagaced"
 

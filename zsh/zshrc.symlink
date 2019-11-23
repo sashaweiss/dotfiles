@@ -1,8 +1,6 @@
 # If ever you want to profile the shell:
 # https://htr3n.github.io/2018/07/faster-zsh/
 
-export DOTFILES=$HOME/.files
-
 source "$DOTFILES/zsh/completion.zsh"
 source "$DOTFILES/zsh/functions.zsh"
 source "$DOTFILES/zsh/keymap.zsh"

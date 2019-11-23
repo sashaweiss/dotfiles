@@ -1,42 +1,58 @@
 # sasha's .files
-My personal dotfiles. A `zsh`+`vim`+`tmux` workflow, mostly.
 
-Thanks to [holman's dotfiles](https://github.com/holman/dotfiles), [.tmux](https://github.com/olivierverdier/zsh-git-prompt), and [zsh-git-prompt](https://github.com/gpakosz/.tmux)!
+My personal dotfiles. `zsh`+`neovim`+`tmux`+`Visual Studio Code`.
 
 ## Download and install
-These dotfiles will assume that they live at `$HOME/.files` - changing this will require adjusting the `$DOTFILES` environment variable set in the first line of `zsh/zshrc.symlink`.
 
-Installation on Mac assumes `git` (and therefore the Xcode command-line tools) is installed.
+Clone the repo:
 
-Manual installation on Linux will require installing `zsh`, `git`, and `curl` if they're not already.
+```sh
+$ git clone git@github.com:sashaweiss/dotfiles $HOME/.files
+```
 
-### Linking
+**To install to somewhere other than $HOME/.files, make sure to adjust the $DOTFILES environment variable!**
+
+Link the appropriate files:
+
 ```sh
 export DOTFILES="$HOME/.files"
-./install/link
+./link
 ```
 
-### Install my toys
+...and you should be good to go!
 
-Install brew:
-```
-$ ./brew/install.sh
-```
+## Installing peripherals
 
-Let brew install everything:
-```
+### Brew
+
+```sh
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
 $ brew bundle
 ```
 
-### Start using `zsh`
+### Brew version of `zsh`
+
 Add `$(brew --prefix)/bin/zsh` (the result of running that expression, not the expression itself) to `/etc/shells`. Run `chsh -s $(brew --prefix)/bin/zsh`.
 
-### Individual language support
-Run `./<language>/install.sh` for individual language support.
-
-#### Vim plugins
-Make sure to run `python/install.sh`, `ruby/install.sh`, and `node/install.sh` first so we have language support for `neovim`.
+### Vim plugins
 
 ```sh
-vim +PlugInstall +qa
+$ nvim -c "PlugInstall" -c "qa"
+```
+
+### Rust
+
+```sh
+$ curl https://sh.rustup.rs -sSf | sh -s -- --no-modify-path -y
+$ rustup toolchain add nightly
+$ rustup component add rust-src rustfmt rust-analysis
+$ rustup component add rust-src rustfmt rust-analysis --toolchain nightly
+```
+
+#### Rust-Analyzer language server (for editors)
+
+```sh
+$ git clone git@github.com:rust-analyzer/rust-analyzer
+$ cd rust-analyzer
+$ cargo xtask install
 ```
