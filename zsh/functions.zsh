@@ -29,8 +29,8 @@
 function_dirs=("$DOTFILES/zsh/functions" "$DOTFILES/zsh/functions/fzf")
 for dir in $function_dirs; do
   # don't surround in quotes to get the expansion
-  # (:t) extracts just the filename
-  autoload -Uz $dir/*(:t)
+  # (x:t) extracts just the executable filenames, minus the dir name
+  autoload -Uz $dir/*(.x:t)
   fpath=("$dir" $fpath)
 done
 unset function_dirs
