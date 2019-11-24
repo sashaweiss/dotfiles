@@ -1,3 +1,9 @@
+" Install Vim-Plug if not installed
+if empty(glob("$HOME/.local/share/nvim/site/autoload/plug.vim"))
+  !curl --create-dirs -fLo "$HOME/.local/share/nvim/site/autoload/plug.vim"
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
 " ========= VimPlug Plugins =========
 call plug#begin('$HOME/.vim/plugged')
 
