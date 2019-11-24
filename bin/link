@@ -14,7 +14,8 @@ ln -fs "$DOTFILES/tool-versions" "$HOME/.tool-versions"
 
 ln -fs "$DOTFILES/xvimrc" "$HOME/.xvimrc"
 
-ln -fs "$DOTFILES/tmux.conf" "$HOME/.tmux.conf"
+ln -fs "$DOTFILES/tmux.conf.local" "$HOME/.tmux.conf.local"
+ln -fs "$DOTFILES/submodules/tmux/.tmux.conf" "$HOME/.tmux.conf"
 
 mkdir -p "$HOME/.config/alacritty"
 ln -fs "$DOTFILES/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
