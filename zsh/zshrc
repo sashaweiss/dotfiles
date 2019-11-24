@@ -16,4 +16,6 @@ for alias in $DOTFILES/zsh/alias/*.zsh; do
   source $alias
 done
 
+# Ordered to ensure they have "the last word"
 source "$DOTFILES/zsh/path.zsh"
+source "$DOTFILES/zsh/asdf.zsh"
