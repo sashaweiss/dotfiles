@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+ln -fs "$DOTFILES/gitconfig" "$HOME/.gitconfig"
+ln -fs "$DOTFILES/gitignore" "$HOME/.gitignore"
+
+ln -fs "$DOTFILES/zsh/zshrc" "$HOME/.zshrc"
+ln -fs "$DOTFILES/zsh/zshenv" "$HOME/.zshenv"
+
+mkdir -p "$HOME/.config/nvim"
+ln -fs "$DOTFILES/neovim/init.vim" "$HOME/.config/nvim/init.vim"
+ln -fs "$DOTFILES/neovim/plugins/coc.json" "$HOME/.config/nvim/coc-settings.json"
+
+ln -fs "$DOTFILES/tool-versions" "$HOME/.tool-versions"
+
+ln -fs "$DOTFILES/xvimrc" "$HOME/.xvimrc"
+
+ln -fs "$DOTFILES/tmux.conf" "$HOME/.tmux.conf"
+
+mkdir -p "$HOME/.config/alacritty"
+ln -fs "$DOTFILES/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
+
+ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"

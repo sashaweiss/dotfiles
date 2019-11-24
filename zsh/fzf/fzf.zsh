@@ -53,7 +53,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # <<<< keybindings >>>>
 # NOTE: corresponding widgets defined in `$DOTFILES/functions/_fzf_functions` &
-# `$(brew --prefix)/opt/fzf/shell/key-bindings.zsh`
+# `$brew_prefix/opt/fzf/shell/key-bindings.zsh`
 
 # << zsh functions -> widgets >>
 zle -N fzf-edit-widget
