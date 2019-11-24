@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 ln -fs "$DOTFILES/gitconfig" "$HOME/.gitconfig"
 ln -fs "$DOTFILES/gitignore" "$HOME/.gitignore"
@@ -7,8 +7,10 @@ ln -fs "$DOTFILES/zsh/zshrc" "$HOME/.zshrc"
 ln -fs "$DOTFILES/zsh/zshenv" "$HOME/.zshenv"
 
 mkdir -p "$HOME/.config/nvim"
-ln -Fs "$DOTFILES/neovim/init.vim" "$HOME/.config/nvim/init.vim"
-ln -Fs "$DOTFILES/neovim/plugins/coc.json" "$HOME/.config/nvim/coc-settings.json"
+ln -fs "$DOTFILES/neovim/init.vim" "$HOME/.config/nvim/init.vim"
+ln -fs "$DOTFILES/neovim/plugins/coc.json" "$HOME/.config/nvim/coc-settings.json"
+
+ln -fs "$DOTFILES/tool-versions" "$HOME/.tool-versions"
 
 ln -fs "$DOTFILES/xvimrc" "$HOME/.xvimrc"
 
