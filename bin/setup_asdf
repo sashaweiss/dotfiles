@@ -2,6 +2,11 @@
 
 # credits to @nathanshelly
 
+if ! command -v asdf > /dev/null; then
+  echo "asdf is not installed!"
+  exit 1
+fi
+
 if ! asdf plugin-list | grep -q nodejs; then
   asdf plugin-add nodejs
   # install keyring - https://github.com/asdf-vm/asdf-nodejs#install
