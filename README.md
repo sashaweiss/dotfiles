@@ -45,14 +45,6 @@ $ nvim -c "PlugInstall" -c "qa"
 ```sh
 $ curl https://sh.rustup.rs -sSf | sh -s -- --no-modify-path -y
 $ rustup toolchain add nightly
-$ rustup component add rust-src rustfmt rust-analysis
-$ rustup component add rust-src rustfmt rust-analysis --toolchain nightly
-```
-
-#### Rust-Analyzer language server (for editors)
-
-```sh
-$ git clone git@github.com:rust-analyzer/rust-analyzer
-$ cd rust-analyzer
-$ cargo xtask install
+$ rustup component add rust-src rustfmt rust-analysis rls
+$ rustup component add rust-src rustfmt rust-analysis rls --toolchain nightly
 ```

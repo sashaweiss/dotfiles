@@ -10,6 +10,7 @@ extensions=(
   'rust-lang.rust'
   'timonwong.shellcheck'
   'vscodevim.vim'
+  'rust-lang.rust'
 )
 
 for extension in "${extensions[@]}"; do

@@ -44,7 +44,7 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-css',
   \ 'coc-python',
-  \ 'coc-rust-analyzer',
+  \ 'coc-rls',
 \ ]
 
 " trigger key for going to the next snippet position,

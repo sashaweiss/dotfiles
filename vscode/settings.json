@@ -83,9 +83,6 @@
       }
     ],
 
-    "rust-analyzer.enableEnhancedTyping": false,
-    "rust-analyzer.enableCargoWatchOnStartup": "enabled",
-
     "workbench.editor.focusRecentEditorAfterClose": false,
     "workbench.startupEditor": "newUntitledFile",
 
@@ -98,5 +95,10 @@
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
 
-    "workbench.list.automaticKeyboardNavigation": false
+    "workbench.list.automaticKeyboardNavigation": false,
+
+    "editor.codeLens": false,
+    "editor.lightbulb.enabled": false,
+    "editor.parameterHints.cycle": true,
+    "editor.hover.sticky": false
 }
