@@ -100,5 +100,7 @@
     "editor.codeLens": false,
     "editor.lightbulb.enabled": false,
     "editor.parameterHints.cycle": true,
-    "editor.hover.sticky": false
+
+    "rust-analyzer.enableEnhancedTyping": false,
+    "rust-analyzer.enableCargoWatchOnStartup": "enabled"
 }

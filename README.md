@@ -48,3 +48,11 @@ $ rustup toolchain add nightly
 $ rustup component add rust-src rustfmt rust-analysis rls
 $ rustup component add rust-src rustfmt rust-analysis rls --toolchain nightly
 ```
+
+#### Rust-Analyzer language server (for editors)
+
+```sh
+$ git clone git@github.com:rust-analyzer/rust-analyzer
+$ cd rust-analyzer
+$ cargo xtask install
+```
