@@ -18,30 +18,6 @@
 set -ug prefix2
 unbind C-a
 
-# unset edit configuration shortcut
-unbind e
-
-# unbind window splitting
-unbind -
-unbind _
-
-# unbind window movement
-unbind h
-unbind j
-unbind k
-unbind l
-
-# unbind window resizing
-unbind H
-unbind J
-unbind K
-unbind L
-
-# unbind utilities - return to this
-# if I end up installing them
-unbind U
-unbind F
-
 # <<<< end of unsetting .tmux options >>>>
 
 # <<<< override .tmux options >>>>
@@ -196,9 +172,6 @@ bind M-h resize-pane -L 1
 bind M-j resize-pane -D 1
 bind M-k resize-pane -U 1
 bind M-l resize-pane -R 1
-
-# switch to last session
-bind l switch-client -l
 
 # clear scrollback buffer
 # ref - https://stackoverflow.com/a/10553992
