@@ -44,6 +44,7 @@
       vcs                     # git status
       # =========================[ Line #2 ]=========================
       newline
+      background_jobs         # presence of background jobs
       prompt_char             # prompt symbol
   )
 
@@ -55,7 +56,6 @@
       # =========================[ Line #1 ]=========================
       status                  # exit code of the last command
       command_execution_time  # duration of the last command
-      background_jobs         # presence of background jobs
       virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
       rust_version            # rustc version (https://www.rust-lang.org)
       context                 # user@hostname
