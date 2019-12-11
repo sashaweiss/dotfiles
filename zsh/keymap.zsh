@@ -1,7 +1,6 @@
 # *** vim mode ***
 
 # turn on vim mode
-# Note: spaceship vi mode enabled in prompt.zsh
 bindkey -v
 
 # shorten key delay to .2 seconds
