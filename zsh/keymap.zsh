@@ -1,3 +1,5 @@
+# *** vim mode ***
+
 # turn on vim mode
 # Note: spaceship vi mode enabled in prompt.zsh
 bindkey -v
@@ -31,3 +33,9 @@ bindkey -M viins '^a' vi-digit-or-beginning-of-line
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
+
+# *** not vim mode
+
+zmodload zsh/complist
+
+bindkey -M menuselect '^[[Z' reverse-menu-complete
