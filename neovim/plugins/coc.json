@@ -1,23 +1,34 @@
 {
 	"suggest.enablePreview": true,
+
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextPrefix": " ~  ",
   "diagnostic.errorSign": "◉",
   "diagnostic.warningSign": "◉",
   "diagnostic.infoSign": "◉",
   "diagnostic.hintSign": "◉",
+
   "codeLens.enable": true,
   "codeLens.separator": "  ‣ ",
+
   "list.indicator": "λ",
   "list.nextKeymap": "<C-n>",
   "list.previousKeymap": "<C-p>",
+
   "coc.source.file.ignoreHidden": false,
   "coc.preferences.formatOnSaveFiletypes": ["rust"],
+
   "languageserver": {
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
     }
+  },
+
+  // rust-analyzer
+  "rust-analyzer.enableCargoWatchOnStartup": "enabled",
+  "rust-analyzer.featureFlags": {
+    "notifications.workspace-loaded": false
   }
 }

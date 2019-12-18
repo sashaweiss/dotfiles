@@ -13,6 +13,9 @@ Plug 'sheerun/vim-polyglot'
 " ...except GraphQL
 Plug 'jparise/vim-graphql', { 'for': ['graphql', 'gql'] }
 
+" ...and JSONC
+Plug 'neoclide/jsonc.vim'
+
 " Better navigation support for editing markdown
 Plug 'tpope/vim-markdown', { 'for': ['md', 'markdown'] }
 
@@ -71,7 +74,6 @@ call plug#end()
 " *** Polyglot ***
 
 let g:polyglot_disabled = ['markdown']
-let g:rust_recommended_style = 0 " Manually manage spacing config
 
 
 " *** Airline ***

@@ -90,6 +90,9 @@ autocmd FileType python setlocal tabstop=4 shiftwidth=4
 autocmd FileType swift setlocal tabstop=4 shiftwidth=4
 autocmd FileType objc setlocal tabstop=4 shiftwidth=4
 
+" Mark JSON as jsonc to allow comments
+autocmd FileType json setlocal filetype=jsonc
+
 " Search case-sensitive if capital in pattern, otherwise insensitive
 set ignorecase
 set smartcase
