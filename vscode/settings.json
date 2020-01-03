@@ -87,7 +87,9 @@
     "workbench.startupEditor": "newUntitledFile",
 
     "editor.fontFamily": "Operator Mono for Powerline, Menlo, Monaco, 'Courier New', monospace",
-    "workbench.colorTheme": "An Old Hope Classic",
+    "workbench.colorTheme": "Material Theme",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.color": "#42a5f5",
 
     "terminal.integrated.macOptionIsMeta": true,
 
