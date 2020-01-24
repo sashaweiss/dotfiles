@@ -31,7 +31,6 @@ brew install "wget"
 brew install "zsh"
 
 if $(./zsh/functions/is_mac); then
-    brew cask "alacritty", args: { appdir: "/Applications" }
     brew cask "1password", args: { appdir: "/Applications" }
     brew cask "iterm2", args: { appdir: "/Applications" }
     brew cask "alfred", args: { appdir: "/Applications" }
