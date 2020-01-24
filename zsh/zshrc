@@ -8,9 +8,6 @@ source "$DOTFILES/zsh/plugins.zsh"
 source "$DOTFILES/zsh/prompt.zsh"
 source "$DOTFILES/zsh/settings.zsh"
 
-source "$DOTFILES/zsh/fzf/fzf.zsh"
-source "$DOTFILES/zsh/fzf/git.zsh"
-
 # no quotes to get the expansion
 for alias in $DOTFILES/zsh/alias/*.zsh; do
   source $alias
@@ -19,3 +16,7 @@ done
 # Ordered to ensure they have "the last word"
 source "$DOTFILES/zsh/path.zsh"
 source "$DOTFILES/zsh/asdf.zsh"
+
+# After PATH sourcing so FZF can find brew
+source "$DOTFILES/zsh/fzf/fzf.zsh"
+source "$DOTFILES/zsh/fzf/git.zsh"
