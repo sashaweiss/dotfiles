@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+command -v brew > /dev/null && {
+    if $(./zsh/functions/is_mac); then
+        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        export PATH="/usr/local/bin":$PATH
+    else
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+        export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
+    fi
+}
+
+brew tap "dandavison/delta", "https://github.com/dandavison/delta"
+
+brew install "asdf"
+brew install "bat"
+brew install "exa"
+brew install "fd"
+brew install "fzf"
+brew install "git"
+brew install "git-delta"
+brew install "gpg"
+brew install "grip"
+brew install "htop"
+brew install "hyperfine"
+brew install "neovim"
+brew install "ripgrep"
+brew install "tmux"
+brew install "tree"
+brew install "wget"
+brew install "zsh"
+
+if $(./zsh/functions/is_mac); then
+    brew cask "alacritty", args: { appdir: "/Applications" }
+    brew cask "1password", args: { appdir: "/Applications" }
+    brew cask "iterm2", args: { appdir: "/Applications" }
+    brew cask "alfred", args: { appdir: "/Applications" }
+    brew cask "bartender", args: { appdir: "/Applications" }
+    brew cask "contexts", args: { appdir: "/Applications" }
+    brew cask "daisydisk", args: { appdir: "/Applications" }
+    brew cask "firefox", args: { appdir: "/Applications" }
+    brew cask "google-chrome", args: { appdir: "/Applications" }
+    brew cask "postman", args: { appdir: "/Applications" }
+    brew cask "private-internet-access", args: { appdir: "/Applications" }
+    brew cask "spectacle", args: { appdir: "/Applications" }
+    brew cask "visual-studio-code", args: { appdir: "/Applications" }
+fi

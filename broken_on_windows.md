@@ -1,2 +1,0 @@
-- Tries to link VSCode stuff to ~/Library/Application Support
-- Links xvimrc
