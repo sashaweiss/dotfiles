@@ -7,7 +7,8 @@ My personal dotfiles. `zsh`+`neovim`+`tmux`+`Visual Studio Code`.
 Clone the repo:
 
 ```sh
-$ git clone git@github.com:sashaweiss/dotfiles $HOME/.files
+$ git clone git@github.com:sashaweiss/dotfiles $HOME/.files && cd .files
+$ git submodule update --init
 ```
 
 **To install to somewhere other than $HOME/.files, make sure to adjust the $DOTFILES environment variable!**
