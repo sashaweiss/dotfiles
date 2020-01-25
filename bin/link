@@ -16,12 +16,12 @@ ln -fs "$DOTFILES/tmux.conf.local" "$HOME/.tmux.conf.local"
 ln -fs "$DOTFILES/submodules/tmux/.tmux.conf" "$HOME/.tmux.conf"
 
 if $(./zsh/functions/is_mac); then
-    mkdir -p "$HOME/.config/alacritty"
-    ln -fs "$DOTFILES/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
+  mkdir -p "$HOME/.config/alacritty"
+  ln -fs "$DOTFILES/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
 
-    ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-    ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
-    ln -fs "$DOTFILES/xvimrc" "$HOME/.xvimrc"
+  ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+  ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+  ln -fs "$DOTFILES/xvimrc" "$HOME/.xvimrc"
 elif $(./zsh/functions/is_wsl); then
-    echo 'Please remember to run `bin/wsl/sync_vscode`!'
+  echo 'Please remember to run `bin/wsl/sync_vscode`!'
 fi
