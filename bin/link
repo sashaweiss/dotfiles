@@ -23,5 +23,5 @@ if $(./zsh/functions/is_mac); then
   ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
   ln -fs "$DOTFILES/xvimrc" "$HOME/.xvimrc"
 elif $(./zsh/functions/is_wsl); then
-  echo 'Please remember to run `bin/wsl/sync_vscode`!'
+  echo 'Please remember to run `bin/wsl/sync_vs[code|vimrc]`!'
 fi
