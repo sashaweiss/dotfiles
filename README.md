@@ -24,7 +24,7 @@ export DOTFILES="$HOME/.files"
 
 ...and you should be good to go!
 
-*Note*: when installing for the WSL, because of file-system interop issues and linking, the VSCode configs do not link automatically. Use `bin/wsl/sync_vscode` to keep them in sync manually, whenever they change.
+*Note*: when installing for the WSL, because of file-system interop issues and linking, the VSCode configs + VSVimrc do not link automatically. Use `bin/wsl/sync_vs[code|vimrc]` to keep them in sync manually, whenever they change.
 
 ## Installing peripherals
 
