@@ -1,22 +1,22 @@
-### Install zplugin if not present
-if ! [ -d "$HOME/.zplugin" ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+### Install zinit if not present
+if ! [ -d "$HOME/.zinit" ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 fi
 
-### Start of zplugin installer-added chunk
-source "$HOME/.zplugin/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
+### Start of zinit installer-added chunk
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
 ### Plugins
 
-zplugin ice wait atload'_zsh_autosuggest_start' lucid
-zplugin light zsh-users/zsh-autosuggestions
+zinit ice wait atload'_zsh_autosuggest_start' lucid
+zinit light zsh-users/zsh-autosuggestions
 
-zplugin ice wait atload'zpcompinit; zpcdreplay' lucid
-zplugin light zdharma/fast-syntax-highlighting
+zinit ice wait atload'zpcompinit; zpcdreplay' lucid
+zinit light zdharma/fast-syntax-highlighting
 
-zplugin light romkatv/powerlevel10k
+zinit light romkatv/powerlevel10k
 
 # Autosuggestions
 # ref - https://github.com/zsh-users/zsh-autosuggestions#configuration

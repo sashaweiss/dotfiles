@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+VSVIMRC_DIR="/mnt/c/Users/saweiss"
+
+echo "Syncing vsvimrc to $VSVIMRC_DIR"
+cp vsvimrc "$VSVIMRC_DIR/.vsvimrc"

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+[[ -L "$HOME/.gitconfig" ]] && "$HOME/.gitconfig"
+[[ -L "$HOME/.gitignore" ]] && rm "$HOME/.gitignore"
+
+[[ -L "$HOME/.zshrc" ]] && rm "$HOME/.zshrc"
+[[ -L "$HOME/.zshenv" ]] && rm "$HOME/.zshenv"
+
+[[ -L "$HOME/.config/nvim/init.vim" ]] && rm "$HOME/.config/nvim/init.vim"
+[[ -L "$HOME/.config/nvim/coc-settings.json" ]] && rm "$HOME/.config/nvim/coc-settings.json"
+
+[[ -L "$HOME/.tool-versions" ]] && rm "$HOME/.tool-versions"
+
+[[ -L "$HOME/.tmux.conf.local" ]] && rm "$HOME/.tmux.conf.local"
+[[ -L "$HOME/.tmux.conf" ]] && rm "$HOME/.tmux.conf"
+
+if $(./zsh/functions/is_mac); then
+  [[ -L "$HOME/.config/alacritty/alacritty.yml" ]] && rm "$HOME/.config/alacritty/alacritty.yml"
+
+  [[ -L "$HOME/Library/Application Support/Code/User/settings.json" ]] && rm "$HOME/Library/Application Support/Code/User/settings.json"
+  [[ -L "$HOME/Library/Application Support/Code/User/keybindings.json" ]] && rm "$HOME/Library/Application Support/Code/User/keybindings.json"
+
+  [[ -L "$HOME/.xvimrc" ]] && rm "$HOME/.xvimrc"
+fi

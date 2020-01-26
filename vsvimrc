@@ -1,0 +1,24 @@
+" Options
+
+set hlsearch
+set number
+
+set ignorecase
+set smartcase
+
+set incsearch
+
+" Mappings
+
+inoremap jk <esc>
+
+nnoremap J }
+vnoremap J }
+nnoremap K {
+vnoremap K {
+
+noremap z $
+nnoremap Z ^
+
+nmap <C-I> :vsc View.NavigateForward<CR>
+nmap <C-O> :vsc View.NavigateBackward<CR>

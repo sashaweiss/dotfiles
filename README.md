@@ -2,12 +2,15 @@
 
 My personal dotfiles. `zsh`+`neovim`+`tmux`+`Visual Studio Code`.
 
+Supported on Mac and WSL - mostly. Probably.
+
 ## Download and install
 
 Clone the repo:
 
 ```sh
-$ git clone git@github.com:sashaweiss/dotfiles $HOME/.files
+$ git clone git@github.com:sashaweiss/dotfiles $HOME/.files && cd .files
+$ git submodule update --init
 ```
 
 **To install to somewhere other than $HOME/.files, make sure to adjust the $DOTFILES environment variable!**
@@ -21,13 +24,22 @@ export DOTFILES="$HOME/.files"
 
 ...and you should be good to go!
 
+*Note*: when installing for the WSL, because of file-system interop issues and linking, the VSCode configs + VSVimrc do not link automatically. Use `bin/wsl/sync_vs[code|vimrc]` to keep them in sync manually, whenever they change.
+
 ## Installing peripherals
+
+**Please run all `bin` scripts from the top level of this repo. Relatives paths are not my thing.**
+
+### If on Linux (incl. WSL)
+
+```sh
+$ ./bin/install/setup_linux
+```
 
 ### Brew
 
 ```sh
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
-$ brew bundle
+$ ./bin/install/setup_brew
 ```
 
 ### Brew version of `zsh`

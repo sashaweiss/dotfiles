@@ -11,14 +11,18 @@ alias la='ls -alhF'
 
 alias untar='tar -xzvf'
 
-export WORK="$HOME/dev/work"
+is_wsl &&
+  ACTUAL_HOME="/mnt/c/Users/saweiss" ||
+  ACTUAL_HOME="$HOME"
+
+export WORK="$ACTUAL_HOME/dev"
 alias work="cd $WORK"
 
-export CLONE="$HOME/dev/clones"
+export CLONE="$ACTUAL_HOME/dev/clones"
 alias clones="cd $CLONE"
 
-export PLAY="$HOME/Desktop"
+export PLAY="$ACTUAL_HOME/Desktop"
 alias play="cd $PLAY"
 
-export DOWN="$HOME/Downloads"
+export DOWN="$ACTUAL_HOME/Downloads"
 alias down="cd $DOWN"

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+VSCODE_LOCAL_DIR="vscode"
+VSCODE_DIR="/mnt/c/Users/saweiss/AppData/Roaming/Code/User"
+
+if [ "$1" = "to" ]; then
+    echo "Syncing VSCode files to $VSCODE_DIR from $VSCODE_LOCAL_DIR"
+    cp "$VSCODE_LOCAL_DIR/settings.json" "$VSCODE_DIR/settings.json"
+    cp "$VSCODE_LOCAL_DIR/keybindings.json" "$VSCODE_DIR/keybindings.json"
+elif [ "$1" = "from" ]; then
+    echo "Syncing VSCode files from $VSCODE_DIR to $VSCODE_LOCAL_DIR"
+    cp "$VSCODE_DIR/settings.json" "$VSCODE_LOCAL_DIR/settings.json"
+    cp "$VSCODE_DIR/keybindings.json" "$VSCODE_LOCAL_DIR/keybindings.json"
+else
+    echo "Usage: sync_vscode [to|from]"
+    exit 1
+fi
