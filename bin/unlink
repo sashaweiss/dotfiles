@@ -11,12 +11,14 @@
 
 [[ -L "$HOME/.tool-versions" ]] && rm "$HOME/.tool-versions"
 
-[[ -L "$HOME/.xvimrc" ]] && rm "$HOME/.xvimrc"
-
 [[ -L "$HOME/.tmux.conf.local" ]] && rm "$HOME/.tmux.conf.local"
 [[ -L "$HOME/.tmux.conf" ]] && rm "$HOME/.tmux.conf"
 
-[[ -L "$HOME/.config/alacritty/alacritty.yml" ]] && rm "$HOME/.config/alacritty/alacritty.yml"
+if $(./zsh/functions/is_mac); then
+  [[ -L "$HOME/.config/alacritty/alacritty.yml" ]] && rm "$HOME/.config/alacritty/alacritty.yml"
 
-[[ -L "$HOME/Library/Application Support/Code/User/settings.json" ]] && rm "$HOME/Library/Application Support/Code/User/settings.json"
-[[ -L "$HOME/Library/Application Support/Code/User/keybindings.json" ]] && rm "$HOME/Library/Application Support/Code/User/keybindings.json"
+  [[ -L "$HOME/Library/Application Support/Code/User/settings.json" ]] && rm "$HOME/Library/Application Support/Code/User/settings.json"
+  [[ -L "$HOME/Library/Application Support/Code/User/keybindings.json" ]] && rm "$HOME/Library/Application Support/Code/User/keybindings.json"
+
+  [[ -L "$HOME/.xvimrc" ]] && rm "$HOME/.xvimrc"
+fi
