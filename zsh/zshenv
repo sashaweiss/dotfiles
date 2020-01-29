@@ -13,11 +13,15 @@ else
   export EDITOR="vim"
 fi
 
-command -v go > /dev/null && {
+if command -v go > /dev/null; then
   export GOPATH="$(go env GOPATH)"
   export GOROOT="$(go env GOROOT)"
-}
+fi
 
-command -v rustc > /dev/null && {
+if command -v rustc > /dev/null; then
   export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
-}
+fi
+
+if $($DOTFILES/zsh/functions/is_wsl); then
+  export WINDOWS_HOME="/mnt/c/Users/saweiss"
+fi

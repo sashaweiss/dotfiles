@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 VSCODE_LOCAL_DIR="vscode"
-VSCODE_DIR="/mnt/c/Users/saweiss/AppData/Roaming/Code/User"
+VSCODE_DIR="$WINDOWS_HOME/AppData/Roaming/Code/User"
 
 if [ "$1" = "to" ]; then
     echo "Syncing VSCode files to $VSCODE_DIR from $VSCODE_LOCAL_DIR"

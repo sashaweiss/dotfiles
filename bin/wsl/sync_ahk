@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+WINDOWS_STARTUP_DIR="$WINDOWS_HOME/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup"
+
+# No quotes around the first argument to get the expansion
+cp windows/*.ahk "$WINDOWS_STARTUP_DIR"

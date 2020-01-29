@@ -12,7 +12,7 @@ alias la='ls -alhF'
 alias untar='tar -xzvf'
 
 is_wsl &&
-  ACTUAL_HOME="/mnt/c/Users/saweiss" ||
+  ACTUAL_HOME="$WINDOWS_HOME" ||
   ACTUAL_HOME="$HOME"
 
 export WORK="$ACTUAL_HOME/dev"
