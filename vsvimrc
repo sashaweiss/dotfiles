@@ -1,12 +1,13 @@
 " Options
 
-set hlsearch
+set wrap
 set number
+
+set incsearch
+set hlsearch
 
 set ignorecase
 set smartcase
-
-set incsearch
 
 " Mappings
 
@@ -22,3 +23,4 @@ nnoremap Z ^
 
 nmap <C-I> :vsc View.NavigateForward<CR>
 nmap <C-O> :vsc View.NavigateBackward<CR>
+nmap gd :vsc Edit.GoToDefinition<CR>
