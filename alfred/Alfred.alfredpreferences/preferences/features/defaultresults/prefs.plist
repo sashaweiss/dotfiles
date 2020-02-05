@@ -3,9 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>fallbacks</key>
-	<array>
-		<string>features.websearch.google.fallback</string>
-	</array>
+	<array/>
 	<key>showFolders</key>
 	<true/>
 	<key>showImages</key>
