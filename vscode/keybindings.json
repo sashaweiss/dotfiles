@@ -1,4 +1,6 @@
 [
+  //// *** Configuring built-in behavior *** ////
+
   // Use visual next tab instead of MRU
   {
     "key": "shift+cmd+]",
@@ -20,6 +22,7 @@
     "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditorInGroup"
   },
+
   // Disable closing the VSCode window when no editors are visible
   {
     "key": "cmd+w",
@@ -29,38 +32,9 @@
     "key": "ctrl+w",
     "command": "-workbench.action.switchWindow"
   },
-  // Quick-select and navigate sidebar/editor. Cmd+Shift+<key> will focus a panel/editor/terminal. "Focusing" a view
-  // while it is already focused will toggle the sidebar.
-  //
-  // J -> Editor
-  // E -> Explorer
-  // F -> Search
-  // Z -> Terminal
-  {
-    "key": "win+shift+j",
-    "mac": "cmd+shift+j",
-    "command": "-workbench.action.search.toggleQueryDetails",
-    "when": "searchViewletVisible"
-  },
-  {
-    "key": "cmd+shift+j",
-    "command": "workbench.action.focusActiveEditorGroup"
-  },
-  {
-    "key": "cmd+shift+z",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "cmd+shift+e",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "explorerViewletFocus"
-  },
-  {
-    "key": "cmd+shift+f",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "searchViewletFocus"
-  },
-  // The sidebar is navigable with NERDTree-style keys, e.g. `jk`, `C+[np]`, `[C-]o`.
+
+  // Make the sidebar navigable with NERDTree-style keys, e.g. `jk`, `C+[np]`, `[C-]o`.
+  // Relies on the Vim plugin and the workbench.list.automaticKeyboardNavigation setting in settings.json.
   {
     "key": "ctrl+o",
     "command": "list.toggleExpand",
@@ -75,5 +49,43 @@
     "key": "ctrl+o",
     "command": "filesExplorer.openFilePreserveFocus",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
-  }
+  },
+
+  //// *** Adding new functionality *** ////
+
+  // Quick-select and navigate sidebar/editor. Cmd+Shift+<key> will focus a panel/editor/terminal. "Focusing" a view
+  // while it is already focused will toggle the sidebar.
+  //
+  // J -> Editor
+  // E -> Explorer
+  // F -> Search
+  // Z -> Terminal
+  {
+    "key": "win+shift+j",
+    "mac": "cmd+shift+j",
+    "command": "-workbench.action.search.toggleQueryDetails",
+    "when": "searchViewletVisible"
+  },
+  {
+    "key": "win+shift+j",
+    "mac": "cmd+shift+j",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
+  {
+    "key": "win+shift+z",
+    "mac": "cmd+shift+z",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "win+shift+e",
+    "mac": "cmd+shift+e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "win+shift+f",
+    "mac": "cmd+shift+f",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "searchViewletFocus"
+  },
 ]
