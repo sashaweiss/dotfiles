@@ -61,29 +61,29 @@
   // F -> Search
   // Z -> Terminal
   {
-    "key": "win+shift+j",
+    "key": "ctrl+shift+j",
     "mac": "cmd+shift+j",
     "command": "-workbench.action.search.toggleQueryDetails",
     "when": "searchViewletVisible"
   },
   {
-    "key": "win+shift+j",
+    "key": "ctrl+shift+j",
     "mac": "cmd+shift+j",
     "command": "workbench.action.focusActiveEditorGroup"
   },
   {
-    "key": "win+shift+z",
+    "key": "ctrl+shift+z",
     "mac": "cmd+shift+z",
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
-    "key": "win+shift+e",
+    "key": "ctrl+shift+e",
     "mac": "cmd+shift+e",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "explorerViewletFocus"
   },
   {
-    "key": "win+shift+f",
+    "key": "ctrl+shift+f",
     "mac": "cmd+shift+f",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "searchViewletFocus"
