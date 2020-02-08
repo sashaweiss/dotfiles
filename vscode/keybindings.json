@@ -1,4 +1,13 @@
 [
+  // Use visual next tab instead of MRU
+  {
+    "key": "shift+cmd+]",
+    "command": "-workbench.action.nextEditor"
+  },
+  {
+    "key": "shift+cmd+[",
+    "command": "-workbench.action.previousEditor"
+  },
   {
     "key": "ctrl+tab",
     "command": "-workbench.action.openNextRecentlyUsedEditorInGroup"
@@ -8,17 +17,10 @@
     "command": "workbench.action.nextEditorInGroup"
   },
   {
-    "key": "shift+cmd+]",
-    "command": "-workbench.action.nextEditor"
-  },
-  {
     "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditorInGroup"
   },
-  {
-    "key": "shift+cmd+[",
-    "command": "-workbench.action.previousEditor"
-  },
+  // Use Cmd+W to close an editor, not the entire Code instance
   {
     "key": "cmd+w",
     "command": "-workbench.action.closeWindow"
@@ -27,29 +29,37 @@
     "key": "ctrl+w",
     "command": "-workbench.action.switchWindow"
   },
+  // Quick-select and navigate sidebar/editor. Cmd+Shift+<key> will focus a panel/editor/terminal. "Focusing" a view
+  // while it is already focused will toggle the sidebar.
+  //
+  // J -> Editor
+  // E -> Explorer
+  // F -> Search
+  // Z -> Terminal
   {
-    "key": "shift+cmd+j",
+    "key": "cmd+shift+j",
     "command": "-workbench.action.search.toggleQueryDetails",
     "when": "searchViewletVisible"
   },
   {
-    "key": "shift+cmd+j",
+    "key": "cmd+shift+j",
     "command": "workbench.action.focusActiveEditorGroup"
   },
   {
-    "key": "shift+cmd+z",
+    "key": "cmd+shift+z",
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
-    "key": "shift+cmd+e",
+    "key": "cmd+shift+e",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "explorerViewletFocus"
   },
   {
-    "key": "shift+cmd+f",
+    "key": "cmd+shift+f",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "searchViewletFocus"
   },
+  // The sidebar is navigable with NERDTree-style keys, e.g. `jk`, `C+[np]`, `[C-]o`.
   {
     "key": "ctrl+o",
     "command": "list.toggleExpand",

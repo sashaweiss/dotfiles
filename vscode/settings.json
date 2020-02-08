@@ -1,108 +1,124 @@
 {
-    "vim.camelCaseMotion.enable": true,
-    "vim.hlsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.visualstar": true,
-    "vim.replaceWithRegister": true,
-    "vim.insertModeKeyBindings": [
-      {
-        "before": ["j", "k"],
-        "after": ["<Esc>"]
-      }
-    ],
-    "vim.normalModeKeyBindings": [
-      {
-        "before": ["<leader>", "="],
-        "commands": ["workbench.action.nextEditorInGroup"]
-      },
-      {
-        "before": ["<leader>", "-"],
-        "commands": ["workbench.action.previousEditorInGroup"]
-      },
-      {
-        "before": ["<leader>", "w"],
-        "commands": ["workbench.action.closeActiveEditor"]
-      },
-      {
-        "before": ["J"],
-        "after": ["}"]
-      },
-      {
-        "before": ["K"],
-        "after": ["{"]
-      },
-      {
-        "before": ["k"],
-        "after": ["g", "k"]
-      },
-      {
-        "before": ["j"],
-        "after": ["g", "j"]
-      },
-      {
-        "before": ["z"],
-        "after": ["$"]
-      },
-      {
-        "before": ["Z"],
-        "after": ["^"]
-      }
-    ],
-    "vim.visualModeKeyBindings": [
-      {
-        "before": ["J"],
-        "after": ["}"]
-      },
-      {
-        "before": ["K"],
-        "after": ["{"]
-      },
-      {
-        "before": ["k"],
-        "after": ["g", "k"]
-      },
-      {
-        "before": ["j"],
-        "after": ["g", "j"]
-      },
-      {
-        "before": ["z"],
-        "after": ["$", "h"]
-      },
-      {
-        "before": ["v", "z"],
-        "after": ["$", "h"]
-      },
-      {
-        "before": ["v", "Z"],
-        "after": ["^"]
-      },
-      {
-        "before": ["Z"],
-        "after": ["^"]
-      }
-    ],
+  // Vim plugin configuration
+  "vim.camelCaseMotion.enable": true,
+  "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.visualstar": true,
+  "vim.replaceWithRegister": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "="],
+      "commands": ["workbench.action.nextEditorInGroup"]
+    },
+    {
+      "before": ["<leader>", "-"],
+      "commands": ["workbench.action.previousEditorInGroup"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["J"],
+      "after": ["}"]
+    },
+    {
+      "before": ["K"],
+      "after": ["{"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["z"],
+      "after": ["$"]
+    },
+    {
+      "before": ["Z"],
+      "after": ["^"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["J"],
+      "after": ["}"]
+    },
+    {
+    "before": ["K"],
+    "after": ["{"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["z"],
+      "after": ["$", "h"]
+    },
+    {
+      "before": ["v", "z"],
+      "after": ["$", "h"]
+    },
+    {
+      "before": ["v", "Z"],
+      "after": ["^"]
+    },
+    {
+      "before": ["Z"],
+      "after": ["^"]
+    }
+  ],
 
-    "workbench.editor.focusRecentEditorAfterClose": false,
-    "workbench.startupEditor": "newUntitledFile",
+  // Appearance
+  "editor.fontFamily": "Operator Mono for Powerline, Menlo, Monaco, 'Courier New', monospace",
+  "workbench.colorTheme": "Material Theme Palenight High Contrast",
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.folders.color": "#42a5f5",
 
-    "editor.fontFamily": "Operator Mono for Powerline, Menlo, Monaco, 'Courier New', monospace",
-    "workbench.colorTheme": "Material Theme",
-    "workbench.iconTheme": "material-icon-theme",
-    "material-icon-theme.folders.color": "#42a5f5",
+  // Disable the "file preview" feature
+  "workbench.editor.enablePreview": false,
+  // Disable moving to MRU tab after closing
+  "workbench.editor.focusRecentEditorAfterClose": false,
+  // Use a new empty file at startup
+  "workbench.startupEditor": "newUntitledFile",
 
-    "terminal.integrated.macOptionIsMeta": true,
+  // Pass Option through to tmux in the integrated terminal
+  "terminal.integrated.macOptionIsMeta": true,
 
-    "files.trimTrailingWhitespace": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
+  // Save/Paste configuration
+  "files.trimTrailingWhitespace": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
 
-    "workbench.list.automaticKeyboardNavigation": false,
+  // Disable VSCode keyboard nav in lists in favor of Vim plugin's
+  "workbench.list.automaticKeyboardNavigation": false,
 
-    "editor.codeLens": false,
-    "editor.lightbulb.enabled": false,
-    "editor.parameterHints.cycle": true,
+  // Disable the stupid lightbulb and code lens stuff - at least for Rust didn't find it very useful
+  "editor.codeLens": false,
+  "editor.lightbulb.enabled": false,
 
-    "rust-analyzer.enableEnhancedTyping": false,
-    "rust-analyzer.enableCargoWatchOnStartup": "enabled"
+  // Wrap-around hints list
+  "editor.parameterHints.cycle": true,
+
+  // Incompatible with the Vim plugin - also not sure what this means lol
+  "rust-analyzer.enableEnhancedTyping": false,
+  // Without this, plugin isn't very useful
+  "rust-analyzer.enableCargoWatchOnStartup": "enabled",
+  // Is cool, but gets real funky with the Vim plugin and also when editing it bounces the text around a lot
+  "rust-analyzer.displayInlayHints": false
 }
