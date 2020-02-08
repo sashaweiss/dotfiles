@@ -20,7 +20,7 @@
     "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditorInGroup"
   },
-  // Use Cmd+W to close an editor, not the entire Code instance
+  // Disable closing the VSCode window when no editors are visible
   {
     "key": "cmd+w",
     "command": "-workbench.action.closeWindow"
@@ -37,7 +37,8 @@
   // F -> Search
   // Z -> Terminal
   {
-    "key": "cmd+shift+j",
+    "key": "win+shift+j",
+    "mac": "cmd+shift+j",
     "command": "-workbench.action.search.toggleQueryDetails",
     "when": "searchViewletVisible"
   },
