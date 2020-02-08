@@ -120,5 +120,8 @@
   // Without this, plugin isn't very useful
   "rust-analyzer.enableCargoWatchOnStartup": "enabled",
   // Is cool, but gets real funky with the Vim plugin and also when editing it bounces the text around a lot
-  "rust-analyzer.displayInlayHints": false
+  "rust-analyzer.displayInlayHints": false,
+
+  // Don't auto-format JSON - messes with my spacing when playing with settings and stuff lol
+  "json.format.enable": false
 }
