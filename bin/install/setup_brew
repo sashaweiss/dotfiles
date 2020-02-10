@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-command -v brew > /dev/null || {
-    if $(./zsh/functions/is_mac); then
+if ! command -v brew > /dev/null; then
+    if ./zsh/functions/is_mac; then
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
         export PATH="/usr/local/bin":$PATH
     else
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
         export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
     fi
-}
+fi
 
 brew tap "dandavison/delta", "https://github.com/dandavison/delta"
 
@@ -30,7 +30,7 @@ brew install "tree"
 brew install "wget"
 brew install "zsh"
 
-if $(./zsh/functions/is_mac); then
+if ./zsh/functions/is_mac; then
     brew cask "1password", args: { appdir: "/Applications" }
     brew cask "iterm2", args: { appdir: "/Applications" }
     brew cask "alfred", args: { appdir: "/Applications" }

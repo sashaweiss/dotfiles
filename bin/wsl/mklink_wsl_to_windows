@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Usage: ./mklink_wsl_to_windows <Windows location> <WSL location>
+#
+# The Windows location should be a Unix-style absolute path. (The C: prefix is assumed.)
+# The WSL location should be a Unix-style absolute path.
+
+./zsh/functions/is_wsl || exit 1
+
+WINDOWS_LOC="${1//\//\\}"
+WSL_FILE_AS_WIN_PATH="\\\\wsl\$\\Ubuntu${2//\//\\}"
+
+if [ -L "$WINDOWS_ROOT$1" ]; then
+  echo "Destination link exists at $WINDOWS_LOC. Please remove it and try again."
+  exit 1
+fi
+
+./bin/wsl/cmd /c mklink "$WINDOWS_LOC" "$WSL_FILE_AS_WIN_PATH"

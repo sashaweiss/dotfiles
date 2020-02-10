@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-VSVIMRC_DIR="$WINDOWS_HOME"
-
-echo "Syncing vsvimrc to $VSVIMRC_DIR"
-cp vsvimrc "$VSVIMRC_DIR/.vsvimrc"
