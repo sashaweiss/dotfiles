@@ -42,12 +42,12 @@
   },
   {
     "key": "o",
-    "command": "filesExplorer.openFilePreserveFocus",
+    "command": "list.select",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
   },
   {
     "key": "ctrl+o",
-    "command": "filesExplorer.openFilePreserveFocus",
+    "command": "list.select",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
   },
 
