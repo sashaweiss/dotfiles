@@ -25,6 +25,14 @@
       "commands": ["workbench.action.closeActiveEditor"]
     },
     {
+      "before": ["C-o"],
+      "commands": ["workbench.action.navigateBack"]
+    },
+    {
+      "before": ["C-i"],
+      "commands": ["workbench.action.navigateForward"]
+    },
+    {
       "before": ["J"],
       "after": ["}"]
     },
