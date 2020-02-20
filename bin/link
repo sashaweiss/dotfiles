@@ -7,8 +7,8 @@ ln -fs "$DOTFILES/zsh/zshrc" "$HOME/.zshrc"
 ln -fs "$DOTFILES/zsh/zshenv" "$HOME/.zshenv"
 
 mkdir -p "$HOME/.config/nvim"
-ln -fs "$DOTFILES/neovim/init.vim" "$HOME/.config/nvim/init.vim"
-ln -fs "$DOTFILES/neovim/plugins/coc.json" "$HOME/.config/nvim/coc-settings.json"
+ln -fs "$DOTFILES/editors/neovim/init.vim" "$HOME/.config/nvim/init.vim"
+ln -fs "$DOTFILES/editors/neovim/plugins/coc.json" "$HOME/.config/nvim/coc-settings.json"
 
 ln -fs "$DOTFILES/tool-versions" "$HOME/.tool-versions"
 
