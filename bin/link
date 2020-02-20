@@ -7,8 +7,8 @@ ln -fs "$DOTFILES/zsh/zshrc" "$HOME/.zshrc"
 ln -fs "$DOTFILES/zsh/zshenv" "$HOME/.zshenv"
 
 mkdir -p "$HOME/.config/nvim"
-ln -fs "$DOTFILES/editors/neovim/init.vim" "$HOME/.config/nvim/init.vim"
-ln -fs "$DOTFILES/editors/neovim/plugins/coc.json" "$HOME/.config/nvim/coc-settings.json"
+ln -fs "$DOTFILES/neovim/init.vim" "$HOME/.config/nvim/init.vim"
+ln -fs "$DOTFILES/neovim/plugins/coc.json" "$HOME/.config/nvim/coc-settings.json"
 
 ln -fs "$DOTFILES/tool-versions" "$HOME/.tool-versions"
 
@@ -19,20 +19,20 @@ if ./zsh/functions/is_mac; then
   mkdir -p "$HOME/.config/alacritty"
   ln -fs "$DOTFILES/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
 
-  ln -fs "$DOTFILES/editors/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-  ln -fs "$DOTFILES/editors/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
-  ln -fs "$DOTFILES/editors/xvimrc" "$HOME/.xvimrc"
+  ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+  ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+  ln -fs "$DOTFILES/xvimrc" "$HOME/.xvimrc"
 elif ./zsh/functions/is_wsl; then
   ./bin/wsl/mklink_wsl_to_windows \
     /Users/saweiss/.vsvimrc \
-    "$DOTFILES/editors/visualstudio/vsvimrc"
+    "$DOTFILES/visualstudio/vsvimrc"
 
   ./bin/wsl/mklink_wsl_to_windows \
     /Users/saweiss/AppData/Roaming/Code/User/settings.json \
-    "$DOTFILES/editors/vscode/settings.json"
+    "$DOTFILES/vscode/settings.json"
   ./bin/wsl/mklink_wsl_to_windows \
     /Users/saweiss/AppData/Roaming/Code/User/keybindings.json \
-    "$DOTFILES/editors/vscode/keybindings.json"
+    "$DOTFILES/vscode/keybindings.json"
 
   ./bin/wsl/mklink_wsl_to_windows \
     "/Users/saweiss/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/disable_ctrl_esc.ahk" \
