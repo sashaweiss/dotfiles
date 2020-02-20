@@ -2,9 +2,7 @@
 
 ### AutoHotKey
 
-To run AutoHotKey (`.ahk`) scripts on startup, run `Win+R` -> `shell:startup` to open the shell startup directory, and copy the script there.
-
-This functionality should be covered in `bin/wsl/sync_ahk`.
+Install AutoHotKey, and run `bin/link`. This should put a shortcut to the `.ahk` script in the startup folder. If the startup folder differs from  what's in the script, find it via `Win+R` -> `shell:startup`.
 
 ### SharpKeys
 

@@ -19,20 +19,20 @@ if ./zsh/functions/is_mac; then
   mkdir -p "$HOME/.config/alacritty"
   ln -fs "$DOTFILES/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
 
-  ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-  ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
-  ln -fs "$DOTFILES/xvimrc" "$HOME/.xvimrc"
+  ln -fs "$DOTFILES/editors/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+  ln -fs "$DOTFILES/editors/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+  ln -fs "$DOTFILES/editors/xvimrc" "$HOME/.xvimrc"
 elif ./zsh/functions/is_wsl; then
   ./bin/wsl/mklink_wsl_to_windows \
     /Users/saweiss/.vsvimrc \
-    "$DOTFILES/visualstudio/vsvimrc"
+    "$DOTFILES/editors/visualstudio/vsvimrc"
 
   ./bin/wsl/mklink_wsl_to_windows \
     /Users/saweiss/AppData/Roaming/Code/User/settings.json \
-    "$DOTFILES/vscode/settings.json"
+    "$DOTFILES/editors/vscode/settings.json"
   ./bin/wsl/mklink_wsl_to_windows \
     /Users/saweiss/AppData/Roaming/Code/User/keybindings.json \
-    "$DOTFILES/vscode/keybindings.json"
+    "$DOTFILES/editors/vscode/keybindings.json"
 
   ./bin/wsl/mklink_wsl_to_windows \
     "/Users/saweiss/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/disable_ctrl_esc.ahk" \
