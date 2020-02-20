@@ -25,7 +25,11 @@ if ./zsh/functions/is_mac; then
 elif ./zsh/functions/is_wsl; then
   ./bin/wsl/mklink_wsl_to_windows \
     /Users/saweiss/.vsvimrc \
-    "$DOTFILES/visualstudio/vsvimrc"
+    "$DOTFILES/vsvimrc"
+
+  ./bin/wsl/mklink_wsl_to_windows \
+    /Users/saweiss/.ideavimrc \
+    "$DOTFILES/ideavimrc"
 
   ./bin/wsl/mklink_wsl_to_windows \
     /Users/saweiss/AppData/Roaming/Code/User/settings.json \

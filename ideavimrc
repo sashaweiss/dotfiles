@@ -1,0 +1,22 @@
+" Options
+
+set wrap
+set number
+
+set incsearch
+set hlsearch
+
+set ignorecase
+set smartcase
+
+" Mappings
+
+inoremap jk <esc>
+
+nnoremap J }
+vnoremap J }
+nnoremap K {
+vnoremap K {
+
+noremap z $
+nnoremap Z ^
