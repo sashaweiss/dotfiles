@@ -5,6 +5,9 @@
   "vim.useSystemClipboard": true,
   "vim.visualstar": true,
   "vim.replaceWithRegister": true,
+  "vim.handleKeys": {
+    "<C-f>": false
+  },
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
@@ -104,6 +107,8 @@
   "workbench.editor.focusRecentEditorAfterClose": false,
   // Use a new empty file at startup
   "workbench.startupEditor": "newUntitledFile",
+  // Don't use selected string for search
+  "editor.find.seedSearchStringFromSelection": false,
 
   // Pass Option through to tmux in the integrated terminal
   "terminal.integrated.macOptionIsMeta": true,
