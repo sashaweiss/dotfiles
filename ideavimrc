@@ -18,5 +18,9 @@ vnoremap J }
 nnoremap K {
 vnoremap K {
 
-noremap z $
+nnoremap z $
+vnoremap z $
 nnoremap Z ^
+vnoremap Z ^
+
+nnoremap gh :action ShowErrorDescription<CR>

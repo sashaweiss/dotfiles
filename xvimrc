@@ -28,5 +28,5 @@ vnoremap J }
 nnoremap K {
 vnoremap K {
 
-noremap z $
+nnoremap z $
 nnoremap Z ^
