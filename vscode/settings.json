@@ -136,5 +136,8 @@
   "rust-analyzer.displayInlayHints": false,
 
   // Don't auto-format JSON - messes with my spacing when playing with settings and stuff lol
-  "json.format.enable": false
+  "json.format.enable": false,
+
+  // Don't intend to use VSCode to browse .ipynb files
+  "python.dataScience.useNotebookEditor": false
 }
