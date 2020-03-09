@@ -38,7 +38,7 @@ _fzf_preview_window="--preview-window=down:75%"
 _fzf_preview_window_hidden="${_fzf_preview_window}:hidden"
 
 export FZF_DEFAULT_OPTS="--height 50% --reverse --no-mouse --cycle --ansi \
-$_fzf_preview_window\
+ $_fzf_preview_window \
  --bind ctrl-space:toggle-preview,ctrl-e:preview-down,ctrl-d:preview-page-down,ctrl-y:preview-up,ctrl-u:preview-page-up,ctrl-a:select-all+accept"
 
 _fzf_bat_preview="--preview='bat --style=numbers --color=always {}'"

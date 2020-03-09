@@ -9,7 +9,7 @@ preview='grep -o "[a-f0-9]\{7,\}" <<< {} | xargs git show --color=always | bat'
 
 git log --date=short --format="$format" --graph --color=always |
 fzf --ansi --no-sort --reverse --multi --bind "$bindings" \
-  --header 'Press CTRL-S to toggle sort' \
+  --height '100%' \
   --preview "$preview" |
 grep -o "[a-f0-9]\{7,\}"
 
