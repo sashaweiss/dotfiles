@@ -143,5 +143,8 @@
   "explorer.autoReveal": false,
 
   // Don't intend to use VSCode to browse .ipynb files
-  "python.dataScience.useNotebookEditor": false
+  "python.dataScience.useNotebookEditor": false,
+
+  // Don't format my C++
+  "C_Cpp.formatting": "Disabled"
 }
