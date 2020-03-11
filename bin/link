@@ -12,8 +12,7 @@ ln -fs "$DOTFILES/neovim/plugins/coc.json" "$HOME/.config/nvim/coc-settings.json
 
 ln -fs "$DOTFILES/tool-versions" "$HOME/.tool-versions"
 
-ln -fs "$DOTFILES/tmux.conf.local" "$HOME/.tmux.conf.local"
-ln -fs "$DOTFILES/submodules/tmux/.tmux.conf" "$HOME/.tmux.conf"
+ln -fs "$DOTFILES/tmux.conf" "$HOME/.tmux.conf"
 
 if ./zsh/functions/is_mac; then
   mkdir -p "$HOME/.config/alacritty"
