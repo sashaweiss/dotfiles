@@ -19,12 +19,6 @@ Plug 'neoclide/jsonc.vim'
 " Better navigation support for editing markdown
 Plug 'tpope/vim-markdown', { 'for': ['md', 'markdown'] }
 
-" IDE-like features via the Language Server Protocol, supporting almost every language
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-
-" ...except Go
-Plug 'tweekmonster/gofmt.vim', { 'for': ['go'] }
-
 " File browsing
 Plug 'scrooloose/nerdtree'
 
