@@ -19,7 +19,9 @@ nnoremap K {
 vnoremap K {
 
 nnoremap z $
+vnoremap z $h
 nnoremap Z ^
+vnoremap Z ^
 
 nmap <C-I> :vsc View.NavigateForward<CR>
 nmap <C-O> :vsc View.NavigateBackward<CR>
