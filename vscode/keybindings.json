@@ -51,7 +51,17 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
   },
 
-  //// *** Adding new functionality *** ////
+  // Remap parameter hint to be closer to suggestions
+  {
+    "key": "alt+space",
+    "command": "editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+space",
+    "command": "-editor.action.triggerParameterHints",
+    "when": "editorHasSignatureHelpProvider && editorTextFocus"
+  },
 
   // Quick-select and navigate sidebar/editor. Cmd+Shift+<key> will focus a panel/editor/terminal. "Focusing" a view
   // while it is already focused will toggle the sidebar.
