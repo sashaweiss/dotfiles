@@ -30,6 +30,12 @@ export DOTFILES="$HOME/.files"
 
 **Please run all `bin` scripts from the top level of this repo. Relatives paths are not my thing.**
 
+## Fonts
+
+I personally use [Cascadia Code](https://github.com/microsoft/cascadia-code) and/or [Fira Code](https://github.com/tonsky/FiraCode), patched for Powerline by [nerd-fonts](https://github.com/ryanoasis/nerd-fonts).
+
+Go to the `nerd-fonts` repo, find the relevant font, and download and install the `.tff`.
+
 ### If on Linux (incl. WSL)
 
 ```sh
@@ -62,6 +68,8 @@ $ rustup component add rust-src rustfmt rust-analysis rls --toolchain nightly
 ```
 
 #### Rust-Analyzer language server (for editors)
+
+Note: I personally go back and forth between using this and `RLS`, from the Rust team.
 
 ```sh
 $ git clone git@github.com:rust-analyzer/rust-analyzer
