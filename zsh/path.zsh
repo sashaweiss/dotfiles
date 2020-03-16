@@ -2,9 +2,20 @@
 
 typeset -U path
 
-is_mac && path=("/usr/local/bin" $path)
-is_linux && path=("/home/linuxbrew/.linuxbrew/bin" $path)
+if is_mac; then
+  path=("/usr/local/bin" $path)
+elif is_linux; then
+  path=("/home/linuxbrew/.linuxbrew/bin" $path)
+fi
 
-[[ -d "$HOME/.cargo" ]] && path=("$HOME/.cargo/bin" $path)
-is_mac && [[ -d "/Applications/Visual Studio Code.app" ]] && path=("/Applications/Visual Studio Code.app/Contents/Resources/app/bin" $path)
-[[ -z "$GOPATH" ]] && path=("$GOPATH/bin" $path)
+if [[ -d "$HOME/.cargo" ]]; then
+  path=("$HOME/.cargo/bin" $path)
+fi
+
+if is_mac && [[ -d "/Applications/Visual Studio Code.app" ]]; then
+  path=("/Applications/Visual Studio Code.app/Contents/Resources/app/bin" $path)
+fi
+
+if [[ -z "$GOPATH" ]]; then
+  path=("$GOPATH/bin" $path)
+fi
