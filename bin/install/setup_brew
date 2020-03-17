@@ -29,18 +29,3 @@ brew install "tmux"
 brew install "tree"
 brew install "wget"
 brew install "zsh"
-
-if ./zsh/functions/is_mac; then
-    brew cask "1password", args: { appdir: "/Applications" }
-    brew cask "iterm2", args: { appdir: "/Applications" }
-    brew cask "alfred", args: { appdir: "/Applications" }
-    brew cask "bartender", args: { appdir: "/Applications" }
-    brew cask "contexts", args: { appdir: "/Applications" }
-    brew cask "daisydisk", args: { appdir: "/Applications" }
-    brew cask "firefox", args: { appdir: "/Applications" }
-    brew cask "google-chrome", args: { appdir: "/Applications" }
-    brew cask "postman", args: { appdir: "/Applications" }
-    brew cask "private-internet-access", args: { appdir: "/Applications" }
-    brew cask "spectacle", args: { appdir: "/Applications" }
-    brew cask "visual-studio-code", args: { appdir: "/Applications" }
-fi
