@@ -21,6 +21,7 @@ if ./zsh/functions/is_mac; then
   ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
   ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
   ln -fs "$DOTFILES/xvimrc" "$HOME/.xvimrc"
+  ln -fs "$DOTFILES/ideavimrc" "$HOME/.ideavimrc"
 elif ./zsh/functions/is_wsl; then
   ./bin/wsl/mklink_wsl_to_windows \
     /Users/saweiss/.vsvimrc \
