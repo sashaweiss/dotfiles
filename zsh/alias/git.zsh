@@ -9,4 +9,6 @@ command -v git > /dev/null && {
   alias gba='gb -a'
   alias gco='g checkout'
   alias glg='g lg'
+  alias gskip='g update-index --skip-worktree'
+  alias gnoskip='g update-index --no-skip-worktree'
 }
