@@ -2,12 +2,12 @@
 	name = sashaweiss
 	email = asashaweiss@gmail.com
 [core]
-  pager = delta --dark --highlight-removed --tabs=2 --hunk-style=plain --theme="TwoDark" | less -+F
+	pager = delta --dark --highlight-removed --tabs=2 --hunk-style=plain --theme="TwoDark" | less -+F
 [alias]
 	co = checkout
-  oneline = log --pretty=format:\"%h %ad%x20%s%x20%x28%an%x29\" --date=short
-  lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
-  pristine = reset --hard
-  addnowhitespace=!sh -c 'git diff -U0 -w --no-color "$@" | git apply --cached --ignore-whitespace --unidiff-zero -'
+	oneline = log --pretty=format:\"%h %ad%x20%s%x20%x28%an%x29\" --date=short
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+	pristine = reset --hard
+	addnowhitespace=!sh -c 'git diff -U0 -w --no-color "$@" | git apply --cached --ignore-whitespace --unidiff-zero -'
 [grep]
 	linenumber = true
