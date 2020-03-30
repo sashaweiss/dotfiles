@@ -1,6 +1,6 @@
 # sasha's .files
 
-My personal dotfiles. `zsh`+`neovim`+`tmux`+`Visual Studio Code`.
+My personal dotfiles. `[zsh](https://www.zsh.org)`+`[neovim](https://neovim.io)`+`[tmux](https://github.com/tmux/tmux)`+`[VSCode](https://github.com/microsoft/vscode)`.
 
 Supported on Mac and WSL - mostly. Probably.
 
@@ -10,7 +10,6 @@ Clone the repo:
 
 ```sh
 $ git clone git@github.com:sashaweiss/dotfiles $HOME/.files && cd .files
-$ git submodule update --init
 ```
 
 **To install to somewhere other than $HOME/.files, make sure to adjust the $DOTFILES environment variable!**
@@ -23,8 +22,6 @@ export DOTFILES="$HOME/.files"
 ```
 
 ...and you should be good to go!
-
-*Note*: when installing for the WSL, because of file-system interop issues and linking, the VSCode configs + VSVimrc do not link automatically. Use `bin/wsl/sync_vs[code|vimrc]` to keep them in sync manually, whenever they change.
 
 ## Installing peripherals
 
@@ -67,12 +64,3 @@ $ rustup component add rust-src rustfmt rust-analysis rls
 $ rustup component add rust-src rustfmt rust-analysis rls --toolchain nightly
 ```
 
-#### Rust-Analyzer language server (for editors)
-
-Note: I personally go back and forth between using this and `RLS`, from the Rust team.
-
-```sh
-$ git clone git@github.com:rust-analyzer/rust-analyzer
-$ cd rust-analyzer
-$ cargo xtask install
-```
