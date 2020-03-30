@@ -59,6 +59,14 @@
     {
       "before": ["Z"],
       "after": ["^"]
+    },
+    {
+      "before": ["g", "e"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["g", "E"],
+      "commands": ["editor.action.marker.prev"]
     }
   ],
   "vim.visualModeKeyBindings": [
@@ -146,5 +154,8 @@
   "python.dataScience.useNotebookEditor": false,
 
   // Don't format my C++
-  "C_Cpp.formatting": "Disabled"
+  "C_Cpp.formatting": "Disabled",
+
+  // Show issues in the status bar
+  "problems.showCurrentInStatus": true
 }
