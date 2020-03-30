@@ -25,15 +25,13 @@ export DOTFILES="$HOME/.files"
 
 ## Installing peripherals
 
-**Please run all `bin` scripts from the top level of this repo. Relatives paths are not my thing.**
-
 ## Fonts
 
 I personally use [Cascadia Code](https://github.com/microsoft/cascadia-code) and/or [Fira Code](https://github.com/tonsky/FiraCode), patched for Powerline by [nerd-fonts](https://github.com/ryanoasis/nerd-fonts).
 
 Go to the `nerd-fonts` repo, find the relevant font, and download and install the `.tff`.
 
-### If on Linux (incl. WSL)
+### Linux (incl. WSL) "not-built-in"s
 
 ```sh
 $ ./bin/install/setup_linux
