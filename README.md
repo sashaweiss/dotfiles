@@ -1,18 +1,18 @@
 # sasha's .files
 
-My personal dotfiles. `[zsh](https://www.zsh.org)`+`[neovim](https://neovim.io)`+`[tmux](https://github.com/tmux/tmux)`+`[VSCode](https://github.com/microsoft/vscode)`.
+My personal dotfiles. [`zsh`](https://www.zsh.org)+[`neovim`](https://neovim.io)+[`tmux`](https://github.com/tmux/tmux)+[`VSCode`](https://github.com/microsoft/vscode).
 
-Supported on Mac and WSL - mostly. Probably.
+In active use on Mac and the [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq).
 
 ## Download and install
 
 Clone the repo:
 
 ```sh
-$ git clone git@github.com:sashaweiss/dotfiles $HOME/.files && cd .files
+$ git clone git@github.com:sashaweiss/dotfiles $HOME/.files
 ```
 
-**To install to somewhere other than $HOME/.files, make sure to adjust the $DOTFILES environment variable!**
+**To install to somewhere other than $HOME/.files, make sure to adjust `$DOTFILES`!**
 
 Link the appropriate files:
 
@@ -21,7 +21,7 @@ export DOTFILES="$HOME/.files"
 ./link
 ```
 
-...and you should be good to go!
+...and you should be good to go! (Kinda - read on for installing peripherals - without those, some stuff won't work/will look funky/will be unavailable.)
 
 ## Installing peripherals
 
