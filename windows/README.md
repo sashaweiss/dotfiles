@@ -1,9 +1,11 @@
-## Windows-specific configuration
+# Windows-specific
 
-### AutoHotKey
+## AutoHotKey
 
-Install AutoHotKey, and run `bin/link`. This should put a shortcut to the `.ahk` script in the startup folder. If the startup folder differs from  what's in the script, find it via `Win+R` -> `shell:startup`.
+AutoHotKey is an application that exports a scripting language, and can run scripts that can modify Windows system behavior or perform various tasks. Scripts can be set to run on startup - e.g., for mapping key combinations. (For single-key remaps, see [below](#SharpKeys)).
 
-### SharpKeys
+Running `bin/link` during dotfiles install will put a shortcut to my on-startup `.ahk` script(s) in the startup folder. If the startup folder differs from what's in the script, find it via `Win+R` -> `shell:startup`.
 
-Open `remappings.skl` in the SharpKeys application and hit "write to registry" to very permanently write the key remappings listed there to the registry. I've found this to be the most reliable way to make sure said remappings are in effect immediately on sign-in, as well as transitive (useful for other shortcuts).
+## SharpKeys
+
+SharpKeys allows one to very permanently write a set of key remappings to the registry. Which keys should be mapped to which depends a little on your keyboard, and what it's default configuration is - I will always map `CapsLock` to `Esc`, and then depending on the modifier key layout will often map `LeftAlt` to `Win` and vice versa.
