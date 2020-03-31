@@ -8,7 +8,7 @@
       "name": "Ubuntu",
       "source": "Windows.Terminal.Wsl",
       "fontFace": "CaskaydiaCove NF",
-      "colorScheme": "shades-of-purple"
+      "colorScheme": "sasha-legacy"
     },
     {
       // Make changes here to the powershell.exe profile
@@ -66,6 +66,27 @@
       "brightRed": "#F9291B",
       "brightPurple": "#FF76FF",
       "brightYellow": "#F1D000",
+      "brightWhite": "#FEFFFF"
+    },
+    {
+      "name": "sasha-legacy",
+      "foreground": "#C7C7C7",
+      "background": "#160626",
+      "black": "#000000",
+      "blue": "#0225C7",
+      "green": "#00C200",
+      "cyan": "#00C5C7",
+      "red": "#C91B00",
+      "purple": "#C930C7",
+      "yellow": "#C7C400",
+      "white": "#C7C7C7",
+      "brightBlack": "#676767",
+      "brightBlue": "#6871FF",
+      "brightGreen": "#5FF967",
+      "brightCyan": "#5FFDFF",
+      "brightRed": "#FF6D67",
+      "brightPurple": "#FF76FF",
+      "brightYellow": "#FEFB67",
       "brightWhite": "#FEFFFF"
     }
   ],
