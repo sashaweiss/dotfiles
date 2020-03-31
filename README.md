@@ -27,31 +27,39 @@ export DOTFILES="$HOME/.files"
 
 ### Per-platform
 
-See my [Windows](./windows/README.md) and [Mac](./macOS/README.md)-specific configs.
+See my [Windows](./windows/README.md) and [Mac](./macOS/README.md) for platform-specific configs/applications/utilities.
 
-### Fonts
+### [Homebrew](https://brew.sh)
 
-I personally use [Cascadia Code](https://github.com/microsoft/cascadia-code) and/or [Fira Code](https://github.com/tonsky/FiraCode), patched for Powerline by [nerd-fonts](https://github.com/ryanoasis/nerd-fonts).
-
-Go to the `nerd-fonts` repo, find the relevant font, and download and install the `.tff`.
-
-### Brew
+I install the majority of my utilities, as well as my preferred fonts, via `brew`.
 
 ```sh
-$ ./bin/install/setup_brew
+$ ./util/brew/setup_brew
 ```
 
-### Brew version of `zsh`
+#### To make `brew`'s `zsh` the default shell:
 
 Add `$(brew --prefix)/bin/zsh` (the result of running that expression, not the expression itself) to `/etc/shells`. Run `chsh -s $(brew --prefix)/bin/zsh`.
 
+### [asdf](https://github.com/asdf-vm/asdf)
+
+I use `asdf` as my version manager for `node`, `python`, `golang`, and eventually for `rustc`.
+
+```sh
+$ ./util/asdf/setup_asdf
+```
+
 ### Vim plugins
+
+What's `(n)vim` without plugins?
 
 ```sh
 $ nvim -c "PlugInstall" -c "qa"
 ```
 
 ### Rust
+
+My favorite programming language <3 (maybe - MAYBE - except for Swift)
 
 ```sh
 $ curl https://sh.rustup.rs -sSf | sh -s -- --no-modify-path -y
