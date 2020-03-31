@@ -19,3 +19,9 @@ It's a work in progress, and there are obviously some shortcomings/missing piece
 - Making symlinks between the WSL and Windows FSs is...not really feasible. I use `bin/wsl/mklink_wsl_to_windows` to make unidirectional symlinks into the Windows FS.
 
 Not WSL's fault, but Ubuntu ships without a bunch of key utils. Run `bin/wsl/install_linux_deps` to get those.
+
+## [Windows Terminal](https://github.com/microsoft/terminal)
+
+The Windows Terminal allows one to have all the various Windows command lines (WSL, Cmd.exe, Powershell, etc.) as tabs in one application. Installs via the Microsoft Store.
+
+Its settings live in this repo. To update the colorscheme, I used [`ColorTool`](https://github.com/Microsoft/Terminal/tree/master/src/tools/ColorTool). `ColorTool.exe -t <colorscheme>.itermcolors` outputs a JSON that can be added to the settings file, allowing me to keep my iTerm and Windows Terminal color schemes (more or less) in sync. (Note: at the time of writing, the `-t` switch was not released, so I built `ColorTool` from source via the `.sln` in the linked directory. Sigh.)
