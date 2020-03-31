@@ -1,4 +1,27 @@
-source $DOTFILES/vim/commonidevimrc
+" Options
+
+set wrap
+set number
+
+set incsearch
+set hlsearch
+
+set ignorecase
+set smartcase
+
+" Mappings
+
+inoremap jk <esc>
+
+nnoremap J }
+vnoremap J }
+nnoremap K {
+vnoremap K {
+
+nnoremap z $
+vnoremap z $h
+nnoremap Z ^
+vnoremap Z ^
 
 nmap == :xcmenucmd Re-Indent<CR>
 vmap = :xcmenucmd Re-Indent<CR>
