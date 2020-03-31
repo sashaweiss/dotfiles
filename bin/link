@@ -5,8 +5,8 @@ ln -fs "$DOTFILES/zsh/zshenv" "$HOME/.zshenv"
 
 ln -fs "$DOTFILES/util/gitconfig" "$HOME/.gitconfig"
 ln -fs "$DOTFILES/util/gitignore" "$HOME/.gitignore"
-ln -fs "$DOTFILES/util/tool-versions" "$HOME/.tool-versions"
 ln -fs "$DOTFILES/util/tmux.conf" "$HOME/.tmux.conf"
+ln -fs "$DOTFILES/util/asdf/tool-versions" "$HOME/.tool-versions"
 
 mkdir -p "$HOME/.config/nvim"
 ln -fs "$DOTFILES/vim/neovim/init.vim" "$HOME/.config/nvim/init.vim"

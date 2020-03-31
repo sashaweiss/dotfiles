@@ -38,6 +38,17 @@ Tips and tricks:
 - In Rectangle preferences, selecting "Allow any keyboard shortcut" allows overriding of stuff like `Cmd+Ctrl+F`, which is normally a system shortcut.
 - Worth setting to open on login.
 
+## [Contexts](https://contexts.co)
+
+Contexts is a window-switcher that extends MacOS's default `Cmd+Tab` functionality, allowing one to switch to a particular window of an app rather than just to the app itself.
+
+Tips and tricks:
+- Contexts, imho, tries to do way too much. I disable most of the functionality immediately, keeping really just the window switcher.
+
+## [DaisyDisk](https://daisydiskapp.com)
+
+DaisyDisk is an adorable app (paid, through the App Store) that visualizes occupied disk space on your Mac and helps clear it out. I use it especially since all my Mac machines have woefully small SSDs.
+
 ## [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704)
 
 Amphetamine keeps your computer awake, even if the screen goes dark, for a period of time you specify. Handy for when performing a long download, and wanting to make sure it completes overnight.

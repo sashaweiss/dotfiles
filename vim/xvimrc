@@ -1,16 +1,4 @@
-" Options
-
-set hlsearch
-set number
-
-set wrap
-
-set ignorecase
-set smartcase
-
-set incsearch
-
-" Mappings
+source $DOTFILES/vim/commonidevimrc
 
 nmap == :xcmenucmd Re-Indent<CR>
 vmap = :xcmenucmd Re-Indent<CR>
@@ -20,13 +8,3 @@ nmap <C-o> :xcmenucmd Go Back<CR>
 
 nmap <C-z> :xcmenucmd Open in Next Editor<CR>
 nmap <C-q> :xcmenucmd Close Editor<CR>:xcmenucmd Move Focus to Next Editor<CR>
-
-inoremap jk <esc>
-
-nnoremap J }
-vnoremap J }
-nnoremap K {
-vnoremap K {
-
-nnoremap z $
-nnoremap Z ^

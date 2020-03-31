@@ -1,6 +1,6 @@
 # sasha's .files
 
-My personal dotfiles. [`zsh`](https://www.zsh.org)+[`neovim`](https://neovim.io)+[`tmux`](https://github.com/tmux/tmux)+[`VSCode`](https://github.com/microsoft/vscode).
+My personal dotfiles. Mostly [`zsh`](https://www.zsh.org)+[`neovim`](https://neovim.io)+[`tmux`](https://github.com/tmux/tmux)+[`VSCode`](https://github.com/microsoft/vscode).
 
 In active use on Mac and the [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq).
 
@@ -25,17 +25,15 @@ export DOTFILES="$HOME/.files"
 
 ## Installing peripherals
 
-## Fonts
+### Per-platform
+
+See my [Windows](./windows/README.md) and [Mac](./macOS/README.md)-specific configs.
+
+### Fonts
 
 I personally use [Cascadia Code](https://github.com/microsoft/cascadia-code) and/or [Fira Code](https://github.com/tonsky/FiraCode), patched for Powerline by [nerd-fonts](https://github.com/ryanoasis/nerd-fonts).
 
 Go to the `nerd-fonts` repo, find the relevant font, and download and install the `.tff`.
-
-### Linux (incl. WSL) "not-built-in"s
-
-```sh
-$ ./bin/install/setup_linux
-```
 
 ### Brew
 

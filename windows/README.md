@@ -9,3 +9,13 @@ Running `bin/link` during dotfiles install will put a shortcut to my on-startup 
 ## SharpKeys
 
 SharpKeys allows one to very permanently write a set of key remappings to the registry. Which keys should be mapped to which depends a little on your keyboard, and what it's default configuration is - I will always map `CapsLock` to `Esc`, and then depending on the modifier key layout will often map `LeftAlt` to `Win` and vice versa.
+
+## The [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq)
+
+The WSL is a Linux kernel bolted onto the side of (and more and more integrated with!) Windows 10, that allows one to install a Linux distro and use it to manage the Windows FS.
+
+It's a work in progress, and there are obviously some shortcomings/missing pieces:
+- WSL performance in interacting with files in the Windows filesystem (under `/mnt/c`) is pretty poor - for things like `npm install` it's best to invoke `cmd.exe` or `powershell.exe` and use those temporarily.
+- Making symlinks between the WSL and Windows FSs is...not really feasible. I use `bin/wsl/mklink_wsl_to_windows` to make unidirectional symlinks into the Windows FS.
+
+Not WSL's fault, but Ubuntu ships without a bunch of key utils. Run `bin/wsl/install_linux_deps` to get those.
