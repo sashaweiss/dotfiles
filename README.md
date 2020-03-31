@@ -1,19 +1,18 @@
 # sasha's .files
 
-My personal dotfiles. `zsh`+`neovim`+`tmux`+`Visual Studio Code`.
+My personal dotfiles. Mostly [`zsh`](https://www.zsh.org)+[`neovim`](https://neovim.io)+[`tmux`](https://github.com/tmux/tmux)+[`VSCode`](https://github.com/microsoft/vscode).
 
-Supported on Mac and WSL - mostly. Probably.
+In active use on Mac and the [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq).
 
 ## Download and install
 
 Clone the repo:
 
 ```sh
-$ git clone git@github.com:sashaweiss/dotfiles $HOME/.files && cd .files
-$ git submodule update --init
+$ git clone git@github.com:sashaweiss/dotfiles $HOME/.files
 ```
 
-**To install to somewhere other than $HOME/.files, make sure to adjust the $DOTFILES environment variable!**
+**To install to somewhere other than $HOME/.files, make sure to adjust `$DOTFILES`!**
 
 Link the appropriate files:
 
@@ -22,43 +21,45 @@ export DOTFILES="$HOME/.files"
 ./link
 ```
 
-...and you should be good to go!
-
-*Note*: when installing for the WSL, because of file-system interop issues and linking, the VSCode configs + VSVimrc do not link automatically. Use `bin/wsl/sync_vs[code|vimrc]` to keep them in sync manually, whenever they change.
+...and you should be good to go! (Kinda - read on for installing peripherals - without those, some stuff won't work/will look funky/will be unavailable.)
 
 ## Installing peripherals
 
-**Please run all `bin` scripts from the top level of this repo. Relatives paths are not my thing.**
+### Per-platform
 
-## Fonts
+See my [Windows](./windows/README.md) and [Mac](./macOS/README.md) for platform-specific configs/applications/utilities.
 
-I personally use [Cascadia Code](https://github.com/microsoft/cascadia-code) and/or [Fira Code](https://github.com/tonsky/FiraCode), patched for Powerline by [nerd-fonts](https://github.com/ryanoasis/nerd-fonts).
+### [Homebrew](https://brew.sh)
 
-Go to the `nerd-fonts` repo, find the relevant font, and download and install the `.tff`.
-
-### If on Linux (incl. WSL)
+I install the majority of my utilities, as well as my preferred fonts, via `brew`.
 
 ```sh
-$ ./bin/install/setup_linux
+$ ./util/brew/setup_brew
 ```
 
-### Brew
-
-```sh
-$ ./bin/install/setup_brew
-```
-
-### Brew version of `zsh`
+#### To make `brew`'s `zsh` the default shell:
 
 Add `$(brew --prefix)/bin/zsh` (the result of running that expression, not the expression itself) to `/etc/shells`. Run `chsh -s $(brew --prefix)/bin/zsh`.
 
+### [asdf](https://github.com/asdf-vm/asdf)
+
+I use `asdf` as my version manager for `node`, `python`, `golang`, and eventually for `rustc`.
+
+```sh
+$ ./util/asdf/setup_asdf
+```
+
 ### Vim plugins
+
+What's `(n)vim` without plugins?
 
 ```sh
 $ nvim -c "PlugInstall" -c "qa"
 ```
 
 ### Rust
+
+My favorite programming language <3 (maybe - MAYBE - except for Swift)
 
 ```sh
 $ curl https://sh.rustup.rs -sSf | sh -s -- --no-modify-path -y
@@ -67,12 +68,3 @@ $ rustup component add rust-src rustfmt rust-analysis rls
 $ rustup component add rust-src rustfmt rust-analysis rls --toolchain nightly
 ```
 
-#### Rust-Analyzer language server (for editors)
-
-Note: I personally go back and forth between using this and `RLS`, from the Rust team.
-
-```sh
-$ git clone git@github.com:rust-analyzer/rust-analyzer
-$ cd rust-analyzer
-$ cargo xtask install
-```

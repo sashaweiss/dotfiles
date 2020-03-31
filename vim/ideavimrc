@@ -19,7 +19,7 @@ nnoremap K {
 vnoremap K {
 
 nnoremap z $
-vnoremap z $
+vnoremap z $h
 nnoremap Z ^
 vnoremap Z ^
 
