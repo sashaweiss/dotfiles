@@ -15,6 +15,7 @@ fi
 
 asdf plugin-list | grep -q python || asdf plugin-add python
 asdf plugin-list | grep -q golang || asdf plugin-add golang
+asdf plugin-list | grep -q ruby || asdf plugin-add ruby
 
 # install whatever tools are listed in "$HOME/.tool-versions"
 cd "$HOME" && asdf install
