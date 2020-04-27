@@ -4,11 +4,7 @@
 <dict>
 	<key>fallbacks</key>
 	<array/>
-	<key>showFolders</key>
-	<true/>
-	<key>showImages</key>
-	<true/>
-	<key>showTextFiles</key>
-	<true/>
+	<key>showContacts</key>
+	<false/>
 </dict>
 </plist>
