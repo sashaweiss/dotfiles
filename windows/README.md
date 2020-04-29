@@ -25,3 +25,10 @@ Not WSL's fault, but Ubuntu ships without a bunch of key utils. Run `bin/wsl/ins
 The Windows Terminal allows one to have all the various Windows command lines (WSL, Cmd.exe, Powershell, etc.) as tabs in one application. Installs via the Microsoft Store.
 
 Its settings live in this repo. To update the colorscheme, I used [`ColorTool`](https://github.com/Microsoft/Terminal/tree/master/src/tools/ColorTool). `ColorTool.exe -t <colorscheme>.itermcolors` outputs a JSON that can be added to the settings file, allowing me to keep my iTerm and Windows Terminal color schemes (more or less) in sync. (Note: at the time of writing, the `-t` switch was not released, so I built `ColorTool` from source via the `.sln` in the linked directory. Sigh.)
+
+## [Chocolatey](https://chocolatey.org/)
+
+Chocolatey is the equivalent of Homebrew for Windows. I have used it to install:
+- NodeJS
+
+To manage packages, need to have Powershell open with Administrator privileges.
