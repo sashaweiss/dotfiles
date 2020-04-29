@@ -24,3 +24,4 @@ nnoremap Z ^
 vnoremap Z ^
 
 nmap gd :vsc Edit.GoToDefinition<CR>
+nmap gh :vsc Edit.QuickInfo<CR>
