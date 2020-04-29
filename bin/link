@@ -40,7 +40,7 @@ elif ./zsh/functions/is_wsl; then
     "$DOTFILES/windows/disable_ctrl_esc.ahk"
 
   ./bin/wsl/mklink_wsl_to_windows \
-    "/Users/saweiss/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/profiles.json" \
+    "/Users/saweiss/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json" \
     "$DOTFILES/windows/windows_terminal_settings.json"
 
 fi
