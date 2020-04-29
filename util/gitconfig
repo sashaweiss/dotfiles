@@ -3,6 +3,7 @@
 	email = asashaweiss@gmail.com
 [core]
 	pager = delta --dark --highlight-removed --tabs=2 --hunk-style=plain --theme="TwoDark" | less -+F
+  whitespace = cr-at-eol
 [alias]
 	co = checkout
 	oneline = log --pretty=format:\"%h %ad%x20%s%x20%x28%an%x29\" --date=short
