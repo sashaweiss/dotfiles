@@ -157,5 +157,12 @@
   "C_Cpp.formatting": "Disabled",
 
   // Show issues in the status bar
-  "problems.showCurrentInStatus": true
+  "problems.showCurrentInStatus": true,
+
+  // Ignore the freaking extension recommendations
+  "extensions.ignoreRecommendations": true,
+
+  // Explorer confirmation dialogs (I think only relevant for Windows)
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false
 }
