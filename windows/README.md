@@ -1,5 +1,20 @@
 # Windows-specific
 
+## Git and line endings
+
+On Windows, I intentionally usually have `gitconfig` skip-worktree-ed (`git update-index --skip-worktree`), since I add a couple settings that are pretty specific to Windows and the funky hybrid WSL setup I have - specifically that I use the WSL to manage files in the Windows file system.
+
+One way this manifests is the gitconfig setting `core.autocrlf`. For files that live in the Windows world, I want that setting `true` so that my Visual Studio projects etc. can function as expected. For files that live in the Linux world, I need that setting to be `false` so I don't have nasty line ending problems. (E.g., a `.zsh` file with CRLF line endings will have issues.)
+
+So, I keep that setting on and ignored in my global gitconfig (along with the `credential.helper` setting, which I point to the Git for Windows credential manager, a `.exe`). This can cause issues when I clone stuff intended for the Linux FS, e.g. zsh plugins. If one encounters line ending issues there, the following commands in some order can help:
+
+```sh
+$ sed -i 's/\r//g' <file> # deletes the CR from CRLF, in-place
+$ git config --local core.autocrlf false # locally sets the setting to false
+```
+
+For example, I had to run the second in this repo when doing first setup.
+
 ## AutoHotKey
 
 AutoHotKey is an application that exports a scripting language, and can run scripts that can modify Windows system behavior or perform various tasks. Scripts can be set to run on startup - e.g., for mapping key combinations. (For single-key remaps, see [below](#SharpKeys)).
