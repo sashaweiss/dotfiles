@@ -1,14 +1,14 @@
 # MacOS-specific
 
-I use a small menagerie of utility applications when working in MacOS. Some require licenses, and some require manual setup, so I find it clearest to list them below and install them manually.
+Notes on things I do/configure/use specifically on MacOS.
 
 ## [ueli](https://github.com/oliverschwendener/ueli)
 
-ueli is a keystroke launcher for MacOS - i.e., a beefed up Spotlight. Still new to using it, so will follow up when I've got more to say about it.
+ueli is a keystroke launcher - i.e., a beefed up Spotlight. Still new to using it, so will follow up when I've got more to say about it.
 
 ## [AltTab](https://github.com/lwouis/alt-tab-macos)
 
-AltTab is a window switcher for MacOS, giving a similar experience to the Windows Alt-Tab experience. Still new to using it, so will follow up when I've got more to say about it.
+AltTab is a window switcher for MacOS, giving a similar experience to the Windows Alt-Tab experience. Still new to using it, so will follow up when I've got more to say about it. Installs
 
 ## [iTerm](https://iterm2.com)
 
