@@ -105,7 +105,7 @@
   ],
 
   // Appearance
-  "editor.fontFamily": "Operator Mono for Powerline, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "Iosevka",
   "workbench.colorTheme": "Material Theme Palenight High Contrast",
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.folders.color": "#42a5f5",
@@ -164,5 +164,8 @@
 
   // Explorer confirmation dialogs (I think only relevant for Windows)
   "explorer.confirmDragAndDrop": false,
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+
+  // Editor font size
+  "editor.fontSize": 14
 }

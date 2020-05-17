@@ -893,7 +893,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>269 219 796 486 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1280 0 2266 1440 0 0 2560 1440 </string>
+	<string>1280 0 1458 1440 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2560 594 730 454 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1568,7 +1568,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FiraCodeNerdFontComplete-Regular 14</string>
+			<string>Iosevka 16</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1650,9 +1650,7 @@
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
-		<string>FiraCode Nerd Font</string>
-		<string>FiraCode Nerd Font Mono</string>
-		<string>CaskaydiaCove Nerd Font</string>
+		<string>Iosevka</string>
 	</array>
 	<key>NoSyncConfirmRunOpenFile</key>
 	<true/>
@@ -1661,9 +1659,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{2560, 0}, {2560, 1440}}</string>
+		<string>{{0, 0}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{2671, 1020}</string>
+		<string>{1612, 1118}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -1672,7 +1670,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>A185CEEB-A950-46C0-A83B-094B1A3607AD</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>77</integer>
+	<integer>81</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2455,7 +2453,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-29T17:45:36Z</date>
+	<date>2020-05-17T21:20:33Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>

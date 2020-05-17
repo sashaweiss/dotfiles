@@ -25,13 +25,17 @@ export DOTFILES="$HOME/.files"
 
 ## Installing peripherals
 
+### Fonts
+
+I am current using [Iosevka](https://github.com/be5invis/Iosevka) as my default font for coding.
+
 ### Per-platform
 
 See my [Windows](./windows/README.md) and [Mac](./macOS/README.md) for platform-specific configs/applications/utilities.
 
 ### [Homebrew](https://brew.sh)
 
-I install the majority of my utilities, as well as my preferred fonts, via `brew`.
+I install the majority of my utilities via `brew`.
 
 ```sh
 $ ./util/brew/setup_brew

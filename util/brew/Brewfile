@@ -30,6 +30,4 @@ brew "wget"
 brew "yarn"
 brew "zsh"
 
-cask "font-firacode-nerd-font"
-cask "font-cascadia-nerd-font"
 cask "alt-tab"
