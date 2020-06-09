@@ -89,6 +89,8 @@ set smartindent
 autocmd FileType python setlocal tabstop=4 shiftwidth=4
 autocmd FileType swift setlocal tabstop=4 shiftwidth=4
 autocmd FileType objc setlocal tabstop=4 shiftwidth=4
+autocmd FileType cmake setlocal tabstop=4 shiftwidth=4
+autocmd FileType groovy setlocal tabstop=4 shiftwidth=4
 
 " Mark JSON as jsonc to allow comments
 autocmd FileType json setlocal filetype=jsonc
