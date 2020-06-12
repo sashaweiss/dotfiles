@@ -167,5 +167,8 @@
   "explorer.confirmDelete": false,
 
   // Editor font size
-  "editor.fontSize": 14
+  "editor.fontSize": 14,
+
+  // Insert a newline at the end of files
+  "files.insertFinalNewline": true
 }
