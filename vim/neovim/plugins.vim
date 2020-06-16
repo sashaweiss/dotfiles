@@ -89,8 +89,6 @@ let g:airline_right_alt_sep = ''
 
 " *** NERDTree ***
 
-let NERDTreeMapOpenSplit='\t'
-let NERDTreeRespectWildIgnore=1
 let g:NERDTreeWinSize=25
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
