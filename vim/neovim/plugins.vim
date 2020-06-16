@@ -89,9 +89,6 @@ let g:airline_right_alt_sep = ''
 
 " *** NERDTree ***
 
-let g:NERDTreeWinSize=25
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 nmap <leader>nt :NERDTreeToggle<CR>
 nmap <leader>nf :NERDTreeFocus<CR>
 
