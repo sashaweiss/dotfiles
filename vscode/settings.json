@@ -1,33 +1,94 @@
 {
-  // Vim plugin configuration
+  ////////////////////////
+  // General appearance //
+  ////////////////////////
+
+  "editor.fontFamily": "Natasha I",
+  "editor.fontSize": 14,
+  "workbench.colorTheme": "Material Theme Palenight High Contrast",
+  "workbench.iconTheme": "material-icon-theme",
+
+  ////////////////////////////////////////////////////////////////
+  // Workbench, explorer, tabs - stuff around the editor itself //
+  ////////////////////////////////////////////////////////////////
+
+  // Don't auto-reveal files in the explorer
+  "explorer.autoReveal": false,
+
+  // Disable the "file preview" feature
+  "workbench.editor.enablePreview": false,
+
+  // Disable moving to MRU tab after closing
+  "workbench.editor.focusRecentEditorAfterClose": false,
+
+  // Use a new empty file at startup
+  "workbench.startupEditor": "newUntitledFile",
+
+  // Disable VSCode keyboard nav in lists in favor of Vim plugin's
+  "workbench.list.automaticKeyboardNavigation": false,
+
+  // Pass Option through to tmux in the integrated terminal
+  "terminal.integrated.macOptionIsMeta": true,
+
+  // Show issues in the status bar
+  "problems.showCurrentInStatus": true,
+
+  // Explorer confirmation dialogs (I think only relevant for Windows)
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+
+  // Ignore the freaking extension recommendations
+  "extensions.ignoreRecommendations": true,
+
+  /////////////////////
+  // Editor behavior //
+  /////////////////////
+
+  // Save/Paste configuration
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+
+  // Disable the stupid lightbulb and code lens stuff
+  "editor.codeLens": false,
+  "editor.lightbulb.enabled": false,
+
+  // Don't use selected string for search
+  "editor.find.seedSearchStringFromSelection": false,
+
+  ///////////////////////
+  // Language-specific //
+  ///////////////////////
+
+  // Don't auto-format JSON
+  "json.format.enable": false,
+
+  // Don't format my C++
+  "C_Cpp.formatting": "Disabled",
+
+  ////////////////
+  // Vim plugin //
+  ////////////////
+
   "vim.camelCaseMotion.enable": true,
   "vim.hlsearch": true,
   "vim.useSystemClipboard": true,
   "vim.visualstar": true,
-  "vim.replaceWithRegister": true,
+
   "vim.handleKeys": {
     "<C-f>": false,
     "<C-b>": false,
   },
+
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
       "after": ["<Esc>"]
     }
   ],
+
   "vim.normalModeKeyBindings": [
-    {
-      "before": ["<leader>", "="],
-      "commands": ["workbench.action.nextEditorInGroup"]
-    },
-    {
-      "before": ["<leader>", "-"],
-      "commands": ["workbench.action.previousEditorInGroup"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.closeActiveEditor"]
-    },
     {
       "before": ["C-o"],
       "commands": ["workbench.action.navigateBack"]
@@ -69,6 +130,7 @@
       "commands": ["editor.action.marker.prev"]
     }
   ],
+
   "vim.visualModeKeyBindings": [
     {
       "before": ["J"],
@@ -102,73 +164,5 @@
       "before": ["Z"],
       "after": ["^"]
     }
-  ],
-
-  // Appearance
-  "editor.fontFamily": "Iosevka",
-  "workbench.colorTheme": "Material Theme Palenight High Contrast",
-  "workbench.iconTheme": "material-icon-theme",
-  "material-icon-theme.folders.color": "#42a5f5",
-
-  // Disable the "file preview" feature
-  "workbench.editor.enablePreview": false,
-  // Disable moving to MRU tab after closing
-  "workbench.editor.focusRecentEditorAfterClose": false,
-  // Use a new empty file at startup
-  "workbench.startupEditor": "newUntitledFile",
-  // Don't use selected string for search
-  "editor.find.seedSearchStringFromSelection": false,
-
-  // Pass Option through to tmux in the integrated terminal
-  "terminal.integrated.macOptionIsMeta": true,
-
-  // Save/Paste configuration
-  "files.trimTrailingWhitespace": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-
-  // Disable VSCode keyboard nav in lists in favor of Vim plugin's
-  "workbench.list.automaticKeyboardNavigation": false,
-
-  // Disable the stupid lightbulb and code lens stuff - at least for Rust didn't find it very useful
-  "editor.codeLens": false,
-  "editor.lightbulb.enabled": false,
-
-  // Wrap-around hints list
-  "editor.parameterHints.cycle": true,
-
-  // Incompatible with the Vim plugin - also not sure what this means lol
-  "rust-analyzer.enableEnhancedTyping": false,
-  // Without this, plugin isn't very useful
-  "rust-analyzer.enableCargoWatchOnStartup": "enabled",
-  // Is cool, but gets real funky with the Vim plugin and also when editing it bounces the text around a lot
-  "rust-analyzer.displayInlayHints": false,
-
-  // Don't auto-format JSON - messes with my spacing when playing with settings and stuff lol
-  "json.format.enable": false,
-
-  // Don't auto-reveal files in the explorer - I like that with the open dirs I ask for
-  "explorer.autoReveal": false,
-
-  // Don't intend to use VSCode to browse .ipynb files
-  "python.dataScience.useNotebookEditor": false,
-
-  // Don't format my C++
-  "C_Cpp.formatting": "Disabled",
-
-  // Show issues in the status bar
-  "problems.showCurrentInStatus": true,
-
-  // Ignore the freaking extension recommendations
-  "extensions.ignoreRecommendations": true,
-
-  // Explorer confirmation dialogs (I think only relevant for Windows)
-  "explorer.confirmDragAndDrop": false,
-  "explorer.confirmDelete": false,
-
-  // Editor font size
-  "editor.fontSize": 14,
-
-  // Insert a newline at the end of files
-  "files.insertFinalNewline": true
+  ]
 }
