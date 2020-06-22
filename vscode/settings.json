@@ -71,7 +71,6 @@
   // Vim plugin //
   ////////////////
 
-  "vim.camelCaseMotion.enable": true,
   "vim.hlsearch": true,
   "vim.useSystemClipboard": true,
   "vim.visualstar": true,

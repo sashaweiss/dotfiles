@@ -3,14 +3,6 @@
 
   // Use visual next tab instead of MRU
   {
-    "key": "shift+cmd+]",
-    "command": "-workbench.action.nextEditor"
-  },
-  {
-    "key": "shift+cmd+[",
-    "command": "-workbench.action.previousEditor"
-  },
-  {
     "key": "ctrl+tab",
     "command": "-workbench.action.openNextRecentlyUsedEditorInGroup"
   },
@@ -28,39 +20,18 @@
     "key": "cmd+w",
     "command": "-workbench.action.closeWindow"
   },
+
+  // Disable the "switch window" dialog that shows up when the Vim plugin doesn't intercept
   {
     "key": "ctrl+w",
     "command": "-workbench.action.switchWindow"
   },
 
-  // Make the sidebar navigable with NERDTree-style keys, e.g. `jk`, `C+[np]`, `[C-]o`.
-  // Relies on the Vim plugin and the workbench.list.automaticKeyboardNavigation setting in settings.json.
-  {
-    "key": "ctrl+o",
-    "command": "list.toggleExpand",
-    "when": "listFocus && !inputFocus"
-  },
+  // Open a file from the Explorer
   {
     "key": "o",
     "command": "list.select",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
-  },
-  {
-    "key": "ctrl+o",
-    "command": "list.select",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
-  },
-
-  // Remap parameter hint to be closer to suggestions
-  {
-    "key": "alt+space",
-    "command": "editor.action.triggerParameterHints",
-    "when": "editorHasSignatureHelpProvider && editorTextFocus"
-  },
-  {
-    "key": "shift+cmd+space",
-    "command": "-editor.action.triggerParameterHints",
-    "when": "editorHasSignatureHelpProvider && editorTextFocus"
   },
 
   // Quick-select and navigate sidebar/editor. Cmd+Shift+<key> will focus a panel/editor/terminal. "Focusing" a view
