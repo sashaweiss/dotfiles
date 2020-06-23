@@ -9,7 +9,3 @@ brew_prefix=$(brew --prefix)
 asdf_initialization="$brew_prefix/opt/asdf/asdf.sh"
 [ -f "$asdf_initialization" ] && source "$asdf_initialization"
 unset asdf_initialization
-
-asdf_completion="$brew_prefix/opt/asdf/etc/bash_completion.d/asdf.bash"
-[ -f "$asdf_completion" ] && source "$asdf_completion"
-unset asdf_completion
