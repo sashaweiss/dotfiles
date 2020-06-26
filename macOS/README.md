@@ -2,6 +2,19 @@
 
 Notes on things I do/configure/use specifically on MacOS.
 
+## Settings configuration
+
+Note: there's a lot more stuff I should include here.
+
+- Prevent macOS from re-opening apps after reboot.
+```sh
+# Give `root` ownership over the file that stores the session, so it
+# cannot be replaced. Then, prevent anyone from reading or writing it!
+
+$ sudo chown root ~/Library/Preferences/ByHost/com.apple.loginwindow*
+$ sudo chmod 000 ~/Library/Preferences/ByHost/com.apple.loginwindow* 
+```
+
 ## [ueli](https://github.com/oliverschwendener/ueli)
 
 ueli is a keystroke launcher - i.e., a beefed up Spotlight. Still new to using it, so will follow up when I've got more to say about it.
