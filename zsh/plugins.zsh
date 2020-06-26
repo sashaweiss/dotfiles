@@ -15,7 +15,11 @@ zinit light zsh-users/zsh-autosuggestions
 
 zinit ice wait atload'zpcompinit; zpcdreplay' lucid
 
-zinit light zdharma/fast-syntax-highlighting
+# Once https://github.com/zdharma/fast-syntax-highlighting/issues/179 is resolved,
+# can go back to this plugin.
+# zinit light zdharma/fast-syntax-highlighting
+zinit light zsh-users/zsh-syntax-highlighting
+
 zinit light romkatv/powerlevel10k
 
 # Autosuggestions
