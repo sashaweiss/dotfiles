@@ -12,6 +12,9 @@
   // Workbench, explorer, tabs - stuff around the editor itself //
   ////////////////////////////////////////////////////////////////
 
+  // Disable minimap
+  "editor.minimap.enabled": false,
+
   // Don't auto-reveal files in the explorer
   "explorer.autoReveal": false,
 
