@@ -70,6 +70,9 @@
   // Don't format my C++
   "C_Cpp.formatting": "Disabled",
 
+  // Do format HTML
+  "html.format.enable": false,
+
   ////////////////
   // Vim plugin //
   ////////////////
@@ -166,5 +169,15 @@
       "before": ["Z"],
       "after": ["^"]
     }
-  ]
+  ],
+
+  ////////////////////
+  // GitLens plugin //
+  ////////////////////
+
+  "gitlens.views.repositories.enabled": false,
+  "gitlens.views.search.enabled": false,
+  "gitlens.menus": {
+    "editorGroup": false,
+  },
 }
