@@ -2,7 +2,7 @@
 	name = sashaweiss
 	email = asashaweiss@gmail.com
 [core]
-	pager = delta --dark --highlight-removed --tabs=2 --hunk-style=plain --theme="TwoDark" | less -+F
+	pager = delta --dark | less -+F
   whitespace = cr-at-eol
 [alias]
 	co = checkout
