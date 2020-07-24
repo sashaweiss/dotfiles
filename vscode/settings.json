@@ -5,6 +5,7 @@
 
   "editor.fontFamily": "Natasha I",
   "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
   "editor.tabSize": 2,
   "workbench.colorTheme": "Material Theme Palenight High Contrast",
   "workbench.iconTheme": "material-icon-theme",
@@ -180,5 +181,5 @@
   "gitlens.views.search.enabled": false,
   "gitlens.menus": {
     "editorGroup": false,
-  },
+  }
 }
