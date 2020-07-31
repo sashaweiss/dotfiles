@@ -6,6 +6,7 @@ fi
 
 usage () {
   echo "Usage:
+    manage_proxy get
     manage_proxy set <proxy_url> <proxy_port>
     manage_proxy enable
     manage_proxy disable
@@ -16,7 +17,14 @@ log () {
   echo "*** $@ ***"
 }
 
-if [[ "$1" == "set" ]]; then
+if [[ "$1" == "get" ]]; then
+  if [ "$#" -ne 1 ]; then
+    usage
+    return 1
+  fi
+
+  # No-op since we print after anyway
+elif [[ "$1" == "set" ]]; then
   if [ "$#" -ne 3 ]; then
     usage
     return 1

@@ -75,6 +75,11 @@
   // Do format HTML
   "html.format.enable": false,
 
+  // Four spaces for python
+  "[python]": {
+    "editor.tabSize": 4
+  }
+
   ////////////////
   // Vim plugin //
   ////////////////
