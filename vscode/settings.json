@@ -49,11 +49,10 @@
   // Editor behavior //
   /////////////////////
 
-  // Save/Paste configuration
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
-  "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
 
   // Disable the stupid lightbulb and code lens stuff
   "editor.codeLens": false,
@@ -66,19 +65,25 @@
   // Language-specific //
   ///////////////////////
 
-  // Don't auto-format JSON
-  "json.format.enable": false,
-
   // Don't format my C++
   "C_Cpp.formatting": "Disabled",
 
-  // Do format HTML
-  "html.format.enable": false,
-
-  // Four spaces for python
   "[python]": {
     "editor.tabSize": 4
   }
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80
+  },
 
   ////////////////
   // Vim plugin //
@@ -90,7 +95,7 @@
 
   "vim.handleKeys": {
     "<C-f>": false,
-    "<C-b>": false,
+    "<C-b>": false
   },
 
   "vim.insertModeKeyBindings": [
@@ -149,8 +154,8 @@
       "after": ["}"]
     },
     {
-    "before": ["K"],
-    "after": ["{"]
+      "before": ["K"],
+      "after": ["{"]
     },
     {
       "before": ["k"],
