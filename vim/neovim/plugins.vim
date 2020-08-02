@@ -116,11 +116,6 @@ let g:wordmotion_mappings = {
 \ }
 
 
-" *** GoFmt ***
-
-let g:gofmt_exe = 'goimports'
-
-
 " *** FZF ***
 
 command! -bang -nargs=* Rg

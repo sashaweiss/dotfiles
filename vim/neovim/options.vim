@@ -54,7 +54,7 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Autoremove trailing spaces when saving the buffer
-" Don't do it for Rust or Go; let (go|rust)fmt handle that
+" Don't do it for Rust; let rustfmt handle that
 " Use g:StripWhitespace to temporarily disable this behavior
 let g:StripWhitespace = 1
 
