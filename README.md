@@ -1,8 +1,9 @@
 # sasha's .files
 
-My personal dotfiles. Mostly [`zsh`](https://www.zsh.org)+[`neovim`](https://neovim.io)+[`tmux`](https://github.com/tmux/tmux)+[`VSCode`](https://github.com/microsoft/vscode).
+My personal dotfiles. Mostly [`zsh`](https://www.zsh.org)+[`neovim`](https://neovim.io)
++[`tmux`](https://github.com/tmux/tmux)+[`VSCode`](https://github.com/microsoft/vscode).
 
-In active use on Mac and the [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq).
+In active use on Mac and (kinda) the [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq).
 
 ## Download and install
 
@@ -21,17 +22,20 @@ export DOTFILES="$HOME/.files"
 ./link
 ```
 
-...and you should be good to go! (Kinda - read on for installing peripherals - without those, some stuff won't work/will look funky/will be unavailable.)
+...and you should be good to go! (Kinda - read on for installing peripherals - without those,
+some stuff won't work/will look funky/will be unavailable.)
 
 ## Installing peripherals
 
 ### Fonts
 
-I am current using [Iosevka](https://github.com/be5invis/Iosevka) as my default font for coding.
+I am currently using a [custom build](https://github.com/natasha-codes/fonts) of
+[Iosevka](https://github.com/be5invis/Iosevka) as my default font for coding.
 
 ### Per-platform
 
-See my [Windows](./windows/README.md) and [Mac](./macOS/README.md) for platform-specific configs/applications/utilities.
+See my [Windows](./windows/README.md) and [Mac](./macOS/README.md) for platform-specific
+configs/applications/utilities.
 
 ### [Homebrew](https://brew.sh)
 
@@ -43,11 +47,12 @@ $ ./util/brew/setup_brew
 
 #### To make `brew`'s `zsh` the default shell:
 
-Add `$(brew --prefix)/bin/zsh` (the result of running that expression, not the expression itself) to `/etc/shells`. Run `chsh -s $(brew --prefix)/bin/zsh`.
+Add `$(brew --prefix)/bin/zsh` (the result of running that expression, not the expression
+itself) to `/etc/shells`. Run `chsh -s $(brew --prefix)/bin/zsh`.
 
 ### [asdf](https://github.com/asdf-vm/asdf)
 
-I use `asdf` as my version manager for `node`, `python`, `golang`, and eventually for `rustc`.
+I use `asdf` as my version manager for `node`, `python`, and maybe eventually for `rustc`.
 
 ```sh
 $ ./util/asdf/setup_asdf
