@@ -15,6 +15,9 @@ if ./zsh/functions/is_mac; then
 
   ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
   ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+
+  ln -fs "$DOTFILES/macOS/ueli/config.json" "$HOME/Library/Application Support/ueli/config.json"
+
   ln -fs "$DOTFILES/vim/xvimrc" "$HOME/.xvimrc"
   ln -fs "$DOTFILES/vim/ideavimrc" "$HOME/.ideavimrc"
 
