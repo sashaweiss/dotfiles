@@ -10,6 +10,8 @@
   "workbench.colorTheme": "Material Theme Palenight High Contrast",
   "workbench.iconTheme": "material-icon-theme",
 
+  "workbench.sideBar.location": "right",
+
   ////////////////////////////////////////////////////////////////
   // Workbench, explorer, tabs - stuff around the editor itself //
   ////////////////////////////////////////////////////////////////
