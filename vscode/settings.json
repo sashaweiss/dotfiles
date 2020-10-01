@@ -10,7 +10,7 @@
   "workbench.colorTheme": "Material Theme Palenight High Contrast",
   "workbench.iconTheme": "material-icon-theme",
 
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
 
   ////////////////////////////////////////////////////////////////
   // Workbench, explorer, tabs - stuff around the editor itself //
@@ -74,17 +74,13 @@
     "editor.tabSize": 4
   },
 
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
   "[markdown]": {
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 80
+  },
+
+  "files.associations": {
+    "*.resx": "xml"
   },
 
   ////////////////
@@ -94,6 +90,7 @@
   "vim.hlsearch": true,
   "vim.useSystemClipboard": true,
   "vim.visualstar": true,
+  "vim.foldfix": true,
 
   "vim.handleKeys": {
     "<C-f>": false,
@@ -192,6 +189,6 @@
   "gitlens.views.repositories.enabled": false,
   "gitlens.views.search.enabled": false,
   "gitlens.menus": {
-    "editorGroup": false,
+    "editorGroup": false
   }
 }
