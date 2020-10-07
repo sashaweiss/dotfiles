@@ -111,3 +111,6 @@ set wildignore+=*.pyc,*.o,*.class,*.lo,.git,out,node_modules,dist,venv,vendor,*.
 
 " Buffer space around cursor when scrolling
 set scrolloff=1
+
+" Use angle brackets as a match pair
+set matchpairs=(:),{:},[:],<:>
