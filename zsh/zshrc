@@ -4,6 +4,7 @@
 source "$DOTFILES/zsh/completion.zsh"
 source "$DOTFILES/zsh/functions.zsh"
 source "$DOTFILES/zsh/keymap.zsh"
+source "$DOTFILES/zsh/nix.zsh"
 source "$DOTFILES/zsh/plugins.zsh"
 source "$DOTFILES/zsh/prompt.zsh"
 source "$DOTFILES/zsh/settings.zsh"
@@ -15,7 +16,6 @@ done
 
 # Ordered to ensure they have "the last word"
 source "$DOTFILES/zsh/path.zsh"
-source "$DOTFILES/zsh/asdf.zsh"
 
 # After PATH sourcing so FZF can find brew
 source "$DOTFILES/zsh/fzf/fzf.zsh"

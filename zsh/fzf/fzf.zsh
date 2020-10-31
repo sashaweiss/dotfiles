@@ -9,16 +9,16 @@
 
 # <<<< completion >>>>
 
-brew_prefix="$(brew --prefix)"
+fzf_share="$(fzf-share)"
 
 # Note: `$-` lists options set in current shell
 # ref - https://stackoverflow.com/questions/5163144/what-are-the-special-dollar-sign-shell-variables
 [[ $- == *i* ]] && {
-  source "$brew_prefix/opt/fzf/shell/completion.zsh" 2>/dev/null
+  source "$fzf_share/completion.zsh" 2>/dev/null
 }
 
 # keybindings
-source "$brew_prefix/opt/fzf/shell/key-bindings.zsh"
+source "$fzf_share/key-bindings.zsh"
 
 # use `fd` for `**` path completion
 # `$1` is the base path to start traversal
@@ -53,7 +53,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # <<<< keybindings >>>>
 # NOTE: corresponding widgets defined in `$DOTFILES/functions/_fzf_functions` &
-# `$brew_prefix/opt/fzf/shell/key-bindings.zsh`
+# `$fzf_share/key-bindings.zsh`
 
 # << zsh functions -> widgets >>
 zle -N fzf-edit-widget
