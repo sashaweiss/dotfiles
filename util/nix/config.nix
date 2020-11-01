@@ -3,6 +3,7 @@
     sashaPackages = pkgs.buildEnv {
       name = "sasha-packages";
       paths = [
+        # Utilities
         bat
         exa
         fd
@@ -12,18 +13,20 @@
         gitAndTools.delta
         hyperfine
         neovim
-        nodejs-14_x
-        python3
         ripgrep
         rsync
-        ruby_2_7
         shellcheck
-        tldr
         tmux
         tree
         vim
-        yarn
         zsh
+
+        # Languages
+        python3
+        python38Packages.pip
+        ruby_2_7
+        nodejs-14_x
+        yarn
       ];
     };
   };
