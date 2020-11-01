@@ -11,7 +11,7 @@
         git-lfs
         gitAndTools.delta
         hyperfine
-	neovim
+        neovim
         nodejs-14_x
         python3
         ripgrep
