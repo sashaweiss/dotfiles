@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+declare -a extensions=(
+  "eamodio.gitlens"
+  "Equinusocio.vsc-material-theme"
+  "esbenp.prettier-vscode"
+  "mariomatheu.syntax-project-pbxproj"
+  "ms-python.python"
+  "ms-vscode.cpptools"
+  "ms-vsliveshare.vsliveshare"
+  "naumovs.theme-oceanicnext"
+  "PKief.material-icon-theme"
+  "rust-lang.rust"
+  "twxs.cmake"
+  "vscodevim.vim"
+)
+
+for extension in "${extensions[@]}"; do
+  code --install-extension "$extension"
+done
