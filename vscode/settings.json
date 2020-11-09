@@ -107,6 +107,7 @@
   "vim.useSystemClipboard": true,
   "vim.visualstar": true,
   "vim.foldfix": true,
+  "vim.debug.silent": true,
 
   "vim.handleKeys": {
     "<C-f>": false,
