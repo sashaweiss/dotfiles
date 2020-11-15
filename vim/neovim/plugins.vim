@@ -1,3 +1,12 @@
+" ========= Plugin Pre-load Configuration =========
+
+" *** Polyglot ***
+
+let g:polyglot_disabled = ['markdown']
+
+
+" ========= Plugin Load =========
+
 " Install Vim-Plug if not installed
 if empty(glob("$HOME/.local/share/nvim/site/autoload/plug.vim"))
   !curl --create-dirs -fLo "$HOME/.local/share/nvim/site/autoload/plug.vim"
@@ -58,13 +67,7 @@ Plug 'mhartington/oceanic-next'
 call plug#end()
 
 
-" ========= Plugin Configuration =========
-
-
-" *** Polyglot ***
-
-let g:polyglot_disabled = ['markdown']
-
+" ========= Plugin Post-load Configuration =========
 
 " *** Airline ***
 
