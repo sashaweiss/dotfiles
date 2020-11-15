@@ -1,3 +1,4 @@
+let nixpkgs-unstable = import <nixpkgs-unstable> {}; in
 {
   packageOverrides = pkgs: with pkgs; {
     sashaPackages = pkgs.buildEnv {
@@ -7,7 +8,7 @@
         bat
         exa
         fd
-        fzf
+        nixpkgs-unstable.fzf
         git
         git-lfs
         gitAndTools.delta

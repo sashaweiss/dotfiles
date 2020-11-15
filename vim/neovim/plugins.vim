@@ -23,11 +23,7 @@ Plug 'tpope/vim-markdown', { 'for': ['md', 'markdown'] }
 Plug 'scrooloose/nerdtree'
 
 " FZF for fuzzy-matching files, search results, etc.
-if has('mac')
-  Plug '/usr/local/opt/fzf'
-elseif has('unix')
-  Plug '/home/linuxbrew/.linuxbrew/opt/fzf'
-endif
+Plug 'junegunn/fzf'
 Plug 'sashaweiss/fzf.vim', { 'branch': 'preview_fix' } " Use my fork which implements the community's solution to https://github.com/junegunn/fzf.vim/issues/751
 
 " Show line-based git-status in the gutter

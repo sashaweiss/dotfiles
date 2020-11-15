@@ -2,20 +2,34 @@
 
 See: [https://nixos.org](https://nixos.org)
 
-## Installing Nix on MacOS
+## Installing Nix
 
-Installed via:
+Run:
 
 ```sh
 $ sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume --daemon
 ```
 
-for a multi-user installation that works on Catalina.
+for a multi-user installation that works on macOS Catalina. If on a non-Mac system, can ignore
+the `--darwin-use-unencrypted-nix-store-volume`.
 
-## Installing Nix on WSL (never attempted)
+## Installing packages via Nix
 
-Plan to install via:
+To install a package, run:
 
 ```sh
-$ sh <(curl -L https://nixos.org/nix/install) --daemon
+$ nix-env -iA nixpkgs.<package-name>
+```
+
+To install my "set of packages" (via `./config.nix`), run:
+
+```sh
+$ nix-env -iA nixpkgs.sashaPackages
+```
+
+Note that these rely on the "unstable" nixpkgs channel, which you need to add first:
+
+```sh
+$ nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs-unstable
+$ nix-channel --update
 ```
