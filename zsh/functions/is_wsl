@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-[ "$(uname)" = "Linux" ] && [[ "$(uname -r)" == *"Microsoft"* ]]
+[ "$(uname)" = "Linux" ] && [[ "$(uname -r)" == *"microsoft"* ]]
