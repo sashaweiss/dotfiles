@@ -63,22 +63,26 @@ Which keys should be mapped to which depends a little on your keyboard, and what
 default configuration is - I will always map `CapsLock` to `Esc`, and then depending on
 the modifier key layout will often map `LeftAlt` to `Win` and vice versa.
 
-## Git and line endings
+## Git on Windows from the WSL
 
-On Windows, I intentionally usually have `gitconfig` skip-worktree-ed (`git update-index
---skip-worktree`), since I add a couple settings that are pretty specific to Windows and
-the funky hybrid WSL setup I have - specifically that I use the WSL to manage files in
-the Windows file system.
+I use `git` from the WSL, but am frequently working with files in the Windows file system
+and require credentials that are stored in Windows (e.g., for my Microsoft work repos).
+To those ends, I typically keep a couple settings that I only need for this hybrid setup
+as local changes to my `gitconfig`, and keep those "skip-worktree-ed" (`git update-index
+--skipworktree`).
 
-One way this manifests is the gitconfig setting `core.autocrlf`. For files that live in
-the Windows world, I want that setting `true` so that my Visual Studio projects etc. can
-function as expected. For files that live in the Linux world, I need that setting to be
-`false` so I don't have nasty line ending problems. (E.g., a `.zsh` file with CRLF line
-endings will have issues.)
+Specifically:
+```gitconfig
+[core]
+  autocrlf = true
+[credential]
+  helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+```
 
-So, I keep that setting on and ignored in my global gitconfig (along with the
-`credential.helper` setting, which I point to the Git for Windows credential manager, a
-`.exe`). This can cause issues when I clone stuff intended for the Linux FS, e.g. zsh
+Note that the `credential.helper` setting assumes Git for Windows is installed, with support
+for the Windows credential manager.
+
+This can sometimes cause issues when I clone stuff intended for the Linux FS, e.g. zsh
 plugins. If one encounters line ending issues there, the following commands in some order
 can help:
 
@@ -88,4 +92,3 @@ $ git config --local core.autocrlf false # locally sets the setting to false
 ```
 
 For example, I had to run the second in this repo when doing first setup.
-
