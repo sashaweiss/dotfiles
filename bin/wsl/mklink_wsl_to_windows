@@ -8,7 +8,7 @@
 ./zsh/functions/is_wsl || exit 1
 
 WINDOWS_LOC="${1//\//\\}"
-WSL_FILE_AS_WIN_PATH="\\\\wsl\$\\Ubuntu${2//\//\\}"
+WSL_FILE_AS_WIN_PATH="\\\\wsl\$\\Ubuntu-20.04${2//\//\\}"
 
 if [ -L "$WINDOWS_ROOT$1" ]; then
   echo "Destination link exists at $WINDOWS_LOC. Please remove it and try again."
