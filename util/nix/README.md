@@ -13,6 +13,9 @@ $ sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store
 for a multi-user installation that works on macOS Catalina. If on a non-Mac system, can ignore
 the `--darwin-use-unencrypted-nix-store-volume`.
 
+On WSL multi-user installation doesn't seem to work (slash, doesn't make a lot of sense?) so ignore
+the `--daemon` as well.
+
 ## Installing packages via Nix
 
 To install a package, run:
