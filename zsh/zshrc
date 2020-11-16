@@ -4,7 +4,6 @@
 source "$DOTFILES/zsh/completion.zsh"
 source "$DOTFILES/zsh/functions.zsh"
 source "$DOTFILES/zsh/keymap.zsh"
-source "$DOTFILES/zsh/nix.zsh"
 source "$DOTFILES/zsh/plugins.zsh"
 source "$DOTFILES/zsh/prompt.zsh"
 source "$DOTFILES/zsh/settings.zsh"

@@ -7,6 +7,9 @@ export LSCOLORS="GxFxCxDxBxegedabagaced"
 
 export HOSTNAME="$(hostname)"
 
+# Load Nix before basically anything else happens
+source "$DOTFILES/zsh/nix.zsh"
+
 if command -v nvim > /dev/null; then
   export EDITOR="nvim"
 else
