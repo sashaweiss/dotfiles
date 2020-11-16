@@ -8,7 +8,8 @@
       "name": "Ubuntu",
       "fontFace": "Natasha I",
       "source": "Windows.Terminal.Wsl",
-      "colorScheme": "sasha-legacy"
+      "colorScheme": "sasha-legacy",
+      "startingDirectory": "%USERPROFILE%\\dev"
     },
     {
       // Make changes here to the powershell.exe profile
