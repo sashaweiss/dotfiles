@@ -109,19 +109,4 @@ let g:wordmotion_mappings = {
 
 " *** FZF ***
 
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
-
-" Override :Files - add toggleable (w/ Space) preview
-command! -bang -nargs=? -complete=dir Files
-\ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-
-nmap <C-p> :Files<CR>
-nmap <C-b> :Buffers<CR>
-
-" Search for highlighted text
-vnoremap // y:Rg <C-R>"<CR>
+let g:fzf_preview_window = ['down:70%']

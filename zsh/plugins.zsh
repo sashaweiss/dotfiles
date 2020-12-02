@@ -18,6 +18,8 @@ zinit ice wait atload'zpcompinit; zpcdreplay' lucid
 zinit light zdharma/fast-syntax-highlighting
 zinit light romkatv/powerlevel10k
 
+zinit light Aloxaf/fzf-tab
+
 # Autosuggestions
 # ref - https://github.com/zsh-users/zsh-autosuggestions#configuration
 
