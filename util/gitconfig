@@ -2,8 +2,14 @@
 	name = sashaweiss
 	email = asashaweiss@gmail.com
 [core]
-	pager = delta --dark | less -+F
+  pager = delta | less -+F
   whitespace = cr-at-eol
+[delta]
+  syntax-theme = TwoDark
+  file-style = green ul bold
+  file-decoration-style = green ul bold
+  hunk-header-style = syntax
+  hunk-header-decoration-style = green box
 [alias]
 	co = checkout
 	oneline = log --pretty=format:\"%h %ad%x20%s%x20%x28%an%x29\" --date=short
