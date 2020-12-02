@@ -1,14 +1,7 @@
 " ========= Colors =========
 
-" Background color
 set background=dark
-
-" Colors
-" silent! colorscheme molokai
-" let g:molokai_original = 1
-
 silent! colorscheme OceanicNext
-let g:airline_theme='oceanicnext'
 
 " Use transparent background
 hi Normal ctermbg=NONE

@@ -1,10 +1,3 @@
-" ========= Plugin Pre-load Configuration =========
-
-" *** Polyglot ***
-
-let g:polyglot_disabled = ['markdown']
-
-
 " ========= Plugin Load =========
 
 " Install Vim-Plug if not installed
@@ -19,14 +12,11 @@ call plug#begin('$HOME/.vim/plugged')
 " Syntax highlighting for pretty much every language
 Plug 'sheerun/vim-polyglot'
 
-" ...except GraphQL
-Plug 'jparise/vim-graphql', { 'for': ['graphql', 'gql'] }
-
-" ...and JSONC
+" Except JSONC
 Plug 'neoclide/jsonc.vim'
 
-" Better navigation support for editing markdown
-Plug 'tpope/vim-markdown', { 'for': ['md', 'markdown'] }
+" Install Prettier, but only enable it for Markdown.
+Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['markdown'] }
 
 " File browsing
 Plug 'scrooloose/nerdtree'
@@ -56,34 +46,36 @@ Plug 'alvan/vim-closetag', { 'for': ['html', 'xml'] }
 " Automatically close brackets and stuff
 Plug 'jiangmiao/auto-pairs'
 
-" Use `gr` in place of `d`, `c`, `y` - anything that places text in the paste
-" register - to both do the action and paste from the register so you don't
-" blow away the register.
-Plug 'vim-scripts/ReplaceWithRegister'
-
 " OceanicNext colorscheme
 Plug 'mhartington/oceanic-next'
 
 call plug#end()
 
 
-" ========= Plugin Post-load Configuration =========
+" ========= Plugin Configuration =========
 
 " *** Airline ***
 
-let g:airline_theme='cool'
 set laststatus=2
+let g:airline_theme='base16_ashes'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1      " Enable the list of buffers
 let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename
 
+let g:airline_section_a = airline#section#create(['mode'])
+let g:airline_section_b = airline#section#create(['file', ' ', 'readonly'])
+let g:airline_section_c = airline#section#create([])
+let g:airline_section_x = airline#section#create(['ffenc'])
+let g:airline_section_y = airline#section#create(['filetype'])
+let g:airline_section_z = airline#section#create(['Ln: %l of %L, Col: %c'])
+let g:airline_section_warning = airline#section#create([])
+let g:airline_section_error = airline#section#create([])
 
-" *** Airline symbols ***
 
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
+" *** Prettier ***
+
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#trailing_comma = 'all'
 
 
 " *** NERDTree ***
@@ -99,7 +91,7 @@ let g:AutoPairs = {'{':'}'}
 
 
 " *** GitGutter ***
-"
+
 set updatetime=300
 
 

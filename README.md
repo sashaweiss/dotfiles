@@ -1,9 +1,11 @@
 # sasha's .files
 
-My personal dotfiles. Mostly [`zsh`](https://www.zsh.org)+[`neovim`](https://neovim.io)
-+[`tmux`](https://github.com/tmux/tmux)+[`VSCode`](https://github.com/microsoft/vscode).
+My personal dotfiles. Mostly [`zsh`](https://www.zsh.org),
+[`neovim`](https://neovim.io), [`tmux`](https://github.com/tmux/tmux),
+and [`VSCode`](https://github.com/microsoft/vscode).
 
-In active use on Mac and (kinda) the [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq).
+In active use on Mac and (to a lesser extent) the
+[WSL](https://docs.microsoft.com/en-us/windows/wsl/faq).
 
 ## Download and install
 
@@ -76,4 +78,3 @@ $ rustup toolchain add nightly
 $ rustup component add rust-src rustfmt rust-analysis rls
 $ rustup component add rust-src rustfmt rust-analysis rls --toolchain nightly
 ```
-
