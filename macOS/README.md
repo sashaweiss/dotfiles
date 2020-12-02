@@ -7,6 +7,7 @@ Notes on things I do/configure/use specifically on MacOS.
 Note: there's a lot more stuff I should include here.
 
 - Prevent macOS from re-opening apps after reboot.
+
 ```sh
 # Give `root` ownership over the file that stores the session, so it
 # cannot be replaced. Then, prevent anyone from reading or writing it!
@@ -24,6 +25,15 @@ I have a couple PRs out that we wish were merged but haven't been yet. So, we
 maintain our own fork at the link above, and do a local build/install off of the
 `release` branch in that fork. If those PRs go in, we will switch back to the
 official release channels!
+
+From a clone of our fork (linked above):
+
+```
+$ npm install
+$ npm bundle && npm package:dir
+```
+
+And then drag the built `ueli.app` from `dist/mac` into `/Applications`.
 
 Settings live in `macOS/ueli/config.json` (one feature we are waiting on the PR for).
 
