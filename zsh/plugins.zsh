@@ -20,6 +20,9 @@ zinit light romkatv/powerlevel10k
 
 zinit light Aloxaf/fzf-tab
 
+# Default is '/', but I have that in completions frequently (e.g., branch names)
+zstyle ':fzf-tab:*' continuous-trigger '+'
+
 # Autosuggestions
 # ref - https://github.com/zsh-users/zsh-autosuggestions#configuration
 
