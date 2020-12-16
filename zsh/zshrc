@@ -15,6 +15,7 @@ done
 
 # Ordered to ensure they have "the last word"
 source "$DOTFILES/zsh/path.zsh"
+source "$DOTFILES/zsh/asdf.zsh"
 
 # After PATH sourcing so FZF can find brew
 source "$DOTFILES/zsh/fzf/fzf.zsh"

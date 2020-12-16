@@ -23,7 +23,7 @@
   "explorer.autoReveal": false,
 
   // Disable the "file preview" feature
-  "workbench.editor.enablePreview": false,
+  // "workbench.editor.enablePreview": false,
 
   // Disable moving to MRU tab after closing
   "workbench.editor.focusRecentEditorAfterClose": false,
@@ -72,6 +72,10 @@
 
   "python.showStartPage": false,
   "[python]": {
+    "editor.tabSize": 4
+  },
+
+  "[rust]": {
     "editor.tabSize": 4
   },
 
@@ -207,5 +211,8 @@
   "gitlens.views.search.enabled": false,
   "gitlens.menus": {
     "editorGroup": false
-  }
+  },
+  "rust-analyzer.completion.addCallArgumentSnippets": false,
+  "rust-analyzer.completion.postfix.enable": false,
+  "rust-analyzer.inlayHints.enable": false
 }

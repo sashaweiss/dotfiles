@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+if ! command -v asdf > /dev/null; then
+  echo "asdf is not installed!"
+  exit 1
+fi
+
+if ! asdf plugin-list | grep -q nodejs; then
+  asdf plugin-add nodejs
+  # install keyring - https://github.com/asdf-vm/asdf-nodejs#install
+  bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+fi
+
+asdf plugin-list | grep -q python || asdf plugin-add python
+asdf plugin-list | grep -q ruby || asdf plugin-add ruby
+
+# install whatever tools are listed in "$HOME/.tool-versions"
+cd "$HOME" && asdf install

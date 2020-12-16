@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 if ! command -v brew > /dev/null; then
-    if ./zsh/functions/is_mac; then
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-        export PATH="/usr/local/bin":$PATH
-    else
-        sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-        export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
-    fi
+  curl -fsSL "https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
+
+  if ./zsh/functions/is_mac; then
+    export PATH="/usr/local/bin":$PATH
+  else
+    export PATH="/home/linuxbrew/.linuxbrew/bin":$PATH
+  fi
 fi
 
 brew bundle --file "./util/brew/Brewfile"
