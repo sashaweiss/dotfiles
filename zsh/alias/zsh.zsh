@@ -18,7 +18,7 @@ is_wsl &&
 export WORK="$ACTUAL_HOME/dev"
 alias work="cd $WORK"
 
-export CLONE="$ACTUAL_HOME/dev/clones"
+export CLONES="$ACTUAL_HOME/dev/clones"
 alias clones="cd $CLONE"
 
 export PLAY="$ACTUAL_HOME/Desktop"
