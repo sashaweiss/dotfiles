@@ -18,10 +18,8 @@ zinit ice wait atload'zpcompinit; zpcdreplay' lucid
 zinit light zdharma/fast-syntax-highlighting
 zinit light romkatv/powerlevel10k
 
+# See `completions.zsh` for some configuration
 zinit light Aloxaf/fzf-tab
-
-# Default is '/', but I have that in completions frequently (e.g., branch names)
-zstyle ':fzf-tab:*' continuous-trigger '+'
 
 # Autosuggestions
 # ref - https://github.com/zsh-users/zsh-autosuggestions#configuration
