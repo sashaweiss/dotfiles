@@ -7,7 +7,7 @@
   "editor.fontSize": 14,
   "terminal.integrated.fontSize": 14,
   "editor.tabSize": 2,
-  "workbench.colorTheme": "Material Theme Palenight High Contrast",
+  "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
   "workbench.iconTheme": "material-icon-theme",
 
   "workbench.sideBar.location": "left",
