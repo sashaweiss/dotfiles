@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # fuzzy finder
 # ref - https://github.com/junegunn/fzf
 #
@@ -6,6 +8,8 @@
 #   - https://github.com/junegunn/fzf/wiki/examples
 #   - https://medium.com/@sidneyliebrand/how-fzf-and-ripgrep-improved-my-workflow-61c7ca212861
 #   - http://owen.cymru/fzf-ripgrep-navigate-with-bash-faster-than-ever-before/
+# 
+# - @nathanshelly
 
 # <<<< completion >>>>
 

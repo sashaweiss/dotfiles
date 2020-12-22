@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 ### Install zinit if not present
 if ! [ -d "$HOME/.zinit" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"

@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#! /usr/bin/env zsh
 
 # filter `git log` commits and output hash to shell
 

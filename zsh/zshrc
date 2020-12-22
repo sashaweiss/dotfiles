@@ -1,15 +1,22 @@
-# If ever you want to profile the shell:
-# https://htr3n.github.io/2018/07/faster-zsh/
+#!/usr/bin/env zsh
+
+typeset -U path
+
+# Load util functions, Brew, and Nix first
+source "$DOTFILES/zsh/functions.zsh"
+source "$DOTFILES/zsh/brew.zsh"
+source "$DOTFILES/zsh/nix.zsh"
 
 source "$DOTFILES/zsh/android.zsh"
 source "$DOTFILES/zsh/asdf.zsh"
-source "$DOTFILES/zsh/cargo.zsh"
 source "$DOTFILES/zsh/completion.zsh"
+source "$DOTFILES/zsh/editor.zsh"
 source "$DOTFILES/zsh/fzf/fzf.zsh"
 source "$DOTFILES/zsh/fzf/git.zsh"
 source "$DOTFILES/zsh/keymap.zsh"
 source "$DOTFILES/zsh/plugins.zsh"
 source "$DOTFILES/zsh/prompt.zsh"
+source "$DOTFILES/zsh/rust.zsh"
 source "$DOTFILES/zsh/settings.zsh"
 source "$DOTFILES/zsh/vscode.zsh"
 

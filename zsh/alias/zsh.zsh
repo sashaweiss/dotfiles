@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 alias cd='cd -P'
 alias "cd.."='cd ..'
 alias dot="cd $DOTFILES"
@@ -11,9 +13,16 @@ alias la='ls -alhF'
 
 alias untar='tar -xzvf'
 
-is_wsl &&
-  ACTUAL_HOME="$WINDOWS_HOME" ||
+if is_wsl; then
+  export WINDOWS_ROOT="/mnt/c"
+  export WINDOWS_HOME="$WINDOWS_ROOT/Users/saweiss"
+fi
+
+if is_wsl; then
+  ACTUAL_HOME="$WINDOWS_HOME"
+else
   ACTUAL_HOME="$HOME"
+fi
 
 export WORK="$ACTUAL_HOME/dev"
 alias work="cd $WORK"
@@ -26,3 +35,4 @@ alias play="cd $PLAY"
 
 export DOWN="$ACTUAL_HOME/Downloads"
 alias down="cd $DOWN"
+

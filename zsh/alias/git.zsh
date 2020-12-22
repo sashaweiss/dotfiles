@@ -1,4 +1,6 @@
-command -v git > /dev/null && {
+#!/usr/bin/env zsh
+
+if command -v git > /dev/null; then
   alias g='git'
   alias gs='g status'
   alias ga='g add'
@@ -11,4 +13,4 @@ command -v git > /dev/null && {
   alias glg='g lg'
   alias gskip='g update-index --skip-worktree'
   alias gnoskip='g update-index --no-skip-worktree'
-}
+fi

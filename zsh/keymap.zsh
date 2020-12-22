@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # *** vim mode ***
 
 # turn on vim mode

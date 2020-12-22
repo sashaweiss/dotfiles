@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#! /usr/bin/env zsh
 
 # filter all (local and remote) git branches and output to shell
 
