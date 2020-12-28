@@ -28,7 +28,7 @@ export WORK="$ACTUAL_HOME/dev"
 alias work="cd $WORK"
 
 export CLONES="$ACTUAL_HOME/dev/clones"
-alias clones="cd $CLONE"
+alias clones="cd $CLONES"
 
 export PLAY="$ACTUAL_HOME/Desktop"
 alias play="cd $PLAY"
