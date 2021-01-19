@@ -24,7 +24,7 @@
   "explorer.autoReveal": false,
 
   // Disable the "file preview" feature
-  // "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreview": false,
 
   // Disable moving to MRU tab after closing
   "workbench.editor.focusRecentEditorAfterClose": false,
@@ -103,6 +103,14 @@
   "files.associations": {
     "*.resx": "xml"
   },
+
+  //////////////////////////
+  // Rust-Analyzer plugin //
+  //////////////////////////
+
+  "rust-analyzer.completion.addCallArgumentSnippets": false,
+  "rust-analyzer.completion.postfix.enable": false,
+  "rust-analyzer.inlayHints.enable": false,
 
   ////////////////
   // Vim plugin //
@@ -203,27 +211,4 @@
       "after": ["^"]
     }
   ],
-
-  ////////////////////
-  // GitLens plugin //
-  ////////////////////
-
-  "gitlens.views.repositories.enabled": false,
-  "gitlens.views.search.enabled": false,
-  "gitlens.menus": {
-    "editorGroup": false
-  },
-  "rust-analyzer.completion.addCallArgumentSnippets": false,
-  "rust-analyzer.completion.postfix.enable": false,
-  "rust-analyzer.inlayHints.enable": false,
-  "window.zoomLevel": 0,
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
-  "workbench.editor.enablePreview": false,
-  "editor.minimap.enabled": false,
-  "jupyter.useNotebookEditor": false
 }
