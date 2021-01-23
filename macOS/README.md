@@ -1,104 +1,108 @@
 # MacOS-specific
 
-Notes on things I do/configure/use specifically on MacOS.
+Notes on things I do/configure/use specifically on MacOS!
 
-## Settings configuration
+## How-to for fresh installation
 
-Note: there's a lot more stuff I should include here.
+Live notes on my installation process for a fresh, clean machine.
 
-- Prevent macOS from re-opening apps after reboot.
+1. Choose a machine name. This is a hard one.
+2. Install 1Password. Sign into iCloud.
+3. Clone my dotfiles.
+4. Install `brew` via instructions in `/util/brew/README.md`. Run `brew bundle`.
+5. While that's running, install helper apps below.
+6. Once `brew` is done installing, run `DOTFILES="$HOME/.files" ./bin/link`.
+   This [SO post](https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories)
+   may end up relevant.
+7. Clone `natasha-codes/fonts` using `git-lfs`. Install the `Natasha_I` font.
+8. Open `nvim` and run `:PlugInstall`.
+
+## Mac system settings configuration
+
+macOS has a bunch of built-in settings I like to tweak:
+
+- Map CapsLock to Esc in "System Preferences -> Keyboard -> Modifier Keys"
+- Automatically hide and show menu bar in "System Preferences -> General"
+- Set default browser in "System Preferences -> General"
+- Move Spotlight shortcut to Alt+Space in "System Preferences -> Keyboard ->
+  Shortcuts -> Spotlight" (to avoid a conflict with ueli).
+- Set open-at-login items in "System Preferences -> Users and Groups -> Login
+  Items", e.g. Rectangle, AltTab, ueli, Bartender
+- Unblock key-repeat:
+  `defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false`
+- Prevent macOS from re-opening apps after reboot:
 
 ```sh
 # Give `root` ownership over the file that stores the session, so it
 # cannot be replaced. Then, prevent anyone from reading or writing it!
-
 $ sudo chown root ~/Library/Preferences/ByHost/com.apple.loginwindow*
 $ sudo chmod 000 ~/Library/Preferences/ByHost/com.apple.loginwindow*
 ```
+
+## [Visual Studio Code](https://code.visualstudio.com)
+
+VSCode is my preferred text editor.
+
+Config: managed in `/vscode/[keybindings|settings].json`. Favorite plugins:
+
+- Vim
+- Prettier
+- C++
+- rust-analyzer
+- Material Theme + Material Icon Theme
 
 ## [ueli](https://github.com/natasha-codes/ueli)
 
 ueli is a keystroke launcher - i.e., a beefed up Spotlight.
 
-The maintainer is super cool, but also seems super busy and so @nathanshelly and
-I have a couple PRs out that we wish were merged but haven't been yet. So, we
-maintain our own fork at the link above, and do a local build/install off of the
-`release` branch in that fork. If those PRs go in, we will switch back to the
-official release channels!
-
-From a clone of our fork (linked above):
+@nathanshelly and I maintain a fork of ueli to include a couple fixes that
+haven't made it into a formal release. (The maintainer is really nice, but also
+really busy.) Clone the `natasha-codes/ueli` fork and run:
 
 ```
-$ npm install
-$ npm bundle && npm package:dir
+$ yarn install
+$ yarn bundle && yarn package:dir
+$ cp -r dist/mac/ueli.app /Applications
 ```
 
-And then drag the built `ueli.app` from `dist/mac` into `/Applications`.
+Config: managed in `/macOS/ueli/config.json`.
 
-Settings live in `macOS/ueli/config.json` (one feature we are waiting on the PR for).
+## [AltTab](https://alt-tab-macos.netlify.app)
 
-## [AltTab](https://github.com/lwouis/alt-tab-macos)
+AltTab is an improved window switcher for macOS.
 
-AltTab is a window switcher for MacOS, giving a similar experience to the Windows
-Alt-Tab experience.
+Config:
 
-Pretty much golden out of the box!
+- Settings -> Controls -> Shortcut 1 -> Set Cmd+Tab as the shortcut
+- Settings -> Appearance -> Check "Hide apps with no open window"
 
 ## [iTerm](https://iterm2.com)
 
-iTerm is my preferred terminal emulator. It's pretty and performant, with a ton of
-bells and whistles (that I mostly don't use).
+iTerm is my preferred terminal emulator.
 
-Tips and tricks:
-
-- iTerm allows one to store its preferences, which I keep in this repo. Under "iTerm
-  Settings -> General -> Preferences", can specify the directory in which they are found.
-
-- iTerm color schemes can be specified in `.itermcolors` files, which can then be imported
-  into iTerm via "iTerm settings -> Profiles -> Colors -> Color presets". I keep my
-  preferred ones around adjacent to the settings file, because some other emulators can use
-  `.itermcolors` files as well (e.g., Windows Terminal).
-
-- Worth setting to open on login.
+Config: managed in `/macOS/iterm/com.googlecode.iterm2.plist`. From the GUI,
+"Settings -> General -> Preferences" to specify where iTerm should look for the managed preferences.
 
 ## [Bartender](https://www.macbartender.com)
 
-Bartender helps keep your Mac menu bar (top bar) clean and organized, when otherwise it can
-end up overrun with icons for apps one isn't very interested in.
+Bartender manages the menu bar. (It's a paid app I have a license for.)
 
-Tips and tricks:
-
-- Bartender is a paid app, for which I bought a license.
-
-- An icon has to be in the menu bar in order for Bartender to know about it, and optionally
-  for it to hide it.
-
-- Worth setting to open on login.
+Config: manually set for each menu bar item.
 
 ## [Rectangle](https://www.rectangleapp.com)
 
-Rectangle is an (open-source!) app that adds hotkeys for quickly resizing windows to halves,
-thirds, or corners of the screen. Based on [Spectacle](https://spectacleapp.com), which I used
-and loved for many years.
+Rectangle provides hotkeys for resizing windows. Based on Spectacle (RIP).
 
-Tips and tricks:
-
-- I tend towards using the defaults here, which can be hard to remember but are some
-  combination of `Alt`, `Ctrl`, `Shift`, and an arrow key. I usually blunder around until I
-  find the one I want.
-
-- In Rectangle preferences, selecting "Allow any keyboard shortcut" allows overriding of stuff
-  like `Cmd+Ctrl+F`, which is normally a system shortcut.
-
-- Worth setting to open on login.
+Config: "Preferences -> Remove keyboard shortcut restrictions" lets one map
+Ctrl+Cmd+F to "maximize".
 
 ## [DaisyDisk](https://daisydiskapp.com)
 
-DaisyDisk is an adorable app (paid, through the App Store) that visualizes occupied disk space on
-your Mac and helps clear it out. I use it especially since all my Mac machines have woefully small
-SSDs.
+DaisyDisk (paid, via App Store) visualizes occupied disk space.
+
+No config necessary.
 
 ## [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704)
 
-Amphetamine keeps your computer awake, even if the screen goes dark, for a period of time you
-specify. Handy for when performing a long download, and wanting to make sure it completes overnight.
+Amphetamine keeps your computer awake for a specified period, to ensure
+long-running tasks (e.g., downloads) complete.
