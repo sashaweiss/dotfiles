@@ -16,6 +16,7 @@ Live notes on my installation process for a fresh, clean machine.
    may end up relevant.
 7. Clone `natasha-codes/fonts` using `git-lfs`. Install the `Natasha_I` font.
 8. Open `nvim` and run `:PlugInstall`.
+9. Install `asdf` via `/util/asdf/setup_asdf`.
 
 ## Mac system settings configuration
 
