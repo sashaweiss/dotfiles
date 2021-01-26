@@ -4,7 +4,7 @@ autoload -Uz compinit
 compinit
 
 # Case-insensitive tab-completion
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' matcher-list 'r:|?=** m:{a-z\-}={A-Z\_}'
 
 # Highlight options in non-fzf-tab completions
 zstyle ':completion:*' menu select
