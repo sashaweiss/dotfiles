@@ -56,6 +56,7 @@
   "files.insertFinalNewline": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
 
   // Disable the stupid lightbulb and code lens stuff
   "editor.codeLens": false,
@@ -80,6 +81,11 @@
     "editor.tabSize": 4
   },
 
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 4
+  },
+
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 4
@@ -93,6 +99,15 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 4
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 4
+  },
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[markdown]": {
