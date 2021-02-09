@@ -45,6 +45,9 @@ set completeopt=longest,menuone
 " Map .md files to markdown
 au BufNewFile,BufFilePre,BufRead *.md setlocal filetype=markdown
 
+" Map .mm files to objc
+au BufNewFile,BufFilePre,BufRead *.mm setlocal filetype=objc
+
 " Set up highlight group & retain through colorscheme changes
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
