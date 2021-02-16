@@ -32,7 +32,8 @@ some stuff won't work/will look funky/will be unavailable.)
 ### Fonts
 
 I am currently using a [custom build](https://github.com/natasha-codes/fonts) of
-[Iosevka](https://github.com/be5invis/Iosevka) as my default font for coding.
+[Iosevka](https://github.com/be5invis/Iosevka) as my default font for coding,
+specifically `Natasha II`.
 
 ### Per-platform
 

@@ -14,7 +14,7 @@ Live notes on my installation process for a fresh, clean machine.
 6. Once `brew` is done installing, run `DOTFILES="$HOME/.files" ./bin/link`.
    This [SO post](https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories)
    may end up relevant.
-7. Clone `natasha-codes/fonts` using `git-lfs`. Install the `Natasha_I` font.
+7. Clone `natasha-codes/fonts` using `git-lfs`. Install the `Natasha II` font.
 8. Open `nvim` and run `:PlugInstall`.
 9. Install `asdf` via `/util/asdf/setup_asdf`.
 
