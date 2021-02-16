@@ -5,6 +5,7 @@ tap "dandavison/delta", "https://github.com/dandavison/delta"
 
 brew "asdf"
 brew "bat"
+brew "dust"
 brew "exa"
 brew "fd"
 brew "fzf"
