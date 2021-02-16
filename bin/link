@@ -14,6 +14,9 @@ ln -fs "$DOTFILES/vim/neovim/init.vim" "$HOME/.config/nvim/init.vim"
 mkdir -p "$HOME/.config/nixpkgs"
 ln -fs "$DOTFILES/util/nix/config.nix" "$HOME/.config/nixpkgs/config.nix"
 
+mkdir -p "$HOME/.config/vivid"
+ln -fs "$DOTFILES/util/vivid/filetypes.yml" "$HOME/.config/vivid/filetypes.yml"
+
 if ./zsh/functions/is_mac; then
 
   ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
