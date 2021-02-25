@@ -5,6 +5,4 @@ if is_wsl; then
 
   alias pbcopy="clip.exe"
   alias pbpaste="clip.exe"
-
-  alias git="git.exe"
 fi
