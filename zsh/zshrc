@@ -7,13 +7,15 @@ source "$DOTFILES/zsh/functions.zsh"
 source "$DOTFILES/zsh/brew.zsh"
 source "$DOTFILES/zsh/nix.zsh"
 
+# Load zsh keymap before other things to avoid conflicts
+source "$DOTFILES/zsh/keymap.zsh"
+
 source "$DOTFILES/zsh/android.zsh"
 source "$DOTFILES/zsh/asdf.zsh"
 source "$DOTFILES/zsh/completion.zsh"
 source "$DOTFILES/zsh/editor.zsh"
 source "$DOTFILES/zsh/fzf/fzf.zsh"
 source "$DOTFILES/zsh/fzf/git.zsh"
-source "$DOTFILES/zsh/keymap.zsh"
 source "$DOTFILES/zsh/ls_colors.zsh"
 source "$DOTFILES/zsh/plugins.zsh"
 source "$DOTFILES/zsh/prompt.zsh"
