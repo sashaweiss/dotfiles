@@ -23,6 +23,8 @@
   defaultBranch = main
 [pull]
   rebase = false
+[stash]
+  showPatch = true
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
