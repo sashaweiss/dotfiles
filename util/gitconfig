@@ -4,6 +4,7 @@
 [core]
   pager = delta | less -+F
   whitespace = cr-at-eol
+  ignorecase = false
 [delta]
   syntax-theme = TwoDark
   file-style = blue bold
