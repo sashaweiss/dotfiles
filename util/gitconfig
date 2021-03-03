@@ -1,6 +1,6 @@
 [user]
-	name = sashaweiss
-	email = asashaweiss@gmail.com
+  name = sashaweiss
+  email = asashaweiss@gmail.com
 [core]
   pager = delta | less -+F
   whitespace = cr-at-eol
@@ -11,19 +11,19 @@
   hunk-header-style = syntax
   hunk-header-decoration-style = blue box bold
 [alias]
-	co = checkout
-	oneline = log --pretty=format:\"%h %ad%x20%s%x20%x28%an%x29\" --date=short
-	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
-	pristine = reset --hard
-	addnowhitespace=!sh -c 'git diff -U0 -w --no-color "$@" | git apply --cached --ignore-whitespace --unidiff-zero -'
+  co = checkout
+  oneline = log --pretty=format:\"%h %ad%x20%s%x20%x28%an%x29\" --date=short
+  lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+  pristine = reset --hard
+  addnowhitespace=!sh -c 'git diff -U0 -w --no-color "$@" | git apply --cached --ignore-whitespace --unidiff-zero -'
 [grep]
-	linenumber = true
+  linenumber = true
 [init]
   defaultBranch = main
 [pull]
-	rebase = false
+  rebase = false
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
