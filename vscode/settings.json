@@ -121,6 +121,9 @@
     "editor.wordWrapColumn": 80
   },
 
+  // Don't use the Jupyter viewer in VSCode for notebook files
+  "jupyter.useNotebookEditor": false,
+
   "files.associations": {
     "*.resx": "xml"
   },
