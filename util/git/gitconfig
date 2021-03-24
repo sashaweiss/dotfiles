@@ -12,7 +12,6 @@
   hunk-header-style = syntax
   hunk-header-decoration-style = blue box bold
 [alias]
-  pull = pull --prune --all
   co = checkout
   psuh = push
   reste = reset
