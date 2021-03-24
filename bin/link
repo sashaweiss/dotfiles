@@ -4,7 +4,6 @@ ln -fs "$DOTFILES/zsh/zshrc" "$HOME/.zshrc"
 ln -fs "$DOTFILES/zsh/zshenv" "$HOME/.zshenv"
 
 ln -fs "$DOTFILES/util/gitconfig" "$HOME/.gitconfig"
-ln -fs "$DOTFILES/util/gitignore" "$HOME/.gitignore"
 ln -fs "$DOTFILES/util/tmux.conf" "$HOME/.tmux.conf"
 ln -fs "$DOTFILES/util/asdf/tool-versions" "$HOME/.tool-versions"
 
