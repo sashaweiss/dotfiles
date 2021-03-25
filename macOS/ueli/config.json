@@ -110,7 +110,8 @@
 			"rescanEnabled": true,
 			"rescanIntervalInSeconds": 300,
 			"showAlwaysOnPrimaryDisplay": false,
-			"showTrayIcon": true
+			"showTrayIcon": true,
+			"decimalSeparator": "."
 		},
 		"mdfindOptions": {
 			"debounceDelay": 250,
@@ -138,6 +139,11 @@
 				{
 					"excludeHiddenFiles": true,
 					"folderPath": "/Users/sasha",
+					"recursive": false
+				},
+				{
+					"excludeHiddenFiles": false,
+					"folderPath": "/",
 					"recursive": false
 				}
 			],
