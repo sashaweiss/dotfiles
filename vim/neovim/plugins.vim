@@ -15,7 +15,8 @@ Plug 'sheerun/vim-polyglot'
 " Except JSONC
 Plug 'neoclide/jsonc.vim'
 
-" Install Prettier, but only enable it for Markdown.
+" Install Prettier, but only enable it for Markdown. If changing this, also
+" change the autocmd below.
 Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['markdown'] }
 
 " File browsing
@@ -74,8 +75,8 @@ let g:airline_section_error = airline#section#create([])
 
 " *** Prettier ***
 
-let g:prettier#config#single_quote = 'true'
-let g:prettier#config#trailing_comma = 'all'
+" For some reason the vim-prettier autoformat is not automatically triggering.
+autocmd BufWritePost * if &ft ==# 'markdown' | PrettierAsync
 
 
 " *** NERDTree ***
