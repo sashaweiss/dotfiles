@@ -5,8 +5,9 @@
 
   "editor.fontFamily": "Natasha II",
   "editor.fontSize": 14,
-  "terminal.integrated.fontSize": 14,
   "editor.tabSize": 2,
+  "terminal.integrated.fontFamily": "Natasha II",
+  "terminal.integrated.fontSize": 14,
   "workbench.colorTheme": "Material Theme Palenight High Contrast",
   "workbench.iconTheme": "material-icon-theme",
 
