@@ -39,4 +39,4 @@ vnoremap // y:Rg <C-R>"<CR>
 
 " Keybindings for fav fzf-vim commands
 nmap <C-p> :Files<CR>
-nmap <C-b> :Buffers<CR>
+nmap <M-b> :Buffers<CR>
