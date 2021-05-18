@@ -25,6 +25,8 @@
   defaultBranch = main
 [pull]
   rebase = false
+[fetch]
+	prune = true
 [stash]
   showPatch = true
 [include]
