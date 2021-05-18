@@ -41,7 +41,7 @@
 
   // Use the canvas renderer, since the OpenGL one struggles with some
   // of the terminal enhancements I use (e.g. tmux, delta)
-  "terminal.integrated.rendererType": "canvas",
+  "terminal.integrated.gpuAcceleration": "off",
 
   // Show issues in the status bar
   "problems.showCurrentInStatus": true,
