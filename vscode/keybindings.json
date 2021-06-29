@@ -15,15 +15,11 @@
     "command": "workbench.action.previousEditorInGroup"
   },
 
-  // Disable "close group" behavior from workbench
+  // Disable "close editor" behavior from workbench
   {
     "key": "ctrl+w",
-    "command": "-workbench.action.closeActiveEditor"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "!sideBarFocus"
+    "command": "noop",
+    "when": "sideBarFocus"
   },
 
   // Open a file from the Explorer
