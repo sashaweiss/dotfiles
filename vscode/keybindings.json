@@ -1,5 +1,5 @@
 [
-  //// *** Configuring built-in behavior *** ////
+  /// *** Cross-plat *** ///
 
   // Use visual next tab instead of MRU
   {
@@ -15,16 +15,11 @@
     "command": "workbench.action.previousEditorInGroup"
   },
 
-  // Disable closing the VSCode window when no editors are visible
-  {
-    "key": "cmd+w",
-    "command": "-workbench.action.closeWindow"
-  },
-
-  // Disable the "switch window" dialog that shows up when the Vim plugin doesn't intercept
+  // Disable "close group" behavior from workbench
   {
     "key": "ctrl+w",
-    "command": "-workbench.action.switchWindow"
+    "command": "-workbench.action.closeGroup",
+    "when": "activeEditorGroupEmpty && multipleEditorGroups"
   },
 
   // Open a file from the Explorer
@@ -34,27 +29,67 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
   },
 
-  // Quick-select and navigate sidebar/editor. Cmd+Shift+<key> will focus a panel/editor/terminal. "Focusing" a view
-  // while it is already focused will toggle the sidebar.
-  //
-  // J -> Editor
-  // E -> Explorer
-  // F -> Search
-  // Z -> Terminal
+  /// *** Mac *** ///
+
+  // Disable closing the VSCode window when no editors are visible
   {
-    "win": "ctrl+shift+j",
+    "key": "cmd+w",
+    "command": "-workbench.action.closeWindow",
+    "when": "isMac"
+  },
+
+  // "Focus editor"
+  {
     "key": "cmd+shift+j",
     "command": "-workbench.action.search.toggleQueryDetails",
-    "when": "searchViewletVisible"
+    "when": "isMac && searchViewletVisible"
   },
   {
-    "win": "ctrl+shift+j",
     "key": "cmd+shift+j",
-    "command": "workbench.action.focusActiveEditorGroup"
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "isMac"
+  },
+
+  // Toggle built-in terminal
+  {
+    "key": "cmd+shift+z",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "isMac"
+  },
+
+  /// *** Windows *** ///
+
+  // Shortcut for "focus editor"
+  {
+    "key": "ctrl+shift+j",
+    "command": "-workbench.action.search.toggleQueryDetails",
+    "when": "isWindows && searchViewletVisible"
   },
   {
-    "win": "ctrl+shift+z",
-    "key": "cmd+shift+z",
-    "command": "workbench.action.terminal.toggleTerminal"
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "isWindows"
+  },
+
+  // Use <C-p> and <C-n> to navigate the quick-open menu
+  {
+    "key": "ctrl+p",
+    "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "isWindows"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "when": "isWindows"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen && isWindows"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen && isWindows"
   }
 ]
