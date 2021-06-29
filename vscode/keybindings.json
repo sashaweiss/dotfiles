@@ -18,8 +18,12 @@
   // Disable "close group" behavior from workbench
   {
     "key": "ctrl+w",
-    "command": "-workbench.action.closeGroup",
-    "when": "activeEditorGroupEmpty && multipleEditorGroups"
+    "command": "-workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "!sideBarFocus"
   },
 
   // Open a file from the Explorer
@@ -92,4 +96,6 @@
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen && isWindows"
   }
+
+  /// *** Recently added by VSCode *** ///
 ]
