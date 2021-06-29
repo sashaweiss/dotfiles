@@ -15,10 +15,7 @@
 
   "workbench.colorCustomizations": {
     "editorOverviewRuler.selectionHighlightForeground": "#00000000",
-    "editorOverviewRuler.rangeHighlightForeground": "#00000000",
-    "editorOverviewRuler.addedForeground": "#00aa00",
-    "editorOverviewRuler.deletedForeground": "#aa0000",
-    "editorOverviewRuler.modifiedForeground": "#aaaa00"
+    "editorOverviewRuler.rangeHighlightForeground": "#00000000"
   },
 
   // Don't auto-reveal files in the explorer
