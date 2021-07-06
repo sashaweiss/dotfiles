@@ -1,0 +1,19 @@
+#! /usr/bin/env zsh
+
+if ! command -v rg > /dev/null; then
+  echo "Error: rg must be installed!"
+  return 1
+fi
+
+if [[ "$#" == 0 ]]; then
+  echo "Error: no arguments provided!"
+  return 1
+fi
+
+# Save pattern
+pattern="$1"
+
+# Drop pattern
+shift
+
+rg -c $@ $pattern | awk -F ':' '{ print $1 }'
