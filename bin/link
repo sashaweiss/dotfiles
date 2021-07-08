@@ -34,7 +34,7 @@ elif ./zsh/functions/is_wsl; then
   ln -fs "$DOTFILES/util/git/gitconfig_credhelper_wsl" "$HOME/.gitconfig_credhelper"
 
   ./bin/wsl/mklink_wsl_to_windows \
-    /Users/saweiss/Documents/WindowsPowerShell/Microsoft.Powershell_profile.ps1 \
+    /Users/saweiss/Documents/WindowsPowerShell/profile.ps1 \
     "$DOTFILES/powershell/Profile.ps1"
 
   ./bin/wsl/mklink_wsl_to_windows \
