@@ -15,4 +15,11 @@ if [ -L "$WINDOWS_ROOT$1" ]; then
   exit 1
 fi
 
+DEST_DIR="$(dirname $1)"
+
+if ! [ -d "$DEST_DIR" ]; then
+  echo "Creating directory: $DEST_DIR"
+  mkdir -p "$DEST_DIR"
+fi
+
 ./bin/wsl/cmd /c mklink "$WINDOWS_LOC" "$WSL_FILE_AS_WIN_PATH"

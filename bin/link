@@ -34,6 +34,10 @@ elif ./zsh/functions/is_wsl; then
   ln -fs "$DOTFILES/util/git/gitconfig_credhelper_wsl" "$HOME/.gitconfig_credhelper"
 
   ./bin/wsl/mklink_wsl_to_windows \
+    /Users/saweiss/Documents/PowerShell/Profile.ps1 \
+    "$DOTFILES/powershell/Profile.ps1"
+
+  ./bin/wsl/mklink_wsl_to_windows \
     /Users/saweiss/.vsvimrc \
     "$DOTFILES/vim/vsvimrc"
 
