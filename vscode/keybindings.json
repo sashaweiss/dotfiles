@@ -85,12 +85,24 @@
   {
     "key": "ctrl+n",
     "command": "workbench.action.quickOpenSelectNext",
-    "when": "inQuickOpen && isWindows"
+    "when": "isWindows && inQuickOpen"
   },
   {
     "key": "ctrl+p",
     "command": "workbench.action.quickOpenSelectPrevious",
-    "when": "inQuickOpen && isWindows"
+    "when": "isWindows && inQuickOpen"
+  },
+
+  // Revert selected lines in the diff editor
+  {
+    "key": "ctrl+k ctrl+k",
+    "command": "git.revertSelectedRanges",
+    "when": "isWindows && isInDiffEditor"
+  },
+  {
+    "key": "ctrl+k ctrl+r",
+    "command": "-git.revertSelectedRanges",
+    "when": "isWindows && isInDiffEditor"
   }
 
   /// *** Recently added by VSCode *** ///

@@ -130,7 +130,8 @@
   "jupyter.useNotebookEditor": false,
 
   "files.associations": {
-    "*.resx": "xml"
+    "*.resx": "xml",
+    "*.json": "jsonc"
   },
 
   //////////////////////////
