@@ -1,0 +1,27 @@
+#!/usr/bin/env zsh
+
+usage () {
+  echo "Usage:
+  sync_keybindings <to|from>
+  "
+}
+
+if [ "$#" -ne 1 ]; then
+  echo "Wrong number of arguments!\n"
+  usage
+  return 1
+fi
+
+keybindings_filename="sasha.idekeybindings"
+local_keybindings_path="$DOTFILES/xcode/$keybindings_filename"
+remote_keybindings_path="$HOME/Library/Developer/Xcode/UserData/KeyBindings/$keybindings_filename"
+
+if [[ "$1" == "to" ]]; then
+  cp "$local_keybindings_path" "$remote_keybindings_path"
+elif [[ "$1" == "from" ]]; then
+  cp "$remote_keybindings_path" "$local_keybindings_path"
+else
+  echo "Unrecognized argument!\n"
+  usage
+  return 1
+fi
