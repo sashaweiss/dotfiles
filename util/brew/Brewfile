@@ -1,8 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 
-tap "dandavison/delta", "https://github.com/dandavison/delta"
-
 brew "asdf"
 brew "bat"
 brew "dust"

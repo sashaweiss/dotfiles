@@ -101,7 +101,7 @@
 			"hideMainWindowOnBlur": true,
 			"hotKey": {
 				"key": "Space",
-				"modifier": "Command",
+				"modifier": "CommandOrControl",
 				"secondModifier": "-"
 			},
 			"language": "English",
@@ -114,8 +114,8 @@
 			"showTrayIcon": true,
 			"decimalSeparator": ".",
 			"lastWindowPosition": {
-				"x": 540,
-				"y": 295
+				"x": 420,
+				"y": 220
 			}
 		},
 		"mdfindOptions": {
