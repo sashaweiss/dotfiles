@@ -1,16 +1,11 @@
 #!/usr/bin/env bash
 
 declare -a extensions=(
-  "eamodio.gitlens"
-  "Equinusocio.vsc-material-theme"
+  "equinusocio.vsc-material-theme-icons"
+  "equinusocio.vsc-material-theme"
   "esbenp.prettier-vscode"
   "mariomatheu.syntax-project-pbxproj"
-  "ms-python.python"
-  "ms-vscode.cpptools"
-  "ms-vsliveshare.vsliveshare"
-  "naumovs.theme-oceanicnext"
-  "PKief.material-icon-theme"
-  "rust-lang.rust"
+  "mrmlnc.vscode-scss"
   "twxs.cmake"
   "vscodevim.vim"
 )
