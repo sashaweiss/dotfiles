@@ -16,14 +16,16 @@ Live notes on my installation process for a fresh, clean machine.
    may end up relevant.
 7. Clone `natasha-codes/fonts` using `git-lfs`. Install the `Natasha II` font.
 8. Open `nvim` and run `:PlugInstall`.
-9. Install `asdf` via `/util/asdf/setup_asdf`.
+9. Install `asdf` via `/util/asdf/setup_asdf`. (On an M1 Mac, had to set up asdf
+   from a `zsh` session launched via `arch -x86_64 zsh`, but thereafter the
+   language executables e.g. `node` worked fine from `arm64` `zsh`...)
 
 ## Mac system settings configuration
 
 macOS has a bunch of built-in settings I like to tweak:
 
 - Map CapsLock to Esc in "System Preferences -> Keyboard -> Modifier Keys"
-- Automatically hide and show menu bar in "System Preferences -> General"
+- Automatically hide and show menu bar in "System Preferences -> Dock and Menu Bar"
 - Set default browser in "System Preferences -> General"
 - Move Spotlight shortcut to Alt+Space in "System Preferences -> Keyboard ->
   Shortcuts -> Spotlight" (to avoid a conflict with ueli).
@@ -44,27 +46,12 @@ $ sudo chmod 000 ~/Library/Preferences/ByHost/com.apple.loginwindow*
 
 VSCode is my preferred text editor.
 
-Config: managed in `/vscode/[keybindings|settings].json`. Favorite plugins:
-
-- Vim
-- Prettier
-- C++
-- rust-analyzer
-- Material Theme + Material Icon Theme
+Config: managed in `/vscode/[keybindings|settings].json`. See
+`vscode/install_plugins` for some of my core plugins.
 
 ## [ueli](https://github.com/natasha-codes/ueli)
 
 ueli is a keystroke launcher - i.e., a beefed up Spotlight.
-
-@nathanshelly and I maintain a fork of ueli to include a couple fixes that
-haven't made it into a formal release. (The maintainer is really nice, but also
-really busy.) Clone the `natasha-codes/ueli` fork and run:
-
-```
-$ yarn install
-$ yarn bundle && yarn package:dir
-$ cp -r dist/mac/ueli.app /Applications
-```
 
 Config: managed in `/macOS/ueli/config.json`.
 
