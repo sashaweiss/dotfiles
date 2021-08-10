@@ -16,24 +16,24 @@ Live notes on my installation process for a fresh, clean machine.
    may end up relevant.
 7. Clone `natasha-codes/fonts` using `git-lfs`. Install the `Natasha II` font.
 8. Open `nvim` and run `:PlugInstall`.
-9. Install `asdf` via `/util/asdf/setup_asdf`. (On an M1 Mac, had to set up asdf
-   from a `zsh` session launched via `arch -x86_64 zsh`, but thereafter the
-   language executables e.g. `node` worked fine from `arm64` `zsh`...)
+9. Install `asdf` via `/util/asdf/setup_asdf`. (On an M1 Mac, had to run
+   `arch -x86_64 zsh` and do `asdf install` from there to install `node`,
+   but Python needed to be installed from `arm64` `zsh`. _shrug_)
 
 ## Mac system settings configuration
 
 macOS has a bunch of built-in settings I like to tweak:
 
-- Map CapsLock to Esc in "System Preferences -> Keyboard -> Modifier Keys"
-- Automatically hide and show menu bar in "System Preferences -> Dock and Menu Bar"
-- Set default browser in "System Preferences -> General"
-- Move Spotlight shortcut to Alt+Space in "System Preferences -> Keyboard ->
-  Shortcuts -> Spotlight" (to avoid a conflict with ueli).
-- Set open-at-login items in "System Preferences -> Users and Groups -> Login
-  Items", e.g. Rectangle, AltTab, ueli, Bartender
-- Unblock key-repeat:
-  `defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false`
-- Prevent macOS from re-opening apps after reboot:
+-  Map CapsLock to Esc in "System Preferences -> Keyboard -> Modifier Keys"
+-  Automatically hide and show menu bar in "System Preferences -> Dock and Menu Bar"
+-  Set default browser in "System Preferences -> General"
+-  Move Spotlight shortcut to Alt+Space in "System Preferences -> Keyboard ->
+   Shortcuts -> Spotlight" (to avoid a conflict with ueli).
+-  Set open-at-login items in "System Preferences -> Users and Groups -> Login
+   Items", e.g. Rectangle, AltTab, ueli, Bartender
+-  Unblock key-repeat:
+   `defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false`
+-  Prevent macOS from re-opening apps after reboot:
 
 ```sh
 # Give `root` ownership over the file that stores the session, so it
@@ -61,8 +61,8 @@ AltTab is an improved window switcher for macOS.
 
 Config:
 
-- Settings -> Controls -> Shortcut 1 -> Set Cmd+Tab as the shortcut
-- Settings -> Appearance -> Check "Hide apps with no open window"
+-  Settings -> Controls -> Shortcut 1 -> Set Cmd+Tab as the shortcut
+-  Settings -> Appearance -> Check "Hide apps with no open window"
 
 ## [iTerm](https://iterm2.com)
 
