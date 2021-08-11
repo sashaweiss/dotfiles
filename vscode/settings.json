@@ -131,6 +131,10 @@
     "editor.wordWrapColumn": 120
   },
 
+  "[shellscript]": {
+    "editor.tabSize": 4
+  },
+
   "[diff]": {
     "files.trimTrailingWhitespace": false
   },
