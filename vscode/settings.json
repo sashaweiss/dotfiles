@@ -5,7 +5,6 @@
 
   "editor.fontFamily": "Natasha II",
   "editor.fontSize": 14,
-  "editor.tabSize": 2,
   "terminal.integrated.fontFamily": "Natasha II",
   "terminal.integrated.fontSize": 14,
   "workbench.colorTheme": "Material Theme Palenight High Contrast",
@@ -67,8 +66,8 @@
   "editor.codeLens": false,
   "editor.lightbulb.enabled": false,
 
-  // Don't use selected string for search
-  "editor.find.seedSearchStringFromSelection": false,
+  // If selected text, use it to seed search bar
+  "editor.find.seedSearchStringFromSelection": "selection"
 
   ///////////////////////
   // Language-specific //
