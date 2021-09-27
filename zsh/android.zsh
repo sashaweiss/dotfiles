@@ -9,5 +9,5 @@ if [[ -d "$HOME/Library/Android/sdk" ]]; then
 fi
 
 if [[ -d "/Applications/Android Studio.app" ]]; then
-  export JAVA_HOME='/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home'
+  export JAVA_HOME='/Applications/Android Studio.app/Contents/jre/Contents/Home'
 fi
