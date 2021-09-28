@@ -1,16 +1,22 @@
 [user]
   name = sashaweiss
   email = asashaweiss@gmail.com
+[interactive]
+  diffFilter = delta --color-only --features=interactive
 [core]
   pager = delta | less -+F
   whitespace = cr-at-eol
   ignorecase = false
 [delta]
-  syntax-theme = TwoDark
+  syntax-theme = Monokai Extended
   file-style = blue bold
   file-decoration-style = blue ul bold
   hunk-header-style = syntax
   hunk-header-decoration-style = blue box bold
+  minus-style = syntax "#6e1326"
+  minus-emph-style = syntax bold "#bd1515"
+  plus-style = syntax "#0d4a27"
+  plus-emph-style = syntax bold "#108744"
 [alias]
   co = checkout
   psuh = push
