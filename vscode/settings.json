@@ -1,260 +1,240 @@
 {
-  ////////////////////////
-  // General appearance //
-  ////////////////////////
+    ////////////////////////
+    // General appearance //
+    ////////////////////////
 
-  "editor.fontFamily": "Natasha II",
-  "editor.fontSize": 14,
-  "terminal.integrated.fontFamily": "Natasha II",
-  "terminal.integrated.fontSize": 14,
-  "workbench.colorTheme": "Material Theme Palenight High Contrast",
-  "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "Natasha II",
+    "editor.fontSize": 14,
+    "terminal.integrated.fontFamily": "Natasha II",
+    "terminal.integrated.fontSize": 14,
+    "workbench.colorTheme": "Material Theme Palenight High Contrast",
+    "workbench.iconTheme": "material-icon-theme",
 
-  "workbench.sideBar.location": "left",
+    "workbench.sideBar.location": "left",
 
-  "workbench.colorCustomizations": {
-    "editorOverviewRuler.selectionHighlightForeground": "#00000000",
-    "editorOverviewRuler.rangeHighlightForeground": "#00000000"
-  },
+    "workbench.colorCustomizations": {
+        "editorOverviewRuler.selectionHighlightForeground": "#00000000",
+        "editorOverviewRuler.rangeHighlightForeground": "#00000000"
+    },
 
-  // Don't auto-reveal files in the explorer
-  "explorer.autoReveal": false,
+    // Don't auto-reveal files in the explorer
+    "explorer.autoReveal": false,
 
-  // Disable the "file preview" feature
-  "workbench.editor.enablePreview": false,
+    // Disable the "file preview" feature
+    "workbench.editor.enablePreview": false,
 
-  // Disable moving to MRU tab after closing
-  "workbench.editor.focusRecentEditorAfterClose": false,
+    // Disable moving to MRU tab after closing
+    "workbench.editor.focusRecentEditorAfterClose": false,
 
-  // Use a new empty file at startup
-  "workbench.startupEditor": "newUntitledFile",
+    // Use a new empty file at startup
+    "workbench.startupEditor": "newUntitledFile",
 
-  // Disable VSCode keyboard nav in lists in favor of Vim plugin's
-  "workbench.list.automaticKeyboardNavigation": false,
+    // Disable VSCode keyboard nav in lists in favor of Vim plugin's
+    "workbench.list.automaticKeyboardNavigation": false,
 
-  // Pass Option through to tmux in the integrated terminal
-  "terminal.integrated.macOptionIsMeta": true,
+    // Pass Option through to tmux in the integrated terminal
+    "terminal.integrated.macOptionIsMeta": true,
 
-  // Use the canvas renderer, since the OpenGL one struggles with some
-  // of the terminal enhancements I use (e.g. tmux, delta)
-  "terminal.integrated.gpuAcceleration": "off",
+    // Show issues in the status bar
+    "problems.showCurrentInStatus": true,
 
-  // Show issues in the status bar
-  "problems.showCurrentInStatus": true,
+    // Remove the git sync button from the status bar
+    "git.enableStatusBarSync": false,
 
-  // Remove the git sync button from the status bar
-  "git.enableStatusBarSync": false,
+    // Explorer confirmation dialogs (I think only relevant for Windows)
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
 
-  // Explorer confirmation dialogs (I think only relevant for Windows)
-  "explorer.confirmDragAndDrop": false,
-  "explorer.confirmDelete": false,
+    // Ignore the freaking extension recommendations
+    "extensions.ignoreRecommendations": true,
 
-  // Ignore the freaking extension recommendations
-  "extensions.ignoreRecommendations": true,
+    /////////////////////
+    // Editor behavior //
+    /////////////////////
 
-  /////////////////////
-  // Editor behavior //
-  /////////////////////
-
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.minimap.enabled": false,
-
-  // Disable the stupid lightbulb and code lens stuff
-  "editor.codeLens": false,
-  "editor.lightbulb.enabled": false,
-
-  // If selected text, use it to seed search bar
-  "editor.find.seedSearchStringFromSelection": "selection"
-
-  ///////////////////////
-  // Language-specific //
-  ///////////////////////
-
-  // Don't format my C++
-  "C_Cpp.formatting": "Disabled",
-
-  "python.showStartPage": false,
-  "[python]": {
-    "editor.tabSize": 4
-  },
-
-  "[rust]": {
-    "editor.tabSize": 4
-  },
-
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 4
-  },
-
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 4
-  },
-
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 4
-  },
-
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 4
-  },
-
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 4
-  },
-
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 4
-  },
-
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 4
-  },
-
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  "[markdown]": {
     "editor.tabSize": 4,
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 120
-  },
 
-  "[shellscript]": {
-    "editor.tabSize": 4
-  },
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
 
-  "[diff]": {
-    "files.trimTrailingWhitespace": false
-  },
+    // Disable the stupid lightbulb and code lens stuff
+    "editor.codeLens": false,
+    "editor.lightbulb.enabled": false,
 
-  // Don't use the Jupyter viewer in VSCode for notebook files
-  "jupyter.useNotebookEditor": false,
+    // If selected text, use it to seed search bar
+    "editor.find.seedSearchStringFromSelection": "selection",
 
-  "files.associations": {
-    "*.resx": "xml",
-    "*.json": "jsonc"
-  },
+    ///////////////////////
+    // Language-specific //
+    ///////////////////////
 
-  //////////////////////////
-  // Rust-Analyzer plugin //
-  //////////////////////////
+    // Don't format my C++
+    "C_Cpp.formatting": "Disabled",
 
-  "rust-analyzer.completion.addCallArgumentSnippets": false,
-  "rust-analyzer.completion.postfix.enable": false,
-  "rust-analyzer.inlayHints.enable": false,
+    "python.showStartPage": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 
-  ////////////////
-  // Vim plugin //
-  ////////////////
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 
-  "vim.hlsearch": true,
-  "vim.useSystemClipboard": true,
-  "vim.visualstar": true,
-  "vim.foldfix": true,
-  "vim.debug.silent": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 
-  "vim.handleKeys": {
-    "<C-f>": false,
-    "<C-b>": false
-  },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    }
-  ],
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 
-  "vim.normalModeKeyBindings": [
-    {
-      "before": ["C-o"],
-      "commands": ["workbench.action.navigateBack"]
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    {
-      "before": ["C-i"],
-      "commands": ["workbench.action.navigateForward"]
-    },
-    {
-      "before": ["J"],
-      "after": ["}"]
-    },
-    {
-      "before": ["K"],
-      "after": ["{"]
-    },
-    {
-      "before": ["k"],
-      "after": ["g", "k"]
-    },
-    {
-      "before": ["j"],
-      "after": ["g", "j"]
-    },
-    {
-      "before": ["z"],
-      "after": ["$"]
-    },
-    {
-      "before": ["Z"],
-      "after": ["^"]
-    },
-    {
-      "before": ["g", "e"],
-      "commands": ["editor.action.marker.next"]
-    },
-    {
-      "before": ["g", "E"],
-      "commands": ["editor.action.marker.prev"]
-    }
-  ],
 
-  "vim.visualModeKeyBindings": [
-    {
-      "before": ["J"],
-      "after": ["}"]
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    {
-      "before": ["K"],
-      "after": ["{"]
-    },
-    {
-      "before": ["k"],
-      "after": ["g", "k"]
-    },
-    {
-      "before": ["j"],
-      "after": ["g", "j"]
-    },
-    {
-      "before": ["z"],
-      "after": ["$", "h"]
-    },
-    {
-      "before": ["v", "z"],
-      "after": ["$", "h"]
-    },
-    {
-      "before": ["v", "Z"],
-      "after": ["^"]
-    },
-    {
-      "before": ["Z"],
-      "after": ["^"]
-    }
-  ]
 
-  //////////////////////////////
-  // Recently added by VSCode //
-  //////////////////////////////
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 120
+    },
+
+    "[diff]": {
+        "files.trimTrailingWhitespace": false
+    },
+
+    // Don't use the Jupyter viewer in VSCode for notebook files
+    "jupyter.useNotebookEditor": false,
+
+    "files.associations": {
+        "*.resx": "xml",
+        "*.json": "jsonc"
+    },
+
+    /////////////////////
+    // Prettier plugin //
+    /////////////////////
+
+    "prettier.tabWidth": 4,
+
+    //////////////////////////
+    // Rust-Analyzer plugin //
+    //////////////////////////
+
+    "rust-analyzer.completion.addCallArgumentSnippets": false,
+    "rust-analyzer.completion.postfix.enable": false,
+    "rust-analyzer.inlayHints.enable": false,
+
+    ////////////////
+    // Vim plugin //
+    ////////////////
+
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.visualstar": true,
+    "vim.foldfix": true,
+    "vim.debug.silent": true,
+
+    "vim.handleKeys": {
+        "<C-f>": false,
+        "<C-b>": false
+    },
+
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["C-o"],
+            "commands": ["workbench.action.navigateBack"]
+        },
+        {
+            "before": ["C-i"],
+            "commands": ["workbench.action.navigateForward"]
+        },
+        {
+            "before": ["J"],
+            "after": ["}"]
+        },
+        {
+            "before": ["K"],
+            "after": ["{"]
+        },
+        {
+            "before": ["k"],
+            "after": ["g", "k"]
+        },
+        {
+            "before": ["j"],
+            "after": ["g", "j"]
+        },
+        {
+            "before": ["z"],
+            "after": ["$"]
+        },
+        {
+            "before": ["Z"],
+            "after": ["^"]
+        },
+        {
+            "before": ["g", "e"],
+            "commands": ["editor.action.marker.next"]
+        },
+        {
+            "before": ["g", "E"],
+            "commands": ["editor.action.marker.prev"]
+        }
+    ],
+
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["J"],
+            "after": ["}"]
+        },
+        {
+            "before": ["K"],
+            "after": ["{"]
+        },
+        {
+            "before": ["k"],
+            "after": ["g", "k"]
+        },
+        {
+            "before": ["j"],
+            "after": ["g", "j"]
+        },
+        {
+            "before": ["z"],
+            "after": ["$", "h"]
+        },
+        {
+            "before": ["v", "z"],
+            "after": ["$", "h"]
+        },
+        {
+            "before": ["v", "Z"],
+            "after": ["^"]
+        },
+        {
+            "before": ["Z"],
+            "after": ["^"]
+        }
+    ]
 }
