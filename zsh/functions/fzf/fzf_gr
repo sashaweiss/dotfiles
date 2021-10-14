@@ -3,15 +3,20 @@
 # filter all (local and remote) git branches and output to shell
 
 is_in_git_repo || return
-bindings='ctrl-space:toggle-preview'
-preview='git log --oneline --graph --date=short --color=always'
-preview+=' --pretty="format:%C(auto)%cd %h%d %s"'
-# shellcheck disable=SC2016
-preview+=' $(sed s/^..// <<< {} | cut -d" " -f1) | bat'
 
-git branch -a --color=always | grep -v '/HEAD\s' | sort |
-fzf --ansi --multi --tac --preview-window down:70% --bind="$bindings" \
-  --preview "$preview" |
-sed 's/^..//' | cut -d' ' -f1 |
-sed 's#^remotes/##'
-unset preview bindings
+preview='\
+  git log --oneline --graph --date=short --color=always \
+    --pretty="format:%C(auto)%cd %h%d %s" \
+    $(sed s/^..// <<< {}) | bat'
+
+bindings='ctrl-space:toggle-preview'
+
+git branch -a --color=always \
+  | grep -v '/HEAD\s' \
+  | sort \
+  | fzf --ansi --multi --tac \
+      --preview-window 'down:70%' \
+      --bind="$bindings" \
+      --preview "$preview" \
+  | sed 's/^..//' \
+  | sed 's#^remotes/##'
