@@ -1,5 +1,8 @@
 #! /usr/bin/env zsh
 
+# Get the commit log in oneline format and pipe it to FZF. Show the diff from
+# that commit as a preview.
+
 is_in_git_repo || return
 
 format='%C(green)%C(bold)%cd %C(auto)%h%d %s (%an)'

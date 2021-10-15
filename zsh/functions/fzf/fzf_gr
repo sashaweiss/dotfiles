@@ -1,6 +1,7 @@
 #! /usr/bin/env zsh
 
-# filter all (local and remote) git branches and output to shell
+# Get branch list, filter so it's more useful, pipe to FZF. Get commit log as
+# a preview for the selected branch.
 
 is_in_git_repo || return
 
