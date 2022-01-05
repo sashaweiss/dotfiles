@@ -20,4 +20,4 @@ git branch -a --color=always \
       --bind="$bindings" \
       --preview "$preview" \
   | sed 's/^..//' \
-  | sed 's#^remotes/##'
+  | sed 's/^remotes\/[^/]*\///'
