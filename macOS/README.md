@@ -9,7 +9,7 @@ Live notes on my installation process for a fresh, clean machine.
 1. Choose a machine name. This is a hard one.
 2. Install 1Password. Sign into iCloud.
 3. Clone my dotfiles.
-4. Install `brew` via instructions in `/util/brew/README.md`. Run `brew bundle`.
+4. Install `brew` via instructions in on their [homepage](https://brew.sh). Run `brew bundle`.
 5. While that's running, install helper apps below.
 6. Once `brew` is done installing, run `DOTFILES="$HOME/.files" ./bin/link`.
    This [SO post](https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories)
@@ -49,7 +49,7 @@ VSCode is my preferred text editor.
 Config: managed in `/vscode/[keybindings|settings].json`. See
 `vscode/install_plugins` for some of my core plugins.
 
-## [ueli](https://github.com/natasha-codes/ueli)
+## [ueli](https://ueli.app/)
 
 ueli is a keystroke launcher - i.e., a beefed up Spotlight.
 

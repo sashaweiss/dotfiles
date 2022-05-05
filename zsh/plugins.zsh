@@ -2,11 +2,11 @@
 
 ### Install zinit if not present
 if ! [ -d "$HOME/.zinit" ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+  bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 fi
 
 ### Start of zinit installer-added chunk
-source "$HOME/.zinit/bin/zinit.zsh"
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
@@ -17,7 +17,7 @@ zinit light zsh-users/zsh-autosuggestions
 
 zinit ice wait atload'zpcompinit; zpcdreplay' lucid
 
-zinit light zdharma/fast-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light romkatv/powerlevel10k
 
 # See `completions.zsh` for some configuration

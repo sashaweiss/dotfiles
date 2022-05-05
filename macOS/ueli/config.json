@@ -73,7 +73,8 @@
 		},
 		"currencyConverterOptions": {
 			"isEnabled": false,
-			"precision": 2
+			"precision": 2,
+			"defaultTarget": "EUR"
 		},
 		"dictionaryOptions": {
 			"debounceDelay": 250,
@@ -120,8 +121,8 @@
 			"showTrayIcon": true,
 			"decimalSeparator": ".",
 			"lastWindowPosition": {
-				"x": 540,
-				"y": 295
+				"x": 660,
+				"y": 310
 			}
 		},
 		"mdfindOptions": {
