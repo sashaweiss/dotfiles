@@ -10,12 +10,12 @@ the Windows FS.
 
 It's a work in progress, and there are obviously some shortcomings/missing pieces:
 
-- WSL performance in interacting with files in the Windows filesystem (under `/mnt/c`)
-  is pretty poor - for things like `npm install` it's best to invoke `cmd.exe` or
-  `powershell.exe` and use those temporarily.
+-   WSL performance in interacting with files in the Windows filesystem (under `/mnt/c`)
+    is pretty poor - for things like `npm install` it's best to invoke `cmd.exe` or
+    `powershell.exe` and use those temporarily.
 
-- Making symlinks between the WSL and Windows FSs is...not really feasible. I use
-  `bin/wsl/mklink_wsl_to_windows` to make unidirectional symlinks into the Windows FS.
+-   Making symlinks between the WSL and Windows FSs is...not really feasible. I use
+    `bin/wsl/mklink_wsl_to_windows` to make unidirectional symlinks into the Windows FS.
 
 Not WSL's fault, but Ubuntu ships without a bunch of key utils. Run
 `bin/wsl/install_linux_deps` to get those.
@@ -40,8 +40,9 @@ it, so will follow up when I've got more to say about it.
 ## [Chocolatey](https://chocolatey.org/)
 
 Chocolatey is the equivalent of Homebrew for Windows. I have used it to install:
-- NodeJS
-- ueli
+
+-   NodeJS
+-   ueli
 
 To manage packages, need to have Powershell open with Administrator privileges.
 
@@ -68,10 +69,10 @@ the modifier key layout will often map `LeftAlt` to `Win` and vice versa.
 I use `git` from the WSL, but am frequently working with files in the Windows file system
 and require credentials that are stored in Windows (e.g., for my Microsoft work repos).
 To those ends, I typically keep a couple settings that I only need for this hybrid setup
-as local changes to my `gitconfig`, and keep those "skip-worktree-ed" (`git update-index
---skipworktree`).
+as local changes to my `gitconfig`, and keep those "skip-worktree-ed" (`git update-index --skipworktree`).
 
 Specifically:
+
 ```gitconfig
 [core]
   autocrlf = true

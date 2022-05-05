@@ -17,9 +17,9 @@ and use the "Customized" tab.
 
 Defaults I like:
 
-- Open new editor (`:vsp`): `Cmd+Ctrl+T`
-- Jump to definition (`gd`): `Cmd+Ctrl+J`
-- Toggle left bar: `Cmd+0`
-- Open a left bar pane: `Cmd+1-9`
-- Toggle right bar: `Cmd+Opt+0`
-- Toggle console/bottom bar: `Cmd+Shift+Y`
+-   Open new editor (`:vsp`): `Cmd+Ctrl+T`
+-   Jump to definition (`gd`): `Cmd+Ctrl+J`
+-   Toggle left bar: `Cmd+0`
+-   Open a left bar pane: `Cmd+1-9`
+-   Toggle right bar: `Cmd+Opt+0`
+-   Toggle console/bottom bar: `Cmd+Shift+Y`

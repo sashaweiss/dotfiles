@@ -1,109 +1,109 @@
 [
-  /// *** Cross-plat *** ///
+    /// *** Cross-plat *** ///
 
-  // Use visual next tab instead of MRU
-  {
-    "key": "ctrl+tab",
-    "command": "-workbench.action.openNextRecentlyUsedEditorInGroup"
-  },
-  {
-    "key": "ctrl+tab",
-    "command": "workbench.action.nextEditorInGroup"
-  },
-  {
-    "key": "ctrl+shift+tab",
-    "command": "workbench.action.previousEditorInGroup"
-  },
+    // Use visual next tab instead of MRU
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.openNextRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditorInGroup"
+    },
 
-  // Disable "close editor" behavior from workbench
-  {
-    "key": "ctrl+w",
-    "command": "noop",
-    "when": "sideBarFocus"
-  },
+    // Disable "close editor" behavior from workbench
+    {
+        "key": "ctrl+w",
+        "command": "noop",
+        "when": "sideBarFocus"
+    },
 
-  // Open a file from the Explorer
-  {
-    "key": "o",
-    "command": "list.select",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
-  },
+    // Open a file from the Explorer
+    {
+        "key": "o",
+        "command": "list.select",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+    },
 
-  /// *** Mac *** ///
+    /// *** Mac *** ///
 
-  // Disable closing the VSCode window when no editors are visible
-  {
-    "key": "cmd+w",
-    "command": "-workbench.action.closeWindow",
-    "when": "isMac"
-  },
+    // Disable closing the VSCode window when no editors are visible
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.closeWindow",
+        "when": "isMac"
+    },
 
-  // "Focus editor"
-  {
-    "key": "cmd+shift+j",
-    "command": "-workbench.action.search.toggleQueryDetails",
-    "when": "isMac && searchViewletVisible"
-  },
-  {
-    "key": "cmd+shift+j",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "isMac"
-  },
+    // "Focus editor"
+    {
+        "key": "cmd+shift+j",
+        "command": "-workbench.action.search.toggleQueryDetails",
+        "when": "isMac && searchViewletVisible"
+    },
+    {
+        "key": "cmd+shift+j",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "isMac"
+    },
 
-  // Toggle built-in terminal
-  {
-    "key": "cmd+shift+z",
-    "command": "workbench.action.terminal.toggleTerminal",
-    "when": "isMac"
-  },
+    // Toggle built-in terminal
+    {
+        "key": "cmd+shift+z",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "isMac"
+    },
 
-  /// *** Windows *** ///
+    /// *** Windows *** ///
 
-  // Shortcut for "focus editor"
-  {
-    "key": "ctrl+shift+j",
-    "command": "-workbench.action.search.toggleQueryDetails",
-    "when": "isWindows && searchViewletVisible"
-  },
-  {
-    "key": "ctrl+shift+j",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "isWindows"
-  },
+    // Shortcut for "focus editor"
+    {
+        "key": "ctrl+shift+j",
+        "command": "-workbench.action.search.toggleQueryDetails",
+        "when": "isWindows && searchViewletVisible"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "isWindows"
+    },
 
-  // Use <C-p> and <C-n> to navigate the quick-open menu
-  {
-    "key": "ctrl+p",
-    "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
-    "when": "isWindows"
-  },
-  {
-    "key": "ctrl+shift+p",
-    "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
-    "when": "isWindows"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "workbench.action.quickOpenSelectNext",
-    "when": "isWindows && inQuickOpen"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "workbench.action.quickOpenSelectPrevious",
-    "when": "isWindows && inQuickOpen"
-  },
+    // Use <C-p> and <C-n> to navigate the quick-open menu
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "isWindows"
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "when": "isWindows"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "isWindows && inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "isWindows && inQuickOpen"
+    },
 
-  // Revert selected lines in the diff editor
-  {
-    "key": "ctrl+k ctrl+k",
-    "command": "git.revertSelectedRanges",
-    "when": "isWindows && isInDiffEditor"
-  },
-  {
-    "key": "ctrl+k ctrl+r",
-    "command": "-git.revertSelectedRanges",
-    "when": "isWindows && isInDiffEditor"
-  }
+    // Revert selected lines in the diff editor
+    {
+        "key": "ctrl+k ctrl+k",
+        "command": "git.revertSelectedRanges",
+        "when": "isWindows && isInDiffEditor"
+    },
+    {
+        "key": "ctrl+k ctrl+r",
+        "command": "-git.revertSelectedRanges",
+        "when": "isWindows && isInDiffEditor"
+    }
 
-  /// *** Recently added by VSCode *** ///
+    /// *** Recently added by VSCode *** ///
 ]
