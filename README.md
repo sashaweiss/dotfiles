@@ -12,7 +12,7 @@ In active use on Mac and (to a lesser extent) the
 Clone the repo:
 
 ```sh
-$ git clone git@github.com:sashaweiss/dotfiles $HOME/.files
+; git clone git@github.com:sashaweiss/dotfiles $HOME/.files
 ```
 
 **To install to somewhere other than $HOME/.files, make sure to adjust `$DOTFILES`!**
@@ -45,7 +45,7 @@ configs/applications/utilities.
 I install the majority of my utilities via `brew`.
 
 ```sh
-$ ./util/brew/setup_brew
+; ./util/brew/setup_brew
 ```
 
 #### To make `brew`'s `zsh` the default shell:
@@ -58,7 +58,7 @@ itself) to `/etc/shells`. Run `chsh -s $(brew --prefix)/bin/zsh`.
 I use `asdf` as my version manager for `node`, `python`, and maybe eventually for `rustc`.
 
 ```sh
-$ ./util/asdf/setup_asdf
+; ./util/asdf/setup_asdf
 ```
 
 ### Vim plugins
@@ -66,7 +66,7 @@ $ ./util/asdf/setup_asdf
 What's `(n)vim` without plugins?
 
 ```sh
-$ nvim -c "PlugInstall" -c "qa"
+; nvim -c "PlugInstall" -c "qa"
 ```
 
 ### Rust
@@ -74,8 +74,8 @@ $ nvim -c "PlugInstall" -c "qa"
 My favorite programming language <3 (maybe - MAYBE - except for Swift)
 
 ```sh
-$ curl https://sh.rustup.rs -sSf | sh -s -- --no-modify-path -y
-$ rustup toolchain add nightly
-$ rustup component add rust-src rustfmt rust-analysis rls
-$ rustup component add rust-src rustfmt rust-analysis rls --toolchain nightly
+; curl https://sh.rustup.rs -sSf | sh -s -- --no-modify-path -y
+; rustup toolchain add nightly
+; rustup component add rust-src rustfmt rust-analysis rls
+; rustup component add rust-src rustfmt rust-analysis rls --toolchain nightly
 ```

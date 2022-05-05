@@ -38,8 +38,8 @@ macOS has a bunch of built-in settings I like to tweak:
 ```sh
 # Give `root` ownership over the file that stores the session, so it
 # cannot be replaced. Then, prevent anyone from reading or writing it!
-$ sudo chown root ~/Library/Preferences/ByHost/com.apple.loginwindow*
-$ sudo chmod 000 ~/Library/Preferences/ByHost/com.apple.loginwindow*
+; sudo chown root ~/Library/Preferences/ByHost/com.apple.loginwindow*
+; sudo chmod 000 ~/Library/Preferences/ByHost/com.apple.loginwindow*
 ```
 
 ## [Visual Studio Code](https://code.visualstudio.com)
