@@ -4,9 +4,6 @@ My personal dotfiles. Mostly [`zsh`](https://www.zsh.org),
 [`neovim`](https://neovim.io), [`tmux`](https://github.com/tmux/tmux),
 and [`VSCode`](https://github.com/microsoft/vscode).
 
-In active use on Mac and (to a lesser extent) the
-[WSL](https://docs.microsoft.com/en-us/windows/wsl/faq).
-
 ## Download and install
 
 Clone the repo:
