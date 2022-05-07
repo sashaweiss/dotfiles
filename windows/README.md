@@ -66,30 +66,10 @@ the modifier key layout will often map `LeftAlt` to `Win` and vice versa.
 
 ## Git on Windows from the WSL
 
-I use `git` from the WSL, but am frequently working with files in the Windows file system
-and require credentials that are stored in Windows (e.g., for my Microsoft work repos).
-To those ends, I typically keep a couple settings that I only need for this hybrid setup
-as local changes to my `gitconfig`, and keep those "skip-worktree-ed" (`git update-index --skipworktree`).
-
-Specifically:
-
-```gitconfig
-[core]
-  autocrlf = true
-[credential]
-  helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
-```
-
-Note that the `credential.helper` setting assumes Git for Windows is installed, with support
-for the Windows credential manager.
-
-This can sometimes cause issues when I clone stuff intended for the Linux FS, e.g. zsh
-plugins. If one encounters line ending issues there, the following commands in some order
-can help:
+Some valuable commands for working with Git in the WSL, especially when dealing with files
+in the Windows file space:
 
 ```sh
 $ sed -i 's/\r//g' <file> # deletes the CR from CRLF, in-place
-$ git config --local core.autocrlf false # locally sets the setting to false
+$ git config --local core.autocrlf false # locally sets core.autocrlf to false
 ```
-
-For example, I had to run the second in this repo when doing first setup.

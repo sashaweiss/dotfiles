@@ -16,8 +16,6 @@ ln -fs "$DOTFILES/util/vivid/filetypes.yml" "$HOME/.config/vivid/filetypes.yml"
 
 if ./zsh/functions/is_mac; then
 
-  ln -fs "$DOTFILES/util/git/gitconfig_credhelper_mac" "$HOME/.gitconfig_credhelper"
-
   ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
   ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
 
@@ -27,8 +25,6 @@ if ./zsh/functions/is_mac; then
   ln -fs "$DOTFILES/vim/ideavimrc" "$HOME/.ideavimrc"
 
 elif ./zsh/functions/is_wsl; then
-
-  ln -fs "$DOTFILES/util/git/gitconfig_credhelper_wsl" "$HOME/.gitconfig_credhelper"
 
   ./bin/wsl/mklink_wsl_to_windows \
     /Users/saweiss/Documents/WindowsPowerShell/profile.ps1 \
