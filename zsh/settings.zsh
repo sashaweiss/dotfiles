@@ -16,10 +16,7 @@ setopt share_history hist_verify
 #
 # Return non-zero for lines to ignore.
 function zshaddhistory() {
-  if [[ $1 = *"azcopy"* ]]; then
-    # Ignore all azcopy lines
-    return 1
-  elif [[ $1 = " "* ]]; then
+  if [[ $1 = " "* ]]; then
     # Ignore all lines starting with a space
     return 1
   fi

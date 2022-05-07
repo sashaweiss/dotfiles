@@ -2,10 +2,9 @@
 
 typeset -U path
 
-# Load util functions, Brew, and Nix first
+# Load util functions and Brew first
 source "$DOTFILES/zsh/functions.zsh"
 source "$DOTFILES/zsh/brew.zsh"
-source "$DOTFILES/zsh/nix.zsh"
 
 # Load zsh keymap before other things to avoid conflicts
 source "$DOTFILES/zsh/keymap.zsh"
