@@ -19,6 +19,9 @@ alias untar='tar -xzvf'
 export WORK="$HOME/dev"
 alias work="cd $WORK"
 
+export SIGNAL="$WORK/signal"
+alias signal="cd $SIGNAL"
+
 export CLONES="$HOME/dev/clones"
 alias clones="cd $CLONES"
 

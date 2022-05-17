@@ -1,6 +1,8 @@
 [user]
   name = sashaweiss
   email = asashaweiss@gmail.com
+[includeIf "gitdir:~/dev/signal/**"]
+  path = .gitconfig_signal
 [interactive]
   diffFilter = delta --color-only --features=interactive
 [core]
