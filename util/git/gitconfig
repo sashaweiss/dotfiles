@@ -11,6 +11,7 @@
   ignorecase = false
 [delta]
   syntax-theme = Monokai Extended
+  line-numbers = true
   file-style = blue bold
   file-decoration-style = blue ul bold
   hunk-header-style = syntax
