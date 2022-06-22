@@ -23,8 +23,8 @@ let mapleader="\\"
 " Word wrap on line break
 set linebreak
 
-" Don't wrap lines by default
-set nowrap
+" Wrap lines by default
+set wrap
 
 " Keep gutter open
 set signcolumn=yes
