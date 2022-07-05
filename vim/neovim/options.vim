@@ -95,6 +95,9 @@ autocmd FileType objc setlocal tabstop=4 shiftwidth=4
 autocmd FileType cmake setlocal tabstop=4 shiftwidth=4
 autocmd FileType groovy setlocal tabstop=4 shiftwidth=4
 
+" Disable auto-indenting for Markdown, since it's got funky ideas
+autocmd FileType markdown set indentexpr=
+
 " Mark JSON as jsonc to allow comments
 autocmd FileType json setlocal filetype=jsonc
 
