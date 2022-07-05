@@ -24,16 +24,18 @@ fzf_prefix="$(brew --prefix)/opt/fzf/shell"
 # keybindings
 source "$fzf_prefix/key-bindings.zsh"
 
+_fd_with_default_args='fd --hidden --follow --exclude ".git" --strip-cwd-prefix'
+
 # use `fd` for `**` path completion
 # `$1` is the base path to start traversal
 _fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "$1"
+  $_fd_with_default_args . "$1"
 }
 
 # use `fd` for `**` directory completion
 # `$1` is the base path to start traversal
 _fzf_compgen_dir() {
-  fd --type directory --hidden --follow --exclude ".git" . "$1"
+  $_fd_with_default_args --type directory . "$1"
 }
 
 # <<<< options >>>>
@@ -43,7 +45,7 @@ _fzf_preview_window_hidden="${_fzf_preview_window}:hidden"
 
 export FZF_DEFAULT_OPTS="--height 50% --reverse --no-mouse --cycle --ansi \
  $_fzf_preview_window \
- --bind ctrl-space:toggle-preview,ctrl-e:preview-down,ctrl-d:preview-page-down,ctrl-y:preview-up,ctrl-u:preview-page-up,ctrl-a:select-all+accept"
+ --bind ctrl-space:toggle-preview,ctrl-e:preview-down,ctrl-d:preview-page-down,ctrl-y:preview-up,ctrl-u:preview-page-up"
 
 _fzf_bat_preview="--preview='bat --style=numbers --color=always {}'"
 export FZF_CTRL_T_OPTS="$_fzf_bat_preview $_fzf_preview_window_hidden"
@@ -52,7 +54,7 @@ export FZF_EDIT_OPTS="$_fzf_bat_preview"
 
 # <<<< commands >>>>
 
-export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude .git"
+export FZF_DEFAULT_COMMAND="$_fd_with_default_args"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # << zsh functions -> widgets >>
