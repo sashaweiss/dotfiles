@@ -5,7 +5,7 @@
 ios_sim_get_uuid () {
   IFS='\n'
   local sim_names=("${(@f)$(xcrun simctl list devices | grep "^    " | sed 's/^    //')}")
-  local sim_uuids=("${(@f)$(xcrun simctl list | grep "^    " | sed 's/^    //')}")
+  local sim_uuids=("${(@f)$(xcrun simctl list devices | grep "^    " | awk -F'[\(|\)]' '{ print $(NF-3) }')}")
   unset IFS
 
   if [ "${#sim_uuids[@]}" -eq 0 ]; then
