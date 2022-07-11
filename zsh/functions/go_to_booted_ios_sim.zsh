@@ -1,0 +1,17 @@
+#! /usr/bin/env zsh
+
+go_to_booted_ios_sim () {
+  SIM_ID=$(
+  xcrun simctl list devices | \
+    grep "Booted" | \
+    awk '{print $7}' | \
+    sed 's/(\(.*\))/\1/'
+  )
+
+  if [[ -z "$SIM_ID" ]]; then
+    echo "No booted simulator found!"
+    exit 1
+  fi
+
+  cd "$HOME/Library/Developer/CoreSimulator/Devices/$SIM_ID"
+}

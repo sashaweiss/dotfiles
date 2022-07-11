@@ -1,10 +1,12 @@
-#!/usr/bin/env zsh
+#! /usr/bin/env zsh
 
-function_dirs=("$DOTFILES/zsh/functions" "$DOTFILES/zsh/functions/fzf")
-for dir in $function_dirs; do
-  # don't surround in quotes to get the expansion
-  # (x:t) extracts just the executable filenames, minus the dir name
-  autoload -Uz $dir/*(.x:t)
-  fpath=("$dir" $fpath)
-done
-unset function_dirs
+source "$DOTFILES/zsh/functions/fzf/fzf_gc.zsh"
+source "$DOTFILES/zsh/functions/fzf/fzf_gr.zsh"
+source "$DOTFILES/zsh/functions/egs.zsh"
+source "$DOTFILES/zsh/functions/go_to_booted_ios_sim.zsh"
+source "$DOTFILES/zsh/functions/is_in_git_repo.zsh"
+source "$DOTFILES/zsh/functions/is_linux.zsh"
+source "$DOTFILES/zsh/functions/is_mac.zsh"
+source "$DOTFILES/zsh/functions/is_wsl.zsh"
+source "$DOTFILES/zsh/functions/manage_proxy.zsh"
+source "$DOTFILES/zsh/functions/spectrum_ls.zsh"
