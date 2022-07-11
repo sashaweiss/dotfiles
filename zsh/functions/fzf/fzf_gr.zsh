@@ -6,12 +6,12 @@ fzf_gr () {
 
   is_in_git_repo || return
 
-  preview='\
+  local preview='\
     git log --oneline --graph --date=short --color=always \
     --pretty="format:%C(auto)%cd %h%d %s" \
     $(sed s/^..// <<< {}) | bat'
 
-  bindings='ctrl-space:toggle-preview'
+  local bindings='ctrl-space:toggle-preview'
 
   git branch -a --color=always \
     | grep -v '/HEAD\s' \

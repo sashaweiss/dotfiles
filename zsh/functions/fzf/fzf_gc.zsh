@@ -6,11 +6,11 @@ fzf_gc () {
 
   is_in_git_repo || return
 
-  format='%C(green)%C(bold)%cd %C(auto)%h%d %s (%an)'
-  bindings='ctrl-space:toggle-preview'
+  local format='%C(green)%C(bold)%cd %C(auto)%h%d %s (%an)'
+  local bindings='ctrl-space:toggle-preview'
 
   # Extract the commit hash from the oneline, pipe it to `git show`
-  preview='\
+  local preview='\
     grep -o "[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\} [a-f0-9]\{7\}" <<< {} \
     | cut -d " " -f 2 \
     | xargs git show --color=always \
