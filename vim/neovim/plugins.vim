@@ -34,8 +34,8 @@ Plug 'vim-airline/vim-airline-themes'
 " Move by 'subword', i.e. through camelCase and snake_case words
 Plug 'chaoren/vim-wordmotion'
 
-" Add commands for commenting code
-Plug 'tpope/vim-commentary'
+" Comment blocks of code
+Plug 'preservim/nerdcommenter'
 
 " Automatically close tags in *ml languages
 Plug 'alvan/vim-closetag', { 'for': ['html', 'xml'] }
@@ -73,6 +73,15 @@ let g:airline_section_error = airline#section#create([])
 
 nmap <leader>nt :NERDTreeToggle<CR>
 nmap <leader>nf :NERDTreeFocus<CR>
+
+
+" *** NERDCommenter ***
+
+let g:NERDCreateDefaultMappings = 0
+let g:NERDSpaceDelims = 1
+let g:NERDCustomDelimiters = { 'swift': { 'left': '//', 'right': '' } }
+
+map <leader>cc <plug>NERDCommenterInvert
 
 
 " *** Auto-Pairs ***
