@@ -18,7 +18,7 @@ Link the appropriate files:
 
 ```sh
 export DOTFILES="$HOME/.files"
-./link
+./bin/link
 ```
 
 ...and you should be good to go! (Kinda - read on for installing peripherals - without those,

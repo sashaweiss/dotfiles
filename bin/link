@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+source "$DOTFILES/zsh/functions/is_mac.zsh"
+source "$DOTFILES/zsh/functions/is_wsl.zsh"
+
 ln -fs "$DOTFILES/zsh/zshrc" "$HOME/.zshrc"
 ln -fs "$DOTFILES/zsh/zshenv" "$HOME/.zshenv"
 
@@ -15,7 +18,7 @@ ln -fs "$DOTFILES/vim/neovim/init.vim" "$HOME/.config/nvim/init.vim"
 mkdir -p "$HOME/.config/vivid"
 ln -fs "$DOTFILES/util/vivid/filetypes.yml" "$HOME/.config/vivid/filetypes.yml"
 
-if ./zsh/functions/is_mac; then
+if is_mac; then
 
   ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
   ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
@@ -25,32 +28,33 @@ if ./zsh/functions/is_mac; then
   ln -fs "$DOTFILES/vim/xvimrc" "$HOME/.xvimrc"
   ln -fs "$DOTFILES/vim/ideavimrc" "$HOME/.ideavimrc"
 
-elif ./zsh/functions/is_wsl; then
+elif is_wsl; then
 
-  ./bin/wsl/mklink_wsl_to_windows \
-    /Users/saweiss/Documents/WindowsPowerShell/profile.ps1 \
+  "$DOTFILES/bin/wsl/mklink_wsl_to_windows" \
+    "/Users/saweiss/Documents/WindowsPowerShell/profile.ps1" \
     "$DOTFILES/powershell/Profile.ps1"
 
-  ./bin/wsl/mklink_wsl_to_windows \
-    /Users/saweiss/.vsvimrc \
+  "$DOTFILES/bin/wsl/mklink_wsl_to_windows" \
+    "/Users/saweiss/.vsvimrc" \
     "$DOTFILES/vim/vsvimrc"
 
-  ./bin/wsl/mklink_wsl_to_windows \
-    /Users/saweiss/.ideavimrc \
+  "$DOTFILES/bin/wsl/mklink_wsl_to_windows" \
+    "/Users/saweiss/.ideavimrc" \
     "$DOTFILES/vim/ideavimrc"
 
-  ./bin/wsl/mklink_wsl_to_windows \
-    /Users/saweiss/AppData/Roaming/Code/User/settings.json \
+  "$DOTFILES/bin/wsl/mklink_wsl_to_windows" \
+    "/Users/saweiss/AppData/Roaming/Code/User/settings.json" \
     "$DOTFILES/vscode/settings.json"
-  ./bin/wsl/mklink_wsl_to_windows \
-    /Users/saweiss/AppData/Roaming/Code/User/keybindings.json \
+
+  "$DOTFILES/bin/wsl/mklink_wsl_to_windows" \
+    "/Users/saweiss/AppData/Roaming/Code/User/keybindings.json" \
     "$DOTFILES/vscode/keybindings.json"
 
-  ./bin/wsl/mklink_wsl_to_windows \
+  "$DOTFILES/bin/wsl/mklink_wsl_to_windows" \
     "/Users/saweiss/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/disable_ctrl_esc.ahk" \
     "$DOTFILES/windows/disable_ctrl_esc.ahk"
 
-  ./bin/wsl/mklink_wsl_to_windows \
+  "$DOTFILES/bin/wsl/mklink_wsl_to_windows" \
     "/Users/saweiss/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json" \
     "$DOTFILES/windows/windows_terminal_settings.json"
 
