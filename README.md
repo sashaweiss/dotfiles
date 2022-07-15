@@ -37,14 +37,6 @@ specifically `Natasha II`.
 See my [Windows](./windows/README.md) and [Mac](./macOS/README.md) for platform-specific
 configs/applications/utilities.
 
-### [Homebrew](https://brew.sh)
-
-I install the majority of my utilities via `brew`.
-
-```sh
-; ./util/brew/setup_brew
-```
-
 #### To make `brew`'s `zsh` the default shell:
 
 Add `$(brew --prefix)/bin/zsh` (the result of running that expression, not the expression
@@ -52,7 +44,7 @@ itself) to `/etc/shells`. Run `chsh -s $(brew --prefix)/bin/zsh`.
 
 ### [asdf](https://github.com/asdf-vm/asdf)
 
-I use `asdf` as my version manager for `node`, `python`, and maybe eventually for `rustc`.
+I use `asdf` as a version manager for `node`, `python`, and `ruby`.
 
 ```sh
 ; ./util/asdf/setup_asdf
@@ -64,15 +56,4 @@ What's `(n)vim` without plugins?
 
 ```sh
 ; nvim -c "PlugInstall" -c "qa"
-```
-
-### Rust
-
-My favorite programming language <3 (maybe - MAYBE - except for Swift)
-
-```sh
-; curl https://sh.rustup.rs -sSf | sh -s -- --no-modify-path -y
-; rustup toolchain add nightly
-; rustup component add rust-src rustfmt rust-analysis rls
-; rustup component add rust-src rustfmt rust-analysis rls --toolchain nightly
 ```
