@@ -4,8 +4,8 @@
 
 ios_sim_get_uuid () {
   IFS='\n'
-  local sim_names=("${(@f)$(xcrun simctl list devices | grep "^    " | sed 's/^    //')}")
-  local sim_uuids=("${(@f)$(xcrun simctl list devices | grep "^    " | awk -F'[\(|\)]' '{ print $(NF-3) }')}")
+  local sim_names=("${(@f)$(xcrun simctl list devices | grep "^    " | sort | sed 's/^    //')}")
+  local sim_uuids=("${(@f)$(xcrun simctl list devices | grep "^    " | sort | awk -F'[\(|\)]' '{ print $(NF-3) }')}")
   unset IFS
 
   if [ "${#sim_uuids[@]}" -eq 0 ]; then
@@ -15,7 +15,7 @@ ios_sim_get_uuid () {
     echo "Simulators: \n"
 
     for ((i = 1; i <= $#sim_names; i++)); do
-      echo "$i. $(echo ${sim_names[$i]} | xargs)"
+      echo "$((i-1)). $(echo ${sim_names[$i]} | xargs)"
     done
 
     echo -n "\nWhich simulator? "
