@@ -21,7 +21,7 @@ ios_sim_get_uuid () {
     echo -n "\nWhich simulator? "
     read number
 
-    local selected_uuid=${sim_uuids[$number]}
+    local selected_uuid=${sim_uuids[$((number+1))]}
   fi
 
   SELECTED_IOS_SIM_UUID="$selected_uuid"
