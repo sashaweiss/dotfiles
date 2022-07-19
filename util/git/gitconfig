@@ -3,6 +3,9 @@
   email = asashaweiss@gmail.com
 [includeIf "hasconfig:remote.*.url:git@github-signal:signalapp/*"]
   path = .gitconfig_signal
+; Until https://github.com/dandavison/delta/issues/1114 is resolved:
+[add.interactive]
+  useBuiltin = false
 [interactive]
   diffFilter = delta --color-only --features=interactive
 [core]
