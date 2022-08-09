@@ -1,8 +1,10 @@
 #! /usr/bin/env zsh
 
-# [Heavy inspiration from Nora Trapp](https://gist.github.com/Imperiopolis-Signal/2a99392ff026ec918d6328643b5292ce)
+# Heavy inspiration from [Nora Trapp](https://gist.github.com/Imperiopolis-Signal/2a99392ff026ec918d6328643b5292ce)
 
 ios_sim_get_uuid () {
+  is_mac || return 1
+
   IFS='\n'
   local sim_names=("${(@f)$(xcrun simctl list devices | grep "^    " | sort | sed 's/^    //')}")
   local sim_uuids=("${(@f)$(xcrun simctl list devices | grep "^    " | sort | awk -F'[\(|\)]' '{ print $(NF-3) }')}")
