@@ -10,7 +10,4 @@ if command -v git > /dev/null; then
   alias gb='g --no-pager branch'
   alias gba='gb -a'
   alias gco='g checkout'
-  alias glg='g lg'
-  alias gskip='g update-index --skip-worktree'
-  alias gnoskip='g update-index --no-skip-worktree'
 fi
