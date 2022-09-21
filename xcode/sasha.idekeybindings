@@ -244,6 +244,28 @@
 			</dict>
 			<dict>
 				<key>Action</key>
+				<string>tabController_newEditorAreaSplitAlternate:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEKit.CmdDefinition.NewEditorAlternate</string>
+				<key>Group</key>
+				<string>File Menu</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEKit.MenuDefinition.Main</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Keyboard Shortcut</key>
+				<string>^~@p</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>New</string>
+				<key>Title</key>
+				<string>Editor Below</string>
+			</dict>
+			<dict>
+				<key>Action</key>
 				<string>_showNextEditorTab:</string>
 				<key>Alternate</key>
 				<string>NO</string>
