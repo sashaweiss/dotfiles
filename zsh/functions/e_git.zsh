@@ -1,9 +1,9 @@
 #! /usr/bin/env zsh
 
-e_worktree () {
+egs () {
   git status --porcelain | cut -c 4- | xargs $EDITOR
 }
 
-e_conflicts () {
+econflicts () {
   git status --porcelain | grep "UU" | cut -c 4- | xargs $EDITOR
 }
