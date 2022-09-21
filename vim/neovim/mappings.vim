@@ -34,8 +34,11 @@ vnoremap z $h
 " Copy to system (only applicable on Mac)
 noremap <leader>y "*y
 
-" Search for highlighted text (via ':Rg')
-vnoremap // y:Rg <C-R>"<CR>
+" Search for highlighted text
+vnoremap // y/<C-R>"<CR>
+
+" Override * to keep the cursor at the current location after searching
+nnoremap * :keepjumps normal! mi*`i<CR>
 
 " Keybindings for fav fzf-vim commands
 nmap <C-p> :Files<CR>
