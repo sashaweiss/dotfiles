@@ -35,7 +35,7 @@ vnoremap z $h
 noremap <leader>y "*y
 
 " Search for highlighted text
-vnoremap // y/<C-R>"<CR>
+vnoremap // y/<C-R>"<CR>N
 
 " Override * to keep the cursor at the current location after searching
 nnoremap * :keepjumps normal! mi*`i<CR>
