@@ -34,8 +34,9 @@ vnoremap z $h
 " Copy to system (only applicable on Mac)
 noremap <leader>y "*y
 
-" Search for highlighted text
-vnoremap // y/<C-R>"<CR>N
+" Search for the currently-highlighted text, keeping the cursor on the current
+" selection.
+vnoremap // y:let @/='<C-R>"' <BAR> :keepjumps normal! nN<CR>
 
 " Override * to keep the cursor at the current location after searching
 nnoremap * :keepjumps normal! mi*`i<CR>
