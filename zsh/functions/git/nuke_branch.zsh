@@ -1,0 +1,14 @@
+#! /usr/bin/env zsh
+
+nuke_branch () {
+  if [ "$#" -ne 1 ]; then
+    echo "Missing branch argument!"
+    return 1
+  fi
+
+  local remote="$(git remote -v | head -n 1 | awk '{print $1}')"
+  local branch="$1"
+
+  git push --delete "$remote" "$branch"
+  git branch -d "$1"
+}
