@@ -10,5 +10,5 @@ nuke_branch () {
   local branch="$1"
 
   git push --delete "$remote" "$branch"
-  git branch -d "$1"
+  git branch -D "$1"
 }
