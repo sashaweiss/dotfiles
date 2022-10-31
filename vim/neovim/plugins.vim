@@ -93,6 +93,7 @@ let g:AutoPairs = {'{':'}'}
 " *** GitGutter ***
 
 set updatetime=300
+
 command GitNext GitGutterNextHunk
 command GitPrev GitGutterPrevHunk
 
