@@ -139,10 +139,17 @@
   typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_CHAR=' '
 
   ################################[ prompt_char: prompt symbol ]################################
-  # Bright purple prompt symbol.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_FOREGROUND=129
-  # Muted purple prompt symbol when in command vi mode.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VICMD_FOREGROUND=055
+
+  # Bright purple prompt symbol for OK when inserting.
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_VIINS_FOREGROUND=129
+  # Muted purple prompt symbol for OK when in command vi mode.
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_VICMD_FOREGROUND=055
+
+  # Bright red prompt symbol for ERROR when inserting.
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_VIINS_FOREGROUND=124
+  # Muted red prompt symbol for ERROR when in command vi mode.
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_VICMD_FOREGROUND=052
+
   # Default prompt symbol. Previously, '❯'.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='%B;%b'
   # Prompt symbol in command vi mode. Previously, '❮'.
