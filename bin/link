@@ -10,6 +10,9 @@ ln -fs "$DOTFILES/util/git/gitconfig" "$HOME/.gitconfig"
 ln -fs "$DOTFILES/util/git/gitconfig_signal" "$HOME/.gitconfig_signal"
 
 ln -fs "$DOTFILES/util/tmux.conf" "$HOME/.tmux.conf"
+
+ln -fs "$DOTFILES/util/prettierrc" "$HOME/.prettierrc"
+
 ln -fs "$DOTFILES/util/asdf/tool-versions" "$HOME/.tool-versions"
 
 mkdir -p "$HOME/.config/nvim"
