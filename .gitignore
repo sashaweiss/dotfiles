@@ -1,8 +1,1 @@
-*.swp
 .DS_Store
-
-# Might have to build from source, will put in $DOTFILES/target
-target
-
-**/Alfred.alfredpreferences/**/local/
-**/Alfred.alfredpreferences/remote/
