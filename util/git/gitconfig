@@ -48,3 +48,7 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[machete "traverse"]
+  ; When using [git-machete](https://github.com/VirtusLab/git-machete), disable
+  ; pushing by default.
+	push = false
