@@ -117,7 +117,7 @@
 			"rememberWindowPosition": false,
 			"rescanEnabled": true,
 			"rescanIntervalInSeconds": 300,
-			"showAlwaysOnPrimaryDisplay": true,
+			"showAlwaysOnPrimaryDisplay": false,
 			"showTrayIcon": true,
 			"decimalSeparator": ".",
 			"lastWindowPosition": {
