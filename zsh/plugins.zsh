@@ -39,7 +39,13 @@ bindkey -M viins '^f' vi-forward-word # next word, how `vim` `w` would advance
 
 # delete backwards by vi-word, ref - https://unix.stackexchange.com/questions/250690/how-to-configure-ctrlw-as-delete-word-in-zsh
 vi-backward-delete-word() {
+    # Strip specific chars from WORDCHARS, so we break on it when deleting.
+    #
+    # Using multiple redefinitions seems to work - doing it as a one-liner
+    # didn't, so here we are.
     local WORDCHARS=${WORDCHARS/\//}
+    local WORDCHARS=${WORDCHARS/-/}
+    local WORDCHARS=${WORDCHARS/_/}
     zle backward-delete-word
 }
 zle -N vi-backward-delete-word
