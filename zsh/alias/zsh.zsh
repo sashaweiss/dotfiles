@@ -16,18 +16,11 @@ alias la='ls -alhF'
 
 alias untar='tar -xzvf'
 
-export WORK="$HOME/dev"
 alias work="cd $WORK"
 
-export SIGNAL="$WORK/signal"
-alias signal="cd $SIGNAL"
+alias notes="cd $WORK/notes"
 
-export CLONES="$HOME/dev/clones"
-alias clones="cd $CLONES"
-
-export PLAY="$HOME/Desktop"
 alias play="cd $PLAY"
 
-export DOWN="$HOME/Downloads"
 alias down="cd $DOWN"
 
