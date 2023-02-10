@@ -4,5 +4,6 @@ export DOTFILES="$HOME/.files"
 export HOSTNAME="$(hostname)"
 
 export WORK="$HOME/dev"
+export NOTES="$WORK/notes"
 export PLAY="$HOME/Desktop"
 export DOWN="$HOME/Downloads"

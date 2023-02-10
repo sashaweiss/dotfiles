@@ -17,10 +17,7 @@ alias la='ls -alhF'
 alias untar='tar -xzvf'
 
 alias work="cd $WORK"
-
-alias notes="cd $WORK/notes"
-
+alias notes="cd $NOTES"
 alias play="cd $PLAY"
-
 alias down="cd $DOWN"
 
