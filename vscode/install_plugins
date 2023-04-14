@@ -3,10 +3,7 @@
 declare -a extensions=(
   "equinusocio.vsc-material-theme"
   "esbenp.prettier-vscode"
-  "mariomatheu.syntax-project-pbxproj"
-  "mrmlnc.vscode-scss"
   "pkief.material-icon-theme"
-  "twxs.cmake"
   "vscodevim.vim"
 )
 
