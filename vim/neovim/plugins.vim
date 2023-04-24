@@ -37,9 +37,6 @@ Plug 'chaoren/vim-wordmotion'
 " Comment blocks of code
 Plug 'preservim/nerdcommenter'
 
-" Automatically close tags in *ml languages
-Plug 'alvan/vim-closetag', { 'for': ['html', 'xml'] }
-
 " Automatically close brackets and stuff
 Plug 'jiangmiao/auto-pairs'
 
