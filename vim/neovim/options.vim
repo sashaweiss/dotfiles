@@ -56,28 +56,6 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 
-" Autoremove trailing spaces when saving the buffer
-" Don't do it for Rust; let rustfmt handle that
-" Use g:StripWhitespace to temporarily disable this behavior
-let g:StripWhitespace = 1
-
-function! StripTrailingWhitespace()
-  if g:StripWhitespace != 1 || (exists("b:StripWhitespace") && b:StripWhitespace != 1)
-    return
-  endif
-
-  if &ft =~ 'rust'
-    return
-  endif
-
-  let l = line(".")
-  let c = col(".")
-  :%s/\s\+$//e
-  call cursor(l, c)
-endfunction
-
-autocmd BufWritePost * call StripTrailingWhitespace()
-
 " New panes to right and bottom
 set splitright
 
