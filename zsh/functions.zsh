@@ -6,7 +6,6 @@ source "$DOTFILES/zsh/functions/copy.zsh"
 source "$DOTFILES/zsh/functions/fd-copy.zsh"
 source "$DOTFILES/zsh/functions/is_linux.zsh"
 source "$DOTFILES/zsh/functions/is_mac.zsh"
-source "$DOTFILES/zsh/functions/is_wsl.zsh"
 source "$DOTFILES/zsh/functions/manage_proxy.zsh"
 source "$DOTFILES/zsh/functions/spectrum_ls.zsh"
 

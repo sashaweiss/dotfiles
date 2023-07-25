@@ -1,19 +1,18 @@
 #!/usr/bin/env zsh
 
 source "$DOTFILES/zsh/functions/is_mac.zsh"
-source "$DOTFILES/zsh/functions/is_wsl.zsh"
 
 ln -fs "$DOTFILES/zsh/zshrc" "$HOME/.zshrc"
 ln -fs "$DOTFILES/zsh/zshenv" "$HOME/.zshenv"
 
 ln -fs "$DOTFILES/util/git/gitconfig" "$HOME/.gitconfig"
-ln -fs "$DOTFILES/util/git/gitconfig_signal" "$HOME/.gitconfig_signal"
+ln -fs "$DOTFILES/util/git/gitconfig-signal" "$HOME/.gitconfig-signal"
 
 ln -fs "$DOTFILES/util/tmux.conf" "$HOME/.tmux.conf"
 
 ln -fs "$DOTFILES/util/prettierrc" "$HOME/.prettierrc"
 
-ln -fs "$DOTFILES/util/asdf/tool-versions" "$HOME/.tool-versions"
+ln -fs "$DOTFILES/util/asdf/tool-versions.config" "$HOME/.tool-versions"
 
 mkdir -p "$HOME/.config/nvim"
 ln -fs "$DOTFILES/vim/neovim/init.vim" "$HOME/.config/nvim/init.vim"
@@ -21,44 +20,12 @@ ln -fs "$DOTFILES/vim/neovim/init.vim" "$HOME/.config/nvim/init.vim"
 mkdir -p "$HOME/.config/vivid"
 ln -fs "$DOTFILES/util/vivid/filetypes.yml" "$HOME/.config/vivid/filetypes.yml"
 
-if is_mac; then
+is_mac || return 0
 
-  ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-  ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
 
-  ln -fs "$DOTFILES/macOS/ueli/config.json" "$HOME/Library/Application Support/ueli/config.json"
+ln -fs "$DOTFILES/macOS/ueli/config.json" "$HOME/Library/Application Support/ueli/config.json"
 
-  ln -fs "$DOTFILES/vim/xvimrc" "$HOME/.xvimrc"
-  ln -fs "$DOTFILES/vim/ideavimrc" "$HOME/.ideavimrc"
-
-elif is_wsl; then
-
-  "$DOTFILES/bin/wsl/mklink_wsl_to_windows" \
-    "/Users/saweiss/Documents/WindowsPowerShell/profile.ps1" \
-    "$DOTFILES/powershell/Profile.ps1"
-
-  "$DOTFILES/bin/wsl/mklink_wsl_to_windows" \
-    "/Users/saweiss/.vsvimrc" \
-    "$DOTFILES/vim/vsvimrc"
-
-  "$DOTFILES/bin/wsl/mklink_wsl_to_windows" \
-    "/Users/saweiss/.ideavimrc" \
-    "$DOTFILES/vim/ideavimrc"
-
-  "$DOTFILES/bin/wsl/mklink_wsl_to_windows" \
-    "/Users/saweiss/AppData/Roaming/Code/User/settings.json" \
-    "$DOTFILES/vscode/settings.json"
-
-  "$DOTFILES/bin/wsl/mklink_wsl_to_windows" \
-    "/Users/saweiss/AppData/Roaming/Code/User/keybindings.json" \
-    "$DOTFILES/vscode/keybindings.json"
-
-  "$DOTFILES/bin/wsl/mklink_wsl_to_windows" \
-    "/Users/saweiss/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/disable_ctrl_esc.ahk" \
-    "$DOTFILES/windows/disable_ctrl_esc.ahk"
-
-  "$DOTFILES/bin/wsl/mklink_wsl_to_windows" \
-    "/Users/saweiss/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json" \
-    "$DOTFILES/windows/windows_terminal_settings.json"
-
-fi
+ln -fs "$DOTFILES/vim/xvimrc" "$HOME/.xvimrc"
+ln -fs "$DOTFILES/vim/ideavimrc" "$HOME/.ideavimrc"

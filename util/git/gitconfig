@@ -2,7 +2,7 @@
   name = sashaweiss
   email = asashaweiss@gmail.com
 [includeIf "hasconfig:remote.*.url:git@github-signal:signalapp/*"]
-  path = .gitconfig_signal
+  path = .gitconfig-signal
 [interactive]
   diffFilter = delta --color-only --features=interactive
 [core]
