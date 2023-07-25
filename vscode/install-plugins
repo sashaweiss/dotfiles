@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 declare -a extensions=(
+  "equinusocio.vsc-community-material-theme"
   "equinusocio.vsc-material-theme"
+  "equinusocio.vsc-material-theme-icons"
   "esbenp.prettier-vscode"
   "pkief.material-icon-theme"
   "vscodevim.vim"
