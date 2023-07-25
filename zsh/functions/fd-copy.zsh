@@ -11,5 +11,5 @@ fd-copy () {
     return 1
   fi
 
-  fd -t f "$1" | xargs -I{} cp "{}" "$2"
+  fd -t f "$1" | xargs -I{} cp "{}" "$2/{}"
 }
