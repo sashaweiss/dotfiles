@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-./zsh/functions/is_wsl || exit 1
-
-# Pipe stderr to sed to cut first three lines - starting cmd.exe from a non-mapped
-# network drive (e.g. \\wsl$) prints a three-line error message.
-cmd.exe "$@" |& sed '1,3d'
