@@ -9,7 +9,7 @@
 [interactive]
   diffFilter = delta --color-only --features=interactive
 [core]
-  pager = delta | less -+F
+  pager = delta | bat
   whitespace = cr-at-eol
   ignorecase = false
 [delta]
