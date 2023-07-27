@@ -6,7 +6,7 @@
 [interactive]
   diffFilter = delta --color-only --features=interactive
 [core]
-  pager = delta | bat ; use `less -+F` if bat is not available
+  pager = delta | bat --pager 'less -+F' ; use `less -+F` if bat is not available
   whitespace = cr-at-eol
   ignorecase = false
 [delta]
