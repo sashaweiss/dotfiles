@@ -17,6 +17,8 @@
         "editorOverviewRuler.rangeHighlightForeground": "#00000000"
     },
 
+    "editor.rulers": [80],
+
     // Don't auto-reveal files in the explorer
     "explorer.autoReveal": false,
 
