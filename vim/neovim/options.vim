@@ -26,9 +26,6 @@ set linebreak
 " Wrap lines by default
 set wrap
 
-" Show a ruler at 80 characters
-set colorcolumn=80
-
 " Keep gutter open
 set signcolumn=yes
 
