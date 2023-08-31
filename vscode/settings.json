@@ -109,6 +109,10 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+
     "[markdown]": {
         "editor.tabSize": 2,
         "editor.wordWrap": "wordWrapColumn",
