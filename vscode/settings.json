@@ -76,7 +76,6 @@
     // Don't format my C++
     "C_Cpp.formatting": "Disabled",
 
-    "python.showStartPage": false,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -109,8 +108,13 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
+    "python.showStartPage": false,
+    "python.analysis.typeCheckingMode": "basic",
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": false, // Unsupported
+        "editor.formatOnSelect": false // Unsupported
     },
 
     "[markdown]": {
