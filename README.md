@@ -32,16 +32,6 @@ I am currently using a [custom build](https://github.com/natasha-codes/fonts) of
 [Iosevka](https://github.com/be5invis/Iosevka) as my default font for coding,
 specifically `Natasha II`.
 
-### Per-platform
-
-See my [Windows](./windows/README.md) and [Mac](./macOS/README.md) for platform-specific
-configs/applications/utilities.
-
-#### To make `brew`'s `zsh` the default shell:
-
-Add `$(brew --prefix)/bin/zsh` (the result of running that expression, not the expression
-itself) to `/etc/shells`. Run `chsh -s $(brew --prefix)/bin/zsh`.
-
 ### [asdf](https://github.com/asdf-vm/asdf)
 
 I use `asdf` as a version manager for `node`, `python`, and `ruby`.
