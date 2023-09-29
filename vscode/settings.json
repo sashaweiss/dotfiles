@@ -108,10 +108,12 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
-    "python.showStartPage": false,
     "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.extraPaths": [
+        "~/.asdf/installs/python/3.11.5/lib/python3.11/site-packages"
+    ],
     "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnSave": true,
         "editor.formatOnPaste": false, // Unsupported
         "editor.formatOnSelect": false // Unsupported
@@ -126,9 +128,6 @@
     "[diff]": {
         "files.trimTrailingWhitespace": false
     },
-
-    // Don't use the Jupyter viewer in VSCode for notebook files
-    "jupyter.useNotebookEditor": false,
 
     "files.associations": {
         "*.resx": "xml",
