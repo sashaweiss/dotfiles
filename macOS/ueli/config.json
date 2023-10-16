@@ -101,7 +101,7 @@
 			"showHiddenFiles": false
 		},
 		"generalOptions": {
-			"allowWindowMove": true,
+			"allowWindowMove": false,
 			"autostart": true,
 			"clearCachesOnExit": false,
 			"hideMainWindowAfterExecution": true,
@@ -112,7 +112,7 @@
 				"secondModifier": "-"
 			},
 			"language": "English",
-			"logExecution": true,
+			"logExecution": false,
 			"persistentUserInput": false,
 			"rememberWindowPosition": false,
 			"rescanEnabled": true,
@@ -262,6 +262,10 @@
 		"workflowOptions": {
 			"isEnabled": false,
 			"workflows": []
+		},
+		"loremIpsumOptions": {
+			"isEnabled": false,
+			"prefix": "lipsum"
 		}
 	}
 }
