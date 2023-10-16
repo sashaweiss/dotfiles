@@ -63,6 +63,8 @@ Config:
 
 -   Settings -> Controls -> Shortcut 1 -> Set Cmd+Tab as the shortcut
 -   Settings -> Appearance -> Check "Hide apps with no open window"
+-   Settings -> Controls -> Miscellaneous -> Check "Cursor follows focus"
+    - This helps things like `ueli` understand where the "active" display is.
 
 ## [iTerm](https://iterm2.com)
 
