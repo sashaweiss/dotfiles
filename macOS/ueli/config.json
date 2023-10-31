@@ -39,7 +39,7 @@
 			"isEnabled": false
 		},
 		"calculatorOptions": {
-			"isEnabled": true,
+			"isEnabled": false,
 			"precision": 16
 		},
 		"colorConverterOptions": {
