@@ -22,6 +22,8 @@ ln -fs "$DOTFILES/util/vivid/filetypes.yml" "$HOME/.config/vivid/filetypes.yml"
 
 is_mac || return 0
 
+ln -fs "$DOTFILES/alacritty/alacritty.toml" "$HOME/.alacritty.toml"
+
 ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
 

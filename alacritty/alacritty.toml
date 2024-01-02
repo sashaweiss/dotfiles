@@ -1,0 +1,14 @@
+# working_directory = "~/dev"
+
+import = [
+  "~/.files/alacritty/oceanic-next.toml"
+]
+
+[window]
+startup_mode = "Maximized"
+option_as_alt = "Both"
+padding = { y = 8, x = 4 }
+
+[font]
+normal = { family = "Natasha II", style = "Regular" }
+size = 15
