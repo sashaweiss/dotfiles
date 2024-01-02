@@ -143,8 +143,21 @@
 			"maxSearchResults": 24
 		},
 		"shortcutOptions": {
-			"isEnabled": false,
-			"shortcuts": []
+			"isEnabled": true,
+			"shortcuts": [
+				{
+					"description": "",
+					"executionArgument": "/Applications/Alacritty.app",
+					"icon": {
+						"parameter": "",
+						"type": "URL"
+					},
+					"name": "iterm",
+					"needsUserConfirmationBeforeExecution": false,
+					"tags": [],
+					"type": "File path"
+				}
+			]
 		},
 		"simpleFolderSearchOptions": {
 			"folders": [
