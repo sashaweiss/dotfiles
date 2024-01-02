@@ -11,4 +11,4 @@ padding = { y = 8, x = 4 }
 
 [font]
 normal = { family = "Natasha II", style = "Regular" }
-size = 15
+size = 16
