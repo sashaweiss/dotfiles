@@ -115,7 +115,7 @@
 			"logExecution": false,
 			"persistentUserInput": false,
 			"rememberWindowPosition": false,
-			"rescanEnabled": true,
+			"rescanEnabled": false,
 			"rescanIntervalInSeconds": 300,
 			"showAlwaysOnPrimaryDisplay": false,
 			"showTrayIcon": true,
