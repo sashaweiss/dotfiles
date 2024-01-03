@@ -5,9 +5,11 @@ import = [
 ]
 
 [window]
-startup_mode = "Maximized"
 option_as_alt = "Both"
+startup_mode = "Maximized"
 padding = { y = 8, x = 4 }
+title = "Ye Olde Terminale"
+dynamic_title = false
 
 [font]
 normal = { family = "Natasha II", style = "Regular" }
