@@ -17,7 +17,7 @@ fzf_gr () {
     | grep -v '/HEAD\s' \
     | sort \
     | fzf --ansi --multi --tac \
-    --preview-window 'down:70%' \
+    --preview-window 'down:60%' \
     --bind="$bindings" \
     --preview "$preview" \
     | sed 's/^..//' \
