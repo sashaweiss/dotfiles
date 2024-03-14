@@ -38,9 +38,8 @@
 
   machete-discover = machete discover
   machete-status = machete status --list-commits-with-hashes
-  ; TODO: add `--whole` to the following commands. Blocked by https://github.com/VirtusLab/git-machete/issues/1205.
-  machete-rebase = machete traverse --no-push
-  machete-push = machete traverse --push
+  machete-rebase = machete traverse --no-push --start-from=first-root --return-to=stay
+  machete-push = machete traverse --push --start-from=first-root --return-to=stay
 [grep]
   linenumber = true
 [init]
