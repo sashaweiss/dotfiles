@@ -37,9 +37,10 @@
   addnowhitespace = !sh -c 'git diff -U0 -w --no-color "$@" | git apply --cached --ignore-whitespace --unidiff-zero -'
 
   machete-discover = machete discover
-  machete-rebase = machete traverse --whole --no-push
   machete-status = machete status --list-commits-with-hashes
-  machete-push = machete traverse --whole --push
+  ; TODO: add `--whole` to the following commands. Blocked by https://github.com/VirtusLab/git-machete/issues/1205.
+  machete-rebase = machete traverse --no-push
+  machete-push = machete traverse --push
 [grep]
   linenumber = true
 [init]
