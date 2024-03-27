@@ -6,16 +6,18 @@
 [interactive]
   diffFilter = delta --color-only --features=interactive
 [core]
-  pager = delta | bat --pager 'less -+F' ; use `less -+F` if bat is not available
+  ; Also see delta.zsh for config.
+  pager = delta
   whitespace = cr-at-eol
   ignorecase = false
 [delta]
-  syntax-theme = Monokai Extended
   line-numbers = true
-  file-style = blue bold
+  side-by-side = true
+  syntax-theme = Monokai Extended Bright
+  file-style = blue bold italic
   file-decoration-style = blue ul bold
   hunk-header-style = syntax
-  hunk-header-decoration-style = blue box bold
+  hunk-header-decoration-style = blue box bold ul
   minus-style = syntax "#6e1326"
   minus-emph-style = syntax bold "#bd1515"
   plus-style = syntax "#0d4a27"
