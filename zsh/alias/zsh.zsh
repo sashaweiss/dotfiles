@@ -11,9 +11,6 @@ alias pg='ping google.com'
 
 alias e="$EDITOR"
 
-alias l='ls -lFh'
-alias la='ls -alhF'
-
 alias untar='tar -xzvf'
 
 alias work="cd $WORK"
