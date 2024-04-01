@@ -16,12 +16,6 @@ inoremap <ScrollWheelUp> <nop>
 noremap <ScrollWheelDown> <nop>
 inoremap <ScrollWheelDown> <nop>
 
-" Jump paragraphs using capital J and K
-nnoremap J }
-vnoremap J }
-nnoremap K {
-vnoremap K {
-
 " Move by display lines
 nnoremap <silent> k gk
 nnoremap <silent> j gj
