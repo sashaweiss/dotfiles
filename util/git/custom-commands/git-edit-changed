@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+git status --porcelain --untracked-files=all | rg -v '^D' | git get-porcelain-filename | xargs $EDITOR
