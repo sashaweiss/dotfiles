@@ -39,6 +39,7 @@
       command_execution_time  # duration of the last command
       # =========================[ Line #2 ]=========================
       newline
+      context                 # user@hostname
       prompt_char             # prompt symbol
   )
 
@@ -48,8 +49,6 @@
   # last prompt line gets hidden if it would overlap with left prompt.
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
       # =========================[ Line #1 ]=========================
-      rust_version            # rustc version (https://www.rust-lang.org)
-      context                 # user@hostname
       # =========================[ Line #2 ]=========================
       newline
   )
