@@ -144,20 +144,7 @@
 		},
 		"shortcutOptions": {
 			"isEnabled": true,
-			"shortcuts": [
-				{
-					"description": "",
-					"executionArgument": "/Applications/Alacritty.app",
-					"icon": {
-						"parameter": "",
-						"type": "URL"
-					},
-					"name": "iterm",
-					"needsUserConfirmationBeforeExecution": false,
-					"tags": [],
-					"type": "File path"
-				}
-			]
+			"shortcuts": []
 		},
 		"simpleFolderSearchOptions": {
 			"folders": [

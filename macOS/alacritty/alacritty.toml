@@ -1,7 +1,7 @@
 # working_directory = "~/dev"
 
 import = [
-  "~/.files/alacritty/oceanic-next.toml"
+  "~/.files/macOS/alacritty/oceanic-next.toml"
 ]
 
 [window]
