@@ -144,7 +144,20 @@
 		},
 		"shortcutOptions": {
 			"isEnabled": true,
-			"shortcuts": []
+			"shortcuts": [
+				{
+					"description": "",
+					"executionArgument": "/Applications/iTerm.app",
+					"icon": {
+						"parameter": "",
+						"type": "URL"
+					},
+					"name": "alacritty",
+					"needsUserConfirmationBeforeExecution": false,
+					"tags": [],
+					"type": "File path"
+				}
+			]
 		},
 		"simpleFolderSearchOptions": {
 			"folders": [
