@@ -22,7 +22,7 @@ vim.opt.linebreak = true
 vim.opt.wrap = true
 
 -- Always show the gutter
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "yes:2"
 
 -- Show as much of wrapped lines going off the screen as possible
 vim.opt.display:append { "lastline" }
