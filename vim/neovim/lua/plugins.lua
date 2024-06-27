@@ -48,40 +48,42 @@ vim.call('plug#end')
 
 -- gitsigns
 
+
+
 require('gitsigns').setup {
 	signs = {
-		add = { text = ' +' },
-		change = { text = ' ~' },
-		changedelete = { text = ' ~' },
-		delete = { text = ' -' },
-		topdelete = { text = ' -' },
-		untracked = { text = ' ?' },
+		add = { text = '+' },
+		change = { text = '~' },
+		changedelete = { text = '~' },
+		delete = { text = '-' },
+		topdelete = { text = '-' },
+		untracked = { text = '?' },
 	},
 	signs_staged = {
-		add = { text = '|+' },
-		change = { text = '|~' },
-		changedelete = { text = '|~' },
-		delete = { text = '|-' },
-		topdelete = { text = '|-' },
+		add = { text = '+' },
+		change = { text = '~' },
+		changedelete = { text = '~' },
+		delete = { text = '-' },
+		topdelete = { text = '-' },
 	},
 }
 
 vim.cmd.highlight({ "GitSignsAdd", "guifg=lightgreen", "guibg=none" })
-vim.cmd.highlight({ "GitSignsStagedAdd", "guifg=lightgreen", "guibg=none" })
+vim.cmd.highlight({ "GitSignsStagedAdd", "guifg=lightgreen", "guibg=darkgreen" })
 
 vim.cmd.highlight({ "GitSignsChange", "guifg=yellow", "guibg=none" })
-vim.cmd.highlight({ "GitSignsStagedChange", "guifg=yellow", "guibg=none" })
+vim.cmd.highlight({ "GitSignsStagedChange", "guifg=yellow", "guibg=darkyellow" })
 
 vim.cmd.highlight({ "GitSignsChangedelete", "guifg=yellow", "guibg=none" })
-vim.cmd.highlight({ "GitSignsStagedChangedelete", "guifg=yellow", "guibg=none" })
+vim.cmd.highlight({ "GitSignsStagedChangedelete", "guifg=yellow", "guibg=darkyellow" })
 
 vim.cmd.highlight({ "GitSignsDelete", "guifg=red", "guibg=none" })
-vim.cmd.highlight({ "GitSignsStagedDelete", "guifg=red", "guibg=none" })
+vim.cmd.highlight({ "GitSignsStagedDelete", "guifg=red", "guibg=darkred" })
 
 vim.cmd.highlight({ "GitSignsTopdelete", "guifg=red", "guibg=none" })
-vim.cmd.highlight({ "GitSignsStagedTopdelete", "guifg=red", "guibg=none" })
+vim.cmd.highlight({ "GitSignsStagedTopdelete", "guifg=red", "guibg=darkred" })
 
-vim.cmd.highlight({ "GitSignsUntracked", "guifg=green", "guibg=none" })
+vim.cmd.highlight({ "GitSignsUntracked", "guifg=blue", "guibg=none" })
 
 vim.api.nvim_create_user_command('Blame', 'Gitsigns blame', {})
 
