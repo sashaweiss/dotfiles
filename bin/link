@@ -15,7 +15,7 @@ ln -fs "$DOTFILES/util/prettierrc" "$HOME/.prettierrc"
 ln -fs "$DOTFILES/util/asdf/tool-versions.config" "$HOME/.tool-versions"
 
 mkdir -p "$HOME/.config/nvim"
-ln -fs "$DOTFILES/vim/neovim/init.vim" "$HOME/.config/nvim/init.vim"
+ln -fs "$DOTFILES/vim/neovim/init.lua" "$HOME/.config/nvim/init.lua"
 
 mkdir -p "$HOME/.config/vivid"
 ln -fs "$DOTFILES/util/vivid/filetypes.yml" "$HOME/.config/vivid/filetypes.yml"
