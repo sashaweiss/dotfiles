@@ -83,6 +83,8 @@ vim.cmd.highlight({ "GitSignsStagedTopdelete", "guifg=red", "guibg=none" })
 
 vim.cmd.highlight({ "GitSignsUntracked", "guifg=green", "guibg=none" })
 
+vim.api.nvim_create_user_command('Blame', 'Gitsigns blame', {})
+
 -- Airline
 
 vim.g.airline_theme = 'base16_ashes'
