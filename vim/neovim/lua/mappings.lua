@@ -15,7 +15,7 @@ vim.keymap.set('n', '<silent>', 'k gk')
 vim.keymap.set('n', '<silent>', 'j gj')
 
 -- Copy to system (only applicable on Mac)
-vim.keymap.set('n', '<leader>y', '"*y')
+vim.keymap.set('', '<leader>y', '"*y')
 
 -- Override * to keep the cursor at the current location after searching
 vim.keymap.set('n', '*', ':keepjumps normal! mi*`i<CR>')
