@@ -16,6 +16,9 @@ Plug('neoclide/jsonc.vim')
 -- File browsing
 Plug('scrooloose/nerdtree')
 
+-- Highlight trailing whitespace
+Plug('ntpeters/vim-better-whitespace')
+
 -- FZF for fuzzy-matching files, search results, etc.
 Plug('junegunn/fzf')
 Plug('sashaweiss/fzf.vim', { ['branch'] = 'preview_fix' }) -- Use my fork which implements the community's solution to https://github.com/junegunn/fzf.vim/issues/751
@@ -28,9 +31,6 @@ Plug('bling/vim-airline')
 
 -- Themes for said statusline
 Plug('vim-airline/vim-airline-themes')
-
--- Move by 'subword', i.e. through camelCase and snake_case words
-Plug('chaoren/vim-wordmotion')
 
 -- Comment blocks of code
 Plug('preservim/nerdcommenter')
