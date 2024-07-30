@@ -7,12 +7,6 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 
--- Syntax highlighting for pretty much every language
-Plug('sheerun/vim-polyglot')
-
--- Except JSONC
-Plug('neoclide/jsonc.vim')
-
 -- File browsing
 Plug('scrooloose/nerdtree')
 
