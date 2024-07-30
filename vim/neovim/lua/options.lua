@@ -61,6 +61,13 @@ vim.api.nvim_create_autocmd({"FileType"}, {
   callback = function() vim.opt.indentexpr='' end,
 })
 
+-- Map custom extensions to known filetypes
+vim.filetype.add({
+  extension = {
+    jsonproto = 'json5'
+  }
+})
+
 -- Search case-sensitive if capital in pattern, otherwise insensitive
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
