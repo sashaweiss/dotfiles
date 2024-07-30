@@ -2,7 +2,7 @@
   name = sashaweiss
   email = asashaweiss@gmail.com
 
-[includeIf "hasconfig:remote.*.url:git@github-signal:signalapp/*"]
+[includeIf "hasconfig:remote.*.url:git@github-signal:**/*"]
   path = .gitconfig_signal
 
 [interactive]
