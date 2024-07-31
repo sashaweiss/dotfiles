@@ -23,6 +23,7 @@ source "$DOTFILES/zsh/plugins.zsh"
 source "$DOTFILES/zsh/prompt.zsh"
 source "$DOTFILES/zsh/rust.zsh"
 source "$DOTFILES/zsh/settings.zsh"
+source "$DOTFILES/zsh/tools.zsh"
 source "$DOTFILES/zsh/vscode.zsh"
 
 # Note: no quotes below to get proper expansion
