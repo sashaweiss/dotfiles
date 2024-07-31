@@ -11,8 +11,8 @@ vim.keymap.set('n', '<leader>w', ':bprevious <BAR> bd #<CR>')
 vim.keymap.set('n', '<leader>W', ':bprevious <BAR> bd! #<CR>')
 
 -- Move by display lines
-vim.keymap.set('n', '<silent>', 'k gk')
-vim.keymap.set('n', '<silent>', 'j gj')
+vim.keymap.set('n', 'k', 'gk')
+vim.keymap.set('n', 'j', 'gj')
 
 -- Copy to system (only applicable on Mac)
 vim.keymap.set('', '<leader>y', '"*y')
