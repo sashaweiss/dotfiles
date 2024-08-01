@@ -32,7 +32,6 @@ bind-git-helper() {
   done
 }
 
-# f - list files (what `git status` would list)
 # r - list branches (including remotes)
 # c - list commits
 bind-git-helper r c

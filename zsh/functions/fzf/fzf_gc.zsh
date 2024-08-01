@@ -11,7 +11,7 @@ fzf_gc () {
 
   # Extract the commit hash from the oneline, pipe it to `git show`
   local preview='\
-    grep -o "[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\} [a-f0-9]\{7\}" <<< {} \
+    grep -o "[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\} [a-f0-9]\{7,\}" <<< {} \
     | cut -d " " -f 2 \
     | xargs git show --color=always \
     | bat'
