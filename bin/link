@@ -26,5 +26,6 @@ ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/
 ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
 
 ln -fs "$DOTFILES/macOS/ueli/config.json" "$HOME/Library/Application Support/ueli/config.json"
+ln -fs "$DOTFILES/macOS/ueli/ueli9.settings.json" "$HOME/Library/Application Support/ueli/ueli9.settings.json"
 
 ln -fs "$DOTFILES/vim/ideavimrc" "$HOME/.ideavimrc"

@@ -1,0 +1,25 @@
+{
+    "appearance.searchBarAppearance": "auto",
+    "appearance.searchBarPlaceholderText": "",
+    "appearance.searchBarSize": "large",
+    "extension[ApplicationSearch].macOsFolders": [
+        "/System/Applications",
+        "/System/Library/CoreServices",
+        "/Applications"
+    ],
+    "extensions.enabledExtensionIds": [
+        "SystemSettings",
+        "SystemCommands",
+        "ApplicationSearch",
+        "UeliCommand"
+    ],
+    "general.hotkey": "Cmd+Space",
+    "general.searchHistory.enabled": false,
+    "general.searchHistory.history": [],
+    "window.alwaysOnTop": false,
+    "window.hideWindowOn": [
+        "blur",
+        "escapePressed",
+        "afterInvocation"
+    ]
+}
