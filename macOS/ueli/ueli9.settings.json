@@ -1,13 +1,13 @@
 {
-    "appearance.searchBarAppearance": "auto",
+    "appearance.searchBarAppearance": "underline",
     "appearance.searchBarPlaceholderText": "",
     "appearance.searchBarSize": "large",
     "extension[ApplicationSearch].macOsFolders": [
         "/System/Applications",
-        "/System/Library/CoreServices",
         "/Applications"
     ],
     "extensions.enabledExtensionIds": [
+        "FileSearch",
         "SystemSettings",
         "SystemCommands",
         "ApplicationSearch",
