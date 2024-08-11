@@ -12,7 +12,7 @@ zstyle ':completion:*' menu select
 # Use LS_COLORS for zsh completions
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-if command -v fzf; then
+if command -v fzf > /dev/null; then
   # Functionally disable this fzf-tab feature, which
   # defaults to `/`, by mapping it to a character ("=") that appears rarely in paths.
   zstyle ':fzf-tab:*' continuous-trigger '='
