@@ -1,5 +1,9 @@
 #!/usr/bin/env zsh
 
+if ! command -v fzf > /dev/null; then
+  return
+fi
+
 # fuzzy finder
 # ref - https://github.com/junegunn/fzf
 #
@@ -13,7 +17,7 @@
 
 # <<<< completion >>>>
 
-fzf_prefix="$(brew --prefix fzf)/shell"
+fzf_prefix="$BREW_PREFIX/opt/fzf"
 
 # Note: `$-` lists options set in current shell
 # ref - https://stackoverflow.com/questions/5163144/what-are-the-special-dollar-sign-shell-variables
@@ -55,7 +59,11 @@ export FZF_EDIT_OPTS="$_fzf_bat_preview"
 # <<<< commands >>>>
 
 export FZF_DEFAULT_COMMAND="$_fd_with_default_args"
+
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# Disable. Overridden by a custom M-C command anyway.
+FZF_CTRL_C_COMMAND=""
 
 # << zsh functions -> widgets >>
 zle -N fzf-edit-widget

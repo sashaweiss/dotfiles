@@ -2,6 +2,7 @@
 
 export DOTFILES="$HOME/.files"
 export HOSTNAME="$(hostname)"
+export BREW_PREFIX="/opt/homebrew"
 
 export WORK="$HOME/dev"
 export NOTES="$WORK/notes"

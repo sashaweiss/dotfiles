@@ -21,7 +21,9 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light romkatv/powerlevel10k
 
 # See `completions.zsh` for some configuration
-zinit light Aloxaf/fzf-tab
+if command -v fzf > /dev/null; then
+  zinit light Aloxaf/fzf-tab
+fi
 
 # Autosuggestions
 # ref - https://github.com/zsh-users/zsh-autosuggestions#configuration

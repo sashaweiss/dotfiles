@@ -13,6 +13,11 @@ export KEYTIMEOUT=20
 # map jk to esc in insert mode
 bindkey -M viins 'jk' vi-cmd-mode
 
+# if there's no fzf, we won't have a C-R history reverse-search mapping. Set it up now.
+if ! command -v fzf > /dev/null; then
+  bindkey '^R' history-incremental-search-backward
+fi
+
 # map non-vi-mode line editing in insert mode
 bindkey -M viins '^w' backward-delete-word
 bindkey -M viins '^u' backward-kill-line
@@ -34,9 +39,3 @@ bindkey -M viins '^a' vi-digit-or-beginning-of-line
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
-
-# *** not vim mode
-
-zmodload zsh/complist
-
-bindkey -M menuselect '^[[Z' reverse-menu-complete

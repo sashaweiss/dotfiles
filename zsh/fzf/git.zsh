@@ -1,5 +1,9 @@
 #!/usr/bin/env zsh
 
+if ! command -v fzf > /dev/null; then
+  return
+fi
+
 # fzf ❤️ git
 # useful combinations of git & fzf
 # this file specifies keybinding for functions defined in

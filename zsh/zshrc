@@ -11,7 +11,7 @@ source "$DOTFILES/zsh/keymap.zsh"
 
 source "$DOTFILES/zsh/android.zsh"
 source "$DOTFILES/zsh/asdf.zsh"
-source "$DOTFILES/zsh/completion.zsh"
+# source "$DOTFILES/zsh/completion.zsh"
 source "$DOTFILES/zsh/console.app.zsh"
 source "$DOTFILES/zsh/delta.zsh"
 source "$DOTFILES/zsh/editor.zsh"

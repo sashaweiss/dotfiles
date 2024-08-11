@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 
-brew_prefix=$(brew --prefix asdf)
+local asdf_prefix="$BREW_PREFIX/opt/asdf"
+local asdf_initialization="$asdf_prefix/libexec/asdf.sh"
 
-asdf_initialization="$brew_prefix/libexec/asdf.sh"
 [ -f "$asdf_initialization" ] && source "$asdf_initialization"
-unset asdf_initialization
