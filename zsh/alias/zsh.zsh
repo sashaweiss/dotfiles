@@ -7,14 +7,10 @@ alias d='date'
 
 alias dot="cd $DOTFILES"
 
-alias pg='ping google.com'
-
 alias e="$EDITOR"
 
 alias untar='tar -xzvf'
 
-alias work="cd $WORK"
-alias notes="cd $NOTES"
-alias play="cd $PLAY"
+alias desk="cd $PLAY"
 alias down="cd $DOWN"
-
+alias work="cd $WORK"
