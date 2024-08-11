@@ -17,7 +17,7 @@ fi
 
 # <<<< completion >>>>
 
-fzf_prefix="$BREW_PREFIX/opt/fzf"
+fzf_prefix="$BREW_PREFIX/opt/fzf/shell"
 
 # Note: `$-` lists options set in current shell
 # ref - https://stackoverflow.com/questions/5163144/what-are-the-special-dollar-sign-shell-variables
