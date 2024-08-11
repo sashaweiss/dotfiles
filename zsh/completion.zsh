@@ -13,8 +13,8 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 if command -v fzf; then
-  # An fzf-tab feature I don't really understand, which defaults to `/`.
-  # Remap it to a key I use less frequently in paths 😊
+  # Functionally disable this fzf-tab feature, which
+  # defaults to `/`, by mapping it to a character ("=") that appears rarely in paths.
   zstyle ':fzf-tab:*' continuous-trigger '='
 fi
 

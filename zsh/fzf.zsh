@@ -18,31 +18,12 @@ fi
 # <<<< completion >>>>
 
 fzf_prefix="$BREW_PREFIX/opt/fzf/shell"
-
-# Note: `$-` lists options set in current shell
-# ref - https://stackoverflow.com/questions/5163144/what-are-the-special-dollar-sign-shell-variables
-[[ $- == *i* ]] && {
-  source "$fzf_prefix/completion.zsh" 2>/dev/null
-}
-
-# keybindings
+source "$fzf_prefix/completion.zsh"
 source "$fzf_prefix/key-bindings.zsh"
 
-_fd_with_default_args='fd --hidden --follow --exclude ".git" --strip-cwd-prefix'
-
-# use `fd` for `**` path completion
-# `$1` is the base path to start traversal
-_fzf_compgen_path() {
-  $_fd_with_default_args . "$1"
-}
-
-# use `fd` for `**` directory completion
-# `$1` is the base path to start traversal
-_fzf_compgen_dir() {
-  $_fd_with_default_args --type directory . "$1"
-}
-
 # <<<< options >>>>
+
+_fd_with_default_args='fd --hidden --follow --exclude ".git" --strip-cwd-prefix'
 
 _fzf_preview_window="--preview-window=down:75%"
 _fzf_preview_window_hidden="${_fzf_preview_window}:hidden"
@@ -67,3 +48,42 @@ FZF_CTRL_C_COMMAND=""
 
 # << zsh functions -> widgets >>
 zle -N fzf-edit-widget
+
+
+# -- Git Integration --
+#
+# See also:
+#   - https://junegunn.kr/2016/07/fzf-git
+#   - https://gist.github.com/junegunn/8b572b8d4b5eddd8b85e5f4d40f17236
+#
+# Thanks to @nathanshelly 💙
+
+# join multi-line output from fzf
+join-lines() {
+  local item
+  while read item; do
+    echo -n "${(q)item} "
+  done
+}
+
+# Generate an `fzf-g<char>-widget () { ... }` function, with `<char`> provided
+# as an argument. Requires that a function `fzf-g<char>` exist in `$PATH`. See
+# also `./functions/fzf/`.
+bind-git-helper() {
+  local c
+  for c in $@; do
+    eval "fzf-g$c-widget() {\
+      zle reset-prompt;\
+      local result=\$(fzf_g$c | join-lines);\
+      zle reset-prompt;\
+      LBUFFER+=\$result\
+    }"
+    eval "zle -N fzf-g$c-widget"
+    eval "bindkey '\e$c' fzf-g$c-widget"
+  done
+}
+
+# r - list branches (including remotes)
+# c - list commits
+bind-git-helper r c
+unset -f bind-git-helper
