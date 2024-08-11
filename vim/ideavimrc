@@ -13,16 +13,6 @@ set smartcase
 
 inoremap jk <esc>
 
-nnoremap J }
-vnoremap J }
-nnoremap K {
-vnoremap K {
-
-nnoremap z $
-vnoremap z $h
-nnoremap Z ^
-vnoremap Z ^
-
 nnoremap gh :action ShowErrorDescription<CR>
 nnoremap ge :action GotoNextError<CR>
 nnoremap gi :action GotoImplementation<CR>
