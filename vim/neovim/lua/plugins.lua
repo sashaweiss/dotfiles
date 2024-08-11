@@ -15,7 +15,7 @@ Plug('ntpeters/vim-better-whitespace')
 
 -- FZF for fuzzy-matching files, search results, etc.
 Plug('junegunn/fzf')
-Plug('sashaweiss/fzf.vim', { ['branch'] = 'preview_fix' }) -- Use my fork which implements the community's solution to https://github.com/junegunn/fzf.vim/issues/751
+Plug('junegunn/fzf.vim')
 
 -- Show git signs in the gutter
 Plug('lewis6991/gitsigns.nvim')
