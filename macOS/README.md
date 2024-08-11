@@ -14,9 +14,8 @@ Live notes on my installation process for a fresh, clean machine.
 6. Once `brew` is done installing, run `DOTFILES="$HOME/.files" ./bin/link`.
    This [SO post](https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories)
    may end up relevant.
-7. Clone `natasha-codes/fonts` using `git-lfs`. Install the `Natasha II` font.
-8. Open `nvim` and run `:PlugInstall`.
-9. Install `asdf` via `/util/asdf/setup_asdf`. (On an M1 Mac, had to run
+7. Open `nvim` and run `:PlugInstall`.
+8. Install `asdf` via `/util/asdf/setup_asdf`. (On an M1 Mac, had to run
    `arch -x86_64 zsh` and do `asdf install` from there to install `node`,
    but Python needed to be installed from `arm64` `zsh`. _shrug_)
 
