@@ -64,7 +64,8 @@ vim.api.nvim_create_autocmd({"FileType"}, {
 -- Map custom extensions to known filetypes
 vim.filetype.add({
   extension = {
-    jsonproto = 'json5'
+    jsonproto = 'json5',
+    json = 'json5'
   }
 })
 

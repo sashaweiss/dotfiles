@@ -84,6 +84,10 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -106,17 +110,6 @@
 
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
-    "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.extraPaths": [
-        "~/.asdf/installs/python/3.11.5/lib/python3.11/site-packages"
-    ],
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
-        "editor.formatOnPaste": false, // Unsupported
-        "editor.formatOnSelect": false // Unsupported
     },
 
     "[markdown]": {
