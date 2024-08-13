@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+if [ "$#" -ne 1 ]; then
+  echo "Missing required argument: branch"
+  exit 1
+fi
+
+git checkout main
+git pull || git pull # Try twice
+git branch -D "$1"
+
+git machete-rebase
