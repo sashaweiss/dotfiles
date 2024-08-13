@@ -16,5 +16,6 @@
         "blur",
         "afterInvocation",
         "escapePressed"
-    ]
+    ],
+    "window.visibleOnAllWorkspaces": true
 }
