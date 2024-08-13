@@ -1,0 +1,20 @@
+{
+    "extension[SimpleFolderSearch].folders": [
+        "/Users/sasha",
+        "/"
+    ],
+    "extensions.enabledExtensionIds": [
+        "SystemCommands",
+        "SimpleFolderSearch",
+        "ApplicationSearch",
+        "UeliCommand"
+    ],
+    "general.hotkey": "Cmd+Space",
+    "searchEngine.maxResultLengthEmptySearchTerm": 0,
+    "window.alwaysCenter": true,
+    "window.hideWindowOn": [
+        "blur",
+        "afterInvocation",
+        "escapePressed"
+    ]
+}
