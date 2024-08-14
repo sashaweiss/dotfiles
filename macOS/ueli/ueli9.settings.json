@@ -10,6 +10,7 @@
         "UeliCommand"
     ],
     "general.hotkey": "Cmd+Space",
+    "general.searchHistory.enabled": true,
     "searchEngine.maxResultLengthEmptySearchTerm": 0,
     "window.alwaysCenter": true,
     "window.hideWindowOn": [
