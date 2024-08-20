@@ -11,6 +11,6 @@ alias e="$EDITOR"
 
 alias untar='tar -xzvf'
 
-alias desk="cd $PLAY"
+alias desk="cd $DESK"
 alias down="cd $DOWN"
 alias work="cd $WORK"
