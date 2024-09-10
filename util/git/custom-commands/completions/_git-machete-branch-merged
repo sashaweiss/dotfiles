@@ -1,0 +1,2 @@
+#compdef git-machete-branch-merged
+#description (CC) Drops a branch managed by `git-machete` that has merged to `main`
