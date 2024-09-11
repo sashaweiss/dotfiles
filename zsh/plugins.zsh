@@ -48,6 +48,7 @@ vi-backward-delete-word() {
     local WORDCHARS=${WORDCHARS/\//}
     local WORDCHARS=${WORDCHARS/-/}
     local WORDCHARS=${WORDCHARS/_/}
+    local WORDCHARS=${WORDCHARS/./}
     zle backward-delete-word
 }
 zle -N vi-backward-delete-word
