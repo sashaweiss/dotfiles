@@ -1,12 +1,26 @@
 {
+    "extension[ApplicationSearch].macOsFolders": [
+        "/System/Applications",
+        "/Applications",
+        "/Users/sasha/Applications"
+    ],
+    "extension[SimpleFileSearch].folders": [
+        {
+            "id": "17137f6d-3a61-460d-aebd-b3bd6bd377c5",
+            "path": "/Users/sasha",
+            "recursive": false,
+            "searchFor": "folders"
+        }
+    ],
     "extension[SimpleFolderSearch].folders": [
         "/Users/sasha",
         "/"
     ],
     "extensions.enabledExtensionIds": [
+        "ApplicationSearch",
+        "SimpleFileSearch",
         "SystemCommands",
         "SimpleFolderSearch",
-        "ApplicationSearch",
         "UeliCommand"
     ],
     "general.hotkey": "Cmd+Space",
