@@ -1,0 +1,36 @@
+#!/usr/bin/env zsh
+
+usage () {
+  echo "Usage:
+  sync-xcode-configs <to|from>
+  "
+  return 1
+}
+
+if [ "$#" -ne 1 ]; then
+  echo "Wrong number of arguments!\n"
+  usage
+  return 1
+fi
+
+LOCAL_DIR="$DOTFILES/xcode"
+KB_FILE="sasha.idekeybindings"
+THEME_FILE="sashas-oceanic-next.dvtcolortheme"
+
+REMOTE_KB_DIR="$HOME/Library/Developer/Xcode/UserData/KeyBindings"
+REMOTE_THEME_DIR="$HOME/Library/Developer/Xcode/UserData/FontAndColorThemes"
+
+if [[ "$1" == "to" ]]; then
+  mkdir -p "$REMOTE_KB_DIR"
+  mkdir -p "$REMOTE_THEME_DIR"
+
+  cp "$LOCAL_DIR/$KB_FILE" "$REMOTE_KB_DIR"
+  cp "$LOCAL_DIR/$THEME_FILE" "$REMOTE_THEME_DIR"
+elif [[ "$1" == "from" ]]; then
+  cp "$REMOTE_KB_DIR/$KB_FILE" "$LOCAL_DIR"
+  cp "$REMOTE_THEME_DIR/$KB_FILE" "$LOCAL_DIR"
+else
+  echo "Unrecognized argument!\n"
+  usage
+  return 1
+fi

@@ -1,9 +1,7 @@
 # Xcode-specific
 
-## Keybindings
+This directory backs up Xcode configuration files, using the `sync-xcode-configs` script to copy them to/from the appropriate Xcode directories. (Manual copying is required since Xcode clobbers symlinks rather than writing to the pointed-to file whenever updates are made to the config via the GUI.)
 
-I have some editor keybinding customizations that I prefer, which are backed up here as a `.idekeybindings` file. The `sync-keybindings` script enables copying that keybindings file to and from the Xcode directory, since Xcode (as of Xcode 16.2) clobbers symlinks when saving an updated keybinding.
+## Acknowledgements
 
-## Color theme
-
-I use a custom editor theme, the contents of which are largely taken with appreciation from https://github.com/dmcrodrigues/Oceanic-Next-Xcode-Theme. (Note that it references my custom `Natasha II` font; see `/README.md`.)
+Many thanks to https://github.com/dmcrodrigues/Oceanic-Next-Xcode-Theme for providing the foundation for my Xcode editor theme!
