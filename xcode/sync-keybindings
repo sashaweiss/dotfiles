@@ -2,8 +2,9 @@
 
 usage () {
   echo "Usage:
-  sync_keybindings <to|from>
+  sync-keybindings <to|from>
   "
+  return 1
 }
 
 if [ "$#" -ne 1 ]; then
@@ -12,14 +13,16 @@ if [ "$#" -ne 1 ]; then
   return 1
 fi
 
-keybindings_filename="sasha.idekeybindings"
-local_keybindings_path="$DOTFILES/xcode/$keybindings_filename"
-remote_keybindings_path="$HOME/Library/Developer/Xcode/UserData/KeyBindings/$keybindings_filename"
+KB_FILE="sasha.idekeybindings"
+LOCAL_KB_DIR="$DOTFILES/xcode"
+REMOTE_KB_DIR="$HOME/Library/Developer/Xcode/UserData/KeyBindings"
 
 if [[ "$1" == "to" ]]; then
-  cp "$local_keybindings_path" "$remote_keybindings_path"
+  mkdir -p "$REMOTE_KB_DIR"
+
+  cp "$LOCAL_KB_DIR/$KB_FILE" "$REMOTE_KB_DIR"
 elif [[ "$1" == "from" ]]; then
-  cp "$remote_keybindings_path" "$local_keybindings_path"
+  cp "$REMOTE_KB_DIR/$KB_FILE" "$LOCAL_KB_DIR"
 else
   echo "Unrecognized argument!\n"
   usage
