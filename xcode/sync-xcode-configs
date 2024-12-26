@@ -15,7 +15,7 @@ fi
 
 LOCAL_DIR="$DOTFILES/xcode"
 KB_FILE="sasha.idekeybindings"
-THEME_FILE="sashas-oceanic-next.dvtcolortheme"
+THEME_FILE="sashas-oceanic-next.xccolortheme"
 
 REMOTE_KB_DIR="$HOME/Library/Developer/Xcode/UserData/KeyBindings"
 REMOTE_THEME_DIR="$HOME/Library/Developer/Xcode/UserData/FontAndColorThemes"
@@ -28,7 +28,7 @@ if [[ "$1" == "to" ]]; then
   cp "$LOCAL_DIR/$THEME_FILE" "$REMOTE_THEME_DIR"
 elif [[ "$1" == "from" ]]; then
   cp "$REMOTE_KB_DIR/$KB_FILE" "$LOCAL_DIR"
-  cp "$REMOTE_THEME_DIR/$KB_FILE" "$LOCAL_DIR"
+  cp "$REMOTE_THEME_DIR/$THEME_FILE" "$LOCAL_DIR"
 else
   echo "Unrecognized argument!\n"
   usage
