@@ -1,0 +1,13 @@
+Host github-signal
+	HostName github.com
+	IdentityFile ~/.ssh/signal_ed25519
+	IdentitiesOnly yes
+
+Host github-personal
+	HostName github.com
+	IdentityFile ~/.ssh/personal_ed25519
+	IdentitiesOnly yes
+
+Host github.com
+	IdentityFile ~/.ssh/signal_ed25519
+	IdentitiesOnly yes

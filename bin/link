@@ -18,6 +18,9 @@ ln -fs "$DOTFILES/util/asdf/asdfrc" "$HOME/.asdfrc"
 mkdir -p "$HOME/.config/nvim"
 ln -fs "$DOTFILES/vim/neovim/init.lua" "$HOME/.config/nvim/init.lua"
 
+mkdir -p "$HOME/.ssh"
+ln -fs "$DOTFILES/util/ssh/config" "$HOME/.ssh/config"
+
 mkdir -p "$HOME/.config/vivid"
 ln -fs "$DOTFILES/util/vivid/filetypes.yml" "$HOME/.config/vivid/filetypes.yml"
 
