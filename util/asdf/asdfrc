@@ -1,2 +1,0 @@
-# Read .nvmrc and .node-version files in addition to .tool-versions
-legacy_version_file = yes

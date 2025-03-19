@@ -12,8 +12,8 @@ ln -fs "$DOTFILES/util/tmux.conf" "$HOME/.tmux.conf"
 
 ln -fs "$DOTFILES/util/prettierrc" "$HOME/.prettierrc"
 
-ln -fs "$DOTFILES/util/asdf/tool-versions" "$HOME/.tool-versions"
-ln -fs "$DOTFILES/util/asdf/asdfrc" "$HOME/.asdfrc"
+mkdir -p "$HOME/.config/mise"
+ln -fs "$DOTFILES/util/mise.toml" "$HOME/.config/mise/config.toml"
 
 mkdir -p "$HOME/.config/nvim"
 ln -fs "$DOTFILES/vim/neovim/init.lua" "$HOME/.config/nvim/init.lua"
