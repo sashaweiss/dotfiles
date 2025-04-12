@@ -9,5 +9,5 @@ Host github-personal
 	IdentitiesOnly yes
 
 Host github.com
-	IdentityFile ~/.ssh/signal_ed25519
+	IdentityFile ~/.ssh/id_ed25519
 	IdentitiesOnly yes
