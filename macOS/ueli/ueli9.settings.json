@@ -1,4 +1,5 @@
 {
+    "appearance.showAppIconInDock": false,
     "extension[ApplicationSearch].macOsFolders": [
         "/System/Applications",
         "/Applications",
@@ -16,7 +17,38 @@
         "/Users/sasha",
         "/"
     ],
+    "extension[Workflow].workflows": [
+        {
+            "actions": [
+                {
+                    "id": "workflow-action-5f92ea54-87be-421f-9d5b-2eae06936966",
+                    "args": {
+                        "filePath": "/Users/sasha/Library/Mobile Documents/com~apple~CloudDocs"
+                    },
+                    "name": "Open iCloud Drive Directory",
+                    "handlerId": "OpenFile"
+                }
+            ],
+            "name": "Open iCloud Drive",
+            "id": "workflow-12d6f41e-e6d2-41a7-b09a-3b92b8f7078f"
+        },
+        {
+            "actions": [
+                {
+                    "id": "workflow-action-27340c08-e868-436e-9d1d-e90c05ad8958",
+                    "args": {
+                        "filePath": "/Applications"
+                    },
+                    "name": "Open /Applications directory",
+                    "handlerId": "OpenFile"
+                }
+            ],
+            "name": "Applications",
+            "id": "workflow-b0f497fc-c1c6-43dd-82ab-22031c0b3a3a"
+        }
+    ],
     "extensions.enabledExtensionIds": [
+        "Workflow",
         "ApplicationSearch",
         "SimpleFileSearch",
         "SystemCommands",
