@@ -5,5 +5,6 @@ if [ "$#" -ne 1 ]; then
   exit 1
 fi
 
-git branch-merged "$1"
-git machete-push
+git checkout main
+git pull || git pull # Try twice
+git branch -D "$1"
