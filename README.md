@@ -26,6 +26,10 @@ some stuff won't work/will look funky/will be unavailable.)
 
 ## Installing peripherals
 
+### Firefox
+
+`about:config` -> `browser.tabs.closeWindowWithLastTab = false`
+
 ### Fonts
 
 I am currently using a [custom build](https://github.com/natasha-codes/fonts) of
