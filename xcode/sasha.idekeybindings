@@ -8,48 +8,6 @@
 		<array>
 			<dict>
 				<key>Action</key>
-				<string>findInWorkspace:</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>CommandGroupID</key>
-				<string>Xcode.IDEKit.CmdDefinition.FindInWorkspace</string>
-				<key>CommandID</key>
-				<string>Xcode.IDEKit.CmdDefinition.FindInWorkspace</string>
-				<key>Group</key>
-				<string>Find Menu</string>
-				<key>GroupID</key>
-				<string>Xcode.IDEKit.MenuDefinition.Main</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>Find in Workspace…</string>
-			</dict>
-			<dict>
-				<key>Action</key>
-				<string>findSelectedTextInWorkspace:</string>
-				<key>Alternate</key>
-				<string>NO</string>
-				<key>CommandGroupID</key>
-				<string>Xcode.IDEKit.CmdDefinition.FindSelectedTextInWorkspace</string>
-				<key>CommandID</key>
-				<string>Xcode.IDEKit.CmdDefinition.FindSelectedTextInWorkspace</string>
-				<key>Group</key>
-				<string>Find Menu</string>
-				<key>GroupID</key>
-				<string>Xcode.IDEKit.MenuDefinition.Main</string>
-				<key>GroupedAlternate</key>
-				<string>NO</string>
-				<key>Keyboard Shortcut</key>
-				<string>$@F</string>
-				<key>Navigation</key>
-				<string>NO</string>
-				<key>Title</key>
-				<string>Find Selected Text in Workspace</string>
-			</dict>
-			<dict>
-				<key>Action</key>
 				<string>moveKeyboardFocusToNextEditor:</string>
 				<key>Alternate</key>
 				<string>NO</string>
