@@ -23,3 +23,7 @@ vim.keymap.set('n', '*', ':keepjumps normal! mi*`i<CR>')
 -- Keybindings for fav fzf-vim commands
 vim.keymap.set('n', '<C-p>', ':Files<CR>')
 vim.keymap.set('n', '<M-b>', ':Buffers<CR>')
+
+-- NERDTree
+vim.keymap.set('n', '<leader>nt', ':NERDTreeToggle<CR>')
+vim.keymap.set('n', '<leader>nf', ':NERDTreeFocus<CR>')

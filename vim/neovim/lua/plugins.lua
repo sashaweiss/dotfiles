@@ -96,18 +96,11 @@ vim.cmd([[
 	let g:airline_section_error = airline#section#create([])
 ]])
 
--- NERDTree
-
-vim.keymap.set('n', '<leader>nt', ':NERDTreeToggle<CR>')
-vim.keymap.set('n', '<leader>nf', ':NERDTreeFocus<CR>')
-
 -- NERDCommenter
 
 vim.g.NERDCreateDefaultMappings = 0
 vim.g.NERDSpaceDelims = 1
 vim.g.NERDCustomDelimiters = { ['swift'] = { ['left'] = '//', ['right'] = '' } }
-
-vim.keymap.set('', '<leader>cc', '<plug>NERDCommenterInvert')
 
 -- Auto-Pairs
 
