@@ -26,9 +26,6 @@ Plug('bling/vim-airline')
 -- Themes for said statusline
 Plug('vim-airline/vim-airline-themes')
 
--- Comment blocks of code
-Plug('preservim/nerdcommenter')
-
 -- Automatically close brackets and stuff
 Plug('jiangmiao/auto-pairs')
 
