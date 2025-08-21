@@ -33,6 +33,7 @@ ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Co
 mkdir -p "$HOME/Library/Application Support/ueli"
 ln -fs "$DOTFILES/macOS/ueli/ueli9.settings.json" "$HOME/Library/Application Support/ueli/ueli9.settings.json"
 
+ln -fs "$DOTFILES/vim/obsidian.vimrc" "$OBSIDIAN/.obsidian.vimrc"
 ln -fs "$DOTFILES/vim/ideavimrc" "$HOME/.ideavimrc"
 
 ln -fs "$ICLOUD" "$HOME/iCloud"
