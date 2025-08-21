@@ -35,4 +35,5 @@ ln -fs "$DOTFILES/macOS/ueli/ueli9.settings.json" "$HOME/Library/Application Sup
 
 ln -fs "$DOTFILES/vim/ideavimrc" "$HOME/.ideavimrc"
 
-ln -fs "$HOME/Library/Mobile Documents/com~apple~CloudDocs" "$HOME/iCloud"
+ln -fs "$ICLOUD" "$HOME/iCloud"
+ln -fs "$OBSIDIAN" "$HOME/Obsidian"

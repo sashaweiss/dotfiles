@@ -8,3 +8,6 @@ export DESK="$HOME/Desktop"
 export DOWN="$HOME/Downloads"
 export WORK="$HOME/dev"
 mkdir -p "$WORK"
+
+export ICLOUD="$HOME/iCloud"
+export OBSIDIAN="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Notes"
