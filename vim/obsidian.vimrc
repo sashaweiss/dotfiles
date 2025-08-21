@@ -1,4 +1,4 @@
 nmap j gj
 nmap k gk
 
-imap jk <ESC>
+imap jk <Esc>
