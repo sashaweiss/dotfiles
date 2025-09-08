@@ -9,5 +9,5 @@ export DOWN="$HOME/Downloads"
 export WORK="$HOME/dev"
 mkdir -p "$WORK"
 
-export ICLOUD="$HOME/iCloud"
+export ICLOUD="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 export OBSIDIAN="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents"
