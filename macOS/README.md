@@ -41,20 +41,14 @@ macOS has a bunch of built-in settings I like to tweak:
 
 ## [Visual Studio Code](https://code.visualstudio.com)
 
-VSCode is my preferred text editor.
-
 Config: managed in `/vscode/[keybindings|settings].json`. See
 `vscode/install_plugins` for some of my core plugins.
 
 ## [ueli](https://ueli.app/)
 
-ueli is a keystroke launcher - i.e., a beefed up Spotlight.
-
 Config: managed in `/macOS/ueli/config.json`.
 
 ## [AltTab](https://alt-tab-macos.netlify.app)
-
-AltTab is an improved window switcher for macOS.
 
 Config:
 
@@ -63,33 +57,7 @@ Config:
 -   Settings -> Controls -> Miscellaneous -> Check "Cursor follows focus"
     - This helps things like `ueli` understand where the "active" display is.
 
-## [iTerm](https://iterm2.com)
-
-iTerm is my preferred terminal emulator.
-
-Config: managed in `/macOS/iterm/com.googlecode.iterm2.plist`. From the GUI,
-"Settings -> General -> Preferences" to specify where iTerm should look for the managed preferences.
-
-## [Bartender](https://www.macbartender.com)
-
-Bartender manages the menu bar. (It's a paid app I have a license for.)
-
-Config: manually set for each menu bar item.
-
 ## [Rectangle](https://www.rectangleapp.com)
-
-Rectangle provides hotkeys for resizing windows. Based on Spectacle (RIP).
 
 Config: "Preferences -> Remove keyboard shortcut restrictions" lets one map
 Ctrl+Cmd+F to "maximize".
-
-## [DaisyDisk](https://daisydiskapp.com)
-
-DaisyDisk (paid, via App Store) visualizes occupied disk space.
-
-No config necessary.
-
-## [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704)
-
-Amphetamine keeps your computer awake for a specified period, to ensure
-long-running tasks (e.g., downloads) complete.

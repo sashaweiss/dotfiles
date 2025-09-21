@@ -10,6 +10,9 @@ ln -fs "$DOTFILES/util/git/gitconfig_signal" "$HOME/.gitconfig_signal"
 
 ln -fs "$DOTFILES/util/tmux.conf" "$HOME/.tmux.conf"
 
+mkdir -p "$HOME/.ssh"
+ln -fs "$DOTFILES/util/ssh/config" "$HOME/.ssh/config"
+
 ln -fs "$DOTFILES/util/prettierrc" "$HOME/.prettierrc"
 
 mkdir -p "$HOME/.config/mise"
@@ -18,8 +21,8 @@ ln -fs "$DOTFILES/util/mise.toml" "$HOME/.config/mise/config.toml"
 mkdir -p "$HOME/.config/nvim"
 ln -fs "$DOTFILES/vim/neovim/init.lua" "$HOME/.config/nvim/init.lua"
 
-mkdir -p "$HOME/.ssh"
-ln -fs "$DOTFILES/util/ssh/config" "$HOME/.ssh/config"
+mkdir -p "$HOME/.config/kitty"
+ln -fs "$DOTFILES/util/kitty.conf" "$HOME/.config/kitty/kitty.conf"
 
 mkdir -p "$HOME/.config/vivid"
 ln -fs "$DOTFILES/util/vivid/filetypes.yml" "$HOME/.config/vivid/filetypes.yml"
