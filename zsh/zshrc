@@ -2,6 +2,9 @@
 
 typeset -U path
 
+# Use escape codes to set the terminal emulator title.
+printf '\033]0;ye olde terminale\007'
+
 # Load util functions and Brew first
 source "$DOTFILES/zsh/functions.zsh"
 source "$DOTFILES/zsh/brew.zsh"
