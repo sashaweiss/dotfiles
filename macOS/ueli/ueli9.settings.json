@@ -45,20 +45,6 @@
             ],
             "name": "Applications",
             "id": "workflow-b0f497fc-c1c6-43dd-82ab-22031c0b3a3a"
-        },
-        {
-            "actions": [
-                {
-                    "id": "workflow-action-e0ec42cc-ad89-44bf-a05f-f567b0ef5044",
-                    "args": {
-                        "filePath": "/Applications/kitty.app"
-                    },
-                    "name": "Open Kitty",
-                    "handlerId": "OpenFile"
-                }
-            ],
-            "name": "Terminal",
-            "id": "workflow-ed64885c-1152-453d-953a-2ca563e7dc00"
         }
     ],
     "extensions.enabledExtensionIds": [
