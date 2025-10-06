@@ -7,7 +7,6 @@
     "editor.fontSize": 14,
     "terminal.integrated.fontFamily": "Natasha II",
     "terminal.integrated.fontSize": 14,
-    "workbench.colorTheme": "Material Theme Palenight High Contrast",
     "workbench.iconTheme": "material-icon-theme",
 
     "workbench.sideBar.location": "left",
@@ -233,5 +232,6 @@
             "before": ["Z"],
             "after": ["^"]
         }
-    ]
+    ],
+    "workbench.colorTheme": "Solarized Dark"
 }
