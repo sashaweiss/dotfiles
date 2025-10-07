@@ -67,6 +67,7 @@ vim.filetype.add({
     jsonproto = 'json5',
     json = 'json5',
     md = 'markdown',
+    log = 'log',
   }
 })
 

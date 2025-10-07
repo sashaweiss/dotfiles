@@ -19,7 +19,9 @@ mkdir -p "$HOME/.config/mise"
 ln -fs "$DOTFILES/util/mise.toml" "$HOME/.config/mise/config.toml"
 
 mkdir -p "$HOME/.config/nvim"
+mkdir -p "$HOME/.config/nvim/after"
 ln -fs "$DOTFILES/vim/neovim/init.lua" "$HOME/.config/nvim/init.lua"
+ln -fs "$DOTFILES/vim/neovim/lua/syntax" "$HOME/.config/nvim/after/syntax"
 
 mkdir -p "$HOME/.config/ghostty"
 ln -fs "$DOTFILES/util/ghostty.conf" "$HOME/.config/ghostty/config"
