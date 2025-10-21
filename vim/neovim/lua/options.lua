@@ -61,6 +61,13 @@ vim.api.nvim_create_autocmd({"FileType"}, {
   callback = function() vim.opt.indentexpr='' end,
 })
 
+-- Make `md` as a filetype redirect to `markdown`. This enables doing
+-- `set filetype=md` in an unwritten buffer (i.e., no file extension).
+vim.api.nvim_create_autocmd({"FileType"}, {
+  pattern = "md",
+  callback = function() vim.bo.filetype='markdown' end,
+})
+
 -- Map custom extensions to known filetypes
 vim.filetype.add({
   extension = {
