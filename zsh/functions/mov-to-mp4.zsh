@@ -6,19 +6,30 @@ mov-to-mp4 () {
     return 1
   fi
 
-  if [ "$#" -ne 1 ]; then
-    echo "*** Unrecognized arguments: $@ ***"
+  SOURCE=""
+  OUTPUT=""
+
+  if [ "$#" -eq 1 ]; then
+    SOURCE="$1"
+    OUTPUT="${1%.mov}.mp4"
+  elif [ "$#" -eq 2 ]; then
+    SOURCE="$1"
+    OUTPUT="$2"
+  else
+    echo "Usage: avconvert <source> <output>"
     return 1
   fi
 
-  if [[ ! "$1" == *.mov ]]; then
-    echo "** Input file must have .mov extension! ***"
+  if [[ ! "$SOURCE" == *.mov ]]; then
+    echo "** Source must have .mov extension! ***"
+    return 1
+  elif [[ ! "$OUTPUT" == *.mp4 ]]; then
+    echo "** Output must have .mov extension! ***"
     return 1
   fi
 
-  output="${1%.mov}.mp4"
   avconvert \
-    --source "$1" \
-    --output "$output" \
+    --source "$SOURCE" \
+    --output "$OUTPUT" \
     --preset PresetHEVC1920x1080 \
 }
