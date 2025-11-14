@@ -233,5 +233,6 @@
             "after": ["^"]
         }
     ],
-    "workbench.colorTheme": "Solarized Dark"
+    "workbench.colorTheme": "Solarized Dark",
+    "git.openRepositoryInParentFolders": "always"
 }
