@@ -10,6 +10,7 @@
             "id": "17137f6d-3a61-460d-aebd-b3bd6bd377c5",
             "path": "/Users/sasha",
             "recursive": false,
+            "excludeHiddenFiles": true,
             "searchFor": "folders"
         }
     ],
@@ -54,6 +55,11 @@
         "SystemCommands",
         "SimpleFolderSearch",
         "UeliCommand"
+    ],
+    "favorites": [
+        "W01hY09zQXBwbGljYXRpb25dWy9BcHBsaWNhdGlvbnMvR2hvc3R0eS5hcHBd",
+        "W01hY09zQXBwbGljYXRpb25dWy9BcHBsaWNhdGlvbnMvRmlyZWZveC5hcHBd",
+        "W01hY09zQXBwbGljYXRpb25dWy9TeXN0ZW0vQXBwbGljYXRpb25zL0NhbGVuZGFyLmFwcF0="
     ],
     "general.hotkey": "Cmd+Space",
     "general.searchHistory.enabled": false,
