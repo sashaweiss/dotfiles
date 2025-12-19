@@ -103,6 +103,14 @@
         "key": "ctrl+k ctrl+r",
         "command": "-git.revertSelectedRanges",
         "when": "isWindows && isInDiffEditor"
+    },
+    {
+        "key": "alt+cmd+=",
+        "command": "editor.action.fontZoomIn"
+    },
+    {
+        "key": "alt+cmd+-",
+        "command": "editor.action.fontZoomOut"
     }
 
     /// *** Recently added by VSCode *** ///
