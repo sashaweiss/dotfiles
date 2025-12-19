@@ -7,7 +7,6 @@
     "editor.fontSize": 14,
     "terminal.integrated.fontFamily": "Natasha II",
     "terminal.integrated.fontSize": 14,
-    "workbench.iconTheme": "material-icon-theme",
 
     "workbench.sideBar.location": "left",
 
@@ -72,45 +71,6 @@
     // Language-specific //
     ///////////////////////
 
-    // Don't format my C++
-    "C_Cpp.formatting": "Disabled",
-
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
-    "[scss]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
-    "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
     "[markdown]": {
         "editor.tabSize": 2,
         "editor.wordWrap": "wordWrapColumn",
@@ -130,9 +90,7 @@
     // Rust-Analyzer plugin //
     //////////////////////////
 
-    "rust-analyzer.completion.addCallArgumentSnippets": false,
     "rust-analyzer.completion.postfix.enable": false,
-    "rust-analyzer.inlayHints.enable": false,
 
     ////////////////
     // Vim plugin //
@@ -142,7 +100,6 @@
     "vim.useSystemClipboard": true,
     "vim.visualstar": true,
     "vim.foldfix": true,
-    "vim.debug.silent": true,
 
     "vim.handleKeys": {
         "<C-f>": false,
@@ -233,6 +190,6 @@
             "after": ["^"]
         }
     ],
-    "workbench.colorTheme": "Solarized Dark",
+    "workbench.colorTheme": "Default Dark+",
     "git.openRepositoryInParentFolders": "always"
 }
