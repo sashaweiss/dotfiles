@@ -20,7 +20,8 @@ mov-to-mp4 () {
     return 1
   fi
 
-  if [[ ! "$SOURCE" == *.mov ]]; then
+  if [[ ! "${SOURCE:l}" == *.mov ]]; then
+    echo $SOURCE
     echo "** Source must have .mov extension! ***"
     return 1
   elif [[ ! "$OUTPUT" == *.mp4 ]]; then
