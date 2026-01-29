@@ -17,6 +17,7 @@ fzf_gr () {
     | grep -v '/HEAD\s' \
     | sort \
     | fzf --ansi --multi --tac \
+    --height '100%' \
     --preview-window 'down:60%' \
     --bind="$bindings" \
     --preview "$preview" \
