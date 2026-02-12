@@ -1,2 +1,2 @@
 #compdef git-lg
-#description (CC) Show a pretty, one-line `git log`
+#description (Custom) Show a pretty, one-line `git log`

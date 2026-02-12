@@ -1,0 +1,20 @@
+#compdef cd-git-worktree
+#description (Custom) Change directory to a git worktree
+
+local -a branches
+branches=()
+local worktree_path branch relative_path
+local base_dir=$(git rev-parse --show-toplevel)
+
+while IFS= read -r line; do
+  if [[ $line =~ ^worktree ]]; then
+    worktree_path=${line#worktree }
+    # Calculate relative path from current directory
+    relative_path=${worktree_path#$base_dir/}
+  elif [[ $line =~ ^branch ]]; then
+    branch=${line#branch refs/heads/}
+    branches+=("$relative_path:$branch")
+  fi
+done < <(git worktree list --porcelain)
+
+_describe 'worktree branch' branches

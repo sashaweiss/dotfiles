@@ -1,2 +1,2 @@
 #compdef git-get-porcelain-filename
-#description (CC) Extract a filename from `git status --porcelain`
+#description (Custom) Extract a filename from `git status --porcelain`

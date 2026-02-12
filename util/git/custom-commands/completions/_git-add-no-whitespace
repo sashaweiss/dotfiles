@@ -1,2 +1,2 @@
 #compdef git-add-no-whitespace
-#description (CC) Add, skipping whitespace changes
+#description (Custom) Add, skipping whitespace changes

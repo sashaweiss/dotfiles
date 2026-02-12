@@ -1,2 +1,2 @@
 #compdef git-nuke-branch
-#description (CC) Nuke the given branch locally and remotely
+#description (Custom) Nuke the given branch locally and remotely
