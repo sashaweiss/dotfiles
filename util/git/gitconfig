@@ -14,6 +14,9 @@
   whitespace = cr-at-eol
   ignorecase = false
 
+[submodule]
+  recurse = true
+
 [delta]
   line-numbers = true
   side-by-side = true
