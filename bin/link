@@ -31,6 +31,9 @@ ln -fs "$DOTFILES/util/vivid/filetypes.yml" "$HOME/.config/vivid/filetypes.yml"
 
 is_mac || return 0
 
+mkdir -p "$HOME/.claude"
+ln -fs "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json"
+
 mkdir -p "$HOME/Library/Application Support/Code/User"
 ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
