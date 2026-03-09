@@ -5,6 +5,7 @@
 source "$DOTFILES/zsh/functions/is_mac.zsh"
 source "$DOTFILES/zsh/functions/is_in_git_repo.zsh"
 
+source "$DOTFILES/zsh/functions/bell.zsh"
 source "$DOTFILES/zsh/functions/cd-git-worktree.zsh"
 source "$DOTFILES/zsh/functions/copy.zsh"
 source "$DOTFILES/zsh/functions/fd-copy.zsh"
