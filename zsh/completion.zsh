@@ -3,6 +3,9 @@
 autoload -Uz compinit
 compinit
 
+# Never suggest _-prefixed completion-provider functions
+zstyle ':completion:*:functions' ignored-patterns '_*'
+
 # Case-insensitive tab-completion
 zstyle ':completion:*' matcher-list 'r:|?=** m:{a-z\-}={A-Z\_}'
 
