@@ -38,7 +38,7 @@ specifically `Natasha II`.
 
 ### Vim plugins
 
-What's `(n)vim` without plugins?
+What's `(n)vim` without plugins? First, install [vim-plug](https://github.com/junegunn/vim-plug?tab=readme-ov-file#installation), making sure to install it to the right directory for `nvim`.
 
 ```sh
 ; nvim -c "PlugInstall" -c "qa"
