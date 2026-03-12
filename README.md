@@ -1,8 +1,7 @@
 # sasha's .files
 
 My personal dotfiles. Mostly [`zsh`](https://www.zsh.org),
-[`neovim`](https://neovim.io), [`tmux`](https://github.com/tmux/tmux),
-and [`VSCode`](https://github.com/microsoft/vscode).
+[`neovim`](https://neovim.io), [`tmux`](https://github.com/tmux/tmux).
 
 ## Download and install
 
