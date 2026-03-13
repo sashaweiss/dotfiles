@@ -9,6 +9,10 @@ zstyle ':completion:*:functions' ignored-patterns '_*'
 # Case-insensitive tab-completion
 zstyle ':completion:*' matcher-list 'r:|?=** m:{a-z\-}={A-Z\_}'
 
+# Jump straight to completions via the menu, rather than completing to a prefix
+# and needing a second tab to launch the menu.
+setopt MENU_COMPLETE
+
 # Highlight options in non-fzf-tab completions
 zstyle ':completion:*' menu select
 
