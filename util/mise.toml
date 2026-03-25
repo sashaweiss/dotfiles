@@ -3,3 +3,8 @@ java = "17.0.2"
 node = "20.18.1"
 python = "3.12.4"
 ruby = "3.2.2"
+
+[settings]
+
+[settings.ruby]
+compile = false
