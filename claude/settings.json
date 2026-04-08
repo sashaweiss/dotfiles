@@ -4,5 +4,12 @@
     "swift-lsp@claude-plugins-official": true,
     "rust-analyzer-lsp@claude-plugins-official": true
   },
-  "spinnerTipsEnabled": false
+  "spinnerTipsEnabled": false,
+  "permissions": {
+    "allow": [
+      "Bash(grep *)",
+      "Bash(find *)",
+      "Bash(ls *)"
+    ]
+  }
 }
