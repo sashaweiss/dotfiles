@@ -39,8 +39,6 @@ vim.call('plug#end')
 
 -- gitsigns
 
-
-
 require('gitsigns').setup {
 	signs = {
 		add = { text = '+' },
@@ -77,6 +75,12 @@ vim.cmd.highlight({ "GitSignsStagedTopdelete", "guifg=red", "guibg=darkred" })
 vim.cmd.highlight({ "GitSignsUntracked", "guifg=blue", "guibg=none" })
 
 vim.api.nvim_create_user_command('Blame', 'Gitsigns blame', {})
+vim.api.nvim_create_user_command('NextHunk', 'Gitsigns next_hunk', {})
+vim.api.nvim_create_user_command('PrevHunk', 'Gitsigns prev_hunk', {})
+
+-- NERDTree
+
+vim.api.nvim_create_user_command('File', 'NERDTreeFind', {})
 
 -- Airline
 
