@@ -13,14 +13,12 @@ fzf_gr () {
 
   local bindings='ctrl-space:toggle-preview'
 
-  git branch -a --color=always \
-    | grep -v '/HEAD\s' \
+  git branch --color=always \
     | sort \
     | fzf --ansi --multi --tac \
     --height '100%' \
     --preview-window 'down:60%' \
     --bind="$bindings" \
     --preview "$preview" \
-    | sed 's/^..//' \
-    | sed 's/^remotes\/[^/]*\///'
+    | sed 's/^..//'
 }
