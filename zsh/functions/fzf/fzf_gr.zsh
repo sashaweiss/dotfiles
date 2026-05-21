@@ -14,11 +14,10 @@ fzf_gr () {
   local bindings='ctrl-space:toggle-preview'
 
   git branch --color=always \
-    | sort \
-    | fzf --ansi --multi --tac \
-    --height '100%' \
-    --preview-window 'down:60%' \
-    --bind="$bindings" \
-    --preview "$preview" \
+    | fzf \
+      --height '100%' \
+      --preview-window 'down:60%' \
+      --bind="$bindings" \
+      --preview "$preview" \
     | sed 's/^..//'
 }
