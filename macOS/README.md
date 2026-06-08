@@ -27,17 +27,9 @@ macOS has a bunch of built-in settings I like to tweak:
 -   Move Spotlight shortcut to Alt+Space in "System Preferences -> Keyboard ->
     Shortcuts -> Spotlight" (to avoid a conflict with ueli).
 -   Set open-at-login items in "System Preferences -> Users and Groups -> Login
-    Items", e.g. Rectangle, AltTab, ueli, Bartender
+    Items", e.g. Rectangle, AltTab, ueli
 -   Unblock key-repeat:
     `defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false`
--   Prevent macOS from re-opening apps after reboot:
-
-```sh
-# Give `root` ownership over the file that stores the session, so it
-# cannot be replaced. Then, prevent anyone from reading or writing it!
-; sudo chown root ~/Library/Preferences/ByHost/com.apple.loginwindow*
-; sudo chmod 000 ~/Library/Preferences/ByHost/com.apple.loginwindow*
-```
 
 ## [Visual Studio Code](https://code.visualstudio.com)
 
