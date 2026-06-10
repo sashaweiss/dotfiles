@@ -1,0 +1,4 @@
+#compdef git-branch-merged
+#description (Custom) Delete the given local branch after checking out main
+
+_arguments '1:branch:($(git branch --format="%(refname:short)" 2>/dev/null))'
