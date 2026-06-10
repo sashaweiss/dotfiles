@@ -44,11 +44,6 @@
   skip = update-index --skip-worktree
   unskip = update-index --no-skip-worktree
 
-  machete-discover = machete discover
-  machete-status = machete status --list-commits-with-hashes
-  machete-rebase = machete traverse --no-push --start-from=first-root --return-to=stay
-  machete-push = machete traverse --push --start-from=first-root --return-to=stay
-
 [grep]
   linenumber = true
 
@@ -72,8 +67,3 @@
   required = true
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
-
-[machete "traverse"]
-  ; When using [git-machete](https://github.com/VirtusLab/git-machete), disable
-  ; pushing by default.
-  push = false

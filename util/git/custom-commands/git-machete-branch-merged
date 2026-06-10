@@ -1,9 +1,0 @@
-#!/usr/bin/env zsh
-
-if [ "$#" -ne 1 ]; then
-  echo "Missing required argument: branch"
-  exit 1
-fi
-
-git branch-merged "$1"
-git machete-push
