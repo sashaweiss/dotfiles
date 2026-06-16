@@ -25,3 +25,6 @@ if command -v fzf > /dev/null; then
   zstyle ':fzf-tab:*' continuous-trigger '='
 fi
 
+# Don't suggest URL schemes (file:, ftp://, gopher://, etc.) for `open`
+compdef _files open
+
