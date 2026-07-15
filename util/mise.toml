@@ -5,7 +5,10 @@ python = "3.12.4"
 ruby = "3.4.9"
 
 [settings]
-idiomatic_version_file_enable_tools = ["ruby"]
+idiomatic_version_file_enable_tools = [
+  "ruby",
+  "node",
+]
 
 [settings.ruby]
 compile = false
