@@ -20,6 +20,7 @@
 [delta]
   line-numbers = true
   side-by-side = true
+  wrap-max-lines = unlimited
   syntax-theme = Monokai Extended Bright
   file-style = blue bold italic
   file-decoration-style = blue ul bold
