@@ -3,8 +3,11 @@
 autoload -Uz compinit
 compinit
 
-# Never suggest _-prefixed completion-provider functions
-zstyle ':completion:*:functions' ignored-patterns '_*'
+# Never suggest _-prefixed names when completing a command name. Scoped to the
+# command-name tags so `_`-prefixed files still complete normally, and the
+# default `_ignored` completer still offers them if nothing else matches.
+zstyle ':completion:*:(commands|functions|aliases|builtins|reserved-words|parameters)' \
+  ignored-patterns '_*'
 
 # Case-insensitive tab-completion
 zstyle ':completion:*' matcher-list 'r:|?=** m:{a-z\-}={A-Z\_}'
