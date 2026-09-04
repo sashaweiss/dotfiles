@@ -1,0 +1,2 @@
+#compdef git-force-pull
+#description (Custom) Move the local branch to the latest version of its remote, resetting the local as necessary.

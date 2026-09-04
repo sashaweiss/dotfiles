@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+branch="$(git symbolic-ref --short HEAD)"
+upstream="$(git rev-parse --abbrev-ref "$branch@{upstream}")"
+
+git fetch "${upstream%%/*}"
+git reset --hard "$upstream"
