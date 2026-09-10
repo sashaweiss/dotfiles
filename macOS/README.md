@@ -40,6 +40,15 @@ Config: managed in `/vscode/[keybindings|settings].json`. See
 
 Config: managed in `/macOS/ueli/config.json`.
 
+## [Sol](https://sol.ospfranco.com)
+
+Config: managed in `/macOS/sol/config.json`. Sol overwrites the file, so the
+config needs to be synced using
+`/macOS/sol/[export|import]-config.zsh` instead.
+
+Scripts: managed in `/macOS/sol/scripts`, linked into `~/.config/sol/scripts` by
+`bin/link`.
+
 ## [AltTab](https://alt-tab-macos.netlify.app)
 
 Config:

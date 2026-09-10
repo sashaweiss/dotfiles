@@ -21,7 +21,7 @@ ln -fs "$DOTFILES/util/mise.toml" "$HOME/.config/mise/config.toml"
 mkdir -p "$HOME/.config/nvim"
 mkdir -p "$HOME/.config/nvim/after"
 ln -fs "$DOTFILES/vim/neovim/init.lua" "$HOME/.config/nvim/init.lua"
-ln -fs "$DOTFILES/vim/neovim/lua/syntax" "$HOME/.config/nvim/after/syntax"
+ln -fsn "$DOTFILES/vim/neovim/lua/syntax" "$HOME/.config/nvim/after/syntax"
 
 mkdir -p "$HOME/.config/ghostty"
 ln -fs "$DOTFILES/util/ghostty.conf" "$HOME/.config/ghostty/config"
@@ -37,6 +37,9 @@ ln -fs "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json"
 mkdir -p "$HOME/Library/Application Support/Code/User"
 ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+
+mkdir -p "$HOME/.config/sol/scripts"
+ln -fs "$DOTFILES"/macOS/sol/scripts/*.sh "$HOME/.config/sol/scripts"
 
 mkdir -p "$HOME/Library/Application Support/ueli"
 ln -fs "$DOTFILES/macOS/ueli/ueli9.settings.json" "$HOME/Library/Application Support/ueli/ueli9.settings.json"
