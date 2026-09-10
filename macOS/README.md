@@ -47,7 +47,7 @@ config needs to be synced using
 `/macOS/sol/[export|import]-config.zsh` instead.
 
 Scripts: managed in `/macOS/sol/scripts`, linked into `~/.config/sol/scripts` by
-`bin/link`.
+`/macOS/sol/import-config.zsh`.
 
 ## [AltTab](https://alt-tab-macos.netlify.app)
 
