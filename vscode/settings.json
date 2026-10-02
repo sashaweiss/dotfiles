@@ -2,194 +2,256 @@
     ////////////////////////
     // General appearance //
     ////////////////////////
-
     "editor.fontFamily": "Natasha II",
     "editor.fontSize": 14,
     "terminal.integrated.fontFamily": "Natasha II",
     "terminal.integrated.fontSize": 14,
-
     "workbench.sideBar.location": "left",
-
     "workbench.colorCustomizations": {
         "editorOverviewRuler.selectionHighlightForeground": "#00000000",
         "editorOverviewRuler.rangeHighlightForeground": "#00000000"
     },
-
-    "editor.rulers": [80],
-
+    "editor.rulers": [
+        80
+    ],
     // Don't auto-reveal files in the explorer
     "explorer.autoReveal": false,
-
     // Disable the "file preview" feature
     "workbench.editor.enablePreview": false,
-
     // Disable moving to MRU tab after closing
     "workbench.editor.focusRecentEditorAfterClose": false,
-
     // Use a new empty file at startup
     "workbench.startupEditor": "newUntitledFile",
-
     // Disable VSCode keyboard nav in lists in favor of Vim plugin's
     "workbench.list.automaticKeyboardNavigation": false,
-
     // Pass Option through to tmux in the integrated terminal
     "terminal.integrated.macOptionIsMeta": true,
-
     // Show issues in the status bar
     "problems.showCurrentInStatus": true,
-
     // Remove the git sync button from the status bar
     "git.enableStatusBarSync": false,
-
     // Explorer confirmation dialogs (I think only relevant for Windows)
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
-
     // Ignore the freaking extension recommendations
     "extensions.ignoreRecommendations": true,
-
     /////////////////////
     // Editor behavior //
     /////////////////////
-
     "editor.tabSize": 4,
-
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
-
     // Disable the stupid lightbulb and code lens stuff
     "editor.codeLens": false,
     "editor.lightbulb.enabled": "off",
-
     // If selected text, use it to seed search bar
     "editor.find.seedSearchStringFromSelection": "selection",
-
     ///////////////////////
     // Language-specific //
     ///////////////////////
-
     "[markdown]": {
         "editor.tabSize": 2,
         "editor.wordWrap": "wordWrapColumn",
         "editor.wordWrapColumn": 80
     },
-
     "[diff]": {
         "files.trimTrailingWhitespace": false
     },
-
     "files.associations": {
         "*.resx": "xml",
         "*.json": "jsonc"
     },
-
     //////////////////////////
     // Rust-Analyzer plugin //
     //////////////////////////
-
     "rust-analyzer.completion.postfix.enable": false,
-
     ////////////////
     // Vim plugin //
     ////////////////
-
     "vim.hlsearch": true,
     "vim.useSystemClipboard": true,
     "vim.visualstar": true,
     "vim.foldfix": true,
-
     "vim.handleKeys": {
         "<C-f>": false,
         "<C-b>": false
     },
-
     "vim.insertModeKeyBindings": [
         {
-            "before": ["j", "k"],
-            "after": ["<Esc>"]
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         }
     ],
-
     "vim.normalModeKeyBindings": [
         {
-            "before": ["C-o"],
-            "commands": ["workbench.action.navigateBack"]
+            "before": [
+                "C-o"
+            ],
+            "commands": [
+                "workbench.action.navigateBack"
+            ]
         },
         {
-            "before": ["C-i"],
-            "commands": ["workbench.action.navigateForward"]
+            "before": [
+                "C-i"
+            ],
+            "commands": [
+                "workbench.action.navigateForward"
+            ]
         },
         {
-            "before": ["J"],
-            "after": ["}"]
+            "before": [
+                "J"
+            ],
+            "after": [
+                "}"
+            ]
         },
         {
-            "before": ["K"],
-            "after": ["{"]
+            "before": [
+                "K"
+            ],
+            "after": [
+                "{"
+            ]
         },
         {
-            "before": ["k"],
-            "after": ["g", "k"]
+            "before": [
+                "k"
+            ],
+            "after": [
+                "g",
+                "k"
+            ]
         },
         {
-            "before": ["j"],
-            "after": ["g", "j"]
+            "before": [
+                "j"
+            ],
+            "after": [
+                "g",
+                "j"
+            ]
         },
         {
-            "before": ["z"],
-            "after": ["$"]
+            "before": [
+                "z"
+            ],
+            "after": [
+                "$"
+            ]
         },
         {
-            "before": ["Z"],
-            "after": ["^"]
+            "before": [
+                "Z"
+            ],
+            "after": [
+                "^"
+            ]
         },
         {
-            "before": ["g", "e"],
-            "commands": ["editor.action.marker.next"]
+            "before": [
+                "g",
+                "e"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ]
         },
         {
-            "before": ["g", "E"],
-            "commands": ["editor.action.marker.prev"]
+            "before": [
+                "g",
+                "E"
+            ],
+            "commands": [
+                "editor.action.marker.prev"
+            ]
         }
     ],
-
     "vim.visualModeKeyBindings": [
         {
-            "before": ["J"],
-            "after": ["}"]
+            "before": [
+                "J"
+            ],
+            "after": [
+                "}"
+            ]
         },
         {
-            "before": ["K"],
-            "after": ["{"]
+            "before": [
+                "K"
+            ],
+            "after": [
+                "{"
+            ]
         },
         {
-            "before": ["k"],
-            "after": ["g", "k"]
+            "before": [
+                "k"
+            ],
+            "after": [
+                "g",
+                "k"
+            ]
         },
         {
-            "before": ["j"],
-            "after": ["g", "j"]
+            "before": [
+                "j"
+            ],
+            "after": [
+                "g",
+                "j"
+            ]
         },
         {
-            "before": ["z"],
-            "after": ["$", "h"]
+            "before": [
+                "z"
+            ],
+            "after": [
+                "$",
+                "h"
+            ]
         },
         {
-            "before": ["v", "z"],
-            "after": ["$", "h"]
+            "before": [
+                "v",
+                "z"
+            ],
+            "after": [
+                "$",
+                "h"
+            ]
         },
         {
-            "before": ["v", "Z"],
-            "after": ["^"]
+            "before": [
+                "v",
+                "Z"
+            ],
+            "after": [
+                "^"
+            ]
         },
         {
-            "before": ["Z"],
-            "after": ["^"]
+            "before": [
+                "Z"
+            ],
+            "after": [
+                "^"
+            ]
         }
     ],
-    "workbench.colorTheme": "Abyss",
-    "git.openRepositoryInParentFolders": "always"
+    "workbench.colorTheme": "Tomorrow Night Blue",
+    "git.openRepositoryInParentFolders": "always",
+    "chat.titleBar.openInAgentsWindow.enabled": false,
+    "chat.titleBar.signIn.enabled": false,
+    "workbench.browser.showInTitleBar": false,
+    "update.showReleaseNotes": false
 }
