@@ -1,2 +1,4 @@
 #compdef git-nuke-branch
 #description (Custom) Nuke the given branch locally and remotely
+
+_arguments '1:branch:($(git branch --format="%(refname:short)" 2>/dev/null))'
