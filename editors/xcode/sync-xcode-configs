@@ -13,7 +13,7 @@ if [ "$#" -ne 1 ]; then
   return 1
 fi
 
-LOCAL_DIR="$DOTFILES/xcode"
+LOCAL_DIR="$DOTFILES/editors/xcode"
 KB_FILE="sasha.idekeybindings"
 THEME_FILE="sashas-oceanic-next.xccolortheme"
 

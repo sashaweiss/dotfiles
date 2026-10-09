@@ -1,4 +1,4 @@
-vim.opt.runtimepath:append { "$DOTFILES/vim/neovim" }
+vim.opt.runtimepath:append { "$DOTFILES/editors/vim/neovim" }
 
 require("plugins")
 require("options")

@@ -20,8 +20,8 @@ ln -fs "$DOTFILES/util/mise.toml" "$HOME/.config/mise/config.toml"
 
 mkdir -p "$HOME/.config/nvim"
 mkdir -p "$HOME/.config/nvim/after"
-ln -fs "$DOTFILES/vim/neovim/init.lua" "$HOME/.config/nvim/init.lua"
-ln -fsn "$DOTFILES/vim/neovim/lua/syntax" "$HOME/.config/nvim/after/syntax"
+ln -fs "$DOTFILES/editors/vim/neovim/init.lua" "$HOME/.config/nvim/init.lua"
+ln -fsn "$DOTFILES/editors/vim/neovim/lua/syntax" "$HOME/.config/nvim/after/syntax"
 
 mkdir -p "$HOME/.config/ghostty"
 ln -fs "$DOTFILES/util/ghostty.conf" "$HOME/.config/ghostty/config"
@@ -35,10 +35,10 @@ mkdir -p "$HOME/.moat"
 ln -fs "$DOTFILES/util/moat/settings.json" "$HOME/.moat/settings.json"
 
 mkdir -p "$HOME/Library/Application Support/Code/User"
-ln -fs "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-ln -fs "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+ln -fs "$DOTFILES/editors/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+ln -fs "$DOTFILES/editors/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
 
 mkdir -p "$HOME/.config/dewey"
 ln -fs "$DOTFILES/macOS/dewey/config.json" "$HOME/.config/dewey/config.json"
 
-ln -fs "$DOTFILES/vim/ideavimrc" "$HOME/.ideavimrc"
+ln -fs "$DOTFILES/editors/vim/ideavimrc" "$HOME/.ideavimrc"
