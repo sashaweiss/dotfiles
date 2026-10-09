@@ -1,4 +1,5 @@
 {
   "spinnerTipsEnabled": false,
-  "tui": "default"
+  "tui": "default",
+  "bashEditDiffEnabled": false
 }
