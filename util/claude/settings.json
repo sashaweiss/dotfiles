@@ -1,3 +1,4 @@
 {
-  "spinnerTipsEnabled": false
+  "spinnerTipsEnabled": false,
+  "tui": "default"
 }
