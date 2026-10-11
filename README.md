@@ -1,15 +1,14 @@
 # sasha's .files
 
-My personal dotfiles. Mostly [`zsh`](https://www.zsh.org),
-[`neovim`](https://neovim.io), [`tmux`](https://github.com/tmux/tmux).
+My personal dotfiles.
 
-## How-to for fresh installation
+## Setup steps for new computer
 
-Live notes on my installation process for a fresh, clean machine.
+Live notes on my installation process for a new machine.
 
 1. Choose a machine name.
 
-```
+```sh
 ; sudo scutil --set ComputerName "Machine Name"
 ; sudo scutil --set LocalHostName "Machine-Name" # doesn't allow spaces
 ; sudo scutil --set HostName "Machine Name"
@@ -21,9 +20,15 @@ Live notes on my installation process for a fresh, clean machine.
 
 1. Install password manager, preferred browser, preferred terminal.
 
+1. Create a new SSH key and register it with Github.
+
+```sh
+; ssh-keygen # name it "personal_ed25519"
+```
+
 1. Clone these dotfiles.
 
-```
+```sh
 ; export DOTFILES="$HOME/.files"
 ; git clone git@github.com:sashaweiss/dotfiles $DOTFILES
 ; cd $DOTFILES
@@ -32,7 +37,7 @@ Live notes on my installation process for a fresh, clean machine.
 
 1. Install `brew` via instructions on their [homepage](https://brew.sh). Install brew-managed tools.
 
-```
+```sh
 ; export DOTFILES="$HOME/.files"
 ; cd $DOTFILES/util
 ; brew bundle
@@ -40,7 +45,7 @@ Live notes on my installation process for a fresh, clean machine.
 
 1. Install dotfiles-managed settings.
 
-```
+```sh
 ; export DOTFILES="$HOME/.files"
 ; cd $DOTFILES
 ; ./bin/link
@@ -51,12 +56,12 @@ Live notes on my installation process for a fresh, clean machine.
 
 ## macOS System Settings
 
--   Map CapsLock to Esc in "System Preferences -> Keyboard -> Modifier Keys"
--   Automatically hide and show menu bar in "System Preferences -> Dock and Menu Bar"
--   Set default browser in "System Preferences -> General"
--   Move Spotlight shortcut to Alt+Space in "System Preferences -> Keyboard -> Shortcuts -> Spotlight" (to avoid a conflict with ueli).
--   Set open-at-login items in "System Preferences -> Users and Groups -> Login Items"
--   Unblock key-repeat: `defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false`
+- Map CapsLock to Esc in "System Preferences -> Keyboard -> Modifier Keys"
+- Automatically hide and show menu bar in "System Preferences -> Dock and Menu Bar"
+- Set default browser in "System Preferences -> General"
+- Move Spotlight shortcut to Alt+Space in "System Preferences -> Keyboard -> Shortcuts -> Spotlight" (to avoid a conflict with ueli).
+- Set open-at-login items in "System Preferences -> Users and Groups -> Login Items"
+- Unblock key-repeat: `defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false`
 
 ## App settings
 
@@ -69,4 +74,4 @@ Live notes on my installation process for a fresh, clean machine.
 These should auto-install upon opening `nvim`. If not:
 
 1. Install [vim-plug](https://github.com/junegunn/vim-plug?tab=readme-ov-file#installation).
-2. `nvim -c "PlugInstall" -c "qa"
+1. `nvim -c "PlugInstall" -c "qa"`
