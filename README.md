@@ -57,6 +57,7 @@ Live notes on my installation process for a new machine.
 ## macOS System Settings
 
 - Map CapsLock to Esc in "System Preferences -> Keyboard -> Modifier Keys"
+- "Date and Time" -> "24-hour time"
 - Automatically hide and show menu bar in "System Preferences -> Dock and Menu Bar"
 - Set default browser in "System Preferences -> General"
 - Move Spotlight shortcut to Alt+Space in "System Preferences -> Keyboard -> Shortcuts -> Spotlight" (to avoid a conflict with ueli).
