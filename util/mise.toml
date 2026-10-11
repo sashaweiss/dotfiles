@@ -1,8 +1,8 @@
 [tools]
-java = "openjdk-17.0.2"
-node = "24.14.0"
-python = "3.12.4"
-ruby = "3.4.9"
+java = "latest"
+node = "latest"
+python = "latest"
+ruby = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = [
