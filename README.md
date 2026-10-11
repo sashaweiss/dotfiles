@@ -3,42 +3,70 @@
 My personal dotfiles. Mostly [`zsh`](https://www.zsh.org),
 [`neovim`](https://neovim.io), [`tmux`](https://github.com/tmux/tmux).
 
-## Download and install
+## How-to for fresh installation
 
-Clone the repo:
+Live notes on my installation process for a fresh, clean machine.
 
-```sh
-; git clone git@github.com:sashaweiss/dotfiles $HOME/.files
+1. Choose a machine name.
+
+```
+; sudo scutil --set ComputerName "Machine Name"
+; sudo scutil --set LocalHostName "Machine-Name" # doesn't allow spaces
+; sudo scutil --set HostName "Machine Name"
 ```
 
-**To install to somewhere other than $HOME/.files, make sure to adjust `$DOTFILES`!**
+1. Sign into iCloud.
 
-Link the appropriate files:
+1. Make macOS install the developer tools by running `git`.
 
-```sh
-export DOTFILES="$HOME/.files"
-./bin/link
+1. Install password manager, preferred browser, preferred terminal.
+
+1. Clone these dotfiles.
+
+```
+; export DOTFILES="$HOME/.files"
+; git clone git@github.com:sashaweiss/dotfiles $DOTFILES
+; cd $DOTFILES
+; ./bin/link
 ```
 
-...and you should be good to go! (Kinda - read on for installing peripherals - without those,
-some stuff won't work/will look funky/will be unavailable.)
+1. Install `brew` via instructions on their [homepage](https://brew.sh). Install brew-managed tools.
 
-## Installing peripherals
+```
+; export DOTFILES="$HOME/.files"
+; cd $DOTFILES/util
+; brew bundle
+```
+
+1. Install dotfiles-managed settings.
+
+```
+; export DOTFILES="$HOME/.files"
+; cd $DOTFILES
+; ./bin/link
+; ./macos/import-plist-settings.zsh <plist-settings>
+```
+
+1. Clone [`natasha-codes/fonts`](https://github.com/natasha-codes/fonts) using `git-lfs`. Install the `Natasha II` font.
+
+## macOS System Settings
+
+-   Map CapsLock to Esc in "System Preferences -> Keyboard -> Modifier Keys"
+-   Automatically hide and show menu bar in "System Preferences -> Dock and Menu Bar"
+-   Set default browser in "System Preferences -> General"
+-   Move Spotlight shortcut to Alt+Space in "System Preferences -> Keyboard -> Shortcuts -> Spotlight" (to avoid a conflict with ueli).
+-   Set open-at-login items in "System Preferences -> Users and Groups -> Login Items"
+-   Unblock key-repeat: `defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false`
+
+## App settings
 
 ### Firefox
 
 `about:config` -> `browser.tabs.closeWindowWithLastTab = false`
 
-### Fonts
-
-I am currently using a [custom build](https://github.com/natasha-codes/fonts) of
-[Iosevka](https://github.com/be5invis/Iosevka) as my default font for coding,
-specifically `Natasha II`.
-
 ### Vim plugins
 
-What's `(n)vim` without plugins? First, install [vim-plug](https://github.com/junegunn/vim-plug?tab=readme-ov-file#installation), making sure to install it to the right directory for `nvim`.
+These should auto-install upon opening `nvim`. If not:
 
-```sh
-; nvim -c "PlugInstall" -c "qa"
-```
+1. Install [vim-plug](https://github.com/junegunn/vim-plug?tab=readme-ov-file#installation).
+2. `nvim -c "PlugInstall" -c "qa"
