@@ -5,6 +5,19 @@
 local vim = vim
 local Plug = vim.fn['plug#']
 
+local data_dir = vim.fn.stdpath('data') .. '/site'
+local plug_path = data_dir .. '/autoload/plug.vim'
+
+if vim.fn.empty(vim.fn.glob(plug_path)) == 1 then
+  vim.fn.system({
+    'curl', '-fLo', plug_path, '--create-dirs',
+    'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim',
+  })
+  vim.api.nvim_create_autocmd('VimEnter', {
+    command = 'PlugInstall --sync | source $MYVIMRC',
+  })
+end
+
 vim.call('plug#begin')
 
 -- File browsing
