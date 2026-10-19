@@ -1,3 +1,4 @@
 {
-  "gitAccessMode": "read"
+  "gitAccessMode": "read",
+  "tui": "default"
 }
