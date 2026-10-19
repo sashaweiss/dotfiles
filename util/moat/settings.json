@@ -1,4 +1,5 @@
 {
+  "bashEditDiffEnabled": false,
   "gitAccessMode": "read",
   "tui": "default"
 }
