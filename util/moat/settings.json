@@ -1,5 +1,5 @@
 {
-  "bashEditDiffEnabled": false,
-  "gitAccessMode": "read",
-  "tui": "default"
+  "sessionDefaults": {
+    "image": "moat:swift"
+  }
 }
