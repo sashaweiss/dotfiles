@@ -1,5 +1,16 @@
 {
-  "sessionDefaults": {
-    "image": "moat:swift"
+  "containerPath" : "/usr/local/bin/container",
+  "gitPath" : "/usr/bin/git",
+  "sessionDefaults" : {
+    "addSkills" : [
+
+    ],
+    "copyHostClaudeConfigs" : true,
+    "cpus" : 2,
+    "gitAccessMode" : "write",
+    "image" : "moat:swift",
+    "memory" : "4G",
+    "model" : "opus",
+    "permissionMode" : "auto"
   }
 }
