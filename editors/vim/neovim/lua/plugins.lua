@@ -1,51 +1,39 @@
 -- ========= Plugin Load =========
 --
--- `vim-plug` must be installed: https://github.com/junegunn/vim-plug
+-- Managed by the built-in `vim.pack` (Neovim 0.12+). Missing plugins are
+-- installed on startup; update with `:lua vim.pack.update()`.
 
-local vim = vim
-local Plug = vim.fn['plug#']
+local function gh(repo) return 'https://github.com/' .. repo end
 
-local data_dir = vim.fn.stdpath('data') .. '/site'
-local plug_path = data_dir .. '/autoload/plug.vim'
+vim.pack.add({
+  -- File browsing
+  gh('preservim/nerdtree'),
 
-if vim.fn.empty(vim.fn.glob(plug_path)) == 1 then
-  vim.fn.system({
-    'curl', '-fLo', plug_path, '--create-dirs',
-    'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim',
-  })
-  vim.api.nvim_create_autocmd('VimEnter', {
-    command = 'PlugInstall --sync | source $MYVIMRC',
-  })
-end
+  -- Highlight trailing whitespace
+  gh('ntpeters/vim-better-whitespace'),
 
-vim.call('plug#begin')
+  -- FZF for fuzzy-matching files, search results, etc.
+  gh('junegunn/fzf'),
+  gh('junegunn/fzf.vim'),
 
--- File browsing
-Plug('scrooloose/nerdtree')
+  -- Show git signs in the gutter
+  gh('lewis6991/gitsigns.nvim'),
 
--- Highlight trailing whitespace
-Plug('ntpeters/vim-better-whitespace')
+  -- Show a nice statusline at the bottom
+  gh('vim-airline/vim-airline'),
 
--- FZF for fuzzy-matching files, search results, etc.
-Plug('junegunn/fzf')
-Plug('junegunn/fzf.vim')
+  -- Themes for said statusline
+  gh('vim-airline/vim-airline-themes'),
 
--- Show git signs in the gutter
-Plug('lewis6991/gitsigns.nvim')
+  -- Automatically close brackets and stuff
+  gh('jiangmiao/auto-pairs'),
 
--- Show a nice statusline at the bottom
-Plug('bling/vim-airline')
+  -- OceanicNext colorscheme
+  gh('mhartington/oceanic-next'),
 
--- Themes for said statusline
-Plug('vim-airline/vim-airline-themes')
-
--- Automatically close brackets and stuff
-Plug('jiangmiao/auto-pairs')
-
--- OceanicNext colorscheme
-Plug('mhartington/oceanic-next')
-
-vim.call('plug#end')
+  -- Render Markdown in-buffer
+  gh('MeanderingProgrammer/render-markdown.nvim'),
+}, { confirm = false })
 
 
 -- ========= Plugin Configuration =========
