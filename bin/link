@@ -7,6 +7,8 @@ ln -fs "$DOTFILES/zsh/zshenv" "$HOME/.zshenv"
 
 ln -fs "$DOTFILES/util/git/gitconfig" "$HOME/.gitconfig"
 ln -fs "$DOTFILES/util/git/gitconfig_signal" "$HOME/.gitconfig_signal"
+mkdir -p "$HOME/.config/git"
+ln -fs "$DOTFILES/util/git/gitignore" "$HOME/.config/git/ignore"
 
 ln -fs "$DOTFILES/util/tmux.conf" "$HOME/.tmux.conf"
 
