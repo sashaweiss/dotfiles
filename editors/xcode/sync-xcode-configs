@@ -15,7 +15,7 @@ fi
 
 LOCAL_DIR="$DOTFILES/editors/xcode"
 KB_FILE="sasha.idekeybindings"
-THEME_FILE="sashas-oceanic-next.xccolortheme"
+THEME_FILE="sashas-oceanic-next-27.xcworkspacecolortheme"
 
 REMOTE_KB_DIR="$HOME/Library/Developer/Xcode/UserData/KeyBindings"
 REMOTE_THEME_DIR="$HOME/Library/Developer/Xcode/UserData/FontAndColorThemes"
