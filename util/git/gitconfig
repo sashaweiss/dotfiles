@@ -45,6 +45,10 @@
   skip = update-index --skip-worktree
   unskip = update-index --no-skip-worktree
 
+[branch]
+  sort = refname
+  sort = -HEAD
+
 [grep]
   linenumber = true
 
