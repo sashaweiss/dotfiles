@@ -1,0 +1,2 @@
+#compdef git-park
+#description (Custom) Reset the branch named after the current worktree to the latest version of its remote.

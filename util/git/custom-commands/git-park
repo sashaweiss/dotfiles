@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+branch="$(basename "$(git rev-parse --show-toplevel)")"
+upstream="$(git rev-parse --abbrev-ref "$branch@{upstream}")" || exit 1
+
+git fetch "${upstream%%/*}"
+git switch -C "$branch" "$upstream"
