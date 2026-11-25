@@ -19,6 +19,8 @@ fzf_gc () {
   git log --oneline --date=short --format="$format" --color=always \
     | fzf \
       --height '100%' \
+      --exact \
+      --no-sort \
       --bind "$bindings" \
       --preview "$preview" \
     | grep -o "[a-f0-9]\{7,\}"
